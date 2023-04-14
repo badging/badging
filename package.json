@@ -1,0 +1,70 @@
+{
+  "name": "dei-project-badging-website",
+  "version": "1.0.0",
+  "description": "Website for DEI Project Badging with CHAOSS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
+    "prepare": "husky install",
+    "build": "webpack --mode production",
+    "dev": "webpack serve",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllInOpenSource/DEI-Project-Badging-Website.git"
+  },
+  "author": "Tochukwu Odeme C.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllInOpenSource/DEI-Project-Badging-Website/issues"
+  },
+  "homepage": "https://github.com/AllInOpenSource/DEI-Project-Badging-Website#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@svgr/webpack": "^7.0.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "stylelint": "^15.4.0",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  },
+  "engines": {
+    "node": ">= 16.15.0"
+  },
+  "lint-staged": {
+    ".": [
+      "npm run format"
+    ]
+  }
+}
