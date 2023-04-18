@@ -1,3 +1,151 @@
-// .how-it-works{
-//     height: 100vh;
-// }
+@import "../../assets/styles/variables";
+/* ==================== START HOW-IT-WORKS-SECTION STYLE ======================= */
+.how-it-works {
+	border-bottom: 1px solid $primaryBorderColor;
+	border-top: 1px solid $primaryBorderColor;
+
+	a {
+		text-decoration: underline;
+		color: #ffffff;
+		font-weight: 600;
+	}
+
+	p {
+		line-height: 1.5;
+		color: #858c90;
+	}
+
+	.heading-2 {
+		font-size: 3rem;
+		background: linear-gradient(258.74deg, #69c7b9 14.64%, #e1b1ee 73.78%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		font-family: "Clash Display", sans-serif;
+	}
+
+	.heading-3,
+	.text-lg {
+		font-size: 1.125rem;
+		line-height: 2;
+	}
+
+	.heading-3 {
+		background: linear-gradient(
+			123.52deg,
+			#ffffff -36.16%,
+			rgba(255, 255, 255, 0) 219.41%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		margin: 1rem 0 0.5rem;
+		font-family: "Clash Display", sans-serif;
+	}
+
+	.projects {
+		text-align: center;
+		padding: 2.5rem 0 2rem;
+		border-bottom: 1px solid #454c53;
+
+		.logos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			column-gap: 3.5rem;
+			row-gap: 1rem;
+			padding: 0 1rem;
+			margin-top: 0.5rem;
+		}
+	}
+
+	/* HOW IT WORKS*/
+	.text {
+		text-align: center;
+		max-width: 846px;
+		margin: 0 auto;
+
+		p {
+			margin: 0.75rem 1rem 3rem;
+		}
+	}
+
+	.content-wrap {
+		background-image: url(./assets/home/bg_desktop_lt.png),
+			url(./assets/home/bg_desktop_rt.png);
+		background-position: left bottom, right bottom;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	.content {
+		padding: 8rem 0;
+		margin: 0 auto;
+		max-width: 1200px;
+
+		.cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+
+			.card {
+				background: rgba(13, 13, 13, 0.7);
+				border-width: 1px;
+				border-style: solid;
+				border-image: linear-gradient(
+						to top,
+						rgba(40, 47, 55, 0),
+						rgba(40, 47, 55, 1)
+					)
+					1;
+				max-width: 24.2rem;
+				height: 24.2rem;
+				padding: 2.9rem 3.5rem;
+				transition: all 0.3s ease-in-out;
+			}
+
+			.card-hover {
+				border-image: linear-gradient(
+						to top,
+						rgb(219, 32, 157),
+						rgba(105, 199, 185, 1)
+					)
+					1;
+
+				p {
+					color: #ffffff;
+				}
+
+				/* card icons */
+				.img-wrap {
+					width: 4rem;
+					height: 4rem;
+					border-top: 1px solid #454c53;
+					border-radius: 50%;
+					background: linear-gradient(180deg, #0e0e0e 0%, #1b1b1b 100%);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					svg {
+						path {
+							fill: #ffffff;
+							transition: fill 0.3s ease-in-out;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1921px) {
+		.content-wrap {
+			background-position: left bottom, right bottom;
+			background-size: 90% 100%;
+			background-repeat: no-repeat;
+		}
+	}
+}
