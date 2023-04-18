@@ -1,0 +1,46 @@
+@import "variables";
+
+* > * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: $font-family_2;
+    color: $primaryTextColor;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primaryTextColor;
+  }
+  li {
+    list-style: none;
+  }
+  body {
+    background-color: $primaryBackgroundColor;
+  }
+
+  .container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 10px 70px;
+  }
+
+  @media screen and (max-width: 1030px) {
+    nav {
+        ul {
+            display: none !important;
+        }
+    }
+    .get-started{
+        display: none;
+    }
+    .logo{
+      width: auto;
+    }
+    .container {
+      padding: 30px 30px;
+    }
+    .hero-section {
+            padding: 0px 20px;
+    }
+  }

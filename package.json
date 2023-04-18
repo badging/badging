@@ -1,7 +1,7 @@
 {
   "name": "dei-project-badging-website",
   "version": "1.0.0",
-  "description": "Website for DEI Project Badging with CHAOSS",
+  "description": "Website for DEI Project Badging with CHAOSS & ALL-IN",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",

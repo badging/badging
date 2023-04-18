@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables";
+
+footer {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Work Sans';
+    font-style: regular;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: $primaryTextColor;
+
+    .social {
+        display: flex;
+        gap: 20px;
+        }
+    .copyright .footer-note {
+        color: #69C7B9;
+        }
+  }
+  
