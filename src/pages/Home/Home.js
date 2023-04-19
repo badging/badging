@@ -1,5 +1,6 @@
 import  { useState } from 'react'
 import '../../assets/styles/global.scss'
+import './home.scss'
 import { discord, dropbox, github, loom } from "../../assets/images";
 import { Footer, Header } from '../../components';
 
@@ -36,8 +37,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="how-it-works container">
-				<div className="projects">
+      <div className="how-it-works ">
+				<div className="projects ">
 					<p className="text-lg">
 						Join 150+ open source projects trusting us to badge their projects.
 					</p>
@@ -51,14 +52,13 @@ const Home = () => {
 						))}
 					</div>
 				</div>
-				<div className="content-wrap">
+				<div className="content-wrap container">
 					<div className="content">
 						<div className="text">
 							<h2 className="heading-2">How it Works</h2>
 							<p className="text-lg">
 								Join us in our mission to promote Diversity, Equity, and
-								Inclusion in the workplace!
-								<br />
+								Inclusion in the workplace! <br />
 								Recognize and reward DEI efforts with our innovative project
 								badging system, and inspire
 							</p>
@@ -89,8 +89,8 @@ const Home = () => {
 												y2="29.6667"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>
@@ -129,8 +129,8 @@ const Home = () => {
 												y2="21.6667"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>
@@ -169,8 +169,8 @@ const Home = () => {
 												y2="27.3333"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>
