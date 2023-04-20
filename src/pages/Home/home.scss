@@ -4,9 +4,9 @@
 	border-bottom: 1px solid $primaryBorderColor;
 	border-top: 1px solid $primaryBorderColor;
 
-  br {
-    display: none;
-  }
+	br {
+		display: none;
+	}
 	a {
 		text-decoration: underline;
 		color: #ffffff;
@@ -75,14 +75,6 @@
 		}
 	}
 
-	// .content-wrap {
-	// 	background-image: url(./assets/home/bg_desktop_lt.png),
-	// 		url(./assets/home/bg_desktop_rt.png);
-	// 	background-position: left bottom, right bottom;
-	// 	background-size: auto 100%;
-	// 	background-repeat: no-repeat;
-	// }
-
 	.content {
 		padding: 8rem 0;
 
@@ -147,43 +139,51 @@
 
 // 768px - 1023px
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .how-it-works {
-    .content {
-      .cards {
-        .card {
-          width: 100%;
-          height: 100%;
-          padding: 2.9rem 3.5rem;
-        }
-      }
-    }
-  }
+	.how-it-works {
+		.content {
+			.cards {
+				.card {
+					width: 100%;
+					height: 100%;
+					padding: 2.9rem 3.5rem;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .how-it-works {
-    .content {
-			.cards {
-				flex-wrap: nowrap;
+	.how-it-works {
+		.content-wrap {
+			background: $sectionTitleBackground, $sectionTitleBackground;
+			background-size: 50% 80%;
+			background-position: -20% 65%, 120% 65%;
+			background-repeat: no-repeat;
 
-        .card{
-          padding: 2rem;
-        }
+			.content {
+				.cards {
+					flex-wrap: nowrap;
+
+					.card {
+						padding: 2rem;
+					}
+				}
 			}
 		}
-  }
+	}
 }
 
 @media screen and (min-width: 1440px) {
-  .how-it-works {
-    br {
-      display: block;
-    }
+	.how-it-works {
+		br {
+			display: block;
+		}
 
-    // .content-wrap {
-    //   background-position: left bottom, right bottom;
-    //   background-size: 90% 100%;
-    //   background-repeat: no-repeat;
-    // }
-  }
+		.content-wrap {
+			background: $sectionTitleBackground, $sectionTitleBackground;
+			background-size: 50% 80%;
+			background-position: -15% 50%, 115% 50%;
+			background-repeat: no-repeat;
+		}
+	}
 }
