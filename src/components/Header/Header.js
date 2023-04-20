@@ -4,12 +4,13 @@ import Logo from "../../assets/images/logos/logo.svg"
 import '../../assets/styles/global.scss'
 import './header.scss'
 
+
 const Header = () => {
   return (
     <header>
         <nav className='container'>
             <Link to="/" className='active'>
-                <img src={Logo} className="logo" alt="all-in-chaoss-logo" width={250}/>
+                <img src={Logo} className="logo" alt="all-in-chaoss-logo" />
             </Link>
             <ul>
                 <Link to="/" className="nav-link">
@@ -37,7 +38,6 @@ const Header = () => {
                         inspire a culture of inclusivity and excellence. 
                         Take the first step towards positive change today.
                     </div>
-                    
             </div>
             
         </div>

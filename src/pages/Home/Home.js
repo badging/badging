@@ -89,8 +89,8 @@ const Home = () => {
 												y2="29.6667"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>
@@ -129,8 +129,8 @@ const Home = () => {
 												y2="21.6667"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>
@@ -169,8 +169,8 @@ const Home = () => {
 												y2="27.3333"
 												gradientUnits="userSpaceOnUse"
 											>
-												<stop stop-color="#818181" />
-												<stop offset="1" stop-color="#494949" />
+												<stop stopColor="#818181" />
+												<stop offset="1" stopColor="#494949" />
 											</linearGradient>
 										</defs>
 									</svg>

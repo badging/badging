@@ -22,6 +22,7 @@ module.exports = {
       {
         test: /\.(png|jp(e*)g|svg|gif|ttf|woff(2)?|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: ["file-loader"],
+        // type: "asset/resource",
       },
       {
         test: /\.svg$/,
@@ -38,6 +39,7 @@ module.exports = {
         "logos",
         "logo.svg"
       ),
+      // logo: path.join(__dirname, "src", "assets", "images", "logos", "logo.svg")
     }),
   ],
   devServer: {

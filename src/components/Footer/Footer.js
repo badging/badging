@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 import {twitter, reddit, linkedin, mail} from "../../assets/images"
 import '../../assets/styles/global.scss'
 import './footer.scss'
-// import twittere from '../../assets/images/icons/twitter.svg';
+
 const Footer = () => {
   return (
-    // <div className="container">
         <footer className='container'>
             <div className="social">
                 <Link to='/'>
@@ -26,7 +25,6 @@ const Footer = () => {
                 Copyright &copy; <Link to="https://chaoss.community/" className="footer-note">CHOASS</Link> & <Link to="https://allinopensource.org/" className="footer-note">ALlin</Link> Project. All rights reserved
             </div>
     </footer>
-    // </div>
   )
 }
 
