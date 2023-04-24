@@ -2,9 +2,8 @@ import  { useState } from 'react'
 import '../../assets/styles/global.scss'
 import './home.scss'
 import { discord, dropbox, github, loom } from "../../assets/images";
-import { Footer, Header } from '../../components';
-
-
+import { Footer, Header, Faq } from '../../components';
+import { faqData } from '../../components/Faq/data';
 const projects = [
 	{
 		name: "github",
@@ -188,6 +187,20 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			
+			<section className='container'>
+				<div className="faq">
+					<h2>Still Have Questions</h2>
+			{
+                faqData.map(( {question, answer}, id) => {
+                    return (
+                        <Faq key={id} question={question} answer={answer} />
+                    )
+                })
+            }
+				</div>
+			</section>
+
       <Footer />
     </div>
   )

@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables";
+
+
+    h2 {
+        margin-bottom: 20px;
+    }
+    .faq-details {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        p:nth-child(1) {
+            border: 1px solid $primaryBorderColor;
+            max-width: inherit;
+            height: 91px;
+            font-family: $font-family_1;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            padding: 0px 30px;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        p:nth-child(2) {
+           margin: 0px 30px;
+        }
+    }
+
+

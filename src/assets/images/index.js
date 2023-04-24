@@ -9,3 +9,5 @@ import discord from "./logos/company_logo-2.svg";
 import dropbox from "./logos/company_logo-3.svg";
 
 export {twitter, reddit, linkedin, mail, loom, github, discord, dropbox}
+
+export { default as logoSVG } from "./logos/all-in-chaoss-logo.svg";

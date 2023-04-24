@@ -37,7 +37,7 @@ module.exports = {
         __dirname,
         "/src/assets/images",
         "logos",
-        "logo.svg"
+        "all-in-chaoss-logo.svg"
       ),
       // logo: path.join(__dirname, "src", "assets", "images", "logos", "logo.svg")
     }),

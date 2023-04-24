@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logos/logo.svg';
 import '../../assets/styles/global.scss';
 import './header.scss';
 import CardCarousel from './CardCarousel';
+import {logoSVG} from '../../assets/images'
 
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="container">
         <Link to="/" className="active">
           <img
-            src={Logo}
+            src={logoSVG}
             className="logo"
             alt="all-in-chaoss-logo"
             width={250}
