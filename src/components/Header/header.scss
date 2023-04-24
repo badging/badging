@@ -4,7 +4,8 @@
 header {
   height: 100vh;
   background: var(--section-title-background);
-
+  width: 100%;
+//   background-color: #fff;
   nav {
     display: flex;
     align-items: center;
@@ -14,11 +15,12 @@ header {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    width: 1440px;
     z-index: 100;
     backdrop-filter: blur(6px);
+    position: fixed;
+    left: 0;
+right: 0;
 
     ul {
       display: flex;
