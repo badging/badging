@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = () => {
-  return <div>We are...all in.</div>;
+  return <div>All in/CHAOSS DEI Project Badging under development</div>;
 };
 
 export default Home;
