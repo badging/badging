@@ -1,5 +1,5 @@
 {
-  "name": "dei-project-badging-website",
+  "name": "project-badging",
   "version": "1.0.0",
   "description": "Website for DEI Project Badging with CHAOSS",
   "main": "index.js",
@@ -8,23 +8,24 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
-    "stylelint": "npx stylelint \"**/*.css\"",
+    "stylelint": "npx stylelint \"**/*.css\" --fix",
     "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
-    "prepare": "husky install",
     "build": "webpack --mode production",
     "dev": "webpack serve",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\"",
+    "precommit": "lint-staged",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AllInOpenSource/DEI-Project-Badging-Website.git"
+    "url": "git+https://github.com/AllInOpenSource/Project-Badging.git"
   },
-  "author": "Tochukwu Odeme C.",
+  "author": "AllInOpenSource | CHAOSS",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AllInOpenSource/DEI-Project-Badging-Website/issues"
+    "url": "https://github.com/AllInOpenSource/Project-Badging/issues"
   },
-  "homepage": "https://github.com/AllInOpenSource/DEI-Project-Badging-Website#readme",
+  "homepage": "https://github.com/AllInOpenSource/Project-Badging#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,7 +40,7 @@
     "@svgr/webpack": "^7.0.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
-    "eslint": "^8.38.0",
+    "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -55,6 +56,8 @@
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
     "stylelint": "^15.4.0",
+    "stylelint-config-standard": "33.0.0",
+    "stylelint-scss": "4.6.0",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.2"
@@ -63,8 +66,14 @@
     "node": ">= 16.15.0"
   },
   "lint-staged": {
-    ".": [
-      "npm run format"
+    "*.{js,jsx,ts,tsx,json,md,html,css,scss}": [
+      "npm run format",
+      "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }

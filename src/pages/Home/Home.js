@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
-  return (
-    <div>We are...all in.</div>
-  )
-}
+  return <div>We are...all in.</div>;
+};
 
-export default Home
+export default Home;
