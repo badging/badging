@@ -1,2 +1,2 @@
-# DEI-Project-Badging-Website
+# Project Badging
 Website for DEI Project Badging with CHAOSS
