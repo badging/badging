@@ -52,7 +52,7 @@ jobs:
           password: ${{ secrets.SSHPASSWORD }}
           script: |
             echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.allinopensource.org/*
-            mkdir -p /var/www/badging.chaoss.community/
+            mkdir -p /var/www/badging.allinopensource.org/
 
       - name: deploy new build
         uses: garygrossgarten/github-action-scp@release
