@@ -33,13 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
-      favicon: path.join(
-        __dirname,
-        "/src/assets/images",
-        "logos",
-        "all-in-chaoss-logo.svg"
-      ),
-      // logo: path.join(__dirname, "src", "assets", "images", "logos", "logo.svg")
+      favicon: path.join(__dirname, "/src/assets/images", "logos", "logo.svg"),
     }),
   ],
   devServer: {
