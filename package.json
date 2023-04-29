@@ -1,14 +1,14 @@
 {
   "name": "project-badging",
   "version": "1.0.0",
-  "description": "Website for DEI Project Badging with CHAOSS",
+  "description": "Website for DEI Project Badging with CHAOSS & All In",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
-    "stylelint": "npx stylelint \"**/*.css\" --fix",
+    "stylelint": "npx stylelint \"**/*.css\" --fix --allow-empty-input",
     "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
     "build": "webpack --mode production",
     "dev": "webpack serve",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/AllInOpenSource/Project-Badging#readme",
   "dependencies": {
+    "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
@@ -48,7 +49,7 @@
     "eslint-plugin-react": "^7.32.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.3",
+    "husky": "8.0.3",
     "lint-staged": "^13.2.1",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
@@ -58,6 +59,7 @@
     "stylelint": "^15.4.0",
     "stylelint-config-standard": "33.0.0",
     "stylelint-scss": "4.6.0",
+    "svg-url-loader": "8.0.0",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.2"
@@ -67,13 +69,13 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md,html,css,scss}": [
-      "npm run format",
-      "git add"
+      "npm run format -v",
+      "git add -v"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit"
+      "pre-commit": "npm run precommit -v"
     }
   }
 }
