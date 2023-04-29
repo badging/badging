@@ -22,7 +22,7 @@ const Footer = () => {
                 </Link>
             </div>
             <div className="copyright">
-                Copyright &copy; <Link to="https://chaoss.community/" className="footer-note">CHOASS</Link> & <Link to="https://allinopensource.org/" className="footer-note">ALlin</Link> Project. All rights reserved
+                Copyright &copy; <Link to="https://chaoss.community/" className="footer-note">CHOASS</Link> & <Link to="https://allinopensource.org/" className="footer-note">All In</Link> Project. All rights reserved
             </div>
     </footer>
   )
