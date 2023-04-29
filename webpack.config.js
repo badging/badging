@@ -28,7 +28,7 @@ module.exports = {
         test: /\.svg$/,
         use: [
           {
-            loader: 'svg-url-loader',
+            loader: "svg-url-loader",
             options: {
               limit: 50000,
             },
@@ -40,7 +40,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
-      favicon: path.join(__dirname, "/src/assets/images", "logos", "all-in-chaoss-logo.svg"),
+      favicon: path.join(
+        __dirname,
+        "/src/assets/images",
+        "logos",
+        "all-in-chaoss-logo.svg"
+      ),
     }),
   ],
   devServer: {

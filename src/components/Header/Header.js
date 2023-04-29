@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../assets/styles/global.scss';
-import './header.scss';
-import CardCarousel from './CardCarousel';
-import {badgingLogo} from '../../assets/images'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../assets/styles/global.scss";
+import "./header.scss";
+import CardCarousel from "./CardCarousel";
+import { badgingLogo } from "../../assets/images";
 
 const Header = () => {
   return (
@@ -30,7 +29,7 @@ const Header = () => {
           </Link>
         </ul>
         <Link className="get-started" to="/">
-          {' '}
+          {" "}
           Get Started
         </Link>
       </nav>
