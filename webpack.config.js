@@ -20,20 +20,27 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif|ttf|woff(2)?|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(png|jp(e*)g|gif|ttf|woff(2)?|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: ["file-loader"],
         // type: "asset/resource",
       },
       {
         test: /\.svg$/,
-        use: ["@svgr/webpack"],
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 50000,
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
-      favicon: path.join(__dirname, "/src/assets/images", "logos", "logo.svg"),
+      favicon: path.join(__dirname, "/src/assets/images", "logos", "all-in-chaoss-logo.svg"),
     }),
   ],
   devServer: {

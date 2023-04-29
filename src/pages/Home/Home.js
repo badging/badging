@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import  { useState } from 'react'
 import '../../assets/styles/global.scss'
 import './home.scss'
@@ -206,12 +205,5 @@ const Home = () => {
     </div>
   )
 }
-=======
-import React from "react";
-
-const Home = () => {
-  return <div>All in/CHAOSS DEI Project Badging under development</div>;
-};
->>>>>>> main
 
 export default Home;
