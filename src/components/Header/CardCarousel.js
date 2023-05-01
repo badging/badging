@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 
 const cardItems = [
   {
@@ -9,7 +9,7 @@ const cardItems = [
         <b>Step I:</b> Project Demographics
       </p>
     ),
-    copy: '',
+    copy: "",
     button: <button className="card-carousel-btn">Get Started</button>,
     blankDiv: (
       <div className="blank_div">
@@ -61,7 +61,7 @@ const cardItems = [
         <b>Step II:</b> Project Review
       </p>
     ),
-    copy: '',
+    copy: "",
     blankDiv: (
       <div className="blank_div">
         <div className="mobile_blank">
@@ -109,11 +109,11 @@ const cardItems = [
     hidden_title: <p>Step III</p>,
     title: (
       <p>
-        {' '}
-        <b>Step III:</b> DEI Badge{' '}
+        {" "}
+        <b>Step III:</b> DEI Badge{" "}
       </p>
     ),
-    copy: '',
+    copy: "",
     blankDiv: (
       <div className="blank_div">
         <div className="mobile_blank">
@@ -160,13 +160,13 @@ const cardItems = [
 ];
 function determineClasses(indexes, cardIndex) {
   if (indexes.currentIndex === cardIndex) {
-    return 'active';
+    return "active";
   } else if (indexes.nextIndex === cardIndex) {
-    return 'next';
+    return "next";
   } else if (indexes.previousIndex === cardIndex) {
-    return 'prev';
+    return "prev";
   }
-  return 'inactive';
+  return "inactive";
 }
 const CardCarousel = () => {
   const [indexes, setIndexes] = useState({
