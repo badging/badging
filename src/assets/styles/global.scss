@@ -1,39 +1,39 @@
 @import "variables";
 
 * > * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: $font-family_2;
-  color: $primaryTextColor;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: $font-family_2;
+	color: $primaryTextColor;
 }
 
 a {
-  text-decoration: none;
-  color: $primaryTextColor;
+	text-decoration: none;
+	color: $primaryTextColor;
 }
 li {
-  list-style: none;
+	list-style: none;
 }
 body {
-  background-color: $primaryBackgroundColor;
+	background-color: $primaryBackgroundColor;
 }
 
 .container {
-  max-width: 100%;
-  margin: auto;
-  padding: 10px 70px;
-  // background-color: #fff;
+	max-width: 100%;
+	margin: auto;
+	padding: 10px 70px;
+	// background-color: #fff;
 }
 
 h2 {
-  font-size: 3rem;
-  background: $heroTitleBackground;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-family: $font-family_1, sans-serif;
+	font-size: 3rem;
+	background: $heroTitleBackground;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	font-family: $font-family_1, sans-serif;
 }
 
 h3 {
@@ -73,12 +73,32 @@ h3 {
   }
 }
 
+@media screen and (max-width: 1030px) {
+	nav {
+		ul {
+			display: none !important;
+		}
+	}
+	.get-started {
+		display: none;
+	}
+	.logo {
+		width: auto;
+	}
+	.container {
+		padding: 30px 30px;
+	}
+	.hero-section {
+		padding: 0px 20px;
+	}
+}
+
 .faq {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: url("../../assets/images/others/faq-background.svg");
-  margin-bottom: 100px;
+	max-width: 1300px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url("../../assets/images/others/faq-background.svg");
+	margin-bottom: 100px;
 }
