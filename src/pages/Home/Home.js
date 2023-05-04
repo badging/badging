@@ -1,13 +1,8 @@
 import "../../assets/styles/global.scss";
 import "./home.scss";
-import { Footer, Header, Faq } from "../../components";
+import { Footer, Header, Faq, CardComponent } from "../../components";
 import { faqData } from "../../components/Faq/data";
-import { featuredProjects } from "./data";
-import {
-	ApplySvgComponent,
-	ReviewSvgComponent,
-	GetBadgedSvgComponent,
-} from "../../assets/images";
+import { featuredProjects, howItWorksData } from "./data";
 
 const Home = () => {
 	return (
@@ -38,57 +33,17 @@ const Home = () => {
 							</p>
 						</div>
 						<div className="cards">
-							<div className="card">
-								<div className="img-wrap" aria-hidden="true">
-									<ApplySvgComponent
-										width="28"
-										height="30"
-										className="apply-svg"
+							{howItWorksData.map(({ id, title, text, link, icon }) => {
+								return (
+									<CardComponent
+										key={id}
+										title={title}
+										text={text}
+										link={link}
+										icon={icon}
 									/>
-								</div>
-								<div className="card-text">
-									<h3>Apply for Badge</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim
-										nec consequat vel. Lectus tellus feugiat Est scelerisque
-										ante diam at sed condimentum <a href="apply">Learn more</a>
-									</p>
-								</div>
-							</div>
-							<div className="card">
-								<div className="img-wrap" aria-hidden="true">
-									<ReviewSvgComponent
-										width="28"
-										height="22"
-										className="review-svg"
-									/>
-								</div>
-								<div className="card-text">
-									<h3>Review</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim
-										nec consequat vel. Lectus tellus feugiat Est scelerisque
-										ante diam at sed condimentum <a href="apply">Learn more</a>
-									</p>
-								</div>
-							</div>
-							<div className="card">
-								<div className="img-wrap" aria-hidden="true">
-									<GetBadgedSvgComponent
-										width="14"
-										height="28"
-										className="badge-svg"
-									/>
-								</div>
-								<div className="card-text">
-									<h3>Get Badged</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim
-										nec consequat vel. Lectus tellus feugiat Est scelerisque
-										ante diam at sed condimentum <a href="apply">Learn more</a>
-									</p>
-								</div>
-							</div>
+								);
+							})}
 						</div>
 					</div>
 				</div>
