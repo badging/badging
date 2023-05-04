@@ -1,26 +1,8 @@
 import "../../assets/styles/global.scss";
 import "./home.scss";
-import { discord, dropbox, github, loom } from "../../assets/images";
 import { Footer, Header, Faq } from "../../components";
 import { faqData } from "../../components/Faq/data";
-const projects = [
-	{
-		name: "github",
-		logo: github,
-	},
-	{
-		name: "loom",
-		logo: loom,
-	},
-	{
-		name: "discord",
-		logo: discord,
-	},
-	{
-		name: "dropbox",
-		logo: dropbox,
-	},
-];
+import { featuredProjects } from "./data";
 
 const Home = () => {
 	return (
@@ -32,7 +14,7 @@ const Home = () => {
 						Join 150+ open source projects trusting us to badge their projects.
 					</p>
 					<div className="logos">
-						{projects.map((project, index) => (
+						{featuredProjects.map((project, index) => (
 							<div className="img-wrap" key={index}>
 								<img src={project.logo} alt={`${project.name} logo`} />
 							</div>
