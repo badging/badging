@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 54px;
 	background: $heroTitleBackground;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -47,9 +47,39 @@ h3 {
   line-height: 2;
 }
 
+main {
+    max-width: 1380px;
+    margin: auto;
+	height: auto;
+	// padding: 0px 40px;
+}
+
+    .jumbotron {
+        max-width: 887px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+		padding: 180px 0px 70px 40px;
+         p {
+            font-family: $font-family_2;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 180%;
+            color: $secondaryTextColor;
+         }
+    }
+
+
 @media screen and (max-width: 768px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+  }
+  .jumbotron {
+	width: 100% !important;
+	padding: 180px 20px 70px 30px;
   }
 }
 
