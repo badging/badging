@@ -9,7 +9,7 @@ const Projects = () => {
     <div>
       <Header />
       <Jumbotron />
-        <section >
+        <section className='project'>
             <div className="badging">
               <div className="search">
                 <button className='filter'>M Filter</button>

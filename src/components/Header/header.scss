@@ -319,6 +319,49 @@ header {
   }
 }
 
+.mobileNav, .mobileNav {
+  display: none;
+}
+
+.mobileNavLinks {
+  position: relative;
+  height: 548px;
+  // background-color: #fff;
+  top: 135px;
+  display: none;
+  flex-direction: column;
+  gap: 70px;
+  padding: 30px;
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #000 !important;
+    margin-top: 30px;
+
+    font-family: $font-family_1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+  .get-started-mobile {
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 47px;
+  gap: 20px;
+  color: #000;
+  max-width: inherit;
+  height: 66px;
+  background: #FFFFFF;
+    }
+}
+
 @media screen and (min-width: 769px) {
   .carousel-container {
     position: relative;
@@ -422,6 +465,18 @@ header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+	.mobileNav {
+		display: inline;
+    cursor: pointer;
+   
+	}
+  .mobileNavLinks {
+    display: flex;
   }
 }
 
