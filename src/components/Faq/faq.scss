@@ -27,4 +27,14 @@
 			margin: 0px 30px;
 		}
 	}
+
+	.faq-details:hover {
+		border: 1px solid;
+		border-image: linear-gradient(
+				to top,
+				rgb(219, 32, 157),
+				rgba(105, 199, 185, 1)
+			)
+			1;
+	}
 }
