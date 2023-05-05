@@ -48,14 +48,14 @@ h3 {
 }
 
 main {
-    max-width: 1380px;
-    margin: auto;
+    // max-width: 100%;
 	height: auto;
 	// padding: 0px 40px;
 }
 
     .jumbotron {
-        max-width: 887px;
+        max-width: 1340px;
+		margin: auto;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -69,6 +69,7 @@ main {
             font-size: 18px;
             line-height: 180%;
             color: $secondaryTextColor;
+			max-width: 840px;
          }
     }
 
