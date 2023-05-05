@@ -3,11 +3,25 @@ import "./home.scss";
 import { Footer, Header, Faq, CardComponent } from "../../components";
 import { faqData } from "../../components/Faq/data";
 import { featuredProjects, howItWorksData } from "./data";
+import CardCarousel from "../../components/Header/CardCarousel";
 
 const Home = () => {
 	return (
 		<div>
 			<Header />
+				<div className="sub-nav">
+					<div className="hero-section">
+					<div className="title">DEI Project Badging</div>
+					<div className="description">
+						Join us in our mission to promote Diversity, Equity, and Inclusion
+						in the workplace! Recognize and reward DEI efforts with our
+						innovative project badging system, and inspire a culture of
+						inclusivity and excellence. Take the first step towards positive
+						change today.
+						</div>
+					</div>
+					<CardCarousel />
+				</div>
 			<div className="how-it-works">
 				<div className="projects wrap">
 					<p className="text-lg">

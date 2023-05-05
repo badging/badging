@@ -33,19 +33,7 @@ const Header = () => {
           Get Started
         </Link>
       </nav>
-      <div className="sub-nav">
-        <div className="hero-section">
-          <div className="title">DEI Project Badging</div>
-          <div className="description">
-            Join us in our mission to promote Diversity, Equity, and Inclusion
-            in the workplace! Recognize and reward DEI efforts with our
-            innovative project badging system, and inspire a culture of
-            inclusivity and excellence. Take the first step towards positive
-            change today.
-          </div>
-        </div>
-        <CardCarousel />
-      </div>
+      
     </header>
   );
 };
