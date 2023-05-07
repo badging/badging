@@ -13,41 +13,25 @@ const cardItems = [
     button: <button className="card-carousel-btn">Get Started</button>,
     blankDiv: (
       <div className="blank_div">
-        <div className="mobile_blank">
-          <div className="row1">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+        <div className="first_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
           </div>
-          <div className="row2">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
-          </div>
-          <div className="row3">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
-        <div className="desktop_blank">
-          <div className="first_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
+        <div className="hr_line"></div>
+        <div className="second_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
           </div>
-          <div className="hr_line"></div>
-          <div className="second_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
       </div>
@@ -64,41 +48,25 @@ const cardItems = [
     copy: "",
     blankDiv: (
       <div className="blank_div">
-        <div className="mobile_blank">
-          <div className="row1">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+        <div className="first_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
           </div>
-          <div className="row2">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
-          </div>
-          <div className="row3">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
-        <div className="desktop_blank">
-          <div className="first_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
+        <div className="hr_line"></div>
+        <div className="second_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
           </div>
-          <div className="hr_line"></div>
-          <div className="second_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
       </div>
@@ -116,42 +84,26 @@ const cardItems = [
     copy: "",
     blankDiv: (
       <div className="blank_div">
-        <div className="mobile_blank">
-          <div className="row1">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+        <div className="first_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
           </div>
-          <div className="row2">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
-          </div>
-          <div className="row3">
-            <div className="small_rec1"></div>
-            <div className="small_rec2"></div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
-        <div className="desktop_blank">
-          <div className="first_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
-          </div>
 
-          <div className="hr_line"></div>
-          <div className="second_blank">
-            <div className="blank_left">
-              <div className="rec1"></div>
-              <div className="rec2"></div>
-            </div>
-            <div className="blank_right">
-              <div className="rec1"></div>
-              <div className="rec3"></div>
-            </div>
+        <div className="hr_line"></div>
+        <div className="second_blank">
+          <div className="blank_left">
+            <div className="rec1"></div>
+            <div className="rec2"></div>
+          </div>
+          <div className="blank_right">
+            <div className="rec1"></div>
+            <div className="rec3"></div>
           </div>
         </div>
       </div>
