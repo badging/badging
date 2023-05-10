@@ -28,7 +28,7 @@ const Header = () => {
             Projects
           </Link>
         </ul>
-        <Link className="get-started" to="/">
+        <Link className="get-started" to="/badge">
           {' '}
           Get Started
         </Link>
