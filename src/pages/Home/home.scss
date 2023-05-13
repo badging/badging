@@ -53,10 +53,12 @@
 		max-width: 1440px;
 		margin: 0 auto;
 		padding: 10px 20px;
-		background: $sectionTitleBackground, $sectionTitleBackground;
-		background-size: 120% 30%;
-		background-position: 50% 7%, 50% 90%;
-		background-repeat: no-repeat;
+		// background: $sectionTitleBackground, $sectionTitleBackground;
+		// background-size: 120% 30%;
+		// background-position: 50% 7%, 50% 90%;
+		// background-repeat: no-repeat;
+
+    background: url(../../assets/images/others/bg-how-it-works-mobile.svg) no-repeat center center;
 
 		.content {
 			padding: 3rem 0;
@@ -129,7 +131,7 @@
 	}
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 	.how-it-works {
 		br {
 			display: block;
@@ -140,11 +142,11 @@
 			text-align: center;
 
 			.logos {
-        display: flex;
-        justify-content: center;
-        column-gap: 3.5rem;
-        row-gap: 1rem;
-        padding: 0 1rem;
+				display: flex;
+				justify-content: center;
+				column-gap: 3.5rem;
+				row-gap: 1rem;
+				padding: 0 1rem;
 
 				.img-wrap {
 					justify-content: center;
@@ -157,11 +159,13 @@
 		}
 
 		.content-wrap {
-			background: $sectionTitleBackground, $sectionTitleBackground;
-			background-size: 50% 80%;
-			background-position: -20% 65%, 120% 65%;
-			background-repeat: no-repeat;
-      padding: 30px 30px;
+			// background: $sectionTitleBackground, $sectionTitleBackground;
+			// background-size: 50% 80%;
+			// background-position: -20% 65%, 120% 65%;
+			// background-repeat: no-repeat;
+			padding: 30px 30px;
+
+			background: url(../../assets/images/others/bg-how-it-works-web.svg);
 
 			.content {
 				& > div:first-child {
@@ -173,27 +177,27 @@
 
 					.card {
 						padding: 1.5rem 1.5rem 3rem;
-            font-size: 14px;
+						font-size: 14px;
 
 						.img-wrap {
 							width: 3rem;
 							height: 3rem;
 						}
 
-            .apply-svg{
-              width: 20px;
-              height: 22px;
-            }
+						.apply-svg {
+							width: 20px;
+							height: 22px;
+						}
 
-            .review-svg{
-              width: 20px;
-              height: 14px;
-            }
+						.review-svg {
+							width: 20px;
+							height: 14px;
+						}
 
-            .badge-svg{
-              width: 10px;
-              height: 20px;
-            }
+						.badge-svg {
+							width: 10px;
+							height: 20px;
+						}
 					}
 				}
 			}
@@ -216,26 +220,27 @@
 		}
 
 		.content-wrap {
-			background-position: -15% 50%, 115% 50%;
-      padding: 10px 70px;
+			// background-position: -15% 50%, 115% 50%;
+      background: url(../../assets/images/others/bg-how-it-works-web.svg) no-repeat center center;
+			padding: 10px 70px;
 
 			.content {
-        padding: 8rem 0;
+				padding: 8rem 0;
 
 				.cards {
 					.card {
-            padding: 2.87rem 3.18rem 5.93rem;
-            font-size: 1rem;
+						padding: 2.87rem 3.18rem 5.93rem;
+						font-size: 1rem;
 
-            .img-wrap {
-              width: 4rem;
-              height: 4rem;
+						.img-wrap {
+							width: 4rem;
+							height: 4rem;
 
-              svg{
-                width: initial;
-                height: initial;
-              }
-            }
+							svg {
+								width: initial;
+								height: initial;
+							}
+						}
 					}
 				}
 			}
