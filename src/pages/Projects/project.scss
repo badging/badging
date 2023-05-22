@@ -2,10 +2,10 @@
 
 .project {
     width: 100%;
-	height: 100vh;
-    background-color: #fff;
+	height: auto;
+    background-color: #000;
     padding: 100px 10px 20px 0px;
-    
+    // color: #000 !important;
     .badging > div {
         color: #000;
     }
@@ -67,6 +67,32 @@
                 color: #fff;
             }
         }
+        
+        .badging-footer {
+            // background-color: #000;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            background-color: #000;
+            align-items: center;
+            justify-content: flex-end;
+
+            .pagination {
+                background-color: #000;
+                color: #fff !important;
+            }
+        }
+
     }
     
 }
+
+.MuiPagination-root .MuiPaginationItem-root {
+    color: #fff; // Replace with your desired pagination text color
+    border: #1C1C1C 1px solid;
+  }
+  
+  .MuiPagination-root .MuiPaginationItem-root.Mui-selected {
+    color: #000; // Replace with your desired pagination text color
+    background-color: #fff;
+  }

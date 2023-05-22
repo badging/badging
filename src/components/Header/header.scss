@@ -466,6 +466,7 @@ header {
       }
     }
   }
+  
 }
 
 @media screen and (max-width: 650px) {
@@ -475,9 +476,15 @@ header {
     cursor: pointer;
    
 	}
+
   .mobileNavLinks {
     display: flex;
+    transition: width 5s;
   }
+  .sub-nav {
+    height: auto;
+  }
+
 }
 
 // @media screen and (min-width: 1024px) and (max-width: 1439px) {

@@ -17,6 +17,10 @@ import ApplySvgComponent from "./icons/Apply.js";
 import ReviewSvgComponent from "./icons/Review.js";
 import GetBadgedSvgComponent from "./icons/GetBadged.js";
 
+
+// BADGES
+import badge from './badges/badge.svg'
+
 export {
 	badgingLogo,
 	twitter,
@@ -33,5 +37,7 @@ export {
 
 	DefaultMobileNavIcon,
 	OpenMobileNavIcon,
-	MobileLogo
+	MobileLogo,
+
+	badge
 };
