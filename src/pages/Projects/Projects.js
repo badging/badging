@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../assets/styles/global.scss';
 import './project.scss';
 import { Footer, Header } from '../../components';
-import Jumbotron from '../../components/Jumbotron/jumbotron';
+import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import { Pagination, TablePagination } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
