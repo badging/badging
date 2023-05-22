@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../assets/styles/global.scss";
 import "./header.scss";
-import CardCarousel from "./CardCarousel";
 import { badgingLogo } from "../../assets/images";
 import { DefaultMobileNavIcon, OpenMobileNavIcon, MobileLogo } from "../../assets/images";
 
