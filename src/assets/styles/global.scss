@@ -1,1 +1,143 @@
-// placeholder for global css
+@import "variables";
+
+* > * {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: $font-family_2;
+	color: $primaryTextColor;
+}
+
+a {
+	text-decoration: none;
+	color: $primaryTextColor;
+}
+li {
+	list-style: none;
+}
+body {
+	background-color: $primaryBackgroundColor;
+}
+
+.container {
+	max-width: 100%;
+	margin: auto;
+	padding: 10px 70px;
+	// background-color: #fff;
+}
+
+h2 {
+	font-size: 54px;
+	background: $heroTitleBackground;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	font-family: $font-family_1, sans-serif;
+}
+
+h3 {
+	background: $cardTitleBackground;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	margin: 1rem 0 0.5rem;
+	font-family: $font-family_1, sans-serif;
+  line-height: 2;
+}
+
+main {
+    // max-width: 100%;
+	height: auto;
+	// padding: 0px 40px;
+}
+
+    .jumbotron {
+        max-width: 1340px;
+		margin: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+		padding: 180px 0px 70px 40px;
+         p {
+            font-family: $font-family_2;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 180%;
+            color: $secondaryTextColor;
+			max-width: 840px;
+         }
+    }
+
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.9rem;
+  }
+  .jumbotron {
+	width: 100% !important;
+	padding: 180px 20px 70px 30px;
+  }
+}
+
+// @media screen and (max-width: 1030px) {
+//   nav {
+//     ul {
+//       display: none !important;
+//     }
+//   }
+//   .get-started {
+//     display: none;
+//   }
+//   .logo {
+//     width: auto;
+//   }
+//   .container {
+//     padding: 30px 30px;
+//   }
+//   .hero-section {
+//     padding: 0px 20px;
+//   }
+// }
+
+@media screen and (max-width: 1030px) {
+	nav {
+		.web {
+			display: none !important;
+		}
+	}
+	
+	.get-started {
+		// display: none;
+	}
+	.logo {
+		width: auto;
+	}
+	.container {
+		padding: 30px 30px;
+	}
+	.hero-section {
+		padding: 0px 20px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.get-started {
+		display: none;
+	}
+	
+}
+
+.faq {
+	max-width: 1300px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url("../images/others/faq-background.svg");
+	margin-bottom: 100px;
+}
