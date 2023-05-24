@@ -5,6 +5,10 @@ import mail from "./icons/mail.svg";
 import ApplySvgComponent from "./icons/Apply.js";
 import ReviewSvgComponent from "./icons/Review.js";
 import GetBadgedSvgComponent from "./icons/GetBadged.js";
+import DefaultMobileNavIcon from "./icons/DefaultMobileNavIcon.svg"
+import OpenMobileNavIcon from "./icons/OpenMobileNavIcon.svg"
+import MobileLogo from "./icons/MobileLogo.svg"
+
 
 import github from "./logos/github_logo.svg";
 import loom from "./logos/loom_logo.svg";
@@ -15,6 +19,10 @@ import badgingLogo from "./logos/all-in-chaoss-logo.svg";
 import goldBadge from "./others/gold-badge.svg";
 import silverBadge from "./others/silver-badge.svg";
 import passingBadge from "./others/passing-badge.svg";
+
+
+// BADGES
+import badge from './badges/badge.svg'
 
 export {
 	badgingLogo,
@@ -31,5 +39,9 @@ export {
 	dropbox,
   goldBadge,
   silverBadge,
-  passingBadge
+  passingBadge,
+	DefaultMobileNavIcon,
+	OpenMobileNavIcon,
+	MobileLogo,
+	badge
 };
