@@ -1,11 +1,15 @@
 @import "../../assets/styles/variables";
 
 .about-dei {
-	h2 {
-		background: linear-gradient(180deg, $headingColor 0%, $headingColor 100%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		margin-bottom: 1rem;
+	.jumbotron {
+		padding: 164px 16px 70px 16px;
+		margin: 0rem 0rem;
+		max-width: 70.875rem;
+
+		p {
+			max-width: inherit;
+			font-size: 1rem;
+		}
 	}
 
 	main {
@@ -13,13 +17,20 @@
 		display: flex;
 		flex-direction: column;
 
+		h2 {
+			background: linear-gradient(180deg, $headingColor 0%, $headingColor 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			margin-bottom: 1rem;
+		}
+
 		p {
 			color: $textColor2;
 			line-height: 1.8;
 		}
 
 		section {
-      width: 100%;
+			width: 100%;
 
 			.content {
 				display: flex;
@@ -67,14 +78,25 @@
 			font-size: 2rem;
 		}
 
+		.jumbotron {
+			padding: 180px 120px 70px 120px;
+			max-width: 70.875rem;
+      align-items: flex-start;
+
+			p {
+        font-size: 18px;
+				max-width: inherit;
+			}
+		}
+
 		main {
 			align-items: flex-start;
 
-      section {
-        .content {
-          padding: 0 7.5rem;
-        }
-      }
+			section {
+				.content {
+					padding: 0 7.5rem;
+				}
+			}
 
 			section.top {
 				padding: 4.375rem 0 3.375rem;
@@ -93,13 +115,21 @@
 }
 
 @media screen and (min-width: 1441px) {
-  .about-dei {
-    main {
-      section {
-        .content {
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+	.about-dei {
+		.jumbotron {
+			max-width: 1340px;
+			padding: 180px 0px 70px 30px;
+			margin: 0 auto;
+		}
+		main {
+			section {
+				.content {
+					margin: 0 auto;
+					padding: 0px 0px;
+					max-width: 1340px;
+					padding: 0px 30px;
+				}
+			}
+		}
+	}
 }

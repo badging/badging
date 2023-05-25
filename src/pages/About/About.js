@@ -1,12 +1,16 @@
 import "../../assets/styles/global.scss";
 import "./about.scss";
-import { Footer, Header } from "../../components";
+import { Footer, Header, Jumbotron } from "../../components";
 import { goldBadge, silverBadge, passingBadge } from "../../assets/images";
 
 const About = () => {
 	return (
 		<div className="about-dei">
 			<Header />
+			<Jumbotron
+				title="About DEI Project Badging"
+				description="Lorem ipsum dolor sit amet consectetur. Sed risus ultrices sit nibh sed. Interdum urna molestie fames porttitor elementum a diam laoreet. Sed tempor habitant phasellus velit sagittis mauris lorem pretium. Arcu neque id duis eu pellentesque in amet et. Ipsum ultricies a etiam est. Viverra eleifend tortor iaculis fringilla sed."
+			/>
 			<main>
 				<section className="top">
 					<div className="content">
