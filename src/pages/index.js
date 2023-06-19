@@ -1,5 +1,6 @@
 import Home from './Home/Home';
 import DeiBadge from './DeiBadge/DeiBadge';
-// src\pages\DeiBadge\DeiBadge.js
+import Projects from './Projects/Projects';
+import About from './About/About';
 
-export { Home, DeiBadge };
+export { Home, About, Projects, DeiBadge };

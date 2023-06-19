@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 54px;
 	background: $heroTitleBackground;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -47,40 +47,72 @@ h3 {
   line-height: 2;
 }
 
+main {
+    // max-width: 100%;
+	height: auto;
+	// padding: 0px 40px;
+}
+
+    .jumbotron {
+        max-width: 1340px;
+		margin: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+		padding: 180px 0px 70px 40px;
+         p {
+            font-family: $font-family_2;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 180%;
+            color: $secondaryTextColor;
+			max-width: 840px;
+         }
+    }
+
+
 @media screen and (max-width: 768px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+  }
+  .jumbotron {
+	width: 100% !important;
+	padding: 180px 20px 70px 30px;
   }
 }
 
-@media screen and (max-width: 1030px) {
-  nav {
-    ul {
-      display: none !important;
-    }
-  }
-  .get-started {
-    display: none;
-  }
-  .logo {
-    width: auto;
-  }
-  .container {
-    padding: 30px 30px;
-  }
-  .hero-section {
-    padding: 0px 20px;
-  }
-}
+// @media screen and (max-width: 1030px) {
+//   nav {
+//     ul {
+//       display: none !important;
+//     }
+//   }
+//   .get-started {
+//     display: none;
+//   }
+//   .logo {
+//     width: auto;
+//   }
+//   .container {
+//     padding: 30px 30px;
+//   }
+//   .hero-section {
+//     padding: 0px 20px;
+//   }
+// }
 
 @media screen and (max-width: 1030px) {
 	nav {
-		ul {
+		.web {
 			display: none !important;
 		}
 	}
+	
 	.get-started {
-		display: none;
+		// display: none;
 	}
 	.logo {
 		width: auto;
@@ -93,12 +125,19 @@ h3 {
 	}
 }
 
+@media screen and (max-width: 650px) {
+	.get-started {
+		display: none;
+	}
+	
+}
+
 .faq {
 	max-width: 1300px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: url("../../assets/images/others/faq-background.svg");
+	background: url("../images/others/faq-background.svg");
 	margin-bottom: 100px;
 }

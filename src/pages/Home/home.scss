@@ -1,5 +1,50 @@
 @import "../../assets/styles/variables";
 
+.sub-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 99;
+
+    .hero-section {
+      max-width: 760px;
+      height: auto;
+      text-align: center;
+      margin-top: 130px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      .title {
+        font-family: $font-family_1;
+        font-style: medium;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 66px;
+        background: $heroTitleBackground;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .description {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        letter-spacing: 0.02em;
+        color: #858c90;
+        margin-top: 10px;
+        max-width: 860px;
+      }
+    }
+  }
 /* ==================== START HOW-IT-WORKS-SECTION STYLE ======================= */
 .how-it-works {
 	border-bottom: 1px solid $primaryBorderColor;
@@ -53,9 +98,10 @@
 		max-width: 1440px;
 		margin: 0 auto;
 		padding: 10px 20px;
-		background: $sectionTitleBackground, $sectionTitleBackground;
-		background-size: 120% 30%;
-		background-position: 50% 7%, 50% 90%;
+		// background: $sectionTitleBackground, $sectionTitleBackground;
+		// background-size: 120% 30%;
+		// background-position: 50% 7%, 50% 90%;
+    background: url(./bg-how-it-works-mobile.svg);
 		background-repeat: no-repeat;
 
 		.content {
