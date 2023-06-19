@@ -1,7 +1,5 @@
 @import "../../assets/styles/variables";
 
-
-
 .sub-nav {
     display: flex;
     flex-direction: column;
@@ -100,9 +98,10 @@
 		max-width: 1440px;
 		margin: 0 auto;
 		padding: 10px 20px;
-		background: $sectionTitleBackground, $sectionTitleBackground;
-		background-size: 120% 30%;
-		background-position: 50% 7%, 50% 90%;
+		// background: $sectionTitleBackground, $sectionTitleBackground;
+		// background-size: 120% 30%;
+		// background-position: 50% 7%, 50% 90%;
+    background: url(./bg-how-it-works-mobile.svg);
 		background-repeat: no-repeat;
 
 		.content {
