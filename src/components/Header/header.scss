@@ -3,7 +3,8 @@
 /* ==================== START HEADER STYLE ======================= */
 header {
   // padding-top: 50px;
-  // height: 100vh;
+  // height: 30px;
+  // padding-bottom: 40px;
   background: var(--section-title-background);
   width: 100%;
   //   background-color: #fff;
@@ -88,54 +89,54 @@ header {
 }
 
 /* ==================== END HEADER STYLE ======================= */
-  // .sub-nav {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100%;
-  //   height: 100vh;
-  //   justify-content: center;
-  //   align-items: center;
-  //   margin: auto;
-  //   position: absolute;
-  //   // top: 100px;
-  //   z-index: 99;
-  //   /* background-color: blue; */
+// .sub-nav {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   height: 100vh;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto;
+//   position: absolute;
+//   // top: 100px;
+//   z-index: 99;
+//   /* background-color: blue; */
 
-  //   .hero-section {
-  //     max-width: 760px;
-  //     height: auto;
-  //     text-align: center;
-  //     margin-top: 130px;
-  //     display: flex;
-  //     flex-direction: column;
-  //     flex-wrap: wrap;
+//   .hero-section {
+//     max-width: 760px;
+//     height: auto;
+//     text-align: center;
+//     margin-top: 130px;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
 
-  //     .title {
-  //       font-family: $font-family_1;
-  //       font-style: medium;
-  //       font-weight: 600;
-  //       font-size: 54px;
-  //       line-height: 66px;
-  //       background: $heroTitleBackground;
-  //       -webkit-background-clip: text;
-  //       -webkit-text-fill-color: transparent;
-  //       background-clip: text;
-  //       -webkit-text-fill-color: transparent;
-  //     }
+//     .title {
+//       font-family: $font-family_1;
+//       font-style: medium;
+//       font-weight: 600;
+//       font-size: 54px;
+//       line-height: 66px;
+//       background: $heroTitleBackground;
+//       -webkit-background-clip: text;
+//       -webkit-text-fill-color: transparent;
+//       background-clip: text;
+//       -webkit-text-fill-color: transparent;
+//     }
 
-  //     .description {
-  //       font-family: "Work Sans";
-  //       font-style: normal;
-  //       font-weight: 400;
-  //       font-size: 18px;
-  //       line-height: 180%;
-  //       letter-spacing: 0.02em;
-  //       color: #858c90;
-  //       margin-top: 10px;
-  //       max-width: 860px;
-  //     }
-  //   }
-  // }
+//     .description {
+//       font-family: "Work Sans";
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 18px;
+//       line-height: 180%;
+//       letter-spacing: 0.02em;
+//       color: #858c90;
+//       margin-top: 10px;
+//       max-width: 860px;
+//     }
+//   }
+// }
 // }
 
 /* ==================== END HEADER STYLE ======================= */
@@ -370,7 +371,8 @@ header {
   }
 }
 
-.mobileNav, .mobileNav {
+.mobileNav,
+.mobileNav {
   display: none;
 }
 
@@ -397,20 +399,20 @@ header {
     font-size: 25px;
     line-height: 22px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .get-started-mobile {
     display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 23px 47px;
-  gap: 20px;
-  color: #000;
-  max-width: inherit;
-  height: 66px;
-  background: #FFFFFF;
-    }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 47px;
+    gap: 20px;
+    color: #000;
+    max-width: inherit;
+    height: 66px;
+    background: #ffffff;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -517,16 +519,13 @@ header {
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 650px) {
-
-	.mobileNav {
-		display: inline;
+  .mobileNav {
+    display: inline;
     cursor: pointer;
-   
-	}
+  }
 
   .mobileNavLinks {
     display: flex;
@@ -535,7 +534,6 @@ header {
   .sub-nav {
     height: auto;
   }
-
 }
 
 // @media screen and (min-width: 1024px) and (max-width: 1439px) {
