@@ -1,0 +1,229 @@
+.carousel-container {
+  position: relative;
+
+  margin-top: 10px;
+  .card-carousel {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    margin: 10px auto;
+    align-items: center;
+    position: relative;
+
+    .card {
+      background: #030303;
+      border-image: linear-gradient(
+          161deg,
+          rgb(174, 173, 171, 0.9),
+          rgba(115, 115, 115, 0.5)
+        )
+        1;
+      border-width: 1px;
+      border-style: solid;
+      border-bottom: 0;
+      padding: 20px;
+
+      width: 376px;
+      height: 200px;
+      /* transition: all 0.75s ease; */
+      opacity: 0;
+      position: absolute;
+      // left: 50%;
+      // margin-left: 100px;
+      transform: scale(0.85) translateY(-70px);
+    }
+    .card-carousel-btn {
+      background-color: #030303;
+      // border-radius: 2px;
+      font-weight: 300;
+      font-family: $font-family_1;
+      font-size: 10px;
+      line-height: 15px;
+      position: absolute;
+      color: #bebebe;
+      letter-spacing: 0.02em;
+      padding: 4px 10px;
+      top: 35px;
+      right: 20px;
+      border: 1px solid #454c53;
+    }
+    .hidden_title {
+      position: absolute;
+      left: 10px;
+      top: 5px;
+
+      p {
+        padding-left: 25px;
+        padding-top: 8px;
+        color: #24292e;
+
+        font-weight: bold;
+      }
+    }
+
+    .card-title {
+      position: absolute;
+      background-color: black;
+      width: 175px;
+      height: 60px;
+      left: 15px;
+      z-index: 10;
+      top: 32px;
+      border: 1px solid #454c53;
+      border-bottom: 0;
+      color: #ffffff;
+    }
+    .card-title p {
+      font-family: $font-family_1;
+      font-style: normal;
+      padding-top: 15px;
+      text-align: left;
+      padding-left: 15px;
+    }
+    .copy {
+      border: 1px solid #454c53;
+      // display: none;
+      border-bottom: 0;
+      margin: 70px 0 0 -5px;
+      width: 295px;
+      height: 120px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h2,
+    .card p {
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .card.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      background: #030303;
+      box-shadow: 0px 17px 10px 32px rgba(0, 0, 0, 0.2);
+      width: 330px;
+      // margin: auto;
+      z-index: 2;
+      height: 210px;
+    }
+    .card.active .hidden_title {
+      display: none;
+    }
+
+    .card.next {
+      transform: scale(1.1) translateY(-20px);
+      opacity: 1;
+      z-index: 1;
+      width: 350px;
+      background: #030303;
+      border: 1px solid #222d33;
+      box-shadow: 0px 17px 10px 32px rgba(0, 0, 0, 0.2);
+      display: none;
+
+      .blank_div {
+        display: none;
+      }
+    }
+
+    .card.prev {
+      transform: scale(1.1) translateY(-50px);
+      z-index: 0;
+      opacity: 1;
+      width: 300px;
+      background: #030303;
+      border: 1px solid #222d33;
+      box-shadow: 0px 17px 10px 32px rgba(0, 0, 0, 0.2);
+      // visibility: visible;
+      display: none;
+      .blank_div {
+        display: none;
+      }
+    }
+
+    .card-details-container {
+      left: 51px;
+    }
+
+    .blank_div {
+      position: absolute;
+      top: 114px;
+      left: 32px;
+
+      .first_blank {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      .second_blank {
+        display: flex;
+      }
+
+      .blank_right {
+        display: flex;
+        margin-left: 55px;
+      }
+      .blank_left {
+        display: flex;
+      }
+      .mobile_blank {
+      }
+      .row1,
+      .row2,
+      .row3 {
+        display: flex;
+        margin-bottom: 8px;
+      }
+      .small_rec1 {
+        width: 65px;
+
+        height: 22px;
+        margin-right: 5px;
+        background: #29a618;
+      }
+      .small_rec2 {
+        width: 196px;
+        top: 114px;
+        height: 22px;
+        // margin-left: 10px;
+        background: #171717;
+      }
+
+      .desktop_blank {
+        display: none;
+      }
+
+      .rec1 {
+        width: 32px;
+
+        height: 22px;
+
+        background: #29a618;
+      }
+      .rec2 {
+        width: 387px;
+        top: 114px;
+        height: 22px;
+        margin-left: 10px;
+        background: red;
+      }
+      .rec3 {
+        width: 260px;
+        top: 114px;
+        height: 22px;
+        margin-left: 10px;
+        background: #171717;
+        // display: none;
+      }
+
+      .hr_line {
+        position: absolute;
+        border: 0.5px solid #454c53;
+        top: 36px;
+        width: 116%;
+        left: -46px;
+      }
+    }
+  }
+}
