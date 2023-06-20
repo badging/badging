@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import { Home, About, Projects } from "./pages";
+import { Route, Routes } from 'react-router-dom';
+import { Home, About, Projects, BadgingForm } from './pages';
 
 const App = () => {
   return (
@@ -7,8 +7,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-      </Routes>
-      <Routes>
+        <Route exact path="/badge" element={<BadgingForm />} />
         <Route exact path="/projects" element={<Projects />} />
       </Routes>
     </>
