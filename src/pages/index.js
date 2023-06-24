@@ -1,7 +1,8 @@
 import Home from './Home/Home';
 // import DeiBadge from './DeiBadge/DeiBadge';
-import BadgingForm from './BadgingForm/BadgingForm';
+
 import Projects from './Projects/Projects';
 import About from './About/About';
+import BadgingRequirements from './BadgingRequirements/BadgingRequirements';
 
-export { Home, About, Projects, BadgingForm };
+export { Home, About, Projects, BadgingRequirements };
