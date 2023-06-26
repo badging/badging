@@ -101,7 +101,7 @@
 		// background: $sectionTitleBackground, $sectionTitleBackground;
 		// background-size: 120% 30%;
 		// background-position: 50% 7%, 50% 90%;
-    background: url(./bg-how-it-works-mobile.svg);
+		background: url(../../assets/images/others/bg-how-it-works-web.svg);
 		background-repeat: no-repeat;
 
 		.content {
@@ -174,7 +174,23 @@
 		}
 	}
 }
+@media screen and (max-width: 650px){
+	.how-it-works .content-wrap {
+		background: url(../../assets/images/others/How-it-work.svg);
+		// max-width: 140px;
+		margin: 0 auto;
+		padding: 10px 20px;
+		background-repeat: no-repeat;
+		// background-color: #fff;
+	}
+	.test {
+		height: 100vh;
+		width: 100%;
+		background: url(../../assets/images/others/bg-how-it-works-web.png);
+		z-index: 1;
+	}
 
+}
 @media screen and (min-width: 768px){
 	.how-it-works {
 		br {
@@ -207,7 +223,7 @@
 			background-size: 50% 80%;
 			background-position: -20% 65%, 120% 65%;
 			background-repeat: no-repeat;
-      padding: 30px 30px;
+      		padding: 30px 30px;
 
 			.content {
 				& > div:first-child {
