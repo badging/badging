@@ -14,6 +14,8 @@ The DEI project badges help open source project maintainers showcase their ongoi
 - Once the scan is complete, the project will receive a markdown snippet that can be included in the README.md as an image of the DEI Project Badge earned.
 
 - Upon the conclusion of each badging level, the project receives an inclusive language report on how to improve its DEI efforts in order to apply for and earn the next badging level.
+<img width="901" alt="Badging process" src="https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/06000b65-8d98-4519-b08f-ba0b30e4ce12">
+
 
 ## Badging Levels
 Currently, the DEI Project Badges are available in four levels
