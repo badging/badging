@@ -2,6 +2,7 @@
   "name": "project-badging",
   "version": "1.0.0",
   "description": "Website for DEI Project Badging with CHAOSS & All In",
+  "proxy": "http://localhost:4040",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",
@@ -27,11 +28,12 @@
   },
   "homepage": "https://github.com/AllInOpenSource/Project-Badging#readme",
   "dependencies": {
-    "final-form": "4.20.9",
     "@emotion/react": "11.11.0",
     "@emotion/styled": "11.11.0",
     "@mui/icons-material": "5.11.16",
     "@mui/material": "5.13.1",
+    "axios": "1.4.0",
+    "final-form": "4.20.9",
     "material-react-table": "1.11.4",
     "mdbreact": "5.2.0",
     "prop-types": "15.8.1",

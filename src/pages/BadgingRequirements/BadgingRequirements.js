@@ -5,6 +5,9 @@ import '../../assets/styles/global.scss';
 import './badgingRequirements.scss';
 
 const BadgingRequirements = () => {
+  const handleLogin = () => {
+    window.location.href = '/login';
+  };
   return (
     <div>
       <Header />
@@ -35,7 +38,7 @@ const BadgingRequirements = () => {
             If you have successfully fulfilled the above requirements you can
             proceed to Login with GitHub.
           </p>
-          <button className="github"> Login with GitHub</button>
+          <button className="github" onClick={handleLogin}> Login with GitHub</button>
           <Link
             to="https://github.com/join"
             target="_blank"
