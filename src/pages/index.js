@@ -4,5 +4,6 @@ import Home from './Home/Home';
 import Projects from './Projects/Projects';
 import About from './About/About';
 import BadgingRequirements from './BadgingRequirements/BadgingRequirements';
+import Page from './ApplyForBadge/Page';
 
-export { Home, About, Projects, BadgingRequirements };
+export { Home, About, Projects, BadgingRequirements, Page };
