@@ -1,6 +1,6 @@
 import React from 'react';
 import { Footer, Header } from '../../components';
-import { Link } from 'react-router-dom';
+
 import '../../assets/styles/global.scss';
 import './badgingRequirements.scss';
 
@@ -36,13 +36,6 @@ const BadgingRequirements = () => {
             proceed to Login with GitHub.
           </p>
           <button className="github"> Login with GitHub</button>
-          <Link
-            to="https://github.com/join"
-            target="_blank"
-            className="create-github"
-          >
-            Create a GitHub Account
-          </Link>
         </section>
       </div>
       <Footer />

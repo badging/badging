@@ -4,41 +4,28 @@
 
 .carousel-container {
   position: relative;
-  // top: 120px;
-  margin-bottom: -120px;
-  height: auto;
+  margin-top: 100px;
+  margin-bottom: -45px;
+  min-width: 250px;
+  .getStarted-button button {
+    display: block;
+    width: 380px;
+    padding: 23px 47px;
+    color: black;
+    position: unset;
+  }
+  .getStarted-button {
+    margin-bottom: 100px;
+  }
   .card-carousel {
     list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 320px;
-    // margin: -50px auto -90px auto;
+    height: 250px;
+    margin-top: 50px;
     align-items: center;
-    position: relative;
 
-    .card {
-      background: #030303;
-      border-image: linear-gradient(
-          161deg,
-          rgb(174, 173, 171, 0.9),
-          rgba(115, 115, 115, 0.5)
-        )
-        1;
-      border-width: 1px;
-      border-style: solid;
-      border-bottom: 0;
-      padding: 20px;
-
-      width: 376px;
-      height: 200px;
-      /* transition: all 0.75s ease; */
-      opacity: 0;
-      position: absolute;
-      // left: 50%;
-      // margin-left: 100px;
-      transform: scale(0.85) translateY(-70px);
-    }
     .card-carousel-btn {
       background-color: #030303;
       // border-radius: 2px;
@@ -53,6 +40,7 @@
       top: 35px;
       right: 20px;
       border: 1px solid #454c53;
+      display: none;
     }
     .hidden_title {
       position: absolute;
@@ -122,13 +110,20 @@
       transform: scale(1.1) translateY(-20px);
       opacity: 1;
       z-index: 1;
-      width: 350px;
+      width: 290px;
       background: #030303;
-      border: 1px solid #222d33;
+      border: 1px solid #aeadab;
       box-shadow: 0px 17px 10px 32px rgba(0, 0, 0, 0.2);
-      display: none;
+      display: block;
+      height: 170px;
 
       .blank_div {
+        display: none;
+      }
+      .copy {
+        width: 250px;
+      }
+      .hidden_title {
         display: none;
       }
     }
@@ -137,13 +132,20 @@
       transform: scale(1.1) translateY(-50px);
       z-index: 0;
       opacity: 1;
-      width: 300px;
+      width: 270px;
       background: #030303;
-      border: 1px solid #222d33;
+      border: 1px solid #aeadab;
       box-shadow: 0px 17px 10px 32px rgba(0, 0, 0, 0.2);
+      height: 170px;
       // visibility: visible;
-      display: none;
+      display: block;
       .blank_div {
+        display: none;
+      }
+      .copy {
+        width: 250px;
+      }
+      .hidden_title {
         display: none;
       }
     }
@@ -190,7 +192,7 @@
         width: 196px;
         top: 114px;
         height: 22px;
-        // margin-left: 10px;
+
         background: #171717;
       }
 
@@ -236,21 +238,13 @@
 @media screen and (min-width: 769px) {
   .carousel-container {
     height: 60%;
-
-    position: relative;
-    // align-items: center;
-    // width: 100%;
-    // margin: 40px auto 30px auto;
-    // height: 100%;
+    .getStarted-button {
+      display: none;
+    }
     .card-carousel {
-      // position: relative;
-      // height: 387px;
-      // margin-bottom: 40px;
-      bottom: 20px;
-      .card {
-        width: 960px;
-        top: 100px;
-      }
+      margin-top: -45px;
+      margin-bottom: 115px;
+
       .card-carousel-btn {
         border-radius: 2px;
         font-weight: 400;
@@ -259,6 +253,7 @@
         padding: 8px 20px;
         top: 35px;
         right: 58px;
+        display: block;
       }
 
       .card-title {
@@ -296,7 +291,7 @@
       .card.next {
         width: 774px;
 
-        display: block;
+        // display: block;
         .copy {
           border: none;
         }
@@ -308,8 +303,9 @@
 
       .card.prev {
         width: 660px;
+        // border: 1px solid #222d33;
 
-        display: block;
+        // display: block;
         .copy {
           border: none;
         }
