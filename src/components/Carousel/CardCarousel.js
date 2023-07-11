@@ -198,6 +198,9 @@ const CardCarousel = () => {
 
   return (
     <div className="carousel-container">
+      <div className="getStarted-button">
+        <button>Get Started</button>
+      </div>
       <ul className="card-carousel">
         {cardItems.map((card, index) => (
           <li
