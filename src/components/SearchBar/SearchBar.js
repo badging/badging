@@ -3,7 +3,7 @@ import "./searchbar.scss";
 import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
-import { ProjectContext } from "../../pages/ApplyForBadge/ProjectContext";
+import { SelectProjectRepoContext } from "../../pages/ApplyForBadge/SelectProjectRepoContext";
 
 const SearchBar = ({ ResultsDisplay }) => {
 	const data = [
@@ -16,7 +16,7 @@ const SearchBar = ({ ResultsDisplay }) => {
 	];
 	const [inputValue, setInputValue] = useState("");
 	const [searchResults, setSearchResults] = useState(data);
-	const { setProject } = useContext(ProjectContext);
+	const { setProject } = useContext(SelectProjectRepoContext);
 
 	const handleInputChange = (e) => {
 		const value = e.target.value;
@@ -26,11 +26,11 @@ const SearchBar = ({ ResultsDisplay }) => {
 		setSearchResults(results);
 	};
 
-  const handleClearInput = () => {
-    setInputValue("");
-    setProject("");
-    setSearchResults(data);
-  };
+	const handleClearInput = () => {
+		setInputValue("");
+		setProject("");
+		setSearchResults(data);
+	};
 
 	const performSearch = (value) => {
 		return data.filter((result) =>

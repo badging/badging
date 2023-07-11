@@ -1,10 +1,10 @@
 import "../../assets/styles/global.scss";
-import "./page.scss";
+import "./selectProjectRepo.scss";
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { Header, SearchBar } from "../../components";
 import { info } from "../../assets/images";
-import { ProjectContext } from "./ProjectContext";
+import { SelectProjectRepoContext } from "./SelectProjectRepoContext";
 
 const ResultsDisplay = ({ results, handleResultClick }) => {
 	return (
@@ -26,7 +26,7 @@ ResultsDisplay.propTypes = {
 };
 
 const Page = () => {
-	const { project } = useContext(ProjectContext);
+	const { project } = useContext(SelectProjectRepoContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

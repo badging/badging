@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home, About, Projects, BadgingRequirements, Page } from "./pages";
-import { ProjectProvider } from "./pages/ApplyForBadge/ProjectContext";
+import { SelectProjectRepoProvider } from "./pages/ApplyForBadge/SelectProjectRepoContext";
 
 const App = () => {
 	return (
@@ -8,14 +8,13 @@ const App = () => {
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
-				<Route exact path="/badge" element={<BadgingRequirements />} />
+				<Route path="/badge" element={<BadgingRequirements />} />
 				<Route
-					exact
-					path="/project"
+					path="/select-project"
 					element={
-						<ProjectProvider>
+						<SelectProjectRepoProvider>
 							<Page />
-						</ProjectProvider>
+						</SelectProjectRepoProvider>
 					}
 				/>
 				<Route exact path="/projects" element={<Projects />} />
