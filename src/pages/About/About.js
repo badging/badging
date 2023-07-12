@@ -41,20 +41,18 @@ const About = () => {
 							is to enable open-source maintainers to signal their ongoing
 							efforts in improving and prioritizing DEI within their
 							communities.
-							<ul>
-								<li>
-									To assess and address DEI standards in open-source projects.
-								</li>
-								<li>
-									Recognize projects and communities for their DEI efforts
-								</li>
-								<li>
-									Enable organizations to make informed decisions and take
-									targeted actions to create a more inclusive and equitable
-									environment.
-								</li>
-							</ul>
 						</p>
+						<ul>
+							<li>
+								To assess and address DEI standards in open-source projects.
+							</li>
+							<li>Recognize projects and communities for their DEI efforts</li>
+							<li>
+								Enable organizations to make informed decisions and take
+								targeted actions to create a more inclusive and equitable
+								environment.
+							</li>
+						</ul>
 					</div>
 
 					<div>
@@ -141,25 +139,25 @@ const About = () => {
 							regarding diversity, equity, and inclusion within DEI.md file.
 							This may include outlining strategies, policies, and practices to
 							foster a welcoming environment for all contributors.
-							<ul>
-								<li>
-									If using GitHub, place the DEI.md file in your organizational
-									.github repository, similar to your CODE_OF_CONDUCT.md file.
-								</li>
-								<li>
-									If using GitHub and a .github folder is unavailable or used,
-									place the DEI.md file in a community repository.
-								</li>
-								<li>
-									If you have a project website, provide a link to your DEI.md
-									file from the main project navigation.
-								</li>
-								<li>
-									Use the following <strong>DEI.md template</strong> to develop
-									your project DEI.md file.
-								</li>
-							</ul>
 						</p>
+						<ul>
+							<li>
+								If using GitHub, place the DEI.md file in your organizational
+								.github repository, similar to your CODE_OF_CONDUCT.md file.
+							</li>
+							<li>
+								If using GitHub and a .github folder is unavailable or used,
+								place the DEI.md file in a community repository.
+							</li>
+							<li>
+								If you have a project website, provide a link to your DEI.md
+								file from the main project navigation.
+							</li>
+							<li>
+								Use the following <strong>DEI.md template</strong> to develop
+								your project DEI.md file.
+							</li>
+						</ul>
 					</div>
 					<div className="dei__badges ">
 						<h2 id="dei-badges">DEI Badges</h2>
@@ -192,19 +190,19 @@ const About = () => {
 									primarily focuses on how the project metrics provided in the
 									DEI.md file meet the basic requirements according to the{" "}
 									<strong>CHAOSS metrics.</strong>
-									<h4>Criteria:</h4>
-									<ul>
-										<li>Having a DEI.md file</li>
-										<li>
-											Presence of required metrics headers in the DEI.md file
-										</li>
-										<li>
-											Presence of headings on Project Access, Inclusive
-											Leadership, Communication Transparency, and Newcomer
-											Experience metrics.
-										</li>
-									</ul>
 								</p>
+								<h4>Criteria:</h4>
+								<ul>
+									<li>Having a DEI.md file</li>
+									<li>
+										Presence of required metrics headers in the DEI.md file
+									</li>
+									<li>
+										Presence of headings on Project Access, Inclusive
+										Leadership, Communication Transparency, and Newcomer
+										Experience metrics.
+									</li>
+								</ul>
 							</div>
 							<div>
 								<h3>### Silver Badge</h3>
@@ -217,19 +215,18 @@ const About = () => {
 									the collaborative and inclusive needs of the project according
 									to CHAOSS metrics. One can only apply for a Silver badge after
 									earning the Bronze badge and receiving the DEI scan report.
-									<h4>Criteria:</h4>
-									<ul>
-										<li>Presence of the DEI.md file</li>
-										<li>
-											Extensive response to the Bronze badge report
-											implementation
-										</li>
-										<li>
-											Presence of headings on Inclusivity reports and
-											Contributor participation metrics.
-										</li>
-									</ul>
 								</p>
+								<h4>Criteria:</h4>
+								<ul>
+									<li>Presence of the DEI.md file</li>
+									<li>
+										Extensive response to the Bronze badge report implementation
+									</li>
+									<li>
+										Presence of headings on Inclusivity reports and Contributor
+										participation metrics.
+									</li>
+								</ul>
 							</div>
 							<div>
 								<h3>### Gold Badge</h3>
@@ -237,15 +234,15 @@ const About = () => {
 									As applicants advance to the Gold badge level, they are
 									expected to fully understand and implement DEI best practices
 									in their community.
-									<h4>Criteria:</h4>
-									<ul>
-										<li>Presence of the DEI.md file</li>
-										<li>
-											Extensive response to the Bronze and Silver badge report
-											implementations
-										</li>
-									</ul>
 								</p>
+								<h4>Criteria:</h4>
+								<ul>
+									<li>Presence of the DEI.md file</li>
+									<li>
+										Extensive response to the Bronze and Silver badge report
+										implementations
+									</li>
+								</ul>
 							</div>
 							<div>
 								<h3>### Platinum Badge</h3>
@@ -253,15 +250,15 @@ const About = () => {
 									The highest level in the badging process, the Platinum badge
 									represents exceptional mastery, leadership, and sustained
 									excellence in the relevant area.
-									<h4>Criteria:</h4>
-									<ul>
-										<li>Presence of the DEI.md file</li>
-										<li>
-											Extensive response to the Bronze, Silver, and Gold badge
-											report implementations
-										</li>
-									</ul>
 								</p>
+								<h4>Criteria:</h4>
+								<ul>
+									<li>Presence of the DEI.md file</li>
+									<li>
+										Extensive response to the Bronze, Silver, and Gold badge
+										report implementations
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

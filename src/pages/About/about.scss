@@ -2,7 +2,7 @@
 
 .about-dei {
   * > * {
-    color: inherit;
+    color: $textColor2;
   }
 
 	.jumbotron {
@@ -52,6 +52,7 @@
 
         li {
           list-style: disc;
+          line-height: 1.8;
         }
       }
 
