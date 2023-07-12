@@ -4,7 +4,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { Header, SearchBar } from "../../components";
 import { info } from "../../assets/images";
-import { SelectProjectRepoContext } from "./SelectProjectRepoContext";
+import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContext";
 
 const ResultsDisplay = ({ results, handleResultClick }) => {
 	return (
