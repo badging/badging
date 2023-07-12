@@ -3,7 +3,7 @@ import "./searchbar.scss";
 import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
-import { SelectProjectRepoContext } from "../../pages/ApplyForBadge/SelectProjectRepoContext";
+import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContext";
 
 const SearchBar = ({ ResultsDisplay }) => {
 	const data = [

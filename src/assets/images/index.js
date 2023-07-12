@@ -21,9 +21,10 @@ import file from "./icons/file.svg";
 import fileLink from "./icons/fileLink.svg";
 import team from "./icons/team.svg";
 
-import goldBadge from "./others/gold-badge.svg";
-import silverBadge from "./others/silver-badge.svg";
-import passingBadge from "./others/passing-badge.svg";
+import goldBadge from "./badges/gold-badge.svg";
+import silverBadge from "./badges/silver-badge.svg";
+import bronzeBadge from "./badges/bronze-badge.svg";
+import platinumBadge from "./badges/platinum-badge.svg";
 import badge from "./badges/badge.svg";
 
 export {
@@ -41,7 +42,8 @@ export {
 	dropbox,
 	goldBadge,
 	silverBadge,
-	passingBadge,
+	bronzeBadge,
+  platinumBadge,
 	DefaultMobileNavIcon,
 	OpenMobileNavIcon,
 	MobileLogo,
