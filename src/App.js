@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, About, Projects, BadgingRequirements, Page } from "./pages";
+import { Home, About, Projects, BadgingRequirements, SelectProjectRepo } from "./pages";
 import { SelectProjectRepoProvider } from "./contexts/SelectProjectRepoContext";
 import { DesktopProvider } from "./contexts/DesktopContext";
 
@@ -15,7 +15,7 @@ const App = () => {
 						path="/select-project"
 						element={
 							<SelectProjectRepoProvider>
-								<Page />
+								<SelectProjectRepo />
 							</SelectProjectRepoProvider>
 						}
 					/>

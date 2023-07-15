@@ -11,6 +11,7 @@ import GetBadgedSvgComponent from "./icons/GetBadged.js";
 import DefaultMobileNavIcon from "./icons/DefaultMobileNavIcon.svg";
 import OpenMobileNavIcon from "./icons/OpenMobileNavIcon.svg";
 import MobileLogo from "./icons/MobileLogo.svg";
+import xMarkPink from "./icons/x-mark-pink.svg";
 
 import github from "./logos/github_logo.svg";
 import loom from "./logos/loom_logo.svg";
@@ -43,7 +44,7 @@ export {
 	goldBadge,
 	silverBadge,
 	bronzeBadge,
-  platinumBadge,
+	platinumBadge,
 	DefaultMobileNavIcon,
 	OpenMobileNavIcon,
 	MobileLogo,
@@ -53,4 +54,5 @@ export {
 	team,
 	search,
 	info,
+	xMarkPink,
 };
