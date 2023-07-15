@@ -2,32 +2,52 @@
 
 .faq {
 	h2 {
-		margin-bottom: 20px;
+		margin: 50px 0px 20px 0px;
+		text-align: center;
 	}
 	.faq-details {
 		display: flex;
 		flex-direction: column;
 		margin-top: 5px;
+		// line-height: 70px;
+		border: 1px solid $primaryBorderColor;
+		max-width: inherit;
+		height: auto; //91px;
+		font-family: $font-family_1;
+		padding: 30px 0;
+		cursor: pointer;
+		
+		p{
+			display: inline-block;
+		}
+
 		p:nth-child(1) {
-			border: 1px solid $primaryBorderColor;
-			max-width: inherit;
-			height: 91px;
-			font-family: $font-family_1;
+			display: flex;
+			justify-content: space-between;
+			// background-color: red;
+			width: inherit;
+			height: inherit;
+			align-items: center;
+			padding: 0 55px;
+			font-family:  $font-family_1;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: 0.36px;
+		}
+		p:nth-child(2) {
+			padding: 0px 55px;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 18px;
-			line-height: 22px;
-			display: flex;
-			align-items: center;
-			padding: 0px 30px;
-			justify-content: space-between;
-			cursor: pointer;
+			font-family:  $font-family_2;
 		}
-		p:nth-child(2) {
-			margin: 0px 30px;
-		}
+		.toggleAnswer.openAnswer {
+			margin-top: 25px; /* Change this value to adjust the margin when clicked */
+		  }
 	}
-
+	
 	.faq-details:hover {
 		border: 1px solid;
 		border-image: linear-gradient(

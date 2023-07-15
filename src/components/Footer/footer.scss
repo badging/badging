@@ -20,7 +20,19 @@ footer {
     display: flex;
     gap: 20px;
   }
-  .copyright .footer-note {
-    color: #69c7b9;
+  .social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+  }
+  /* Apply the zoom effect on hover */
+  .social img:hover {
+    transform: scale(1.2);
+  }
+  .copyright a:nth-child(1){
+    color: #06F395;
+  }
+  .copyright a:nth-child(2) {
+    color: #69C7B9;
   }
 }

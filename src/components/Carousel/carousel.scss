@@ -6,17 +6,26 @@
   position: relative;
   margin-top: 100px;
   margin-bottom: -45px;
-  min-width: 250px;
-  .getStarted-button button {
-    display: block;
-    width: 380px;
-    padding: 23px 47px;
-    color: black;
-    position: unset;
-  }
+  width: 100%;
+  
   .getStarted-button {
     margin-bottom: 100px;
-  }
+    // background-color: red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    button {
+      display: block;
+      color: black;
+      width: 500px;
+      padding: 23px 47px;
+      font-size: 25px;
+    }
+
+  } 
+  
   .card-carousel {
     list-style: none;
     padding: 0;
