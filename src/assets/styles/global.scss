@@ -73,10 +73,21 @@ main {
          }
     }
 
+	nav .mobileNav.toggleDesctiptionButton{
+      .getStarted-button button {
+		display: none !important;
+		background-color: red;
+	  }
+    }
 
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 1.9rem;
+  }
+  .faq {
+	h2 {
+		text-align: left !important;
+	}
   }
   .jumbotron {
 	width: 100% !important;
@@ -138,6 +149,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: url("../images/others/faq-background.svg");
+	background: url(../images/others/faq-background.svg);
 	margin-bottom: 100px;
 }

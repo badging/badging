@@ -26,7 +26,7 @@ const Faq = ({ question, answer }) => {
             />
           </svg>
         </p>
-        <p>{displayInfo && answer}</p>
+        <p className={`toggleAnswer ${displayInfo ? 'openAnswer' : ''}`}>{displayInfo && answer}</p>
       </div>
     </>
   );
