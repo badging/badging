@@ -24,3 +24,9 @@ footer {
     color: #69c7b9;
   }
 }
+
+@media screen and (max-width: 1030px) {
+  footer.container {
+    padding: 3.5rem 3.9rem;
+  }
+}
