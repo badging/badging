@@ -28,7 +28,7 @@ const Footer = () => {
         </Link>{" "}
         &{" "}
         <Link to="https://chaoss.community/" className="footer-note">
-          CHOASS
+          CHAOSS
         </Link>{" "}
         Project. All rights reserved
       </div>
