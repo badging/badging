@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
 	return (
 		<ul>
 			<li>
-				<a href="#what-is-dei-project-badging">What is DEI Project Badging?</a>
+				<Link to="/about">What is DEI Project Badging?</Link>
 			</li>
 			<li>
-				<a href="#application-process">Application Process</a>
+				<Link to="/about/application-process">Application Process</Link>
 			</li>
 			<li>
-				<a href="#dei-file">DEI.md File</a>
+				<Link to="/about/dei-file">DEI.md File</Link>
 			</li>
 			<li>
-				<a href="#dei-badges">DEI Badges</a>
+				<Link to="/about/dei-badges">DEI Badge</Link>
 			</li>
 		</ul>
 	);
