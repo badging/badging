@@ -2,7 +2,7 @@
 
 .about-dei {
   * > * {
-    color: $textColor2;
+    color: inherit;
   }
 
 	.jumbotron {
@@ -14,170 +14,246 @@
 			font-size: 3rem;
 		}
 
+    h3 {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+
 		p {
 			max-width: inherit;
-			font-size: 1.25rem;
+			font-size: 1.125rem;
+      padding-right: 2rem;
 		}
 	}
 
 	main {
 		background: #fff;
-    padding: 2rem 1.25rem 5.8rem;
+		padding: 4rem 1rem;
 
-    h3, h2 {
-      background: linear-gradient(180deg, $headingColor 0%, $headingColor 100%);
+		h3,
+		h2 {
+			background: linear-gradient(180deg, $headingColor 0%, $headingColor 100%);
 			-webkit-background-clip: text;
 			background-clip: text;
-    }
+		}
 
 		h2 {
 			margin: 2rem 0 1rem;
 		}
 
-    h3 {
-      font-family: $font-family_2;
-      font-size: 1rem;
-      margin: 0;
-    }
+		h3 {
+			font-family: $font-family_2;
+			font-size: 1rem;
+			margin: 0;
+		}
 
 		p {
 			color: $textColor2;
 			line-height: 1.8;
 		}
 
-    .page__content {
+		.page__content {
+			ul {
+				padding: 0 0 0 1.5rem;
 
-      ul {
-        padding: 0 0 0 1.5rem;
+				li {
+					list-style: disc;
+					line-height: 1.8;
+					color: $textColor2;
+				}
+			}
 
-        li {
-          list-style: disc;
-          line-height: 1.8;
+			h3 {
+				margin-top: 1rem;
+			}
+
+			// Accordion (Dropdown component) starts here
+			.MuiAccordion-root {
+				box-shadow: 0px 4px 32px 5px rgba(0, 0, 0, 0.05);
+				border-radius: 0.25rem;
+				border: none;
+
+        &:not(.Mui-expanded) {
+          height: 5rem;
         }
-      }
 
-      h3 {
-        margin-top: 1rem;
-      }
+				&:not(:first-child) {
+					margin-top: 0.25rem;
+				}
 
-      .dei__file {
-        p:not(:first-of-type) {
-          margin-top: 1rem;
-        }
-      }
+				&::before {
+          background-color: transparent;
+				}
 
-      .dei__badges{
-        h4 {
-          margin-top: 1rem;
-        }
+				// Accordion active state
+				&.Mui-expanded {
+					.MuiAccordionSummary-root {
+            padding-top: 32px;
+						.MuiAccordionSummary-content {
+							.MuiTypography-root {
+								font-size: 1.5rem;
+								color: #199ad6;
+							}
+						}
 
-        .badges {
-          display: flex;
-          flex-wrap: wrap;
-          gap: .5rem 1rem;
-          margin-bottom: 1rem;
-        }
-      }
-    }
+						.MuiSvgIcon-root {
+							color: #199ad6;
+						}
+					}
+				}
 
-		section {
-		}
+				.MuiAccordionSummary-root {
+					padding: 12px 23px;
+					justify-content: space-between;
+					align-items: center;
+					height: 100%;
+          gap: 0 2rem;
 
-		section.top {
-			padding: 4rem 1rem 1.81rem;
-			border-bottom: 0.5px solid $borderColor2;
-		}
+					.MuiAccordionSummary-content {
+						margin: 0;
 
-		section.btm {
-			padding: 1.25rem 1rem 8rem;
+						.MuiTypography-root {
+							font-size: 1.125rem;
+							font-weight: 600;
+							font-family: $font-family_1, sans-serif;
+							line-height: normal;
+						}
+					}
 
-			// .dei-badge {
-			// 	.badges {
-			// 		display: grid;
-			// 		grid-template-columns: repeat(3, 1fr);
-			// 		gap: 7px;
-			// 		margin-top: 1rem;
+					.MuiSvgIcon-root {
+						font-size: 1.8rem;
+						color: $textColor2;
+					}
+				}
 
-			// 		img {
-			// 			width: 100%;
-			// 			height: 100%;
-			// 			max-width: 192px;
-			// 		}
-			// 	}
-			// }
-		}
-	}
-}
+				.MuiAccordionDetails-root {
+					padding: 0.75rem 1.4rem 2rem;
 
-@media screen and (min-width: 768px) {
-	.about-dei {
-		h2 {
-			font-size: 2rem;
-		}
+					.MuiTypography-root {
+						font-family: $font-family_2;
+					}
+				}
+			}
+			// Accordion (Dropdown component) ends here
 
-		.header {
-			// position: relative;
+			.dei__file {
+				p:not(:first-of-type) {
+					margin-top: 1rem;
+				}
+			}
 
-			.jumbotron {
-				// padding: 180px 120px 70px 120px;
-				// max-width: 70.875rem;
-				// align-items: flex-start;
-				// position: sticky;
-				// top: 0;
+			.dei__badges {
+				h4 {
+					margin-top: 1rem;
+				}
 
-				p {
-					// font-size: 18px;
-					// max-width: inherit;
+				.badges {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.5rem 1rem;
+					margin-bottom: 1rem;
 				}
 			}
 		}
 
-		main {
-			// position: relative;
-			// align-items: flex-start;
+		// section {
+		// }
 
-			// .page__nav {
-			//   position: sticky;
-			// }
+		// section.top {
+		// padding: 4rem 1rem 1.81rem;
+		// border-bottom: 0.5px solid $borderColor2;
+		// }
 
-			// section {
-			// 	.content {
-			// 		padding: 0 7.5rem;
-			// 	}
-			// }
+		// section.btm {
+		// padding: 1.25rem 1rem 8rem;
 
-			// section.top {
-			// 	padding: 4.375rem 0 3.375rem;
-			// }
-			// section.btm {
-			// 	padding: 2.81rem 0 21rem;
+		// .dei-badge {
+		// 	.badges {
+		// 		display: grid;
+		// 		grid-template-columns: repeat(3, 1fr);
+		// 		gap: 7px;
+		// 		margin-top: 1rem;
 
-			// 	.dei-badge {
-			// 		.badges {
-			// 			display: flex;
-			// 		}
-			// 	}
-			// }
-		}
+		// 		img {
+		// 			width: 100%;
+		// 			height: 100%;
+		// 			max-width: 192px;
+		// 		}
+		// 	}
+		// }
+		// }
 	}
 }
 
-@media screen and (min-width: 1441px) {
-	.about-dei {
-		.jumbotron {
-			// max-width: 1340px;
-			// padding: 180px 0px 70px 30px;
-			// margin: 0 auto;
-		}
-		main {
-			section {
-				.content {
-					// margin: 0 auto;
-					// padding: 0px 0px;
-					// max-width: 1340px;
-					// padding: 0px 30px;
-				}
-			}
-		}
-	}
-}
+// @media screen and (min-width: 768px) {
+// 	.about-dei {
+// 		h2 {
+// font-size: 2rem;
+// }
+
+// .header {
+// position: relative;
+
+// .jumbotron {
+// padding: 180px 120px 70px 120px;
+// max-width: 70.875rem;
+// align-items: flex-start;
+// position: sticky;
+// top: 0;
+
+// p {
+// font-size: 18px;
+// max-width: inherit;
+// 		}
+// 	}
+// }
+
+// main {
+// position: relative;
+// align-items: flex-start;
+
+// .page__nav {
+//   position: sticky;
+// }
+
+// section {
+// 	.content {
+// 		padding: 0 7.5rem;
+// 	}
+// }
+
+// section.top {
+// 	padding: 4.375rem 0 3.375rem;
+// }
+// section.btm {
+// 	padding: 2.81rem 0 21rem;
+
+// 	.dei-badge {
+// 		.badges {
+// 			display: flex;
+// 		}
+// 	}
+// }
+// 		}
+// 	}
+// }
+
+// @media screen and (min-width: 1441px) {
+// 	.about-dei {
+// 		.jumbotron {
+// max-width: 1340px;
+// padding: 180px 0px 70px 30px;
+// margin: 0 auto;
+// }
+// main {
+// 	section {
+// 		.content {
+// margin: 0 auto;
+// padding: 0px 0px;
+// max-width: 1340px;
+// padding: 0px 30px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
