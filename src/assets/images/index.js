@@ -17,6 +17,7 @@ import loom from "./logos/loom_logo.svg";
 import discord from "./logos/discord_logo.svg";
 import dropbox from "./logos/dropbox_logo.svg";
 import badgingLogo from "./logos/all-in-chaoss-logo.svg";
+import badgingLogoMobile from "./logos/all-in-chaoss-logo-mobile.svg";
 import file from "./icons/file.svg";
 import fileLink from "./icons/fileLink.svg";
 import team from "./icons/team.svg";
@@ -27,8 +28,12 @@ import bronzeBadge from "./badges/bronze-badge.svg";
 import platinumBadge from "./badges/platinum-badge.svg";
 import badge from "./badges/badge.svg";
 
+import howItWorks from "./others/bg-how-it-works-mobile.svg"
+import heroImage from "./others/hero-background.svg"
+
 export {
 	badgingLogo,
+	badgingLogoMobile,
 	twitter,
 	reddit,
 	linkedin,
@@ -53,4 +58,6 @@ export {
 	team,
 	search,
 	info,
+
+	howItWorks, heroImage
 };
