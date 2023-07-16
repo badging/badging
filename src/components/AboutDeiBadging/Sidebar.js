@@ -1,19 +1,27 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
 		<ul>
 			<li>
-				<Link to="/about">What is DEI Project Badging?</Link>
+				<NavLink exact="true" to="/about" id="what-is-dei-badging" end>
+					What is DEI Project Badging?
+				</NavLink>
 			</li>
 			<li>
-				<Link to="/about/application-process">Application Process</Link>
+				<NavLink exact="true" to="/about/application-process">
+					Application Process
+				</NavLink>
 			</li>
 			<li>
-				<Link to="/about/dei-file">DEI.md File</Link>
+				<NavLink exact="true" to="/about/dei-file">
+					DEI.md File
+				</NavLink>
 			</li>
 			<li>
-				<Link to="/about/dei-badges">DEI Badge</Link>
+				<NavLink exact="true" to="/about/dei-badge">
+					DEI Badge
+				</NavLink>
 			</li>
 		</ul>
 	);

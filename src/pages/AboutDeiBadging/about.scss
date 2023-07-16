@@ -87,85 +87,74 @@
 
 @media screen and (min-width: 769px) {
 	.about-dei {
-		// 	h2 {
-		// 		font-size: 2rem;
-		// 	}
+		.jumbotron {
+			padding: 10.6rem 7.5rem 6rem 7.5rem;
+			max-width: 1126px;
+			gap: 0 1rem;
 
-		// 	.header {
-		// 		position: relative;
-
-		// 		.jumbotron {
-		// 			padding: 180px 120px 70px 120px;
-		// 			max-width: 70.875rem;
-		// 			align-items: flex-start;
-		// 			position: sticky;
-		// 			top: 0;
-
-		// 			p {
-		// 				font-size: 18px;
-		// 				max-width: inherit;
-		// 			}
-		// 		}
-		// 	}
-
-		main {
 			h2 {
-				// margin: 2rem 0 1rem;
+				font-size: 3.375rem;
 			}
 
-			// 		position: relative;
-			// 		align-items: flex-start;
+			p {
+				padding: 0;
+			}
 
-			// 		.page__nav {
-			// 			position: sticky;
-			// 		}
+			& > p {
+				margin-top: 1.5rem;
+			}
+		}
 
-			// 		section {
-			// 			.content {
-			// 				padding: 0 7.5rem;
-			// 			}
+		main {
+			display: flex;
+			color: $textColor2;
+			padding: 6.12rem 7.5rem;
+			gap: 0 4rem;
+			align-items: flex-start;
 
-			// 		section.top {
-			// 			padding: 4.375rem 0 3.375rem;
-			// border-bottom: 0.5px solid $borderColor2;
-			// 		}
-			// 		section.btm {
-			// 			padding: 2.81rem 0 21rem;
+			.page__nav {
+				width: 265px;
 
-			// 			.dei-badge {
-			// 				.badges {
-			// 					display: flex;
-			// gap: 7px;
-			// 		margin-top: 1rem;
+				ul {
+					li {
+						cursor: pointer;
+						transition: all 0.3s ease-in-out;
+						margin-bottom: 0.75rem;
+
+						a {
+
+              &.active {
+                color: $chaossBlue;
+                font-weight: 600;
+              }
+						}
+					}
+				}
+			}
+
+			.page__content {
+				width: calc(100% - 265px);
+				padding-right: 14vw;
+
+				h2 {
+					font-size: 2rem;
+					margin-bottom: 1rem;
+					background: linear-gradient(
+						180deg,
+						$headingColor 0%,
+						$headingColor 100%
+					);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+				}
+			}
 
 			// img {
 			// 			width: 100%;
 			// 			height: 100%;
 			// 			max-width: 192px;
 			// 		}
-			// 				}
-			// 			}
-			// 		}
 		}
 	}
 }
-
-// @media screen and (min-width: 1441px) {
-// 	.about-dei {
-// 		.jumbotron {
-// max-width: 1340px;
-// padding: 180px 0px 70px 30px;
-// margin: 0 auto;
-// }
-// main {
-// 	section {
-// 		.content {
-// margin: 0 auto;
-// padding: 0px 0px;
-// max-width: 1340px;
-// padding: 0px 30px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }

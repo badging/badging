@@ -29,7 +29,7 @@ const About = () => {
 					</p>
 				</Jumbotron>
 			</div>
-			<main className="page">
+			<main>
 				{isDesktop && (
 					<>
 						<aside className="page__nav">

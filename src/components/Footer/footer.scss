@@ -37,8 +37,16 @@ footer {
   }
 }
 
-@media screen and (max-width: 1030px) {
+footer.container {
+  padding: 3.5rem 3.9rem;
+}
+
+@media screen and (min-width: 769px) {
+  br {
+    display: none;
+  }
+
   footer.container {
-    padding: 3.5rem 3.9rem;
+    padding: 2.5rem 7.5rem;
   }
 }
