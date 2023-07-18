@@ -3,7 +3,8 @@ import Home from './Home/Home';
 
 import Projects from './Projects/Projects';
 import About from './About/About';
-import BadgingRequirements from './BadgingRequirements/BadgingRequirements';
+
+import GetStartedBadging from './GetStartedBadging/GetStartedBadging';
 import Page from './ApplyForBadge/SelectProjectRepo';
 
-export { Home, About, Projects, BadgingRequirements, Page };
+export { Home, About, Projects, GetStartedBadging, Page };

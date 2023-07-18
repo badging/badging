@@ -1,22 +1,23 @@
 /* ==================== START IMPORT FONTS ======================= */
-@import url("https://api.fontshare.com/v2/css?f[regular]=clash-display@200,400,300,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url('https://api.fontshare.com/v2/css?f[regular]=clash-display@200,400,300,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 /* ==================== END IMPORT FONTS ======================= */
 
-$font-family_1: "Clash Display";
-$font-family_2: "Work Sans", sans-serif;
+$font-family_1: 'Clash Display';
+$font-family_2: 'Work Sans', sans-serif;
 $sectionTitleBackground: radial-gradient(
   34.77% 34.77% at 50% 50%,
   rgba(29, 232, 98, 0.2) 0%,
   rgba(29, 232, 98, 0) 100%
 );
 $primaryTextColor: #fff;
-$textColor2: #24292E;
+$textColor2: #24292e;
+$textColor3: #000000;
 $headingColor: #030303;
-$secondaryTextColor: #858C90;
+$secondaryTextColor: #858c90;
 $primaryBackgroundColor: #000;
 $primaryBorderColor: #454c53;
-$borderColor2: #BEBEBE;
+$borderColor2: #bebebe;
 $projectsBackgroundColor: #090909;
 $heroTitleBackground: linear-gradient(
   258.74deg,
@@ -28,6 +29,3 @@ $cardTitleBackground: linear-gradient(
   #ffffff -36.16%,
   rgba(255, 255, 255, 0) 219.41%
 );
-
-
-
