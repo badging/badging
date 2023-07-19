@@ -32,7 +32,7 @@ ResultsDisplay.propTypes = {
 	handleResultClick: PropTypes.func,
 };
 
-const Page = () => {
+const SelectProjectRepo = () => {
 	const { project } = useContext(SelectProjectRepoContext);
 
 	const handleSubmit = (e) => {
@@ -63,4 +63,4 @@ const Page = () => {
 	);
 };
 
-export default Page;
+export default SelectProjectRepo;
