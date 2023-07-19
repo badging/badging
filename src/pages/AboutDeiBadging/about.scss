@@ -5,80 +5,99 @@
 		color: inherit;
 	}
 
-	.jumbotron {
-		padding: 140px 24px 53px 24px;
-		margin: 0rem 0rem;
-		max-width: 70.875rem;
-
-		h2 {
-			font-size: 3rem;
+	.header {
+		.container {
+			padding: 1.5rem;
 		}
 
-		h3 {
-			font-size: 1.125rem;
-			margin: 0;
-		}
+		.jumbotron__container {
+			.jumbotron {
+				padding: 6rem 0 1.8rem 0;
+				margin: 0rem 0rem;
+				max-width: 70.875rem;
 
-		p {
-			max-width: inherit;
-			font-size: 1.125rem;
-			padding-right: 2rem;
+				h2 {
+					font-size: 3rem;
+				}
+
+				h3 {
+					font-size: 1.125rem;
+					margin: 0;
+				}
+
+				p {
+					max-width: inherit;
+					font-size: 1.125rem;
+					padding-right: 3.8rem;
+				}
+			}
 		}
 	}
 
 	main {
-		background: #fff;
-		padding: 4rem 1rem;
+		background-color: #fff;
 
-		h3,
-		h2 {
-			background: linear-gradient(180deg, $headingColor 0%, $headingColor 100%);
-			-webkit-background-clip: text;
-			background-clip: text;
+		&.container {
+			padding: 4rem 1rem;
 		}
 
-		h3 {
-			font-family: $font-family_2;
-			font-size: 1rem;
-			margin: 0;
-		}
+		.main__container {
+			background: #fff;
 
-		p {
-			color: $textColor2;
-			line-height: 1.8;
-		}
-
-		.page__content {
-			ul {
-				padding: 0 0 0 1.5rem;
-
-				li {
-					list-style: disc;
-					line-height: 1.8;
-					color: $textColor2;
-				}
+			h3,
+			h2 {
+				background: linear-gradient(
+					180deg,
+					$headingColor 0%,
+					$headingColor 100%
+				);
+				-webkit-background-clip: text;
+				background-clip: text;
 			}
 
 			h3 {
-				margin-top: 1rem;
+				font-family: $font-family_2;
+				font-size: 1rem;
+				margin: 0;
 			}
 
-			.dei__file {
-				p:not(:first-of-type) {
-					margin-top: 1rem;
-				}
+			p {
+				color: $textColor2;
+				line-height: 1.8;
 			}
 
-			.dei__badges {
-				h4 {
+			.page__content {
+				ul {
+					padding: 0 0 0 1.5rem;
+
+					li {
+						list-style: disc;
+						line-height: 1.8;
+						color: $textColor2;
+					}
+				}
+
+				h3 {
 					margin-top: 1rem;
 				}
 
-				.badges {
-					display: flex;
-					flex-wrap: wrap;
-					gap: 0.5rem 1rem;
-					margin-bottom: 1rem;
+				.dei__file {
+					p:not(:first-of-type) {
+						margin-top: 1rem;
+					}
+				}
+
+				.dei__badges {
+					h4 {
+						margin-top: 1rem;
+					}
+
+					.badges {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.5rem 1rem;
+						margin-bottom: 1rem;
+					}
 				}
 			}
 		}
@@ -87,74 +106,89 @@
 
 @media screen and (min-width: 769px) {
 	.about-dei {
-		.jumbotron {
-			padding: 10.6rem 7.5rem 6rem 7.5rem;
-			max-width: 1126px;
-			gap: 0 1rem;
-
-			h2 {
-				font-size: 3.375rem;
+		.header {
+			.container {
+				padding: 0.625rem 7.5rem;
 			}
 
-			p {
-				padding: 0;
-			}
+			.jumbotron__container {
+				display: flex;
+				justify-content: flex-start;
+				width: 1440px;
 
-			& > p {
-				margin-top: 1.5rem;
+				.jumbotron {
+					padding: 10rem 0 6rem 0;
+					gap: 0 1rem;
+					max-width: 902px;
+
+					h2 {
+						font-size: 3.375rem;
+					}
+
+					p {
+						padding: 0;
+					}
+
+					& > p {
+						margin-top: 1.5rem;
+					}
+				}
 			}
 		}
 
 		main {
-			display: flex;
-			color: $textColor2;
-			padding: 6.12rem 7.5rem;
-			gap: 0 4rem;
-			align-items: flex-start;
+      display: flex;
+      justify-content: center;
 
-			.page__nav {
-				width: 265px;
+			&.container {
+				padding: 0 7.5rem;
+			}
 
-				ul {
-					li {
-						cursor: pointer;
-						transition: all 0.3s ease-in-out;
-						margin-bottom: 0.75rem;
+			.main__container {
+				display: flex;
+				color: $textColor2;
+				padding: 6.12rem 0;
+				gap: 0 4rem;
+				align-items: flex-start;
+        width: 1200px;
 
-						a {
+				.page__nav {
+					width: 265px;
 
-              &.active {
-                color: $chaossBlue;
-                font-weight: 600;
-              }
+					ul {
+						li {
+							cursor: pointer;
+							transition: all 0.3s ease-in-out;
+							margin-bottom: 0.75rem;
+
+							a {
+								&.active {
+									color: $chaossBlue;
+									font-weight: 600;
+								}
+							}
 						}
 					}
 				}
-			}
 
-			.page__content {
-				width: calc(100% - 265px);
-				padding-right: 14vw;
+				.page__content {
+					width: calc(100% - 265px);
+          max-width: 692px;
 
-				h2 {
-					font-size: 2rem;
-					margin-bottom: 1rem;
-					background: linear-gradient(
-						180deg,
-						$headingColor 0%,
-						$headingColor 100%
-					);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					background-clip: text;
+					h2 {
+						font-size: 2rem;
+						margin-bottom: 1rem;
+						background: linear-gradient(
+							180deg,
+							$headingColor 0%,
+							$headingColor 100%
+						);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-clip: text;
+					}
 				}
 			}
-
-			// img {
-			// 			width: 100%;
-			// 			height: 100%;
-			// 			max-width: 192px;
-			// 		}
 		}
 	}
 }
