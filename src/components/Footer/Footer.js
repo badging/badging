@@ -23,12 +23,12 @@ const Footer = () => {
       </div>
       <div className="copyright">
         Copyright &copy;{" "}
-        <Link to="https://chaoss.community/" className="footer-note">
-          CHOASS
+        <Link to="https://allinopensource.org/" className="footer-note">
+          Allin
         </Link>{" "}
         &{" "}
-        <Link to="https://allinopensource.org/" className="footer-note">
-          All In
+        <Link to="https://chaoss.community/" className="footer-note">
+          CHAOSS
         </Link>{" "}
         Project. All rights reserved
       </div>

@@ -9,6 +9,10 @@
   align-items: center;
   margin: auto;
   z-index: 99;
+  background-image: url(../../assets/images/others/bg-how-it-works-web.png);
+  background-size: cover;
+  background-position: center;
+  // background-color: #fff;
 
   .hero-section {
     max-width: 760px;
@@ -43,6 +47,19 @@
       margin-top: 10px;
       max-width: 860px;
     }
+  }
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  // background: url(./../../assets/images/others/bg-how-it-works-mobile.svg);
+  // background-size: cover;
+  // background-position: center;
+  // z-index: 1;
+  img {
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(60);
   }
 }
 /* ==================== START HOW-IT-WORKS-SECTION STYLE ======================= */
@@ -101,7 +118,7 @@
     // background: $sectionTitleBackground, $sectionTitleBackground;
     // background-size: 120% 30%;
     // background-position: 50% 7%, 50% 90%;
-    background: url(./bg-how-it-works-mobile.svg);
+    // background: url(./bg-how-it-works-mobile.svg);
     background-repeat: no-repeat;
 
     .content {
@@ -160,6 +177,9 @@
 
           p {
             color: #ffffff;
+          }
+          a {
+            color: #06F395;
           }
 
           .img-wrap {

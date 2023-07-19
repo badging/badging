@@ -1,17 +1,17 @@
 export const faqData = [
   {
-    question: "What is DEI Project Badging?",
+    question: "Are the All-In CHAOSS DEI badges for everyone?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, mi ultricies integer erat dictum. Nunc ultrices sit justo bibendum nibh. Eget sed in egestas accumsan sit porta.",
+      "Yes, the ALL In CHAOSS DEI badges are for every open-source project or community.",
   },
   {
-    question: "What is DEI Project Badging ?",
+    question: "How frequently can I apply for a badge?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, mi ultricies integer erat dictum. Nunc ultrices sit justo bibendum nibh. Eget sed in egestas accumsan sit porta.",
+      "Projects maintainers can apply for a new badge after a 12-month of being badged.",
   },
   {
-    question: "What is DEI Project Badging ?",
+    question: "Who can apply to get badged?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, mi ultricies integer erat dictum. Nunc ultrices sit justo bibendum nibh. Eget sed in egestas accumsan sit porta.",
+      "Applicant must be a maintainer or admin to the specified open-source project.",
   },
 ];

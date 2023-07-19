@@ -5,8 +5,8 @@ header {
   // padding-top: 50px;
   // height: 30px;
   // padding-bottom: 40px;
-  background: var(--section-title-background);
-  width: 100%;
+  // background: var(--section-title-background);
+  // width: 100%;
   //   background-color: #fff;
   nav {
     display: flex;
@@ -48,8 +48,7 @@ header {
     margin: auto;
     position: absolute;
     // top: 100px;
-    z-index: 99;
-    /* background-color: blue; */
+    z-index: 99; 
 
     .hero-section {
       max-width: 760px;
@@ -379,12 +378,19 @@ header {
 .mobileNavLinks {
   position: relative;
   height: 548px;
-  // background-color: #fff;
+  position: absolute;
   top: 135px;
   display: none;
   flex-direction: column;
   gap: 70px;
   padding: 30px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  background-color: #000000ab;
+
+  ul a {
+    color: #fff !important;
+  }
 
   .mobile {
     display: flex;
@@ -529,7 +535,7 @@ header {
 
   .mobileNavLinks {
     display: flex;
-    transition: width 5s;
+    transition: all 1500ms ease;
   }
   .sub-nav {
     height: auto;
