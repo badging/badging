@@ -35,10 +35,28 @@ footer {
   .copyright a:nth-child(2) {
     color: #69C7B9;
   }
+  /* Apply the zoom effect on hover */
+  .social img:hover {
+    transform: scale(1.2);
+  }
+  .copyright a:nth-child(1){
+    color: #06F395;
+  }
+  .copyright a:nth-child(2) {
+    color: #69C7B9;
+  }
 }
 
-@media screen and (max-width: 1030px) {
+footer.container {
+  padding: 3.5rem 3.9rem;
+}
+
+@media screen and (min-width: 769px) {
+  br {
+    display: none;
+  }
+
   footer.container {
-    padding: 3.5rem 3.9rem;
+    padding: 2.5rem 7.5rem;
   }
 }
