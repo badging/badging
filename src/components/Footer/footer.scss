@@ -35,6 +35,16 @@ footer {
   .copyright a:nth-child(2) {
     color: #69C7B9;
   }
+  /* Apply the zoom effect on hover */
+  .social img:hover {
+    transform: scale(1.2);
+  }
+  .copyright a:nth-child(1){
+    color: #06F395;
+  }
+  .copyright a:nth-child(2) {
+    color: #69C7B9;
+  }
 }
 
 footer.container {

@@ -7,12 +7,12 @@ import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContex
 
 const SearchBar = ({ ResultsDisplay }) => {
 	const data = [
-		"Badging By CHAOSS",
-		"Badging By CHAOSS",
-		"Badging By CHAOSS",
-		"Badging By CHAOSS",
-		"Badging By CHAOSS",
-		"Badging By CHAOSS",
+		"All in DEI Badging Project",
+		"All in DEI Badging Project",
+		"All in DEI Badging Project",
+		"All in DEI Badging Project",
+		"All in DEI Badging Project",
+		"All in DEI Badging Project",
 	];
 	const [inputValue, setInputValue] = useState("");
 	const [searchResults, setSearchResults] = useState(data);
@@ -55,9 +55,6 @@ const SearchBar = ({ ResultsDisplay }) => {
 				/>
 				<button type="button">Add to List</button>
 			</div>
-			<button type="button" onClick={handleClearInput}>
-				Clear All
-			</button>
 			<ResultsDisplay
 				results={searchResults}
 				handleResultClick={handleResultClick}

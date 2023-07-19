@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, About, Projects, BadgingRequirements, Page } from "./pages";
+import { Home, About, Projects, BadgingRequirements, SelectProjectRepo } from "./pages";
 import {
 	WhatIsDeiBadging,
 	ApplicationProcess,
@@ -29,7 +29,7 @@ const App = () => {
 						path="/select-project"
 						element={
 							<SelectProjectRepoProvider>
-								<Page />
+								<SelectProjectRepo />
 							</SelectProjectRepoProvider>
 						}
 					/>

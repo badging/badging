@@ -4,6 +4,6 @@ import Home from './Home/Home';
 import Projects from './Projects/Projects';
 import About from './AboutDeiBadging/About';
 import BadgingRequirements from './BadgingRequirements/BadgingRequirements';
-import Page from './SelectProjectForBadging/SelectProjectRepo';
+import SelectProjectRepo from './SelectProjectRepo/SelectProjectRepo';
 
-export { Home, About, Projects, BadgingRequirements, Page };
+export { Home, About, Projects, BadgingRequirements, SelectProjectRepo };

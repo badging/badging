@@ -1,12 +1,6 @@
 import "./about.scss";
 import "../../assets/styles/global.scss";
-import {
-	Footer,
-	Header,
-	Jumbotron,
-	Sidebar,
-	AboutDeiMobile,
-} from "../../components";
+import { Footer, Header, Jumbotron, Sidebar, AboutDeiMobile } from "../../components";
 import { useDesktop } from "../../contexts/DesktopContext";
 import { Outlet } from "react-router-dom";
 
