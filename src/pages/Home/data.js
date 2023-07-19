@@ -31,21 +31,21 @@ export const howItWorksData = [
 	{
 		id: 1,
 		title: "Apply",
-		text: "Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim nec consequat vel. Lectus tellus feugiat Est scelerisque ante diam at sed condimentum",
+		text: "To apply for a DEI badge, ensure your DEI.md file is carefully curated and publicly accessible for review.",
 		link: "apply",
 		icon: <ApplySvgComponent width="28" height="30" className="apply-svg" />,
 	},
 	{
 		id: 2,
 		title: "Review",
-		text: "Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim nec consequat vel. Lectus tellus feugiat Est scelerisque ante diam at sed condimentum",
+		text: "Once applied, the specified repository is automatically scanned for the presence of the DEI.md file. The file is carefully examined, and a report of suggestions may be generated.",
 		link: "review",
 		icon: <ReviewSvgComponent width="28" height="22" className="review-svg" />,
 	},
 	{
 		id: 3,
 		title: "Get Badged",
-		text: "Lorem ipsum dolor sit amet consectetur. Urna nunc amet enim nec consequat vel. Lectus tellus feugiat Est scelerisque ante diam at sed condimentum",
+		text: "Showcase thought leadership on project and community inclusivity. Reflect on and affect DEI standards using the CHAOSS DEI metrics Learn more",
 		link: "get-badged",
 		icon: (
 			<GetBadgedSvgComponent width="14" height="28" className="badge-svg" />

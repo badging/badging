@@ -6,25 +6,23 @@
 $font-family_1: "Clash Display";
 $font-family_2: "Work Sans", sans-serif;
 $sectionTitleBackground: radial-gradient(
-  34.77% 34.77% at 50% 50%,
-  rgba(29, 232, 98, 0.2) 0%,
-  rgba(29, 232, 98, 0) 100%
+	34.77% 34.77% at 50% 50%,
+	rgba(29, 232, 98, 0.2) 0%,
+	rgba(29, 232, 98, 0) 100%
 );
 $primaryTextColor: #fff;
-$secondaryTextColor: #858C90;
+$textColor2: #24292e;
+$headingColor: #030303;
+$secondaryTextColor: #858c90;
 $primaryBackgroundColor: #000;
 $primaryBorderColor: #454c53;
+$borderColor2: #bebebe;
 $projectsBackgroundColor: #090909;
-$heroTitleBackground: linear-gradient(
-  258.74deg,
-  #69c7b9 14.64%,
-  #e1b1ee 73.78%
-);
+$heroTitleBackground: linear-gradient(184deg, #69c7b9 0%, #e1b1ee 100%);
 $cardTitleBackground: linear-gradient(
-  123.52deg,
-  #ffffff -36.16%,
-  rgba(255, 255, 255, 0) 219.41%
+	123.52deg,
+	#ffffff -36.16%,
+	rgba(255, 255, 255, 0) 219.41%
 );
-
-
-
+$secondaryBtnColor: #04e28a;
+$chaossBlue: #199AD6;

@@ -1,25 +1,35 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../../assets/styles/global.scss";
-import "./header.scss";
-import { badgingLogo } from "../../assets/images";
-import { DefaultMobileNavIcon, OpenMobileNavIcon, MobileLogo } from "../../assets/images";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../assets/styles/global.scss';
+import './header.scss';
+
+
+
+import {
+  DefaultMobileNavIcon,
+  OpenMobileNavIcon,
+  MobileLogo,
+  badgingLogo,
+  badgingLogoMobile,
+} from '../../assets/images';
+import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
+  // eslint-disable-next-line no-unused-vars
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 650 });
   return (
+    
     <header>
       <nav className="container">
         <Link to="/" className="active">
-        
-            <img
-              src={badgingLogo}
-              className="logo"
-              alt="all-in-chaoss-logo"
-              // width={250}
-              srcSet={`${MobileLogo} 1200w`}
-            />
-          
+          <img
+            src={isMobile ? badgingLogoMobile : badgingLogo}
+            className="logo"
+            alt="all-in-chaoss-logo"
+            // width={250}
+            // srcSet={`${MobileLogo} 1200w`}
+          />
         </Link>
         <ul className="web">
           <Link to="/" className="nav-link">
@@ -32,17 +42,21 @@ const Header = () => {
             Projects
           </Link>
         </ul>
-        <Link className="get-started" to="/">
-          {" "}
+        <Link className="get-started" to="/badge">
+          {' '}
           Get Started
         </Link>
-       
-        <img onClick={() => setNavbarOpen((prev) => !prev)} src={navbarOpen ? OpenMobileNavIcon : DefaultMobileNavIcon}  alt="open" className="mobileNav"/>
-      
+
+        <img
+					onClick={() => setNavbarOpen((prev) => !prev)}
+					src={navbarOpen ? OpenMobileNavIcon : DefaultMobileNavIcon}
+					alt="open"
+					className="mobileNav"
+          // className={`mobileNav ${navbarOpen ? 'toggleDesctiptionButton' : ''}`}
+				/>
       </nav>
-    {navbarOpen ? 
-      (
-      <div className="mobileNavLinks">
+      {navbarOpen ? (
+        <div className="mobileNavLinks">
           <ul className="mobile">
             <Link to="/" className="nav-link">
               Home
@@ -54,15 +68,14 @@ const Header = () => {
               Projects
             </Link>
           </ul>
-          <Link className="get-started-mobile" to="/">
-            {" "}
+          <Link className="get-started-mobile" to="/badge">
+            {' '}
             Get Started
           </Link>
         </div>
-      ) : ''
-    }
-      
-      
+      ) : (
+        ''
+      )}
     </header>
   );
 };

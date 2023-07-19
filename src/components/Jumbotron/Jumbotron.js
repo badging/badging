@@ -1,20 +1,25 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-const Jumbotron = () => {
-  return (
-    
-        <div className="jumbotron">
-          <h2>DEI Badged Projects</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Sed risus ultrices sit nibh sed. 
-            Interdum urna molestie fames porttitor elementum a diam laoreet. Sed 
-            tempor habitant phasellus velit sagittis mauris lorem pretium. 
-            Arcu neque id duis eu pellentesque in amet et. Ipsum ultricies 
-            a etiam est. Viverra eleifend tortor iaculis fringilla sed.
-          </p>
-        </div>
-      
-  )
-}
+const Jumbotron = ({ title, description, subheading = null, children }) => {
+	return (
+		<div className="jumbotron">
+			<h2>{title}</h2>
+			<div>
+				{subheading && <h3>{subheading}</h3>}
+				<p>{description}</p>
+			</div>
+			{/* add any other children */}
+			{children}
+		</div>
+	);
+};
 
-export default Jumbotron
+Jumbotron.propTypes = {
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	subheading: PropTypes.string,
+	children: PropTypes.node,
+};
+
+export default Jumbotron;

@@ -1,0 +1,125 @@
+@import "../../assets/styles/variables";
+
+.select__project {
+	display: flex;
+	flex-direction: column;
+
+	.heading__2 {
+		font-size: 3rem;
+		font-weight: 600;
+		background: linear-gradient(88deg, #E9E9E9 0%, #BABABA 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		margin-bottom: 2rem;
+	}
+
+	button {
+		background: inherit;
+		border: none;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		margin-top: 92px;
+		height: calc(100vh - 92px);
+
+		aside {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 23.2%;
+
+			// flex: 0 0 41.125rem;
+
+			p.heading__2 {
+				font-family: $font-family_1, sans-serif;
+				font-size: 3rem;
+				margin: 0;
+			}
+		}
+
+		.main__content {
+			background: #fff;
+			display: flex;
+			padding: 5.8rem 3.88rem;
+			// width: 100%;
+			justify-content: flex-start;
+			// flex: 1 1 auto;
+
+			.select__project__form {
+				width: 100%;
+				max-width: 37.2rem;
+
+				h2 {
+					background: linear-gradient(180deg, #030303 0%, #030303 100%);
+					font-size: 1.125rem;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					color: transparent;
+					margin-bottom: 1rem;
+				}
+
+				.search_results {
+					display: flex;
+					flex-direction: column;
+					row-gap: 0.5rem;
+					column-gap: 1.3rem;
+					margin-top: 2rem;
+
+					li {
+						list-style-type: none;
+						display: flex;
+
+						button {
+							padding: 1.3rem 1rem;
+						}
+						button.clear {
+							border: 0.5px solid #d61b5e;
+							border-left: none;
+							display: none;
+						}
+						button:first-of-type {
+							border: 0.5px solid $headingColor;
+							width: 100%;
+							text-align: left;
+							color: $headingColor;
+						}
+						button:first-of-type:hover,
+						button:first-of-type:active {
+							border: 0.5px solid #d61b5e;
+							border-right: none;
+						}
+						button:first-of-type:hover ~ button.clear,
+						button:first-of-type:active ~ button.clear {
+							display: block;
+						}
+					}
+				}
+
+				> button {
+					background: $secondaryBtnColor;
+					align-self: flex-start;
+					margin-top: 3rem;
+					padding: 23px 47px;
+					width: 263px;
+					color: $headingColor;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.select__project {
+		main {
+			flex-direction: row;
+		}
+	}
+}
