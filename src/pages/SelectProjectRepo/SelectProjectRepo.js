@@ -3,16 +3,23 @@ import "./selectProjectRepo.scss";
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { Header, SearchBar } from "../../components";
-import { info } from "../../assets/images";
 import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContext";
+import { xMarkPink } from "../../assets/images";
 
 const ResultsDisplay = ({ results, handleResultClick }) => {
 	return (
 		<ul className="search_results">
-			{results.map((result, index) => (
+			{results.slice(0, 3).map((result, index) => (
 				<li key={index}>
-					<button type="button" onClick={() => handleResultClick(result)}>
+					<button
+						type="button"
+						className="btn"
+						onClick={() => handleResultClick(result)}
+					>
 						{result}
+					</button>
+					<button type="button" className="clear btn">
+						<img src={xMarkPink} alt="clear" />
 					</button>
 				</li>
 			))}
@@ -25,7 +32,7 @@ ResultsDisplay.propTypes = {
 	handleResultClick: PropTypes.func,
 };
 
-const Page = () => {
+const SelectProjectRepo = () => {
 	const { project } = useContext(SelectProjectRepoContext);
 
 	const handleSubmit = (e) => {
@@ -35,23 +42,25 @@ const Page = () => {
 	};
 
 	return (
-		<div className="page">
+		<div className="select__project">
 			<Header />
-			<form className="page-content" onSubmit={handleSubmit}>
-				<h2>Search For Project Repository</h2>
-				<SearchBar ResultsDisplay={ResultsDisplay} />
-				<div className="info">
-					<img src={info} alt="info icon" />
-					<p>
-						Lorem ipsum dolor sit amet consectetur. Sed risus ultrices sit nibh
-						sed. Interdum urna molestie fames porttitor elementum a diam
-						laoreet.
+			<main>
+				<aside>
+					<p className="heading__2">
+						You can Badge As Many Project You Want.
 					</p>
-				</div>
-				<button>Submit</button>
-			</form>
+				</aside>
+
+				<section className="main__content">
+					<form className="select__project__form" onSubmit={handleSubmit}>
+						<h2>Search For Project Repository</h2>
+						<SearchBar ResultsDisplay={ResultsDisplay} />
+						<button type="button">Submit</button>
+					</form>
+				</section>
+			</main>
 		</div>
 	);
 };
 
-export default Page;
+export default SelectProjectRepo;

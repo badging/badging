@@ -1,41 +1,32 @@
+import "./about-dei-mobile.scss";
 import "../../assets/styles/global.scss";
-import "./about.scss";
-import { Footer, Header, Jumbotron, Sidebar } from "../../components";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
 	goldBadge,
 	silverBadge,
 	bronzeBadge,
 	platinumBadge,
 } from "../../assets/images";
-import { useDesktop } from "../../contexts/DesktopContext";
 
-const About = () => {
-	const { isDesktop } = useDesktop();
-
+const AboutDeiMobile = () => {
 	return (
-		<div className="about-dei">
-			<div className="header">
-				<Header />
-				<Jumbotron
-					title="About DEI Badging"
-					description="What is All-In CHAOSS DEI Badging
-
-          The All In CHAOSS DEI Badging is an Initiative developed in partnership between CHAOSS and All In to recognize communities and projects that exemplify best practices for Diversity, Equity, and Inclusion (DEI) work within their respective communities. It involved using the CHAOSS DEI metrics as a benchmark to reflect on and access DEI efforts within open-source projects.
-
-          The insights gained from the reflection process and report can be used to drive positive change and make measurable progress in creating a more diverse, equitable, and inclusive environment."
-				/>
-			</div>
-			<main className="page">
-				{isDesktop && (
-					<aside className="page__nav">
-						<Sidebar />
-					</aside>
-				)}
-				<section className="page__content">
-					<div>
-						<h2 id="what-is-dei-project-badging">
-							What is DEI Project Badging?
-						</h2>
+		<div>
+			<Accordion>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls="panel1a-content"
+					id="panel1a-header"
+				>
+					<Typography component={"div"}>
+						What is DEI <br /> Project Badging?
+					</Typography>
+				</AccordionSummary>
+				<AccordionDetails>
+					<Typography component={"div"}>
 						<p>
 							The primary objective of the All In CHAOSS DEI Badging Initiative
 							is to enable open-source maintainers to signal their ongoing
@@ -53,10 +44,20 @@ const About = () => {
 								environment.
 							</li>
 						</ul>
-					</div>
+					</Typography>
+				</AccordionDetails>
+			</Accordion>
 
-					<div>
-						<h2 id="application-process">Application Process</h2>
+			<Accordion>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls="panel2a-content"
+					id="panel2a-header"
+				>
+					<Typography>Application Process</Typography>
+				</AccordionSummary>
+				<AccordionDetails>
+					<Typography component={"div"}>
 						<p>
 							The All In CHAOSS DEI Badging Initiative follows a straightforward
 							process:
@@ -116,9 +117,20 @@ const About = () => {
 								experiences, and learn from others in the community.
 							</p>
 						</div>
-					</div>
-					<div className="dei__file ">
-						<h2 id="dei-file">DEI.md File</h2>
+					</Typography>
+				</AccordionDetails>
+			</Accordion>
+
+			<Accordion>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls="panel3a-content"
+					id="panel3a-header"
+				>
+					<Typography>DEI.md File</Typography>
+				</AccordionSummary>
+				<AccordionDetails>
+					<Typography component={"div"}>
 						<p>
 							The DEI.md file is an essential component of the All In CHAOSS DEI
 							badging initiative. It serves as a benchmark for open-source
@@ -158,10 +170,20 @@ const About = () => {
 								your project DEI.md file.
 							</li>
 						</ul>
-					</div>
-					<div className="dei__badges ">
-						<h2 id="dei-badges">DEI Badges</h2>
+					</Typography>
+				</AccordionDetails>
+			</Accordion>
 
+			<Accordion>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls="panel4a-content"
+					id="panel4a-header"
+				>
+					<Typography>DEI Badge</Typography>
+				</AccordionSummary>
+				<AccordionDetails>
+					<Typography component={"div"}>
 						<div className="badges">
 							<img src={bronzeBadge} alt="Bronze badge" />
 							<img src={silverBadge} alt="Silver badge" />
@@ -261,12 +283,11 @@ const About = () => {
 								</ul>
 							</div>
 						</div>
-					</div>
-				</section>
-			</main>
-			<Footer />
+					</Typography>
+				</AccordionDetails>
+			</Accordion>
 		</div>
 	);
 };
 
-export default About;
+export default AboutDeiMobile;

@@ -11,6 +11,7 @@ import GetBadgedSvgComponent from "./icons/GetBadged.js";
 import DefaultMobileNavIcon from "./icons/DefaultMobileNavIcon.svg";
 import OpenMobileNavIcon from "./icons/OpenMobileNavIcon.svg";
 import MobileLogo from "./icons/MobileLogo.svg";
+import xMarkPink from "./icons/x-mark-pink.svg";
 
 import github from "./logos/github_logo.svg";
 import loom from "./logos/loom_logo.svg";
@@ -28,8 +29,8 @@ import bronzeBadge from "./badges/bronze-badge.svg";
 import platinumBadge from "./badges/platinum-badge.svg";
 import badge from "./badges/badge.svg";
 
-import howItWorks from "./others/bg-how-it-works-mobile.svg"
-import heroImage from "./others/hero-background.svg"
+import howItWorks from "./others/bg-how-it-works-mobile.svg";
+import heroImage from "./others/hero-background.svg";
 
 export {
 	badgingLogo,
@@ -48,7 +49,7 @@ export {
 	goldBadge,
 	silverBadge,
 	bronzeBadge,
-  platinumBadge,
+	platinumBadge,
 	DefaultMobileNavIcon,
 	OpenMobileNavIcon,
 	MobileLogo,
@@ -58,6 +59,7 @@ export {
 	team,
 	search,
 	info,
-
-	howItWorks, heroImage
+	xMarkPink,
+	howItWorks,
+	heroImage,
 };

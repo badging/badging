@@ -2,13 +2,9 @@
 
 .searchbar {
 	.search {
-		// border: 1px solid green;
-		// width: 100%;
-		// height: 100%;
 		display: flex;
-    border: 1px solid #39434a;
-    border-right: none;
-		background: $headingColor;
+    border: 1px solid transparent;
+		background: #F6F6F6;
 
 		input[type="text"] {
 			width: 100%;
@@ -16,15 +12,16 @@
 			outline: none;
 			background: transparent;
 			font-size: 1rem;
+      color: $headingColor;
 		}
 
 		button {
 			border: 1px solid #fff;
 			outline: none;
-			background: #fff;
+			background: $headingColor;
 			padding: 13px 16px;
 			width: 11rem;
-			color: $headingColor;
+			color: #fff;
 		}
 
 		img {
