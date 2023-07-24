@@ -5,6 +5,11 @@ import '../../assets/styles/global.scss';
 import './getStartedBadging.scss';
 
 const GetStartedBadging = () => {
+  const baseurl = 'https://badging.allinopensource.org/api';
+
+  const handleLogin = () => {
+    window.location.href = `${baseurl}/login`;
+  };
   return (
     <div>
       <Header />
@@ -26,7 +31,13 @@ const GetStartedBadging = () => {
           </ol>
 
           <div className="login-github">
-            <button className="login-github">Login with GitHub</button>
+            <button
+              type="button"
+              className="login-github"
+              onClick={handleLogin}
+            >
+              Login with GitHub
+            </button>
           </div>
         </div>
       </div>
