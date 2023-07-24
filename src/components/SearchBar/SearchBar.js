@@ -1,46 +1,74 @@
 import "../../assets/styles/global.scss";
 import "./searchbar.scss";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
-import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContext";
+import { DataContext } from "../../contexts/DataContext";
+import { ResultsDisplay } from "../index";
 
-const SearchBar = ({ ResultsDisplay }) => {
-	const data = [
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-	];
-	const [inputValue, setInputValue] = useState("");
-	const [searchResults, setSearchResults] = useState(data);
-	const { setProject } = useContext(SelectProjectRepoContext);
+const SearchBar = () => {
+	// const [inputValue, setInputValue] = useState("");
+	const [searchResults, setSearchResults] = useState([]);
+	const { userData, setUserData } = useContext(DataContext);
+
+	useEffect(() => {
+		const baseurl = "https://badging.allinopensource.org/api";
+		const urlParams = new URLSearchParams(document.location.search);
+		const code = urlParams.get("code");
+
+		fetch(`${baseurl}/callback`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ code }),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log("data:", data);
+				setUserData({
+					...userData,
+					username: data.username,
+					name: data.name,
+					email: data.email,
+					repos: data.repos,
+				});
+				setSearchResults(data.repos);
+			})
+			.catch((error) => {
+				console.log("an error occurred: ", error);
+			});
+	}, []);
 
 	const handleInputChange = (e) => {
 		const value = e.target.value;
-		setInputValue(value);
+		// setInputValue(value);
 
 		const results = performSearch(value);
 		setSearchResults(results);
 	};
 
 	const handleClearInput = () => {
-		setInputValue("");
-		setProject("");
-		setSearchResults(data);
+		// setInputValue("");
+		setUserData({
+			...userData,
+			projectsToBadge: [],
+		});
+		setSearchResults(userData.repos);
 	};
 
 	const performSearch = (value) => {
-		return data.filter((result) =>
+		return userData.repos.filter((result) =>
 			result.toLowerCase().includes(value.toLowerCase())
 		);
 	};
 
 	const handleResultClick = (result) => {
-		setInputValue(result);
-		setProject(result);
+		// setInputValue(result);
+		setUserData({
+			...userData,
+			projectsToBadge: [...userData.projectsToBadge, result],
+		});
 	};
 
 	return (
@@ -49,7 +77,7 @@ const SearchBar = ({ ResultsDisplay }) => {
 				<img src={search} alt="search" />
 				<input
 					type="text"
-					value={inputValue}
+					// value={inputValue}
 					onChange={handleInputChange}
 					placeholder="Search"
 				/>
@@ -58,6 +86,7 @@ const SearchBar = ({ ResultsDisplay }) => {
 			<ResultsDisplay
 				results={searchResults}
 				handleResultClick={handleResultClick}
+				handleClearInput={handleClearInput}
 			/>
 		</div>
 	);
