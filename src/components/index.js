@@ -11,6 +11,7 @@ import WhatIsDeiBadging from "./AboutDeiBadging/WhatIsDeiBadging";
 import ApplicationProcess from "./AboutDeiBadging/ApplicationProcess";
 import DeiFile from "./AboutDeiBadging/DeiFile";
 import DeiBadge from "./AboutDeiBadging/DeiBadge";
+import ResultsDisplay from "./SearchBar/ResultsDisplay";
 
 export {
 	Header,
@@ -26,4 +27,5 @@ export {
 	ApplicationProcess,
 	DeiFile,
 	DeiBadge,
+	ResultsDisplay,
 };
