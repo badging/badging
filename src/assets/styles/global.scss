@@ -26,6 +26,17 @@ body {
 	// background-color: #fff;
 }
 
+.loading,
+.info {
+	color: $headingColor;
+	margin-top: 20px;
+}
+
+.error {
+	color: #d61b5e;
+	margin-top: 20px;
+}
+
 h2 {
 	font-size: 54px;
 	background: $heroTitleBackground;
@@ -44,55 +55,55 @@ h3 {
 	color: transparent;
 	margin: 1rem 0 0.5rem;
 	font-family: $font-family_1, sans-serif;
-  line-height: 2;
+	line-height: 2;
 }
 
 main {
-    // max-width: 100%;
+	// max-width: 100%;
 	height: auto;
 	// padding: 0px 40px;
 }
 
-    .jumbotron {
-        max-width: 1340px;
-		margin: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-		padding: 180px 0px 70px 40px;
-         p {
-            font-family: $font-family_2;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 180%;
-            color: $secondaryTextColor;
-			max-width: 840px;
-         }
-    }
+.jumbotron {
+	max-width: 1340px;
+	margin: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	padding: 180px 0px 70px 40px;
+	p {
+		font-family: $font-family_2;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 180%;
+		color: $secondaryTextColor;
+		max-width: 840px;
+	}
+}
 
-	nav .mobileNav.toggleDesctiptionButton{
-      .getStarted-button button {
+nav .mobileNav.toggleDesctiptionButton {
+	.getStarted-button button {
 		display: none !important;
 		background-color: red;
-	  }
-    }
+	}
+}
 
 @media screen and (max-width: 768px) {
-  h2 {
-    font-size: 1.9rem;
-  }
-  .faq {
 	h2 {
-		text-align: left !important;
+		font-size: 1.9rem;
 	}
-  }
-  .jumbotron {
-	width: 100% !important;
-	padding: 180px 20px 70px 30px;
-  }
+	.faq {
+		h2 {
+			text-align: left !important;
+		}
+	}
+	.jumbotron {
+		width: 100% !important;
+		padding: 180px 20px 70px 30px;
+	}
 }
 
 // @media screen and (max-width: 1030px) {
@@ -121,7 +132,7 @@ main {
 			display: none !important;
 		}
 	}
-	
+
 	.get-started {
 		// display: none;
 	}
@@ -140,7 +151,6 @@ main {
 	.get-started {
 		display: none;
 	}
-	
 }
 
 .faq {

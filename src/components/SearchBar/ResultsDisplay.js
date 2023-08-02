@@ -1,10 +1,12 @@
+import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { xMarkPink } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
-import { useContext, useState } from "react";
+import useLoadingError from "../../hooks/useLoadingError";
 
 const ResultsDisplay = ({ results }) => {
 	const { userData, setUserData } = useContext(DataContext);
+	const { loading, error } = useLoadingError();
 	const [focusedResultIndex, setFocusedResultIndex] = useState(-1);
 
 	const handleClearInput = (event) => {
@@ -26,7 +28,14 @@ const ResultsDisplay = ({ results }) => {
 
 	return (
 		<ul className="search_results">
-			{results &&
+			{loading && <li className="loading">Loading...</li>}
+			{error && <li className="error">{error}</li>}
+			{!loading && !error && results.length === 0 && (
+				<li className="info">Repository not found</li>
+			)}
+			{!loading &&
+				!error &&
+				results.length > 0 &&
 				results.slice(0, 3).map((result, index) => (
 					<li key={index}>
 						<button
