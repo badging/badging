@@ -7,7 +7,7 @@ import { DataContext } from "../../contexts/DataContext";
 import { ResultsDisplay } from "../index";
 
 const SearchBar = () => {
-	// const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
 	const { userData, setUserData } = useContext(DataContext);
 
@@ -25,7 +25,6 @@ const SearchBar = () => {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				console.log("data:", data);
 				setUserData({
 					...userData,
 					username: data.username,
@@ -42,19 +41,10 @@ const SearchBar = () => {
 
 	const handleInputChange = (e) => {
 		const value = e.target.value;
-		// setInputValue(value);
+		setInputValue(value);
 
 		const results = performSearch(value);
 		setSearchResults(results);
-	};
-
-	const handleClearInput = () => {
-		// setInputValue("");
-		setUserData({
-			...userData,
-			projectsToBadge: [],
-		});
-		setSearchResults(userData.repos);
 	};
 
 	const performSearch = (value) => {
@@ -63,31 +53,18 @@ const SearchBar = () => {
 		);
 	};
 
-	const handleResultClick = (result) => {
-		// setInputValue(result);
-		setUserData({
-			...userData,
-			projectsToBadge: [...userData.projectsToBadge, result],
-		});
-	};
-
 	return (
 		<div className="searchbar">
 			<div className="search">
 				<img src={search} alt="search" />
 				<input
 					type="text"
-					// value={inputValue}
+					value={inputValue}
 					onChange={handleInputChange}
 					placeholder="Search"
 				/>
-				<button type="button">Add to List</button>
 			</div>
-			<ResultsDisplay
-				results={searchResults}
-				handleResultClick={handleResultClick}
-				handleClearInput={handleClearInput}
-			/>
+			<ResultsDisplay results={searchResults} />
 		</div>
 	);
 };

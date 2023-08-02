@@ -77,27 +77,24 @@
 						display: flex;
 
 						button {
-							padding: 1.3rem 1rem;
+              padding: 1.3rem 1rem;
 						}
 						button.clear {
-							border: 0.5px solid #d61b5e;
+              border: 0.5px solid #d61b5e;
 							border-left: none;
-							display: none;
+              transition: all 0.2s ease-out;
 						}
+
 						button:first-of-type {
 							border: 0.5px solid $headingColor;
 							width: 100%;
 							text-align: left;
 							color: $headingColor;
 						}
-						button:first-of-type:hover,
-						button:first-of-type:active {
+						button:first-of-type:focus,
+						button:first-of-type:active, button:first-of-type.focused {
 							border: 0.5px solid #d61b5e;
 							border-right: none;
-						}
-						button:first-of-type:hover ~ button.clear,
-						button:first-of-type:active ~ button.clear {
-							display: block;
 						}
 					}
 				}

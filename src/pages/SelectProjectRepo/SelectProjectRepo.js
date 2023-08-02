@@ -6,15 +6,14 @@ import { DataContext } from "../../contexts/DataContext";
 import { useNavigate } from "react-router-dom";
 
 const SelectProjectRepo = () => {
-	const { userData } = useContext(DataContext);
+	const { userData, setUserData } = useContext(DataContext);
 	const navigate = useNavigate();
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const { name, email, projectsToBadge } = userData;
+	const handleSubmit = () => {
+		const { name, email, repoToBadge } = userData;
 
-		if (!projectsToBadge || projectsToBadge.length === 0) {
-			alert("Please select a project to badge");
+		if (!repoToBadge) {
+			alert("Please select a repository for badging");
 			return;
 		}
 
@@ -25,13 +24,13 @@ const SelectProjectRepo = () => {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ name, email, repos: projectsToBadge }),
+			body: JSON.stringify({ name, email, repos: [repoToBadge] }),
 		})
 			.then((response) => response.json())
 			// eslint-disable-next-line no-unused-vars
 			.then((data) => {
 				// setBadgedRepos([...badgedRepos, ...data.results]);
-
+				setUserData({ ...userData, repoToBadge: "" });
 				navigate("/"); // navigate to success page
 			})
 			.catch((error) => {
