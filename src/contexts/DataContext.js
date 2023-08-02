@@ -7,7 +7,7 @@ export const DataProvider = ({ children }) => {
 	const [userData, setUserData] = useState({
 		name: "",
 		email: "",
-		projectsToBadge: [],
+		repoToBadge: "",
 		username: "",
 		repos: [],
 	});
