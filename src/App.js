@@ -36,10 +36,8 @@ const App = () => {
 						<Route path="/badge" element={<GetStartedBadging />} />
 						<Route path="/select-project" element={<SelectProjectRepo />} />
 						<Route exact path="/projects" element={<Projects />} />
+						<Route exact path="/project-badging-successful" element={<SuccessfullyBadged />} />
 						<Route path="*" element={<ErrorPage />} />
-						<Route exact path="/project-badging-successfull/congratulations" 
-						element={<SuccessfullyBadged />} 
-						/>
 					</Routes>
 				</DataProvider>
 			</DesktopProvider>
