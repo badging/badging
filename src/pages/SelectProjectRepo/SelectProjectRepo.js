@@ -1,19 +1,20 @@
 import "../../assets/styles/global.scss";
 import "./selectProjectRepo.scss";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Header, SearchBar } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
-import { useNavigate } from "react-router-dom";
+import useLoadingError from "../../hooks/useLoadingError";
 
 const SelectProjectRepo = () => {
 	const { userData, setUserData } = useContext(DataContext);
+	const { error, setError } = useLoadingError();
+	const { name, email, repoToBadge } = userData;
 	const navigate = useNavigate();
 
 	const handleSubmit = () => {
-		const { name, email, repoToBadge } = userData;
-
 		if (!repoToBadge) {
-			alert("Please select a repository for badging");
+			setError("Please select a repository for badging");
 			return;
 		}
 
@@ -29,13 +30,18 @@ const SelectProjectRepo = () => {
 			.then((response) => response.json())
 			// eslint-disable-next-line no-unused-vars
 			.then((data) => {
-				// setBadgedRepos([...badgedRepos, ...data.results]);
 				setUserData({ ...userData, repoToBadge: "" });
 				navigate("/"); // navigate to success page
 			})
 			.catch((error) => {
-				console.log("an error occurred while submitting repo for badging");
-				console.log(error);
+        setUserData({ ...userData, repoToBadge: "" });
+				setError(
+					"an error occurred while submitting repo for badging. Please try again"
+				);
+				console.log(
+					"an error occurred while submitting repo for badging: ",
+					error
+				);
 			});
 	};
 
@@ -51,7 +57,12 @@ const SelectProjectRepo = () => {
 					<form className="select__project__form">
 						<h2>Search For Project Repository</h2>
 						<SearchBar />
-						<button type="button" onClick={handleSubmit}>
+						{error && !repoToBadge && <p className="error">{error}</p>}
+						<button
+							type="button"
+							onClick={handleSubmit}
+							onBlur={() => setError(null)}
+						>
 							Submit
 						</button>
 					</form>

@@ -5,13 +5,16 @@ import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
 import { ResultsDisplay } from "../index";
+import useLoadingError from "../../hooks/useLoadingError";
 
 const SearchBar = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
 	const { userData, setUserData } = useContext(DataContext);
+	const { setLoading, setError } = useLoadingError();
 
 	useEffect(() => {
+    setLoading(true);
 		const baseurl = "https://badging.allinopensource.org/api";
 		const urlParams = new URLSearchParams(document.location.search);
 		const code = urlParams.get("code");
@@ -33,8 +36,11 @@ const SearchBar = () => {
 					repos: data.repos,
 				});
 				setSearchResults(data.repos);
+        setLoading(false);
 			})
 			.catch((error) => {
+        setLoading(false);
+        setError("An error occurred while fetching your data. Please try again later.");
 				console.log("an error occurred: ", error);
 			});
 	}, []);
