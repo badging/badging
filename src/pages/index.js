@@ -9,4 +9,6 @@ import About from './AboutDeiBadging/About';
 
 import SelectProjectRepo from './SelectProjectRepo/SelectProjectRepo';
 
-export { Home, About, Projects, GetStartedBadging, SelectProjectRepo };
+import ErrorPage from './Home/ErrorPage/ErrorPage';
+
+export { Home, About, Projects, GetStartedBadging, SelectProjectRepo, ErrorPage };

@@ -5,6 +5,7 @@ import {
 	Projects,
 	GetStartedBadging,
 	SelectProjectRepo,
+	ErrorPage,
 } from "./pages";
 import {
 	WhatIsDeiBadging,
@@ -34,7 +35,7 @@ const App = () => {
 						<Route path="/badge" element={<GetStartedBadging />} />
 						<Route path="/select-project" element={<SelectProjectRepo />} />
 						<Route exact path="/projects" element={<Projects />} />
-						<Route path="*" element={<h1>Not Found</h1>} />
+						<Route path="*" element={<ErrorPage />} />
 					</Routes>
 				</DataProvider>
 			</DesktopProvider>
