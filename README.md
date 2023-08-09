@@ -1,7 +1,5 @@
 # DEI Project Badging
 
-
-
 ## About DEI Project Badging
 The DEI Project Badging Initiative is a collaboration between [AllIn](https://allinopensource.org/) and [CHAOSS](https://chaoss.community/) that awards badges to open-source projects that demonstrate diversity and inclusion. This initiative promotes leadership, self-reflection, and self-improvement on issues critical to building the Internet as a social good.
 
@@ -24,7 +22,7 @@ Currently, the DEI Project Badges are available in four levels
 
 | Level        | Badge        |  Requirements Met
 |--------------|--------------|-------------------------------------
-| Bronze       | ![Bronze Badge](https://raw.githubusercontent.com/AllInOpenSource/BadgingAPI/main/assets/bronze-badge.svg)  |  Presence of DEI.md File
+| Bronze       | ![Bronze-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/804cf75b-0c58-4fef-bf3d-a8d6f88c9f1f)  |  Presence of DEI.md File
 | Silver       | ![Silver-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/952bb182-a652-49bc-890a-1c75aab7c8f4)  |  Comming soon
 | Gold         | ![Gold-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/0471a7a5-46c0-4056-ada1-c7ad09f31d55)  |  Comming soon
 | Platinum     | ![Platinum](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/9de89540-ae31-4197-91b7-c978fcaac204) |  Comming soon
