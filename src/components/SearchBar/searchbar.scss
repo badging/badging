@@ -5,6 +5,7 @@
 		display: flex;
     border: 1px solid transparent;
 		background: #F6F6F6;
+    padding: 13px 0;
 
 		input[type="text"] {
 			width: 100%;
@@ -15,14 +16,14 @@
       color: $headingColor;
 		}
 
-		button {
-			border: 1px solid #fff;
-			outline: none;
-			background: $headingColor;
-			padding: 13px 16px;
-			width: 11rem;
-			color: #fff;
-		}
+		// button {
+		// 	border: 1px solid #fff;
+		// 	outline: none;
+		// 	background: $headingColor;
+		// 	padding: 13px 16px;
+		// 	width: 11rem;
+		// 	color: #fff;
+		// }
 
 		img {
 			margin: 0 0.2rem 0 1rem;

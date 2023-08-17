@@ -1,22 +1,49 @@
 import "../../assets/styles/global.scss";
 import "./searchbar.scss";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
-import { SelectProjectRepoContext } from "../../contexts/SelectProjectRepoContext";
+import { DataContext } from "../../contexts/DataContext";
+import { ResultsDisplay } from "../index";
+import useLoadingError from "../../hooks/useLoadingError";
 
-const SearchBar = ({ ResultsDisplay }) => {
-	const data = [
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-		"All in DEI Badging Project",
-	];
+const SearchBar = () => {
 	const [inputValue, setInputValue] = useState("");
-	const [searchResults, setSearchResults] = useState(data);
-	const { setProject } = useContext(SelectProjectRepoContext);
+	const [searchResults, setSearchResults] = useState([]);
+	const { userData, setUserData } = useContext(DataContext);
+	const { setLoading, setError } = useLoadingError();
+
+	useEffect(() => {
+    setLoading(true);
+		const baseurl = "https://badging.allinopensource.org/api";
+		const urlParams = new URLSearchParams(document.location.search);
+		const code = urlParams.get("code");
+
+		fetch(`${baseurl}/callback`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ code }),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				setUserData({
+					...userData,
+					username: data.username,
+					name: data.name,
+					email: data.email,
+					repos: data.repos,
+				});
+				setSearchResults(data.repos);
+        setLoading(false);
+			})
+			.catch((error) => {
+        setLoading(false);
+        setError("An error occurred while fetching your data. Please try again later.");
+				console.log("an error occurred: ", error);
+			});
+	}, []);
 
 	const handleInputChange = (e) => {
 		const value = e.target.value;
@@ -26,21 +53,10 @@ const SearchBar = ({ ResultsDisplay }) => {
 		setSearchResults(results);
 	};
 
-	const handleClearInput = () => {
-		setInputValue("");
-		setProject("");
-		setSearchResults(data);
-	};
-
 	const performSearch = (value) => {
-		return data.filter((result) =>
+		return userData.repos.filter((result) =>
 			result.toLowerCase().includes(value.toLowerCase())
 		);
-	};
-
-	const handleResultClick = (result) => {
-		setInputValue(result);
-		setProject(result);
 	};
 
 	return (
@@ -53,12 +69,8 @@ const SearchBar = ({ ResultsDisplay }) => {
 					onChange={handleInputChange}
 					placeholder="Search"
 				/>
-				<button type="button">Add to List</button>
 			</div>
-			<ResultsDisplay
-				results={searchResults}
-				handleResultClick={handleResultClick}
-			/>
+			<ResultsDisplay results={searchResults} />
 		</div>
 	);
 };
