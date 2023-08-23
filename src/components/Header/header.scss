@@ -19,7 +19,7 @@ header {
     line-height: 22px;
     width: 1440px;
     z-index: 100;
-    backdrop-filter: blur(6px);
+    background-color: $primaryBackgroundColor;
     position: fixed;
     left: 0;
     right: 0;
@@ -376,17 +376,18 @@ header {
 }
 
 .mobileNavLinks {
-  position: relative;
-  height: 548px;
-  position: absolute;
-  top: 135px;
+  position: fixed;
+  height: auto;
+  top: 100px;
   display: none;
   flex-direction: column;
   gap: 70px;
   padding: 30px;
   width: 100%;
   backdrop-filter: blur(6px);
-  background-color: #000000ab;
+  background-color: $primaryBackgroundColor;
+  z-index: 90;
+
 
   ul a {
     color: #fff !important;

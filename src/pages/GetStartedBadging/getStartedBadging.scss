@@ -3,14 +3,17 @@
 .requirements {
   min-height: 100vh;
   padding-top: 130px;
-  width: 100%;
+  max-width: 1300px;
   display: flex;
   flex-direction: row;
+  margin: auto;
+  gap: 20px;
+  
   // font-family: $font-family_1, sans-serif;
 
   .section-one {
     position: relative;
-    width: 664px;
+    flex: 1;
     padding-top: 206px;
     padding-left: 120px;
     h1 {
@@ -28,7 +31,7 @@
   }
   .section-two {
     background-color: white;
-    width: 776px;
+    flex: 1;
     padding-top: 100px;
     padding-bottom: 20px;
     padding-left: 80px;
