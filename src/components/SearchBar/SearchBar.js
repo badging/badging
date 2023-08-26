@@ -45,6 +45,8 @@ const SearchBar = () => {
 			});
 	}, []);
 
+	
+
 	const handleInputChange = (e) => {
 		const value = e.target.value;
 		setInputValue(value);

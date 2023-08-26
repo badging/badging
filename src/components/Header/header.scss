@@ -19,6 +19,7 @@ header {
     line-height: 22px;
     width: 1440px;
     z-index: 100;
+    // backdrop-filter: blur(6px);
     background-color: $primaryBackgroundColor;
     position: fixed;
     left: 0;

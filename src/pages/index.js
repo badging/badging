@@ -11,4 +11,6 @@ import SelectProjectRepo from './SelectProjectRepo/SelectProjectRepo';
 
 import ErrorPage from './Home/ErrorPage/ErrorPage';
 
-export { Home, About, Projects, GetStartedBadging, SelectProjectRepo, ErrorPage };
+import SuccessfullyBadged from './ProjectBadgingSuccess/ProjectBadgingSuccess';
+
+export { Home, About, Projects, GetStartedBadging, SelectProjectRepo, ErrorPage, SuccessfullyBadged };
