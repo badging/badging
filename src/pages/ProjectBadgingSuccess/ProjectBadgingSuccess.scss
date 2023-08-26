@@ -1,0 +1,47 @@
+@import '../../assets/styles/variables.scss';
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+    padding: 0 10px;
+    max-width: auto;
+
+    .title-header {
+        font-family: $font-family_1;
+        font-size: 32px;
+        font-weight: 600;
+        background: linear-gradient($congratulationTextColor, 88deg, #E9E9E9 0%, #BABABA 100%);
+    }
+    div {
+        text-align: center;
+
+        p {
+            font-family: $font-family_2;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+    a {
+        padding: 20px 70px;
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    section {
+        .title-header {
+            font-size: 25px !important;
+        }
+        a {
+            padding: 10px 30px;
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}

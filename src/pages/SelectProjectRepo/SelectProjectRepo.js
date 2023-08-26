@@ -17,7 +17,7 @@ const SelectProjectRepo = () => {
 			setError("Please select a repository for badging");
 			return;
 		}
-
+		const vaname = "job"
 		// api call to get badged
 		const baseurl = "https://badging.allinopensource.org/api";
 		fetch(`${baseurl}/repos-to-badge`, {
@@ -31,7 +31,7 @@ const SelectProjectRepo = () => {
 			// eslint-disable-next-line no-unused-vars
 			.then((data) => {
 				setUserData({ ...userData, repoToBadge: "" });
-				navigate("/"); // navigate to success page
+				navigate("/project-badging-successful", { state: { name } }); // navigate to success page
 			})
 			.catch((error) => {
         setUserData({ ...userData, repoToBadge: "" });
