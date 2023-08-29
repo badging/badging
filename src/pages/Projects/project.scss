@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables.scss';
 
 .project {
-    width: 100%;
+   
 	height: auto;
     background-color: #000;
     padding: 100px 0px 20px 0px;
@@ -11,8 +11,12 @@
     }
 
     .badging {
-        max-width: 1300px;
+        width: 100%;
         margin: auto;
+        .badging-table {
+            max-width: 65rem;
+            margin: auto;
+        }
         .search {
             display: flex;
             gap: 4px;
