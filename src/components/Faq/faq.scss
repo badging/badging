@@ -1,9 +1,16 @@
 @import "../../assets/styles/variables";
 
+section {
+	height: auto !important;
+}
+
 .faq {
+	width: 100%;
+	margin-top: 70px;
 	h2 {
-		margin: 50px 0px 20px 0px;
+		margin: 0px 0px 20px 0px;
 		text-align: center;
+		
 	}
 	.faq-details {
 		display: flex;
@@ -11,7 +18,8 @@
 		margin-top: 5px;
 		// line-height: 70px;
 		border: 1px solid $primaryBorderColor;
-		max-width: inherit;
+		max-width: 60rem;
+		margin: auto;
 		height: auto; //91px;
 		font-family: $font-family_1;
 		padding: 30px 0;
@@ -35,6 +43,7 @@
 			font-weight: 600;
 			line-height: normal;
 			letter-spacing: 0.36px;
+			text-align: start;
 		}
 		p:nth-child(2) {
 			padding: 0px 55px;
@@ -42,6 +51,7 @@
 			font-weight: 400;
 			font-size: 18px;
 			font-family:  $font-family_2;
+			text-align: start;
 		}
 		.toggleAnswer.openAnswer {
 			margin-top: 25px; /* Change this value to adjust the margin when clicked */

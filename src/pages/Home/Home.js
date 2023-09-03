@@ -103,12 +103,10 @@ const Home = () => {
         }}>
         hello 
       </div> */}
-      <section className="container"
-      
-      >
+      <section className="container">
         <div className="faq"
          style={{ 
-          background:`url(${howItWorks}) top right no-repeat`, 
+          background:`url(${howItWorks}) center top no-repeat`, 
           }}
         >
           <h2>Still Have Questions</h2>
