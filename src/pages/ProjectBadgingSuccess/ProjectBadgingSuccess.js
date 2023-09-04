@@ -9,7 +9,7 @@ const ProjectBadgingSuccess = () => {
   return (
     <div>
         <Header />
-        <section className='container'>
+        <section className='container project__badging__success'>
             <p className='title-header'>Congratulations!</p>
             <div>
              <p> Hello {state?.name}! You will receive a DEI.md</p>
