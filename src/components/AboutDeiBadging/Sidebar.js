@@ -22,7 +22,7 @@ const Sidebar = () => {
 				</div>
 				{isActive === 1 && (
 					<div className="sub__links">
-						<NavLink exact="true" to="/about/what-is-dei-project-badging">
+						<NavLink exact="true" to="/about">
 							What is DEI Project Badging?
 						</NavLink>
 					</div>
@@ -40,6 +40,25 @@ const Sidebar = () => {
 					</NavLink>
 					<img src={arrowRight} alt="arrow" />
 				</div>
+				{isActive === 2 && (
+					<div className="sub__links">
+						<NavLink exact="true" to="/about/application-process">
+							Self-Assessment & Documen...
+						</NavLink>
+						<NavLink exact="true" to="/about/application-process">
+							Project Application
+						</NavLink>
+						<NavLink exact="true" to="/about/application-process">
+							Badging Evaluation
+						</NavLink>
+						<NavLink exact="true" to="/about/application-process">
+							Recognition and Badging
+						</NavLink>
+						<NavLink exact="true" to="/about/application-process">
+							Continued Engagement
+						</NavLink>
+					</div>
+				)}
 			</li>
 			<li>
 				<div className="main__link">

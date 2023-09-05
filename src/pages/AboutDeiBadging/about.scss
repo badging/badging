@@ -101,6 +101,12 @@
 					}
 				}
 
+        .application_process {
+          a {
+            text-decoration: underline;
+          }
+        }
+
 				.dei__badges {
 					h4 {
 						margin-top: 1rem;
@@ -208,6 +214,13 @@
 							.sub__links {
 								border-left: 3px solid $chaossPink;
 								padding: 0px 0 4px 12px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.75rem;
+
+                a {
+                  display: block;
+                }
 							}
 
 							img {
@@ -219,7 +232,7 @@
 
 				.page__content {
 					width: calc(100% - 265px);
-					max-width: 705px;
+					max-width: 719px;
 
 					h2 {
 						font-size: 2rem;
