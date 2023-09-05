@@ -101,9 +101,15 @@
 					}
 				}
 
-        .application_process {
+        .application_process, .dei__file {
           a {
             text-decoration: underline;
+          }
+        }
+
+        .dei__file {
+          ul {
+            margin-top: 1.5rem;
           }
         }
 
