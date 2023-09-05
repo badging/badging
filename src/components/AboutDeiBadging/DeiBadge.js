@@ -30,7 +30,7 @@ const DeiBadge = () => {
 					efforts in meeting the evolving DEI standards for each badge.
 				</p>
 				<div>
-					<h3>### Bronze Badge</h3>
+					<h3>Bronze Badge</h3>
 					<p>
 						The bronze badge is the first-level badge. The badge primarily
 						focuses on how the project metrics provided in the DEI.md file meet
@@ -58,7 +58,7 @@ const DeiBadge = () => {
 					</p>
 				</div>
 				{/* <div>
-					<h3>### Silver Badge</h3>
+					<h3>Silver Badge</h3>
 					<p>
 						Building upon the foundation established with the Bronze badge,
 						applicants are required to fulfil additional criteria and
@@ -82,7 +82,7 @@ const DeiBadge = () => {
 					</ul>
 				</div>
 				<div>
-					<h3>### Gold Badge</h3>
+					<h3>Gold Badge</h3>
 					<p>
 						As applicants advance to the Gold badge level, they are expected to
 						fully understand and implement DEI best practices in their
@@ -98,7 +98,7 @@ const DeiBadge = () => {
 					</ul>
 				</div>
 				<div>
-					<h3>### Platinum Badge</h3>
+					<h3>Platinum Badge</h3>
 					<p>
 						The highest level in the badging process, the Platinum badge
 						represents exceptional mastery, leadership, and sustained excellence

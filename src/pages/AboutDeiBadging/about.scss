@@ -11,6 +11,25 @@
 		}
 
 		.jumbotron__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+      row-gap: 1.5rem;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+
+			h1 {
+				font-size: 3rem;
+				font-family: $font-family_1;
+				background: $heroTitleBackground2;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
 			.jumbotron {
 				padding: 6rem 0 1.8rem 0;
 				margin: 0rem 0rem;
@@ -81,9 +100,9 @@
 					margin-top: 1rem;
 				}
 
-        a{
-          color: $chaossPink;
-        }
+				a {
+					color: $chaossPink;
+				}
 
 				p:not(:first-of-type) {
 					margin-top: 1.5rem;
@@ -101,17 +120,19 @@
 					}
 				}
 
-        .application_process, .dei__file, .dei__badges {
-          a {
-            text-decoration: underline;
-          }
-        }
+				.application_process,
+				.dei__file,
+				.dei__badges {
+					a {
+						text-decoration: underline;
+					}
+				}
 
-        .dei__file {
-          ul {
-            margin-top: 1.5rem;
-          }
-        }
+				.dei__file {
+					ul {
+						margin-top: 1.5rem;
+					}
+				}
 
 				.dei__badges {
 					h4 {
@@ -139,9 +160,12 @@
 
 			.jumbotron__container {
 				display: flex;
+				flex-direction: row;
 				justify-content: flex-start;
 				align-items: center;
+				text-align: left;
 				width: 1440px;
+        padding: 10rem;
 				padding-top: 10rem;
 				padding-bottom: 6rem;
 				column-gap: 1.5rem;
@@ -220,13 +244,13 @@
 							.sub__links {
 								border-left: 3px solid $chaossPink;
 								padding: 0px 0 4px 12px;
-                display: flex;
-                flex-direction: column;
-                row-gap: 0.75rem;
+								display: flex;
+								flex-direction: column;
+								row-gap: 0.75rem;
 
-                a {
-                  display: block;
-                }
+								a {
+									display: block;
+								}
 							}
 
 							img {
