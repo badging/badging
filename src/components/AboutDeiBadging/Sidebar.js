@@ -1,27 +1,69 @@
 import { NavLink } from "react-router-dom";
+import { arrowRight } from "../../assets/images";
+import { useState } from "react";
 
 const Sidebar = () => {
+	const [isActive, setIsActive] = useState(1);
+
 	return (
 		<ul>
 			<li>
-				<NavLink exact="true" to="/about" id="what-is-dei-badging" end>
-					What is DEI Project Badging?
-				</NavLink>
+				<div className="main__link">
+					<NavLink
+						exact="true"
+						to="/about"
+						id="what-is-dei-badging"
+						end
+						onClick={() => setIsActive(1)}
+					>
+						What is All-In CHAOSS DEI...
+					</NavLink>
+					<img src={arrowRight} alt="arrow" />
+				</div>
+				{isActive === 1 && (
+					<div className="sub__links">
+						<NavLink exact="true" to="/about/what-is-dei-project-badging">
+							What is DEI Project Badging?
+						</NavLink>
+					</div>
+				)}
+			</li>
+
+			<li>
+				<div className="main__link">
+					<NavLink
+						exact="true"
+						to="/about/application-process"
+						onClick={() => setIsActive(2)}
+					>
+						How it Works
+					</NavLink>
+					<img src={arrowRight} alt="arrow" />
+				</div>
 			</li>
 			<li>
-				<NavLink exact="true" to="/about/application-process">
-					Application Process
-				</NavLink>
+				<div className="main__link">
+					<NavLink
+						exact="true"
+						to="/about/dei-file"
+						onClick={() => setIsActive(3)}
+					>
+						DEI.md File
+					</NavLink>
+					<img src={arrowRight} alt="arrow" />
+				</div>
 			</li>
 			<li>
-				<NavLink exact="true" to="/about/dei-file">
-					DEI.md File
-				</NavLink>
-			</li>
-			<li>
-				<NavLink exact="true" to="/about/dei-badge">
-					DEI Badge
-				</NavLink>
+				<div className="main__link">
+					<NavLink
+						exact="true"
+						to="/about/dei-badge"
+						onClick={() => setIsActive(4)}
+					>
+						DEI Badges
+					</NavLink>
+					<img src={arrowRight} alt="arrow" />
+				</div>
 			</li>
 		</ul>
 	);

@@ -23,6 +23,7 @@ import curlyBraces from "./logos/curlyBraces.svg";
 import file from "./icons/file.svg";
 import fileLink from "./icons/fileLink.svg";
 import team from "./icons/team.svg";
+import arrowRight from "./icons/arrowRight.svg";
 
 import goldBadge from "./badges/gold-badge.svg";
 import silverBadge from "./badges/silver-badge.svg";
@@ -64,4 +65,5 @@ export {
 	howItWorks,
 	heroImage,
 	curlyBraces,
+	arrowRight,
 };

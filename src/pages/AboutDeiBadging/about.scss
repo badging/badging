@@ -58,7 +58,7 @@
 			h3 {
 				font-family: $font-family_2;
 				font-size: 1rem;
-				margin: 0;
+				// margin: 0;
 			}
 
 			p {
@@ -81,9 +81,23 @@
 					margin-top: 1rem;
 				}
 
-				.dei__file {
-					p:not(:first-of-type) {
-						margin-top: 1rem;
+        a{
+          color: $chaossPink;
+        }
+
+				p:not(:first-of-type) {
+					margin-top: 1.5rem;
+				}
+
+				.what__is__dei {
+					h3 {
+						font-size: 1.5rem;
+						font-weight: bold;
+						margin-top: 0;
+					}
+
+					.objectives {
+						margin-top: 2.375rem;
 					}
 				}
 
@@ -171,11 +185,33 @@
 							transition: all 0.3s ease-in-out;
 							margin-bottom: 0.75rem;
 
-							a {
-								&.active {
-									color: $chaossBlue;
-									font-weight: 600;
+							.main__link {
+								display: flex;
+								align-items: center;
+								margin-bottom: 0.75rem;
+
+								a {
+									line-height: 150%;
+
+									&.active {
+										color: $chaossPink;
+										font-weight: 600;
+
+										& ~ img {
+											display: block;
+											margin-left: 8px;
+										}
+									}
 								}
+							}
+
+							.sub__links {
+								border-left: 3px solid $chaossPink;
+								padding: 0px 0 4px 12px;
+							}
+
+							img {
+								display: none;
 							}
 						}
 					}
@@ -183,10 +219,12 @@
 
 				.page__content {
 					width: calc(100% - 265px);
-					max-width: 692px;
+					max-width: 705px;
 
 					h2 {
 						font-size: 2rem;
+						font-family: $font-family_1;
+						font-weight: bolder;
 						margin-bottom: 1rem;
 						background: linear-gradient(
 							180deg,
