@@ -114,16 +114,26 @@
 			.jumbotron__container {
 				display: flex;
 				justify-content: flex-start;
+				align-items: center;
 				width: 1440px;
+				padding-top: 10rem;
+				padding-bottom: 6rem;
+				column-gap: 1.5rem;
+
+				h1 {
+					font-size: 3.375rem;
+					font-family: $font-family_1;
+					background: $heroTitleBackground2;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
 
 				.jumbotron {
-					padding: 10rem 0 6rem 0;
+					// padding: 10rem 0 6rem 0;
 					gap: 0 1rem;
 					max-width: 902px;
-
-					h2 {
-						font-size: 3.375rem;
-					}
 
 					p {
 						padding: 0;
@@ -137,8 +147,8 @@
 		}
 
 		main {
-      display: flex;
-      justify-content: center;
+			display: flex;
+			justify-content: center;
 
 			&.container {
 				padding: 0 7.5rem;
@@ -150,7 +160,7 @@
 				padding: 6.12rem 0;
 				gap: 0 4rem;
 				align-items: flex-start;
-        width: 1200px;
+				width: 1200px;
 
 				.page__nav {
 					width: 265px;
@@ -173,7 +183,7 @@
 
 				.page__content {
 					width: calc(100% - 265px);
-          max-width: 692px;
+					max-width: 692px;
 
 					h2 {
 						font-size: 2rem;
