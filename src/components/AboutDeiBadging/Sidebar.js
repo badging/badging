@@ -62,11 +62,7 @@ const Sidebar = () => {
 			</li>
 			<li>
 				<div className="main__link">
-					<NavLink
-						exact="true"
-						to="/about/dei-file"
-						onClick={() => setIsActive(3)}
-					>
+					<NavLink exact="true" to="/about/dei-file">
 						DEI.md File
 					</NavLink>
 					<img src={arrowRight} alt="arrow" />
@@ -83,6 +79,34 @@ const Sidebar = () => {
 					</NavLink>
 					<img src={arrowRight} alt="arrow" />
 				</div>
+				{isActive === 4 && (
+					<div className="sub__links">
+						<NavLink exact="true" to="/about/dei-badge">
+							Bronze Badge
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Criteria
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Silver Badge
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Criteria
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Gold Badge
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Criteria
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Platinum Badge
+						</NavLink>
+						<NavLink exact="true" to="/about/dei-badge">
+							Criteria
+						</NavLink>
+					</div>
+				)}
 			</li>
 		</ul>
 	);
