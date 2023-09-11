@@ -28,11 +28,11 @@ const ResultsDisplay = ({ results }) => {
 
 	return (
 		<ul className="search_results">
-			{loading && <li className="loading">Loading...</li>}
+			{/* {loading && <li className="loading">Loading...</li>}
 			{error && <li className="error">{error}</li>}
 			{!loading && !error && results.length === 0 && (
 				<li className="info">Repository not found</li>
-			)}
+			)} */}
 			{!loading &&
 				!error &&
 				results.length > 0 &&
