@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import '../../assets/styles/global.scss';
 import './header.scss';
 
-
-
 import {
   DefaultMobileNavIcon,
   OpenMobileNavIcon,
@@ -19,7 +17,6 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 650 });
   return (
-    
     <header>
       <nav className="container">
         <Link to="/" className="active">
@@ -36,7 +33,7 @@ const Header = () => {
             Home
           </Link>
           <Link to="/about" className="nav-link">
-            AboutDEIBadging
+            About DEI Badging
           </Link>
           <Link to="/projects" className="nav-link">
             Projects
@@ -48,12 +45,12 @@ const Header = () => {
         </Link>
 
         <img
-					onClick={() => setNavbarOpen((prev) => !prev)}
-					src={navbarOpen ? OpenMobileNavIcon : DefaultMobileNavIcon}
-					alt="open"
-					className="mobileNav"
+          onClick={() => setNavbarOpen((prev) => !prev)}
+          src={navbarOpen ? OpenMobileNavIcon : DefaultMobileNavIcon}
+          alt="open"
+          className="mobileNav"
           // className={`mobileNav ${navbarOpen ? 'toggleDesctiptionButton' : ''}`}
-				/>
+        />
       </nav>
       {navbarOpen ? (
         <div className="mobileNavLinks">
@@ -62,7 +59,7 @@ const Header = () => {
               Home
             </Link>
             <Link to="/about" className="nav-link">
-              AboutDEIBadging
+              About DEI Badging
             </Link>
             <Link to="/projects" className="nav-link">
               Projects

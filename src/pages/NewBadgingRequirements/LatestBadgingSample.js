@@ -1,19 +1,40 @@
 import React from 'react';
-import { Layout } from '../../components';
-import { loginArrow } from '../../assets/images';
+import { Footer, Header } from '../../components';
+import {
+  loginArrow,
+  getBadgedFullBG,
+  getBadgedMobile,
+} from '../../assets/images';
 
 import '../../assets/styles/global.scss';
-import './getStartedBadging.scss';
+import './LatestBadging.scss';
 
-const GetStartedBadging = () => {
+const LatestBadgingSample = () => {
   const baseurl = 'https://badging.allinopensource.org/api';
 
   const handleLogin = () => {
     window.location.href = `${baseurl}/login`;
   };
   return (
-    <Layout>
-      <div className="">
+    <div>
+      <Header />
+      <div className="requirements">
+        <div className="section-one">
+          <img
+            className="bg-getStarted"
+            src={getBadgedFullBG}
+            alt="arrow pointer design"
+          />
+
+          <img
+            className="bg-mobile-getStarted"
+            src={getBadgedMobile}
+            alt="arrow pointer design"
+          />
+          {/* <h1> Getting Started With Project Badging</h1> */}
+          {/* <img src={getStartedBg} alt="get started background" /> */}
+        </div>
+
         <div className="section-two">
           <div className="section-wrap">
             <div className="section-title">
@@ -49,8 +70,9 @@ const GetStartedBadging = () => {
           </div>
         </div>
       </div>
-    </Layout>
+      <Footer />
+    </div>
   );
 };
 
-export default GetStartedBadging;
+export default LatestBadgingSample;

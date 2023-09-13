@@ -1,89 +1,90 @@
 /* ==================== START IMPORT FONTS ======================= */
-@import url("https://api.fontshare.com/v2/css?f[regular]=clash-display@200,400,300,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url('https://api.fontshare.com/v2/css?f[regular]=clash-display@200,400,300,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 @font-face {
-	font-family: "Theinhardt";
-	src: url("../fonts/Theinhardt/Theinhardt-Light.otf") format("opentype");
-	font-style: normal;
-	font-weight: lighter;
-	font-display: swap;
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: lighter;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Theinhardt";
-	src: url("../fonts/Theinhardt/Theinhardt-Regular.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-	font-display: swap;
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Theinhardt";
-	src: url("../fonts/Theinhardt/TheinhardtMed.otf") format("opentype");
-	font-style: normal;
-	font-weight: bold;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Theinhardt";
-	src: url("../fonts/Theinhardt/Theinhardt-Bold.otf") format("opentype");
-	font-style: normal;
-	font-weight: bolder;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "JetBrains Mono";
-	src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf")
-		format("truetype");
-	font-style: normal;
-	font-weight: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "JetBrains Mono";
-	src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Medium.ttf")
-		format("truetype");
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Bold.ttf")
-    format("truetype");
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/TheinhardtMed.otf') format('opentype');
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-	font-family: "JetBrains Mono";
-	src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-ExtraBold.ttf")
-		format("truetype");
-	font-style: normal;
-	font-weight: bolder;
-	font-display: swap;
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: bolder;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Medium.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Bold.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-ExtraBold.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: bolder;
+  font-display: swap;
 }
 
 /* ==================== END IMPORT FONTS ======================= */
 
 // $font-family_1: 'Clash Display';
 // $font-family_2: 'Work Sans', sans-serif;
-$font-family_1: "JetBrains Mono";
-$font-family_2: "Theinhardt", sans-serif;
+$font-family_1: 'JetBrains Mono';
+$font-family_2: 'Theinhardt', sans-serif;
 $sectionTitleBackground: radial-gradient(
-	34.77% 34.77% at 50% 50%,
-	rgba(29, 232, 98, 0.2) 0%,
-	rgba(29, 232, 98, 0) 100%
+  34.77% 34.77% at 50% 50%,
+  rgba(29, 232, 98, 0.2) 0%,
+  rgba(29, 232, 98, 0) 100%
 );
 $primaryTextColor: #fff;
 $textColor2: #24292e;
 $textColor3: #000000;
+$textColor4: #030303;
 $headingColor: #030303;
 $secondaryTextColor: #858c90;
 $primaryBackgroundColor: #000;
@@ -91,16 +92,16 @@ $primaryBorderColor: #454c53;
 $borderColor2: #bebebe;
 $projectsBackgroundColor: #090909;
 $heroTitleBackground: linear-gradient(184deg, #69c7b9 0%, #e1b1ee 100%);
-$heroTitleBackground2: linear-gradient(164deg, #E9E9E9 41.39%, #BABABA 80.66%);
+$heroTitleBackground2: linear-gradient(164deg, #e9e9e9 41.39%, #bababa 80.66%);
 $cardTitleBackground: linear-gradient(
-	123.52deg,
-	#ffffff -36.16%,
-	rgba(255, 255, 255, 0) 219.41%
+  123.52deg,
+  #ffffff -36.16%,
+  rgba(255, 255, 255, 0) 219.41%
 );
 $secondaryBtnColor: #04e28a;
 $chaossBlue: #199ad6;
-$chaossPink: #D61B5E;
+$chaossPink: #d61b5e;
 $congratulationTextColor: linear-gradient(
-	rgba(233, 233, 233, 1),
-	rgba(186, 186, 186, 1)
+  rgba(233, 233, 233, 1),
+  rgba(186, 186, 186, 1)
 );
