@@ -32,6 +32,8 @@ import badge from "./badges/badge.svg";
 import howItWorks from "./others/bg-how-it-works-mobile.svg";
 import heroImage from "./others/hero-background.svg";
 
+import GetStartedArrrow from "./icons/GetStartedArrrow.svg"
+
 export {
 	badgingLogo,
 	badgingLogoMobile,
@@ -62,4 +64,5 @@ export {
 	xMarkPink,
 	howItWorks,
 	heroImage,
+	GetStartedArrrow,
 };

@@ -38,6 +38,11 @@ header {
     border: 1px solid #06F395;
     padding: 20px 70px;
   }
+  .get-started:hover {
+    background-color: #06F395;
+    color: #000;
+    transition: background-color 0.7s ease;
+  }
 
   .sub-nav {
     display: flex;
