@@ -25,12 +25,12 @@
 				.MuiAccordionSummary-content {
 					.MuiTypography-root {
 						font-size: 1.5rem;
-						color: $chaossBlue;
+						color: $chaossPink;
 					}
 				}
 
 				.MuiSvgIcon-root {
-					color: $chaossBlue;
+					color: $chaossPink;
 				}
 			}
 		}
@@ -47,15 +47,15 @@
 
 				.MuiTypography-root {
 					font-size: 1.125rem;
-					font-weight: 600;
-					font-family: $font-family_1, sans-serif;
+					font-weight: bolder;
+					font-family: $font-family_1;
 					line-height: normal;
 				}
 			}
 
 			.MuiSvgIcon-root {
 				font-size: 1.8rem;
-				color: $textColor2;
+				color: $headingColor;
 			}
 		}
 
