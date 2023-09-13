@@ -4,6 +4,10 @@
 	display: flex;
 	flex-direction: column;
 
+	* > * {
+		color: $headingColor;
+	}
+
 	.heading__2 {
 		font-size: 3rem;
 		font-weight: 600;
@@ -49,7 +53,6 @@
 			flex-direction: column;
 			padding: 5.8rem 3.88rem;
 			// width: 100%;
-			justify-content: center;
 			// flex: 1 1 auto;
 
 			.select__project__form {
@@ -65,7 +68,7 @@
 					background-clip: text;
 					color: transparent;
 					margin-bottom: 1rem;
-          font-weight: 700;
+					font-weight: 700;
 				}
 
 				p,
@@ -75,9 +78,9 @@
 					line-height: 150%;
 				}
 
-        p.text {
-          margin-bottom: 1rem;
-        }
+				p.text {
+					margin-bottom: 1rem;
+				}
 
 				.select__project__info {
 					border-radius: 4px;
@@ -88,49 +91,15 @@
 					padding: 1.5rem 1.5rem 2rem 1.5rem;
 					justify-content: center;
 					font-weight: 500;
-          margin-bottom: 3.62rem;
+					margin-bottom: 3.62rem;
 
 					svg {
 						align-self: flex-end;
 					}
 				}
 
-				.search_results {
-					display: flex;
-					flex-direction: column;
-					row-gap: 0.5rem;
-					column-gap: 1.3rem;
-					margin-top: 2rem;
-
-					li {
-						list-style-type: none;
-						display: flex;
-
-						button {
-							padding: 1.3rem 1rem;
-						}
-						button.clear {
-							border: 0.5px solid $chaossPink;
-							border-left: none;
-							transition: all 0.2s ease-out;
-						}
-
-						button:first-of-type {
-							border: 0.5px solid $headingColor;
-							width: 100%;
-							text-align: left;
-						}
-						button:first-of-type:focus,
-						button:first-of-type:active,
-						button:first-of-type.focused {
-							border: 0.5px solid $chaossPink;
-							border-right: none;
-						}
-					}
-				}
-
 				> button {
-					background: $secondaryBtnColor;
+					background: #06F395;
 					align-self: flex-start;
 					margin-top: 1rem;
 					padding: 23px 47px;
@@ -140,6 +109,75 @@
 
 					&:disabled {
 						background: $disabledBtnColor;
+					}
+				}
+
+				.search__results {
+          margin: 3rem 0 2rem 0;
+
+					h3 {
+						line-height: 150%;
+						background: linear-gradient(
+							180deg,
+							$headingColor 0%,
+							$headingColor 100%
+						);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-clip: text;
+						color: transparent;
+						font-family: $font-family_3;
+            font-weight: normal;
+            letter-spacing: 3.7px;
+					}
+
+          p {
+            line-height: 180%;
+            width: 100%;
+            max-width: 458px;
+            margin-bottom: 1.5rem;
+          }
+
+					ul {
+						display: flex;
+						gap: 0.5rem;
+						flex-wrap: wrap;
+
+						li.result {
+							display: flex;
+							align-items: center;
+							border-radius: 2rem;
+							border: 1px solid #000;
+							padding: 0.5rem 1rem;
+							line-height: 150%;
+							height: 2.5rem;
+							max-width: 100%;
+							position: relative;
+							transition: padding-right 0.5s ease-out;
+
+							button.clear {
+								position: absolute;
+								opacity: 0;
+								visibility: hidden;
+								right: 0;
+								top: 18%;
+								transform: translateY(-50%);
+								transform: translateX(50%);
+								transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
+									transform 0.5s ease-out;
+							}
+
+							&:hover {
+								padding-right: 2.8rem;
+
+								button.clear {
+									opacity: 1;
+									visibility: visible;
+									transform: translateX(0);
+									right: 1rem;
+								}
+							}
+						}
 					}
 				}
 			}

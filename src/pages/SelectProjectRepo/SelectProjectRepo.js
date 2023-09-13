@@ -3,23 +3,22 @@ import "./selectProjectRepo.scss";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import { Header, SearchBar } from "../../components";
+import { Header, SearchBar, ResultsDisplay } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
-import useLoadingError from "../../hooks/useLoadingError";
+// import useLoadingError from "../../hooks/useLoadingError";
 
 const SelectProjectRepo = () => {
 	const { userData, setUserData } = useContext(DataContext);
-	const { error, setError } = useLoadingError();
-	const { name, email, repoToBadge } = userData;
-	const [disabled, setDisabled] = useState(true);
+	// const { error, setError } = useLoadingError();
+	const { name, email, reposToBadge } = userData;
 	const [showInfo, setShowInfo] = useState(true);
 	const navigate = useNavigate();
 
 	const handleSubmit = () => {
-		if (!repoToBadge) {
-			setError("Please select a repository for badging");
-			return;
-		}
+		// if (!reposToBadge) {
+		// 	setError("Please select a repository for badging");
+		// 	return;
+		// }
 
 		// api call to get badged
 		const baseurl = "https://badging.allinopensource.org/api";
@@ -28,19 +27,19 @@ const SelectProjectRepo = () => {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			body: JSON.stringify({ name, email, repos: [repoToBadge] }),
+			body: JSON.stringify({ name, email, repos: reposToBadge }),
 		})
 			.then((response) => response.json())
 			// eslint-disable-next-line no-unused-vars
 			.then((data) => {
-				setUserData({ ...userData, repoToBadge: "" });
+				setUserData({ ...userData, reposToBadge: [] });
 				navigate("/project-badging-successful", { state: { name } }); // navigate to success page
 			})
 			.catch((error) => {
-				setUserData({ ...userData, repoToBadge: "" });
-				setError(
-					"an error occurred while submitting repo for badging. Please try again"
-				);
+				setUserData({ ...userData, reposToBadge: [] });
+				// setError(
+				// 	"an error occurred while submitting repo for badging. Please try again"
+				// );
 				console.log(
 					"an error occurred while submitting repo for badging: ",
 					error
@@ -62,7 +61,7 @@ const SelectProjectRepo = () => {
 							<div className="select__project__info">
 								<CloseIcon onClick={() => setShowInfo(false)} />
 								<div>
-									<p>Hello John!</p>
+									<p>Hello {name}!</p>
 									<p>We appreciate you choosing to badge your project.</p>
 									<p>
 										Enter your desired project in the search box below before
@@ -78,12 +77,22 @@ const SelectProjectRepo = () => {
 							presence of a DEI.md file.
 						</p>
 						<SearchBar />
-						{/* {error && !repoToBadge && <p className="error">{error}</p>} */}
+						{/* {error && !reposToBadge && <p className="error">{error}</p>} */}
+						{reposToBadge.length > 0 && (
+							<div className="search__results">
+								<h3>SEARCH RESULT</h3>
+								<p>
+									You can proceed to scan the selected project below or search
+									to add more projects
+								</p>
+								<ResultsDisplay results={reposToBadge} />
+							</div>
+						)}
 						<button
 							type="button"
 							onClick={handleSubmit}
-							onBlur={() => setError(null)}
-							disabled={disabled}
+							// onBlur={() => setError(null)}
+							disabled={!reposToBadge.length > 0}
 						>
 							Scan Project
 						</button>
