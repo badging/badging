@@ -19,9 +19,11 @@ import discord from "./logos/discord_logo.svg";
 import dropbox from "./logos/dropbox_logo.svg";
 import badgingLogo from "./logos/all-in-chaoss-logo.svg";
 import badgingLogoMobile from "./logos/all-in-chaoss-logo-mobile.svg";
+import curlyBraces from "./logos/curlyBraces.svg";
 import file from "./icons/file.svg";
 import fileLink from "./icons/fileLink.svg";
 import team from "./icons/team.svg";
+import arrowRight from "./icons/arrowRight.svg";
 
 import goldBadge from "./badges/gold-badge.svg";
 import silverBadge from "./badges/silver-badge.svg";
@@ -64,5 +66,10 @@ export {
 	xMarkPink,
 	howItWorks,
 	heroImage,
+<<<<<<< HEAD
 	GetStartedArrrow,
+=======
+	curlyBraces,
+	arrowRight,
+>>>>>>> main
 };

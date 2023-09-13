@@ -80,7 +80,7 @@
               padding: 1.3rem 1rem;
 						}
 						button.clear {
-              border: 0.5px solid #d61b5e;
+              border: 0.5px solid $chaossPink;
 							border-left: none;
               transition: all 0.2s ease-out;
 						}
@@ -93,7 +93,7 @@
 						}
 						button:first-of-type:focus,
 						button:first-of-type:active, button:first-of-type.focused {
-							border: 0.5px solid #d61b5e;
+							border: 0.5px solid $chaossPink;
 							border-right: none;
 						}
 					}

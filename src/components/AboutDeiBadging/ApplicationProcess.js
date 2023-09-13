@@ -2,64 +2,64 @@ import React from "react";
 
 const ApplicationProcess = () => {
 	return (
-		<div>
-			<h2 id="application-process">Application Process</h2>
-			<p>
-				The All In CHAOSS DEI Badging Initiative follows a straightforward
-				process:
-			</p>
+		<div className="application_process">
+			<h2 id="application-process">How It Works</h2>
 			<div>
 				<h3>Self-Assessment and Documentation:</h3>
 				<p>
-					Before applying for a DEI badge, maintainers are encouraged to conduct
-					a self-assessment of their project&#39;s DEI efforts based on the{" "}
-					<strong>CHAOSS DEI metrics</strong> on Project Access, Newcomer
-					Experience, etc. After the reflective process, maintainers can
+					Before applying for a DEI badge, maintainers or project admins are
+					encouraged to conduct a self-assessment of their project&#39;s DEI
+					efforts based on the following <strong>CHAOSS DEI metrics:</strong>{" "}
+					Project Access, Inclusive Leadership, Communication Transparency, and
+					Newcomer Experience. After the reflective process, maintainers can
 					document how the project attends to and prioritizes DEI around these
-					areas in a markdown file called the DEI.md file. This DEI.md file
-					should exist within the project&#39;s repository for easy feedback
-					from the community.
+					areas in a markdown file called the <a href="##">DEI.md file</a>. This
+					DEI.md file should exist within the project&#39;s repository for easy
+					feedback from the community.
 				</p>
 			</div>
 			<div>
-				<h3>Project Application:</h3>
+				<h3>All in CHAOSS DEI Badge Application:</h3>
 				<p>
 					Once the DEI.md file is published and publicly available, project
-					maintainers interested in the All in CHAOSS DEI badge can proceed to
-					apply here. The applicant must be a maintainer of the project, and the
-					repository that holds the DEI.md file must be specified.
+					maintainers can proceed to apply here. The applicant must be an admin
+					or maintainer of the project, and the repository that holds the DEI.md
+					file must be specified.
 				</p>
 			</div>
 			<div>
 				<h3>Badging Evaluation:</h3>
 				<p>
-					The review follows an automated process in which a bot scans the
-					project repository for the presence of a DEI.md file. The bot will
+					The review follows an automated process in which a CHAOSS bot scans
+					the project repository for the presence of a DEI.md file. The bot will
 					review the DEI.md file for relevant information provided by the
-					maintainer and its alignment with the CHAOSS DEI metrics to determine
-					eligibility for the DEI badge.
+					maintainer and its alignment with the CHAOSS DEI metrics stated in the{" "}
+					<a href="##">DEI.md template</a> to determine eligibility for the
+					badge. Upon successful review of the DEI.md file, a project badge will
+					be issued. The four CHAOSS metrics used in the DEI.md file include:
 				</p>
 			</div>
 			<div>
 				<h3>Recognition and Badging:</h3>
 				<p>
-					Projects that meet the established criteria will be awarded the All In
-					CHAOSS DEI badge, which they can prominently display on their
+					Projects that meet the established criteria will receive the All In
+					CHAOSS DEI badge, which can be prominently displayed on the
 					project&#39;s website, documentation, or other relevant platforms. The
 					badge signifies the project&#39;s commitment to DEI and highlights its
-					adherence to best practices.
+					adherence to DEI best practices.
 				</p>
 			</div>
 			<div>
 				<h3>Continued Engagement:</h3>
 				<p>
-					Once the badging process is completed, we provide inclusive,
-					comprehensive reports and insight for maintainers to enable them to
-					reflect on their DEI efforts. This report will also enable maintainers
-					to identify areas of improvement and do better before applying for
-					other badges. Maintainers who receive the DEI badge are encouraged to
-					continue their DEI, share experiences, and learn from others in the
-					community.
+					Once the badging process is completed, we provide, as an additional
+					service, a report for maintainers to enable them to further reflect on
+					their DEI efforts. This supplemental report will enable maintainers to
+					identify areas of improvement and opportunity. The report may prove
+					helpful as the project badging program evolves to include support for
+					subsequent badges. Maintainers who receive the DEI badge are
+					encouraged to continue their DEI efforts, share experiences, and learn
+					from others in the community.
 				</p>
 			</div>
 		</div>
