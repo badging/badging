@@ -9,7 +9,6 @@ const ProjectBadgingSuccess = () => {
   return (
     <div>
         <Header />
-<<<<<<< HEAD
         <main>
           <div className='successContainer'>
               <div className='infoContainer'>
@@ -43,16 +42,6 @@ const ProjectBadgingSuccess = () => {
                 </div>
               </div>
         </main>
-=======
-        <section className='container project__badging__success'>
-            <p className='title-header'>Congratulations!</p>
-            <div>
-             <p> Hello {state?.name}! You will receive a DEI.md</p>
-             <p>scan report in 1-4days</p>
-            </div>
-            <a href="/">Badge more repos</a>
-        </section>
->>>>>>> f22538ac6e624af5349d2c198bdd09aec903129a
     </div>
   )
 }
