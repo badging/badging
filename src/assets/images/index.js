@@ -66,10 +66,6 @@ export {
 	xMarkPink,
 	howItWorks,
 	heroImage,
-<<<<<<< HEAD
-	GetStartedArrrow,
-=======
 	curlyBraces,
 	arrowRight,
->>>>>>> main
 };
