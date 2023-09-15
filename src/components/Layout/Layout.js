@@ -11,6 +11,7 @@ const Layout = ({ children, className }) => {
       <Header />
       <div className="requirements">
         {/* Attaching all file components */}
+
         <div className="section-one">
           <img
             className="bg-getStarted"
@@ -21,10 +22,15 @@ const Layout = ({ children, className }) => {
             className="bg-mobile-getStarted"
             src={getBadgedMobile}
             alt="hero section mobile background"
+            // style={{ width: '100%' }}
           />
         </div>
+        {/* <div className="section-two"> */}
         <div className={className}>{children} </div>
+        {/* {children} */}
+        {/* </div> */}
       </div>
+
       <Footer />
     </div>
   );

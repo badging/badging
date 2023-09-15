@@ -34,7 +34,7 @@ import badge from './badges/badge.svg';
 import howItWorks from './others/bg-how-it-works-mobile.svg';
 import heroImage from './others/hero-background.svg';
 import getStartedArrow from './others/get-started.svg';
-import getStartedBg from './others/get-started-bg.png';
+
 import loginArrow from './icons/loginArrow.svg';
 import getBadgedFullBG from './others/get-badged-full-bg.svg';
 
@@ -72,7 +72,6 @@ export {
   curlyBraces,
   arrowRight,
   getStartedArrow,
-  getStartedBg,
   loginArrow,
   getBadgedFullBG,
   getBadgedMobile,
