@@ -73,13 +73,15 @@
         }
         
         .badging-footer {
-            // background-color: #000;
-            padding: 20px;
+            // background-color: red !important;
+            padding: 20px 1px;
             color: #fff;
             display: flex;
             background-color: #000;
             align-items: center;
+            max-width: 65rem !important;
             justify-content: flex-end;
+            margin: auto;
 
             .pagination {
                 background-color: #000;
