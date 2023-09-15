@@ -34,7 +34,6 @@ import badge from './badges/badge.svg';
 import howItWorks from './others/bg-how-it-works-mobile.svg';
 import heroImage from './others/hero-background.svg';
 import getStartedArrow from './others/get-started.svg';
-
 import loginArrow from './icons/loginArrow.svg';
 import getBadgedFullBG from './others/get-badged-full-bg.svg';
 
