@@ -12,6 +12,7 @@ import ApplicationProcess from "./AboutDeiBadging/ApplicationProcess";
 import DeiFile from "./AboutDeiBadging/DeiFile";
 import DeiBadge from "./AboutDeiBadging/DeiBadge";
 import ResultsDisplay from "./SelectProject/ResultsDisplay";
+import Layout from "./Layout/Layout";
 
 export {
 	Header,
@@ -28,4 +29,5 @@ export {
 	DeiFile,
 	DeiBadge,
 	ResultsDisplay,
+	Layout,
 };
