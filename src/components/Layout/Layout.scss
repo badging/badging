@@ -1,0 +1,38 @@
+.requirements {
+  display: grid;
+  grid-auto-rows: minmax(456px auto);
+  padding-top: 100px;
+
+  .section-one {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bg-getStarted {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .requirements {
+    display: grid;
+    grid-template-columns: 664px auto;
+    grid-template-rows: auto;
+
+    .section-one {
+      width: 664px;
+      .bg-mobile-getStarted {
+        display: none;
+      }
+      .bg-getStarted {
+        display: block;
+      }
+    }
+    .section-two {
+      flex: 1;
+    }
+  }
+}
