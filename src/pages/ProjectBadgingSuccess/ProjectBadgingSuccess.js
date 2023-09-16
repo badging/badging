@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../../components'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import "./ProjectBadgingSuccess.scss"
 
 const ProjectBadgingSuccess = () => {
@@ -38,7 +38,7 @@ const ProjectBadgingSuccess = () => {
           </div>
           <div className='badge-more'>
                 <div className="item">
-                  <a href="/">Badge more repos</a>
+                  <Link to={"/select-project"}>Badge more repos</Link>
                 </div>
               </div>
         </main>
