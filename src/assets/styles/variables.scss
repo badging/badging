@@ -73,9 +73,9 @@
 /* ==================== END IMPORT FONTS ======================= */
 
 // $font-family_1: 'Clash Display';
-// $font-family_2: 'Work Sans', sans-serif;
-$font-family_1: 'JetBrains Mono';
-$font-family_2: 'Theinhardt', sans-serif;
+$font-family_3: 'Work Sans', sans-serif;
+$font-family_1: "JetBrains Mono";
+$font-family_2: "Theinhardt", sans-serif;
 $sectionTitleBackground: radial-gradient(
   34.77% 34.77% at 50% 50%,
   rgba(29, 232, 98, 0.2) 0%,
@@ -105,3 +105,4 @@ $congratulationTextColor: linear-gradient(
   rgba(233, 233, 233, 1),
   rgba(186, 186, 186, 1)
 );
+$disabledBtnColor: #F3F5F6;
