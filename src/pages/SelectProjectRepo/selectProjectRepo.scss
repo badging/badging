@@ -1,8 +1,43 @@
 @import "../../assets/styles/variables";
 
-.select__project {
+// .select__project {
+// 	display: flex;
+// 	flex-direction: column;
+
+// main {
+// display: grid;
+// grid-template-columns: 1fr 1.2fr;
+// margin-top: 92px;
+// height: calc(100vh - 92px);
+
+// aside {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	padding: 0 23.2%;
+
+// 	// flex: 0 0 41.125rem;
+
+// 	p.heading__2 {
+// 		font-family: $font-family_1, sans-serif;
+// 		font-size: 3rem;
+// 		margin: 0;
+// 	}
+// }
+
+.main__content {
+	background: #fff;
 	display: flex;
 	flex-direction: column;
+	padding: 5.8rem 3.88rem;
+	height: 100%;
+
+	// width: 100%;
+	// flex: 1 1 auto;
+
+	* > * {
+		color: $headingColor;
+	}
 
 	.heading__2 {
 		font-size: 3rem;
@@ -22,161 +57,127 @@
 		cursor: pointer;
 	}
 
-	main {
-		display: grid;
-		grid-template-columns: 1fr 1.2fr;
-		margin-top: 92px;
-		height: calc(100vh - 92px);
+	.select__project__form {
+		width: 100%;
+		max-width: 37.2rem;
+		color: $headingColor;
 
-    * > * {
-      color: $headingColor;
-    }
+		h2 {
+			background: linear-gradient(180deg, #030303 0%, #030303 100%);
+			font-size: 1.5rem;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			color: transparent;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
 
-		aside {
+		p,
+		p > *,
+		svg > * {
+			color: $headingColor;
+			line-height: 150%;
+		}
+
+		p.text {
+			margin-bottom: 1rem;
+		}
+
+		.select__project__info {
+			border-radius: 4px;
+			border: 1px solid #06f395;
+			background: #e4f8f0;
 			display: flex;
+			flex-direction: column;
+			padding: 1.5rem 1.5rem 2rem 1.5rem;
 			justify-content: center;
-			align-items: center;
-			padding: 0 23.2%;
+			font-weight: 500;
+			margin-bottom: 3.62rem;
 
-			// flex: 0 0 41.125rem;
-
-			p.heading__2 {
-				font-family: $font-family_1, sans-serif;
-				font-size: 3rem;
-				margin: 0;
+			svg {
+				align-self: flex-end;
 			}
 		}
 
-		.main__content {
-			background: #fff;
-			display: flex;
-			flex-direction: column;
-			padding: 5.8rem 3.88rem;
-			// width: 100%;
-			// flex: 1 1 auto;
+		> button {
+			background: #06f395;
+			align-self: flex-start;
+			margin-top: 1rem;
+			padding: 23px 47px;
+			width: 263px;
+			font-weight: bolder;
+			color: $headingColor;
 
-			.select__project__form {
+			&:disabled {
+				background: $disabledBtnColor;
+        color: #5B656B;
+			}
+		}
+
+		.search__results {
+			margin: 3rem 0 2rem 0;
+
+			h3 {
+				line-height: 150%;
+				background: linear-gradient(
+					180deg,
+					$headingColor 0%,
+					$headingColor 100%
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				color: transparent;
+				font-family: $font-family_3;
+				font-weight: normal;
+				letter-spacing: 3.7px;
+			}
+
+			p {
+				line-height: 180%;
 				width: 100%;
-				max-width: 37.2rem;
-				color: $headingColor;
+				max-width: 458px;
+				margin-bottom: 1.5rem;
+			}
 
-				h2 {
-					background: linear-gradient(180deg, #030303 0%, #030303 100%);
-					font-size: 1.5rem;
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					background-clip: text;
-					color: transparent;
-					margin-bottom: 1rem;
-					font-weight: 700;
-				}
+			ul {
+				display: flex;
+				gap: 0.5rem;
+				flex-wrap: wrap;
 
-				p,
-				p > *,
-				svg > * {
-					color: $headingColor;
-					line-height: 150%;
-				}
-
-				p.text {
-					margin-bottom: 1rem;
-				}
-
-				.select__project__info {
-					border-radius: 4px;
-					border: 1px solid #06f395;
-					background: #e4f8f0;
+				li.result {
 					display: flex;
-					flex-direction: column;
-					padding: 1.5rem 1.5rem 2rem 1.5rem;
-					justify-content: center;
-					font-weight: 500;
-					margin-bottom: 3.62rem;
+					align-items: center;
+					border-radius: 2rem;
+					border: 1px solid #000;
+					padding: 0.5rem 1rem;
+					line-height: 150%;
+					height: 2.5rem;
+					max-width: 100%;
+					position: relative;
+					transition: padding-right 0.5s ease-out;
 
-					svg {
-						align-self: flex-end;
-					}
-				}
-
-				> button {
-					background: #06F395;
-					align-self: flex-start;
-					margin-top: 1rem;
-					padding: 23px 47px;
-					width: 263px;
-					font-weight: 500;
-					color: $headingColor;
-
-					&:disabled {
-						background: $disabledBtnColor;
-					}
-				}
-
-				.search__results {
-          margin: 3rem 0 2rem 0;
-
-					h3 {
-						line-height: 150%;
-						background: linear-gradient(
-							180deg,
-							$headingColor 0%,
-							$headingColor 100%
-						);
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-						background-clip: text;
-						color: transparent;
-						font-family: $font-family_3;
-            font-weight: normal;
-            letter-spacing: 3.7px;
+					button.clear {
+						position: absolute;
+						opacity: 0;
+						visibility: hidden;
+						right: 0;
+						top: 18%;
+						transform: translateY(-50%);
+						transform: translateX(50%);
+						transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
+							transform 0.5s ease-out;
 					}
 
-          p {
-            line-height: 180%;
-            width: 100%;
-            max-width: 458px;
-            margin-bottom: 1.5rem;
-          }
+					&:hover {
+						padding-right: 2.8rem;
 
-					ul {
-						display: flex;
-						gap: 0.5rem;
-						flex-wrap: wrap;
-
-						li.result {
-							display: flex;
-							align-items: center;
-							border-radius: 2rem;
-							border: 1px solid #000;
-							padding: 0.5rem 1rem;
-							line-height: 150%;
-							height: 2.5rem;
-							max-width: 100%;
-							position: relative;
-							transition: padding-right 0.5s ease-out;
-
-							button.clear {
-								position: absolute;
-								opacity: 0;
-								visibility: hidden;
-								right: 0;
-								top: 18%;
-								transform: translateY(-50%);
-								transform: translateX(50%);
-								transition: opacity 0.5s ease-out, visibility 0.5s ease-out,
-									transform 0.5s ease-out;
-							}
-
-							&:hover {
-								padding-right: 2.8rem;
-
-								button.clear {
-									opacity: 1;
-									visibility: visible;
-									transform: translateX(0);
-									right: 1rem;
-								}
-							}
+						button.clear {
+							opacity: 1;
+							visibility: visible;
+							transform: translateX(0);
+							right: 1rem;
 						}
 					}
 				}
@@ -185,10 +186,4 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.select__project {
-		main {
-			flex-direction: row;
-		}
-	}
-}
+@media screen and (min-width: 768px) {}

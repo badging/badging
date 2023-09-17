@@ -11,7 +11,7 @@ import WhatIsDeiBadging from "./AboutDeiBadging/WhatIsDeiBadging";
 import ApplicationProcess from "./AboutDeiBadging/ApplicationProcess";
 import DeiFile from "./AboutDeiBadging/DeiFile";
 import DeiBadge from "./AboutDeiBadging/DeiBadge";
-import ResultsDisplay from "./SelectProject/ResultsDisplay";
+import SelectedProjects from "./SelectProject/SelectedProjects";
 import Layout from "./Layout/Layout";
 
 export {
@@ -28,6 +28,6 @@ export {
 	ApplicationProcess,
 	DeiFile,
 	DeiBadge,
-	ResultsDisplay,
+	SelectedProjects,
 	Layout,
 };

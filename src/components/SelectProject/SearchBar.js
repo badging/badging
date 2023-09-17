@@ -1,51 +1,49 @@
 import "../../assets/styles/global.scss";
 import "./searchbar.scss";
 import { useContext, useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
-import useLoadingError from "../../hooks/useLoadingError";
+// import useLoadingError from "../../hooks/useLoadingError";
 
-const SearchBar = () => {
+const SearchBar = ({ setShowInfo }) => {
 	const [inputValue, setInputValue] = useState("");
+  const [inputClicked, setInputClicked] = useState(false);
 	const [searchResults, setSearchResults] = useState([]);
 	const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
 	const { userData, setUserData } = useContext(DataContext);
-	const { loading, setLoading, error, setError } = useLoadingError();
+	// const { loading, setLoading, error, setError } = useLoadingError();
 	const searchBarRef = useRef(null);
 
 	useEffect(() => {
-		setLoading(true);
+		// setLoading(true);
 		const baseurl = "https://badging.allinopensource.org/api";
 		const urlParams = new URLSearchParams(document.location.search);
 		const code = urlParams.get("code");
 
-		// fetch(`${baseurl}/callback`, {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify({ code }),
-		// })
-		// 	.then((response) => response.json())
-		// 	.then((data) => {
-		// 		setUserData({
-		// 			...userData,
-		// 			username: data.username,
-		// 			name: data.name,
-		// 			email: data.email,
-		// 			repos: data.repos,
-		// 		});
-		// 		setSearchResults(data.repos);
-		//     setLoading(false);
-		// 	})
-		// 	.catch((error) => {
-		//     setLoading(false);
-		//     setError("An error occurred while fetching your data. Please try again later.");
-		// 		console.log("an error occurred: ", error);
-		// 	});
-
-		// setSearchResults(userData.repos); // test
-		setLoading(false); // test
+		fetch(`${baseurl}/callback`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ code }),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				setUserData({
+					...userData,
+					username: data.username,
+					name: data.name,
+					email: data.email,
+					repos: data.repos,
+				});
+		    // setLoading(false);
+			})
+			.catch((error) => {
+		    // setLoading(false);
+		    // setError("An error occurred while fetching your data. Please try again later.");
+				console.log("an error occurred: ", error);
+			});
 	}, []);
 
 	useEffect(() => {
@@ -70,6 +68,14 @@ const SearchBar = () => {
 		setSearchResults(results);
 	}
 
+  const handleInputClick = () => {
+    if (!inputClicked) {
+      setInputClicked(true);
+      setShowInfo(false);
+      setSearchResults(userData.repos);
+    }
+  };
+
 	function performSearch(value) {
 		return userData.repos.filter((result) =>
 			result.toLowerCase().includes(value.toLowerCase())
@@ -81,7 +87,7 @@ const SearchBar = () => {
 			...userData,
 			reposToBadge: [...userData.reposToBadge, result],
 		});
-    clearSuggestions();
+		clearSuggestions();
 	}
 
 	function handleSuggestionClick(result, index) {
@@ -93,6 +99,7 @@ const SearchBar = () => {
 
 	function clearSuggestions() {
 		setSearchResults([]);
+    setFocusedSuggestionIndex(-1);
 	}
 
 	return (
@@ -103,6 +110,7 @@ const SearchBar = () => {
 					type="text"
 					value={inputValue}
 					onChange={handleInputChange}
+          onClick={handleInputClick}
 					placeholder="Search"
 				/>
 			</div>
@@ -136,5 +144,9 @@ const SearchBar = () => {
 		</div>
 	);
 };
+
+SearchBar.propTypes = {
+  setShowInfo: PropTypes.func.isRequired,
+}
 
 export default SearchBar;

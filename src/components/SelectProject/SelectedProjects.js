@@ -1,11 +1,12 @@
-import { useContext, useState } from "react";
-import PropTypes from "prop-types";
+import { useContext } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
 
-const ResultsDisplay = ({ results }) => {
+const SelectedProjects = () => {
 	const { userData, setUserData } = useContext(DataContext);
+	const filteredReposToBadge = [...new Set(userData.reposToBadge)];
+
 	// const { loading, error } = useLoadingError();
 
 	const handleClearInput = (event, result) => {
@@ -29,7 +30,7 @@ const ResultsDisplay = ({ results }) => {
 				// !loading &&
 				// 	!error &&
 
-				results.slice(0, 3).map((result, index) => (
+				filteredReposToBadge.map((result, index) => (
 					<li key={index} className="result">
 						{result}
 						<button
@@ -46,8 +47,4 @@ const ResultsDisplay = ({ results }) => {
 	);
 };
 
-ResultsDisplay.propTypes = {
-	results: PropTypes.arrayOf(PropTypes.string),
-};
-
-export default ResultsDisplay;
+export default SelectedProjects;

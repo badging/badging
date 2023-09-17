@@ -1,16 +1,11 @@
 @import "../../assets/styles/variables";
 
-section {
-	height: auto !important;
-}
-
 .faq {
 	width: 100%;
 	margin-top: 70px;
 	h2 {
 		margin: 0px 0px 20px 0px;
 		text-align: center;
-		
 	}
 	.faq-details {
 		display: flex;
@@ -24,8 +19,8 @@ section {
 		font-family: $font-family_1;
 		padding: 30px 0;
 		cursor: pointer;
-		
-		p{
+
+		p {
 			display: inline-block;
 		}
 
@@ -37,7 +32,7 @@ section {
 			height: inherit;
 			align-items: center;
 			padding: 0 55px;
-			font-family:  $font-family_1;
+			font-family: $font-family_1;
 			font-size: 20px;
 			font-style: normal;
 			font-weight: 600;
@@ -50,14 +45,14 @@ section {
 			font-style: normal;
 			font-weight: 400;
 			font-size: 18px;
-			font-family:  $font-family_2;
+			font-family: $font-family_2;
 			text-align: start;
 		}
 		.toggleAnswer.openAnswer {
 			margin-top: 25px; /* Change this value to adjust the margin when clicked */
-		  }
+		}
 	}
-	
+
 	.faq-details:hover {
 		border: 1px solid;
 		border-image: linear-gradient(
