@@ -13,6 +13,8 @@ import DeiFile from "./AboutDeiBadging/DeiFile";
 import DeiBadge from "./AboutDeiBadging/DeiBadge";
 import SelectedProjects from "./SelectProject/SelectedProjects";
 import Layout from "./Layout/Layout";
+import Spinner from "./loader/Spinner";
+import Loader from "./loader/Loader";
 
 export {
 	Header,
@@ -30,4 +32,6 @@ export {
 	DeiBadge,
 	SelectedProjects,
 	Layout,
+	Spinner,
+	Loader,
 };

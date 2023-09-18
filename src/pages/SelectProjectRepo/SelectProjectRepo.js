@@ -3,7 +3,7 @@ import "./selectProjectRepo.scss";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import { SearchBar, SelectedProjects, Layout } from "../../components";
+import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
 
@@ -12,9 +12,13 @@ const SelectProjectRepo = () => {
 	// const { error, setError } = useLoadingError();
 	const { name, email, reposToBadge } = userData;
 	const [showInfo, setShowInfo] = useState(true);
+	const [openLoader, setOpenLoader] = useState(false);
 	const navigate = useNavigate();
 
 	const handleSubmit = () => {
+		// open loader
+		setOpenLoader(true);
+
 		// api call to get badged
 		const baseurl = "https://badging.allinopensource.org/api";
 		fetch(`${baseurl}/repos-to-badge`, {
@@ -87,6 +91,9 @@ const SelectProjectRepo = () => {
 					</button>
 				</form>
 			</section>
+			<Loader open={openLoader} bgColor={"#fff"}>
+				<p style={{ color: "#030303" }}>...scanning Repository</p>
+			</Loader>
 		</Layout>
 	);
 };
