@@ -35,11 +35,11 @@ header {
   }
 
   .get-started {
-    border: 1px solid #06F395;
+    border: 1px solid #06f395;
     padding: 20px 70px;
   }
   .get-started:hover {
-    background-color: #06F395;
+    background-color: #06f395;
     color: #000;
     transition: background-color 0.7s ease;
   }
@@ -54,7 +54,7 @@ header {
     margin: auto;
     position: absolute;
     // top: 100px;
-    z-index: 99; 
+    z-index: 99;
 
     .hero-section {
       max-width: 760px;
@@ -99,8 +99,6 @@ header {
   justify-content: center;
   gap: 10px;
 }
- 
-
 
 /* ==================== END HEADER STYLE ======================= */
 // .sub-nav {
@@ -402,7 +400,6 @@ header {
   backdrop-filter: blur(6px);
   background-color: $primaryBackgroundColor;
   z-index: 90;
-
 
   ul a {
     color: #fff !important;

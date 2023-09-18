@@ -52,7 +52,7 @@
         color: $textColor4;
         width: 308px;
         height: 72px;
-        background: #06f395;
+        background: $secondaryBtnColor2;
         border: none;
         cursor: pointer;
         line-height: 24px;
@@ -74,7 +74,7 @@
 @media screen and (min-width: 768px) {
   .requirements {
     .section-two {
-      height: 723px;
+      height: 100%;
 
       .section-wrap {
         width: 552px;
