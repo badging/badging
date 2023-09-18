@@ -1,6 +1,8 @@
 .requirements {
   display: grid;
+
   grid-auto-rows: minmax(456px auto);
+
   padding-top: 100px;
 
   .section-one {
@@ -21,6 +23,7 @@
     display: grid;
     grid-template-columns: 664px auto;
     grid-template-rows: auto;
+    height: auto;
 
     .section-one {
       width: 664px;
@@ -33,6 +36,31 @@
     }
     .section-two {
       flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .requirements {
+    padding-top: 200px;
+    display: grid;
+
+    grid-template-columns: 864px auto;
+
+    height: 100vh;
+    width: 100%;
+
+    .section-one {
+      width: 864px;
+      // width: 40%;
+      .bg-mobile-getStarted {
+        display: none;
+      }
+      .bg-getStarted {
+        display: block;
+      }
+    }
+    .section-two {
     }
   }
 }
