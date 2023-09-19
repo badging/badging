@@ -1,10 +1,47 @@
 @import '../../assets/styles/variables.scss';
 
+main {
+    width: 100%;
+}
+
+
+.jumbotron__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 400px;
+    margin: auto;
+    max-width: 1440px;
+    h1 {
+        font-size: 3.375rem;
+        font-family: $font-family_1;
+        background: $heroTitleBackground2;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 .project {
+
+    .projectIntro {
+        color: #000;
+        padding-top: 50px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 180%; 
+    }
+    .divider {
+        border: 1px solid gray;
+        margin: 30px 0px;
+    }
    
 	height: auto;
-    background-color: #000;
-    padding: 100px 0px 20px 0px;
+    background-color: #fff;
+    // padding: 100px 20px 50px;
+    max-width: 1440px;
+    margin: auto;
     // color: #000 !important;
     .badging > div {
         color: #000;
@@ -13,8 +50,80 @@
     .badging {
         width: 100%;
         margin: auto;
+        // background-color: red;
+
+        p {
+            color: #000;
+        }
+        .container-holder {
+            background-color: #F5F5F5;
+            padding: 0px 20px 30px;
+            border-radius: 10px;
+
+            .table-top-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+               
+
+                p {
+                    font-size: 32px;
+                    font-weight: 700;
+                    font-family: $font-family_1;
+                    padding: 10px 0px;
+                    
+                }
+
+                .filter-projects {
+                    display: flex;
+                    padding: 20px 0px;
+                    align-items: center;
+                    gap: 10px;
+
+                    .filter {
+                        display: flex;
+                        background-color: #000;
+                        border: none;
+                        padding: 7px 30px;
+                        border-radius: 10px;
+                    }
+                    .filter button {
+                        background-color: #000;
+                        font-size: 16px;
+                        // padding: 0px 30px;
+                        border: none;
+                        margin-right: 10px;
+                      
+                     }
+
+                     .search {
+                        // background-color: red;
+                        display: flex;
+                        align-items: center;
+                        width: inherit;
+                        position: relative;
+
+                        input{
+                            padding: 0 30px;
+                            height: 40px;
+                            color: #000;
+                            font-size: 16px;
+                            border-radius: 8px;
+                            background: #E4E4E4;
+
+                        }
+                        img {
+                            position: absolute;
+                            left: 2px;
+                        }
+                     }
+                     
+                }
+            }
+        
+        }
         .badging-table {
-            max-width: 65rem;
+            max-width: 100%;
             margin: auto;
         }
         .search {
@@ -75,17 +184,17 @@
         .badging-footer {
             // background-color: red !important;
             padding: 20px 1px;
-            color: #fff;
+            color: #000;
             display: flex;
-            background-color: #000;
+            background-color: #F5F5F5;
             align-items: center;
-            max-width: 65rem !important;
+            max-width: inherit !important;
             justify-content: flex-end;
             margin: auto;
 
             .pagination {
-                background-color: #000;
-                color: #fff !important;
+                background-color: gray;
+                color: #000 !important;
             }
         }
 
@@ -93,12 +202,48 @@
     
 }
 
+.css-cisyew-MuiTableCell-root.MuiTableCell-body {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.css-ux5ofw-MuiTableCell-root.MuiTableCell-head {
+    background-color: #EDEDED !important;
+    color: #000 !important;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: none !important;
+}
+.css-1gj0jdp-MuiTableRow-root th, .css-1gj0jdp-MuiTableRow-root td {
+    border-bottom: 1px solid gray !important;
+}
+
 .MuiPagination-root .MuiPaginationItem-root {
     color: #fff; // Replace with your desired pagination text color
-    border: #1C1C1C 1px solid;
+    // border: #1C1C1C 1px solid;
+    border-bottom: none !important;
   }
   
   .MuiPagination-root .MuiPaginationItem-root.Mui-selected {
     color: #000; // Replace with your desired pagination text color
     background-color: #fff;
+  }
+//   .MuiPagination-root .MuiPaginationItem-root.Mui-selected > * {
+//     color: #000 !important;
+//   }
+
+  .MuiPagination-root .MuiPaginationItem-root {
+    color: #000;
+    border-bottom: none !important;
+}
+
+  @media screen and (max-width:700px) {
+    .jumbotron__container {
+        
+        h1 {
+            font-size: 2.375rem;
+        }
+    }
   }

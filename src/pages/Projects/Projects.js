@@ -12,7 +12,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { badge } from '../../assets/images';
+import { Filter, SearchIcon, badge, curlyBraces } from '../../assets/images';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -120,20 +120,50 @@ const Projects = () => {
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
-    <div>
+    <main>
       <Header />
-      <Jumbotron
+      {/* <Jumbotron
         title="DEI Badged Projects"
         description="Lorem ipsum dolor sit amet consectetur. Sed risus ultrices sit nibh sed.
         Interdum urna molestie fames porttitor elementum a diam laoreet. Sed
         tempor habitant phasellus velit sagittis mauris lorem pretium.
         Arcu neque id duis eu pellentesque in amet et. Ipsum ultricies
         a etiam est. Viverra eleifend tortor iaculis fringilla sed."
-      />
+      /> */}
+        <div className="container jumbotron__container">
+					<img src={curlyBraces} alt="badging-logo" />
+					<h1>DEI Badged Projects</h1>
+				</div>
       <section className="project">
-        <div className="badging">
+       
+        <p className='projectIntro container'>
+            The All in CHAOSS Badging project is 
+            helping open source communities prioritize diversity, 
+            equity, and inclusion. Using the CHAOSS DEI metrics 
+            as an industry benchmark, we are creating more 
+            inclusive and welcoming open-source environments 
+            for all. Our badged projects serve as exemplary 
+            demonstrations:
+        </p>
+        <hr className='divider' />
+         <div className="badging container">
+          <div className='container-holder'>
+            <div className="table-top-header">
+              <p>DEI Projects</p>
+              <div className='filter-projects'>
+                <div className="search">
+                  <img src={SearchIcon} width={25} height={25} alt='filter-icon'/>
+                  <input type="text" placeholder='Search for projects...' />
+                </div>
+                <div className="filter">
+                  <button>Filter</button>
+                  <img src={Filter} width={25} height={25} alt='filter-icon'/>
+                </div>
+              </div>
+            </div>
           <div className="badging-table">
             <TableContainer component={Paper}>
+             
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
@@ -184,10 +214,12 @@ const Projects = () => {
               className="pagination"
             />
           </div>
+          </div>
+          
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
 

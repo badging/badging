@@ -38,6 +38,9 @@ import loginArrow from './icons/loginArrow.svg';
 import getBadgedFullBG from './others/get-badged-full-bg.svg';
 
 import getBadgedMobile from './others/get-badged-mobile.svg';
+
+import Filter from './icons/Filter.svg'
+import SearchIcon from './icons/SearchIcon.svg'
 export {
   badgingLogo,
   badgingLogoMobile,
@@ -74,4 +77,6 @@ export {
   loginArrow,
   getBadgedFullBG,
   getBadgedMobile,
+  Filter,
+  SearchIcon
 };
