@@ -12,12 +12,11 @@
   background-image: url(../../assets/images/others/bg-how-it-works-web.png);
   background-size: cover;
   background-position: center;
-  
 
   .hero-section {
-    max-width: 760px;
+    max-width: 380px;
     height: auto;
-    text-align: center;
+    text-align: left;
     margin-top: 140px;
     display: flex;
     flex-direction: column;
@@ -27,8 +26,8 @@
       font-family: $font-family_1;
       font-style: medium;
       font-weight: 600;
-      font-size: 54px;
-      line-height: 66px;
+      font-size: 48px;
+      line-height: 61px;
       background: $heroTitleBackground;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -37,14 +36,15 @@
     }
 
     .description {
-      font-family: 'Work Sans';
+      font-family: $font-family_2;
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 180%;
+      font-size: 20px;
+      line-height: 32px;
       letter-spacing: 0.02em;
-      color: #858c90;
+      color: #ededed;
       margin-top: 10px;
+      width: 376px;
       max-width: 860px;
     }
   }
@@ -68,6 +68,10 @@
   border-top: 1px solid $primaryBorderColor;
   max-width: 1300px;
   margin: auto;
+  .content {
+    margin: auto;
+    // width: 387px;
+  }
 
   br {
     display: none;
@@ -81,6 +85,9 @@
   p {
     line-height: 1.5;
     color: #858c90;
+    font-size: 16px;
+
+    width: 285px;
   }
 
   .projects {
@@ -154,6 +161,7 @@
           display: flex;
           flex-direction: column;
           max-width: 24.2rem;
+
           padding: 2.87rem 3.18rem 5.93rem;
           transition: all 0.3s ease-in-out;
 
@@ -170,18 +178,18 @@
         }
 
         .card:hover {
-          border-image: linear-gradient(
-              to top,
-              rgb(219, 32, 157),
-              rgba(105, 199, 185, 1)
-            )
-            1;
+          // border-image: linear-gradient(
+          //     to top,
+          //     rgb(219, 32, 157),
+          //     rgba(105, 199, 185, 1)
+          //   )
+          border-image: linear-gradient(to top, #aeadab, #737373) 1;
 
           p {
             color: #ffffff;
           }
           a {
-            color: #06F395;
+            color: #06f395;
           }
 
           .img-wrap {
@@ -196,9 +204,32 @@
     }
   }
 }
+hr {
+  border: 1px solid $borderColor3;
+}
 
 @media screen and (min-width: 768px) {
+  .sub-nav {
+    .hero-section {
+      max-width: 959px;
+      .description {
+        text-align: center;
+      }
+      .description {
+        width: 591px;
+        max-width: 959px;
+      }
+    }
+  }
   .how-it-works {
+    .content {
+      margin: auto;
+      // width: 387px;
+      width: 700px;
+    }
+    p.text-lg {
+      width: 650px;
+    }
     br {
       display: block;
     }

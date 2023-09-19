@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { loginArrow } from '../../assets/images';
 import './carousel.scss';
 
 const cardItems = [
@@ -11,7 +12,7 @@ const cardItems = [
       </p>
     ),
     copy: '',
-    button: <button className="card-carousel-btn">Get Started</button>,
+    // button: <button className="card-carousel-btn">Get Started </button>,
     blankDiv: (
       <div className="blank_div">
         <div className="mobile_blank">
@@ -199,7 +200,12 @@ const CardCarousel = () => {
   return (
     <div className="carousel-container">
       <div className="getStarted-button">
-        <button>Get Started</button>
+        <button>
+          Get Started{' '}
+          <span>
+            <img className="arrow" src={loginArrow} alt="arrow icon" />
+          </span>
+        </button>
       </div>
       <ul className="card-carousel">
         {cardItems.map((card, index) => (

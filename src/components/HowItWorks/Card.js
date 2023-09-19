@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const CardComponent = ({icon, title, text, link}) => {
+const CardComponent = ({ icon, title, text, link }) => {
   return (
     <div className="card">
       <div className="img-wrap" aria-hidden="true">
@@ -9,9 +9,8 @@ const CardComponent = ({icon, title, text, link}) => {
       </div>
       <div className="card-text">
         <h3>{title}</h3>
-        <p>
-          {text} <Link to={link}>Learn more</Link>
-        </p>
+        <p>{text}</p>
+        <Link to={link}>{link}</Link>
       </div>
     </div>
   );
