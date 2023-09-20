@@ -41,6 +41,10 @@ import getBadgedMobile from './others/get-badged-mobile.svg';
 
 import Filter from './icons/Filter.svg'
 import SearchIcon from './icons/SearchIcon.svg'
+import ScheduleIcon from './icons/ScheduleIcon.svg'
+import DateIcon from './icons/DateIcon.svg'
+import AZicon from './icons/AZIcon.svg'
+
 export {
   badgingLogo,
   badgingLogoMobile,
@@ -78,5 +82,6 @@ export {
   getBadgedFullBG,
   getBadgedMobile,
   Filter,
-  SearchIcon
+  SearchIcon,
+  ScheduleIcon, DateIcon, AZicon
 };

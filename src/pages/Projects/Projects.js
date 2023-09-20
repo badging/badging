@@ -12,7 +12,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Filter, SearchIcon, badge, curlyBraces } from '../../assets/images';
+import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces } from '../../assets/images';
+import { Publish } from '@mui/icons-material';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -107,6 +108,8 @@ const StyledTablePagination = styled(TablePagination)(theme => ({
 const Projects = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(4);
+  const [filter, setFilter] = useState(false);
+  const [filterStatus, setFilterStatus] = useState("Published");
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -117,6 +120,11 @@ const Projects = () => {
     setPage(0);
   };
 
+  const handleFilterToggle = () => {
+    setFilter((prev) =>  !prev)
+  }
+
+  
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
@@ -155,10 +163,26 @@ const Projects = () => {
                   <img src={SearchIcon} width={25} height={25} alt='filter-icon'/>
                   <input type="text" placeholder='Search for projects...' />
                 </div>
-                <div className="filter">
+                <div className="filter" onClick={handleFilterToggle}>
                   <button>Filter</button>
                   <img src={Filter} width={25} height={25} alt='filter-icon'/>
                 </div>
+                <div className="filter-dropdown" style={{display: filter == true ? '' : 'none'}}>
+                    <ul>
+                      <li className={filterStatus == "Published" ? 'activeFilter' : ''} onClick={ () => setFilterStatus("Published")}>
+                        <img src={ScheduleIcon} width={25} className='ccc' height={25} alt='filter-icon'/> 
+                          <span>Published Date</span>
+                      </li>
+                      <li className={filterStatus == "Badged" ? 'activeFilter' : ''}  onClick={() => setFilterStatus("Badged")}>
+                        <img src={DateIcon} width={25} height={25} alt='filter-icon'/> 
+                          <span>Badged Date</span>
+                      </li>
+                      <li className={filterStatus == "Project" ? 'activeFilter' : ''}  onClick={() => setFilterStatus("Project")}>
+                        <img src={AZicon} width={25} height={25} alt='filter-icon'/> 
+                          <span>Project Title</span>
+                      </li>
+                    </ul>
+                  </div>
               </div>
             </div>
           <div className="badging-table">
@@ -179,7 +203,7 @@ const Projects = () => {
                     ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     : rows
                   ).map((row) => (
-                    <StyledTableRow key={row.date}>
+                    <StyledTableRow key={row.id}>
                       <StyledTableCell component="th" scope="row">
                         {row.id}
                       </StyledTableCell>
