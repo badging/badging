@@ -9,7 +9,6 @@
 	align-items: center;
 	margin: auto;
 	z-index: 99;
-	background-image: url(../../assets/images/others/bg-how-it-works-web.png);
 	background-size: cover;
 	background-position: center;
 
@@ -67,7 +66,7 @@
 .how-it-works {
 	border-bottom: 1px solid $primaryBorderColor;
 	border-top: 1px solid $primaryBorderColor;
-	max-width: 1600px;
+	max-width: 1440px;
 	margin: auto;
 	.content {
 		margin: auto;
@@ -91,35 +90,35 @@
 		width: 285px;
 	}
 
-	.projects {
-		border-bottom: 1px solid $primaryBorderColor;
-		padding: 1.5rem 2.37rem;
+	// .projects {
+	// 	border-bottom: 1px solid $primaryBorderColor;
+	// 	padding: 1.5rem 2.37rem;
 
-		.text-lg {
-			font-family: $font-family_1, sans-serif;
-			font-size: 1.125rem;
-			line-height: 1.5;
-		}
+	// 	.text-lg {
+	// 		font-family: $font-family_1, sans-serif;
+	// 		font-size: 1.125rem;
+	// 		line-height: 1.5;
+	// 	}
 
-		.logos {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 0.5rem;
-			margin-top: 1.5rem;
+	// 	.logos {
+	// 		display: grid;
+	// 		grid-template-columns: repeat(2, 1fr);
+	// 		gap: 0.5rem;
+	// 		margin-top: 1.5rem;
 
-			.img-wrap {
-				display: flex;
-				align-items: center;
-				justify-content: left;
-				gap: 1rem;
+	// 		.img-wrap {
+	// 			display: flex;
+	// 			align-items: center;
+	// 			justify-content: left;
+	// 			gap: 1rem;
 
-				img {
-					width: 100%;
-					max-width: 100px;
-				}
-			}
-		}
-	}
+	// 			img {
+	// 				width: 100%;
+	// 				max-width: 100px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	.content-wrap {
 		max-width: 1440px;
@@ -164,7 +163,23 @@
 					max-width: 24.2rem;
 
 					padding: 2.87rem 3.18rem 5.93rem;
-					transition: all 0.3s ease-in-out;
+
+					&,
+					a,
+					.img-wrap {
+						transition: all 0.1s ease-in-out;
+					}
+
+					a {
+						line-height: 1.5;
+					}
+
+					.card-text {
+						h3 {
+							font-family: $font-family_1;
+							font-size: 1.5rem;
+						}
+					}
 
 					.img-wrap {
 						width: 4rem;
@@ -179,25 +194,34 @@
 				}
 
 				.card:hover {
-					// border-image: linear-gradient(
-					//     to top,
-					//     rgb(219, 32, 157),
-					//     rgba(105, 199, 185, 1)
-					//   )
-					border-image: linear-gradient(to top, #aeadab, #737373) 1;
+					border-image: $borderHoverGradient;
 
-					p {
-						color: #ffffff;
-					}
 					a {
-						color: #06f395;
+						text-decoration: underline;
+						letter-spacing: 1.5px;
 					}
 
 					.img-wrap {
+						border-top: 1px solid #aeadab;
+
 						svg {
 							path {
 								fill: #ffffff;
 							}
+						}
+					}
+
+					.card-text {
+						h3 {
+							background: linear-gradient(
+								123.52deg,
+								#ffffff -36.16%,
+								#ffffff 219.41%
+							);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							background-clip: text;
+							color: transparent;
 						}
 					}
 				}
@@ -207,6 +231,8 @@
 }
 hr {
 	border: 1px solid $borderColor3;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -236,34 +262,30 @@ hr {
 			display: block;
 		}
 
-		.projects {
-			padding: 2.5rem 0 2rem;
-			text-align: center;
-			max-width: 1300px;
-			margin: auto;
+		// .projects {
+		// 	padding: 2.5rem 0 2rem;
+		// 	text-align: center;
+		// 	max-width: 1300px;
+		// 	margin: auto;
 
-			.logos {
-				display: flex;
-				justify-content: center;
-				column-gap: 3.5rem;
-				row-gap: 1rem;
-				padding: 0 1rem;
+		// 	.logos {
+		// 		display: flex;
+		// 		justify-content: center;
+		// 		column-gap: 3.5rem;
+		// 		row-gap: 1rem;
+		// 		padding: 0 1rem;
 
-				.img-wrap {
-					justify-content: center;
+		// 		.img-wrap {
+		// 			justify-content: center;
 
-					img {
-						max-width: 120px;
-					}
-				}
-			}
-		}
+		// 			img {
+		// 				max-width: 120px;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		.content-wrap {
-			// background: $sectionTitleBackground, $sectionTitleBackground;
-			// background-size: 50% 80%;
-			// background-position: -20% 65%, 120% 65%;
-			// background-repeat: no-repeat;
 			padding: 30px 30px;
 
 			.content {
@@ -277,6 +299,10 @@ hr {
 					.card {
 						padding: 1.5rem 1.5rem 3rem;
 						font-size: 14px;
+
+						h3 {
+							font-size: 1.5rem;
+						}
 
 						.img-wrap {
 							width: 3rem;
@@ -306,21 +332,20 @@ hr {
 
 @media screen and (min-width: 1440px) {
 	.how-it-works {
-		.projects {
-			padding: 2.5rem 0 2rem;
+		// .projects {
+		// 	padding: 2.5rem 0 2rem;
 
-			.logos {
-				.img-wrap {
-					img {
-						max-width: initial;
-					}
-				}
-			}
-		}
+		// 	.logos {
+		// 		.img-wrap {
+		// 			img {
+		// 				max-width: initial;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		.content-wrap {
-			background-position: -15% 50%, 115% 50%;
-			padding: 10px 70px;
+			padding: 0 70px;
 
 			.content {
 				padding: 6.125rem 0 8rem 0;

@@ -10,10 +10,16 @@ import {
 
 import { faqData } from "../../components/Faq/data";
 import { howItWorksData } from "./data";
-import { howItWorks, howItWorksBgWeb } from "../../assets/images";
+import {
+	howItWorksBgMobile,
+	howItWorksBgWeb,
+	faqBgWeb,
+	faqBgMobile,
+	heroSectionBgWeb,
+	heroSectionBgMobile,
+} from "../../assets/images";
 // import zIndex from '@mui/material/styles/zIndex';
 import { useMediaQuery } from "react-responsive";
-// import "../../assets/images/others/bg-how-it-works-web.png"
 
 const Home = () => {
 	const isMobile = useMediaQuery({ maxWidth: 650 });
@@ -23,7 +29,9 @@ const Home = () => {
 			<div
 				className="sub-nav"
 				style={{
-					background: `url(${howItWorks}) top center no-repeat`,
+					background: `url(${
+						isMobile ? heroSectionBgMobile : heroSectionBgWeb
+					}) center top no-repeat`,
 				}}
 			>
 				<div className="hero-section">
@@ -66,7 +74,7 @@ const Home = () => {
 					className="content-wrap wrap"
 					style={{
 						background: `url(${
-							isMobile ? howItWorks : howItWorksBgWeb
+							isMobile ? howItWorksBgMobile : howItWorksBgWeb
 						}) center top no-repeat`,
 					}}
 				>
@@ -103,11 +111,16 @@ const Home = () => {
         }}>
         hello
       </div> */}
-			<section className="container">
+			<section
+				className="container"
+				style={{
+					background: `url(${!isMobile && faqBgWeb}) center top no-repeat`,
+				}}
+			>
 				<div
 					className="faq"
 					style={{
-						background: `url(${howItWorks}) center top no-repeat`,
+						background: `url(${isMobile && faqBgMobile}) center top no-repeat`,
 					}}
 				>
 					<h2>Still Have Questions?</h2>
