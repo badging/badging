@@ -1,62 +1,62 @@
 @import "../../assets/styles/variables";
 
 footer {
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  font-family: "Work Sans";
-  font-style: regular;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: $primaryTextColor;
-  text-align: center;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	font-family: $font-family_2;
+	font-style: regular;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+	color: $primaryTextColor;
+	text-align: center;
 
-  .social {
-    display: flex;
-    gap: 20px;
-  }
-  .social img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-  }
-  /* Apply the zoom effect on hover */
-  .social img:hover {
-    transform: scale(1.2);
-  }
-  .copyright a:nth-child(1){
-    color: #06F395;
-  }
-  .copyright a:nth-child(2) {
-    color: #69C7B9;
-  }
-  /* Apply the zoom effect on hover */
-  .social img:hover {
-    transform: scale(1.2);
-  }
-  .copyright a:nth-child(1){
-    color: #06F395;
-  }
-  .copyright a:nth-child(2) {
-    color: #69C7B9;
-  }
+	.social {
+		display: flex;
+		gap: 20px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			transition: transform 0.3s;
+
+			/* Apply the zoom effect on hover */
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	.copyright {
+		a {
+			text-decoration: underline;
+		}
+
+		a:nth-child(1) {
+			color: #06f395;
+		}
+
+		a:nth-child(2) {
+			color: #69c7b9;
+		}
+	}
 }
 
 footer.container {
-  padding: 3.5rem 3.9rem;
+	padding: 3.5rem 3.9rem;
 }
 
 @media screen and (min-width: 769px) {
-  br {
-    display: none;
-  }
+	br {
+		display: none;
+	}
 
-  footer.container {
-    padding: 2.5rem 7.5rem;
-  }
+	footer.container {
+		padding: 2.5rem 7.5rem;
+	}
 }

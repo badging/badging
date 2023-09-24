@@ -42,7 +42,7 @@ export const howItWorksData = [
 		be scanned for the presence of the
 		DEI.md file.`,
 
-    link: 'Learn More.',
+    link: 'Learn More',
     icon: <ReviewSvgComponent width="28" height="22" className="review-svg" />,
   },
   {

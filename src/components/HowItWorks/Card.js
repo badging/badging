@@ -20,7 +20,7 @@ CardComponent.propTypes = {
   icon: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
 
 export default CardComponent;
