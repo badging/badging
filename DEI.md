@@ -11,13 +11,15 @@
 1. [Project Access](https://chaoss.community/?p=4953)
 * Description of how your project addresses project access. A sample description is provided in the following points. These points are not required for your project but are meant to help consider things you could be doing or are already doing. The points could also include efforts that your project is doing but are not listed here:
   
-    * Project access is addressed in the [Project Name] through a variety of different efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include: 
-        1. All virtual meetings are transcribed via the Zoom annotation tool and members are able to join via their computer or phone. Video is not required to participate in virtual meetings.
-        2. Virtual meetings are attentive to global time zones. While the majority of our meetings occur during times that are most easily accessed by members in North America, South America, Western Europe, and Africa, virtual meetings are also held to support [Project Name] members in Asia-Pacific and Eastern Europe. 
-        3. Global chapters of [Project Name] have been established in Africa, LATAM, Asia-Pacific, and Eastern Europe to support activities and people in a variety of global regions. 
-        4. Translation services are provided for all website pages.
-        5. Our project regularly performs an accessibility audit on our website and project documentation.
-           
+    * Project access is addressed in the [Project Name] through various efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include: 
+1. All virtual meetings are transcribed via the Zoom annotation tool, and members can join via their computer or phone. Video is not required to participate in virtual meetings.
+2. Virtual meetings are attentive to global time zones. While most of our meetings occur during times that are most easily accessed by members in North America, South America, Western Europe, and Africa, virtual meetings are also held to support [Project Name] members in Asia-Pacific and Eastern Europe. 
+3. [Project Name] project maintainers and merge request coaches span global time zones and work asynchronously with contributors across the world.
+4. Translation services are provided for all website pages. 
+5. All areas of [Project Name] are considered open to community contributions. A stated goal of our project is that “everyone can contribute." 
+6. The [Project Name] SaaS product is conformant with the [Voluntary Product Accessibility Template (VPAT 2.4)](https://www.section508.gov/sell/vpat/) revised in June 2023 as well as to level AA of the [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+7. [Project Name] is developing a unified contributor program that recognizes and rewards non-code contributors, including contributions through events, blog posts, and comments in issues and merge requests.
+
 2. [Communication Transparency](https://chaoss.community/?p=4957)
 * Description of how your project addresses communication transparency. A sample description is provided in the following points. These points are not required for your project but are meant to help consider things you could be doing or are already doing. The points could also include efforts that your project is doing but are not listed here:
   
