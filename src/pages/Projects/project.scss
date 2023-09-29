@@ -164,8 +164,10 @@ main {
                             border-radius: 8px;
                             background: #E4E4E4;
                             max-width: 100%;
+                            border: #858C90;
 
                         }
+                        
                         img {
                             position: absolute;
                             left: 2px;
@@ -293,33 +295,18 @@ main {
     border-bottom: none !important;
 }
 
-  @media screen and (max-width:700px) {
-    .jumbotron__container {
-        
-        h1 {
-            font-size: 2.375rem;
-        }
-    }
-    .table-top-header {
-        flex-direction: column !important;
-        gap: 0px !important;
 
-        .filter button {
-            display: none;
-        }
-    }
-    .filter-dropdown {
-        // background-color: red !important;
-        width: 250px !important;
-
-        .activeFilter {
-            width: 220px;
-        }
-    }
-
-  }
-
- 
+ .css-1q1u3t4-MuiTableRow-root {
+    height: auto !important;
+ }
+ .MuiPagination-ul{
+    color: #000 !important;
+    // background-color: red !important;
+ }
+ .MuiPagination-ul button {
+    background-color: #000;
+    color: #000 !important;
+ }
 
   @media screen and (max-width:1080px) {
     .search {
@@ -336,4 +323,45 @@ main {
             width: 100% !important;
         }
     }
+  }
+
+  @media screen and (max-width:520px) {
+    .container-holder {
+        // padding: 0 !important;
+    }
+   
+}
+
+  @media screen and (max-width:700px) {
+    .jumbotron__container {
+        
+        h1 {
+            font-size: 2.375rem;
+        }
+    }
+    .table-top-header {
+        flex-direction: column !important;
+        gap: 0px !important;
+        align-items: flex-start !important;
+
+        .filter-projects{
+            // background-color: red !important;
+            width: 100%;
+        }
+        .filter button {
+            display: none;
+        }
+    }
+    .filter-dropdown {
+        // background-color: red !important;
+        width: 250px !important;
+
+        .activeFilter {
+            width: 220px;
+        }
+    }
+    .project .badging .badging-table  {
+        padding: 0 !important;
+    }
+
   }

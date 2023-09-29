@@ -14,6 +14,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces } from '../../assets/images';
 import { Publish } from '@mui/icons-material';
+import { fetchProjects } from '../../hooks/fetchProjects';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -110,7 +111,8 @@ const Projects = () => {
   const [rowsPerPage, setRowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
   const [filterStatus, setFilterStatus] = useState("Published");
-
+  const { data, isLoading, error } = fetchProjects('https://badging.allinopensource.org/api/badgedRepos');
+  console.log("data", data);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -123,9 +125,17 @@ const Projects = () => {
   const handleFilterToggle = () => {
     setFilter((prev) =>  !prev)
   }
-
   
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+  }
+  
+  // const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
   return (
     <main>
@@ -154,7 +164,9 @@ const Projects = () => {
             demonstrations:
         </p>
         <hr className='divider' />
-         <div className="badging container">
+        {
+          !isLoading ? (
+            <div className="badging container">
           <div className='container-holder'>
             <div className="table-top-header">
               <p>DEI Projects</p>
@@ -200,21 +212,21 @@ const Projects = () => {
                 </TableHead>
                 <TableBody>
                   {(rowsPerPage > 0
-                    ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    : rows
+                    ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    : data
                   ).map((row) => (
-                    <StyledTableRow key={row.id}>
+                    <StyledTableRow key={data.id}>
                       <StyledTableCell component="th" scope="row">
-                        {row.id}
+                        {data.id}
                       </StyledTableCell>
                       <StyledTableCell align="left">
-                        {row.date}
+                        {formatDate(row.createdAt)}
                       </StyledTableCell>
-                      <StyledTableCell align="left">{row.title}</StyledTableCell>
+                      <StyledTableCell align="left">{row.badgeType}</StyledTableCell>
                       <StyledTableCell align="left">
-                        <img src={badge} alt="badgeImage" />
+                        <img src={'https://raw.githubusercontent.com/AllInOpenSource/BadgingAPI/main/assets/bronze-badge.svg'} width={100} height={100} alt="badgeImage" />
                       </StyledTableCell>
-                      <StyledTableCell align="left">{row.repository}</StyledTableCell>
+                      <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{row.repoLink}</a></StyledTableCell>
                     </StyledTableRow>
                   ))}
 
@@ -229,7 +241,7 @@ const Projects = () => {
           </div>
           <div className="badging-footer">
           <Pagination
-              count={Math.ceil(rows.length / rowsPerPage)}
+              count={Math.ceil(data.length / rowsPerPage)}
               page={page + 1}
               onChange={(event, newPage) => setPage(newPage - 1)}
               variant="outlined"
@@ -241,6 +253,11 @@ const Projects = () => {
           </div>
           
         </div>
+          ): (
+            <p>Error Retrieving Data........</p>
+          )
+        }
+         
       </section>
       <Footer />
     </main>
