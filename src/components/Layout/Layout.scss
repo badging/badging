@@ -24,11 +24,16 @@
     display: grid;
 
     grid-template-columns: (664px auto);
+
+    min-height: 900px;
+    justify-content: center;
+    align-content: center;
     height: 100%;
-    min-height: 800px;
+    margin: auto;
     .section-one {
       img {
         object-fit: contain;
+        height: 723px;
       }
       .bg-mobile-getStarted {
         display: none;
@@ -46,14 +51,13 @@
 @media screen and (min-width: 1440px) {
   .requirements {
     display: grid;
-
+    width: 1200px;
     grid-template-columns: 694px auto;
-
+    justify-content: center;
     height: 100vh;
-    width: 100%;
-    min-height: 900px;
+
     .section-one {
-      margin-top: -150px;
+      // margin-top: -150px;
       // width: 764px;
       img {
         // width: 100%;
