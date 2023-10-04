@@ -111,8 +111,10 @@ const Projects = () => {
   const [rowsPerPage, setRowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
   const [filterStatus, setFilterStatus] = useState("Published");
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('createdAt');
   const { data, isLoading, error } = fetchProjects('https://badging.allinopensource.org/api/badgedRepos');
-  console.log("data", data);
+  console.log("dataa", data);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -136,18 +138,32 @@ const Projects = () => {
   
   // const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+  
+  const filteredData = data && data.filter((row) =>
+    // row.title.toLowerCase().includes(searchTerm.toLowerCase())
+    row.repoLink.includes(searchTerm.toLowerCase())
+  )
+  .sort((a, b) => {
+    if (sortBy === 'Published') {
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    } else if (sortBy === 'Badged') {
+      return new Date(b.updatedAt) - new Date(a.updatedAt);
+    } else if (sortBy === 'Project') {
+      return a.badgeType.localeCompare(b.badgeType);
+    }
+    return 0;
+  });
+
+  function extractImageUrl(markdownText) {
+    const imageUrlRegex = /!\[.*?\]\((.*?)\)/;
+    const match = markdownText.match(imageUrlRegex);
+    console.log("match", match[1]);
+    return match ? match[1] : null;
+  }
 
   return (
     <main>
       <Header />
-      {/* <Jumbotron
-        title="DEI Badged Projects"
-        description="Lorem ipsum dolor sit amet consectetur. Sed risus ultrices sit nibh sed.
-        Interdum urna molestie fames porttitor elementum a diam laoreet. Sed
-        tempor habitant phasellus velit sagittis mauris lorem pretium.
-        Arcu neque id duis eu pellentesque in amet et. Ipsum ultricies
-        a etiam est. Viverra eleifend tortor iaculis fringilla sed."
-      /> */}
         <div className="container jumbotron__container">
 					<img src={curlyBraces} alt="badging-logo" />
 					<h1>DEI Badged Projects</h1>
@@ -173,7 +189,7 @@ const Projects = () => {
               <div className='filter-projects'>
                 <div className="search">
                   <img src={SearchIcon} width={25} height={25} alt='filter-icon'/>
-                  <input type="text" placeholder='Search for projects...' />
+                  <input type="text" value={searchTerm} placeholder='Search for projects...' onChange={(e) => setSearchTerm(e.target.value)} />
                 </div>
                 <div className="filter" onClick={handleFilterToggle}>
                   <button>Filter</button>
@@ -181,15 +197,15 @@ const Projects = () => {
                 </div>
                 <div className="filter-dropdown" style={{display: filter == true ? '' : 'none'}}>
                     <ul>
-                      <li className={filterStatus == "Published" ? 'activeFilter' : ''} onClick={ () => setFilterStatus("Published")}>
+                      <li className={sortBy == "Published" ? 'activeFilter' : ''} onClick={ () => setSortBy("Published")}>
                         <img src={ScheduleIcon} width={25} className='ccc' height={25} alt='filter-icon'/> 
                           <span>Published Date</span>
                       </li>
-                      <li className={filterStatus == "Badged" ? 'activeFilter' : ''}  onClick={() => setFilterStatus("Badged")}>
+                      <li className={sortBy == "Badged" ? 'activeFilter' : ''}  onClick={() => setSortBy("Badged")}>
                         <img src={DateIcon} width={25} height={25} alt='filter-icon'/> 
                           <span>Badged Date</span>
                       </li>
-                      <li className={filterStatus == "Project" ? 'activeFilter' : ''}  onClick={() => setFilterStatus("Project")}>
+                      <li className={sortBy == "Project" ? 'activeFilter' : ''}  onClick={() => setSortBy("Project")}>
                         <img src={AZicon} width={25} height={25} alt='filter-icon'/> 
                           <span>Project Title</span>
                       </li>
@@ -210,32 +226,32 @@ const Projects = () => {
                     <StyledTableCell align="left">Project Repository</StyledTableCell>
                   </TableRow>
                 </TableHead>
-                <TableBody>
-                  {(rowsPerPage > 0
-                    ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    : data
-                  ).map((row) => (
-                    <StyledTableRow key={data.id}>
-                      <StyledTableCell component="th" scope="row">
-                        {data.id}
-                      </StyledTableCell>
-                      <StyledTableCell align="left">
-                        {formatDate(row.createdAt)}
-                      </StyledTableCell>
-                      <StyledTableCell align="left">{row.badgeType}</StyledTableCell>
-                      <StyledTableCell align="left">
-                        <img src={'https://raw.githubusercontent.com/AllInOpenSource/BadgingAPI/main/assets/bronze-badge.svg'} width={100} height={100} alt="badgeImage" />
-                      </StyledTableCell>
-                      <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{row.repoLink}</a></StyledTableCell>
-                    </StyledTableRow>
-                  ))}
+              
+              <TableBody>
+                {(filteredData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((row, index) => (
+                  <StyledTableRow key={index}>
+                    <StyledTableCell component="th" scope="row">
+                      {row.id}
+                    </StyledTableCell>
+                    <StyledTableCell align="left">
+                      {formatDate(row.createdAt)}
+                    </StyledTableCell>
+                    <StyledTableCell align="left">{row.badgeType}</StyledTableCell>
+                    <StyledTableCell align="left">
+                      <img src={extractImageUrl(row.attachment)} width={100} height={100} alt="badgeImage" />
+                    </StyledTableCell>
+                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{row.repoLink}</a></StyledTableCell>
+                  </StyledTableRow>
+                )))}
 
-                  {emptyRows > 0 && (
-                    <TableRow style={{ height: 53 * emptyRows }}>
-                      <TableCell colSpan={6} />
-                    </TableRow>
-                  )}
-                </TableBody>
+                {emptyRows > 0 && (
+                  <TableRow style={{ height: 53 * emptyRows }}>
+                    <TableCell colSpan={6} />
+                  </TableRow>
+                )}
+              </TableBody>
+
               </Table>
             </TableContainer>
           </div>
@@ -254,7 +270,7 @@ const Projects = () => {
           
         </div>
           ): (
-            <p>Error Retrieving Data........</p>
+            <p>Error Retrieving Data....</p>
           )
         }
          

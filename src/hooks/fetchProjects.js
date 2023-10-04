@@ -10,7 +10,7 @@ export function fetchProjects(apiUrl) {
     const fetchData = async () => {
       try {
         const response = await fetch(apiUrl, {
-          cache: 'force-cache',
+          // cache: 'force-cache',
         });
 
         if (!response.ok) {
