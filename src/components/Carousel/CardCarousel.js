@@ -28,6 +28,11 @@ const cardItems = [
             <div className="small_rec1"></div>
             <div className="small_rec2"></div>
           </div>
+          <div className="hr_mb_line"></div>
+          <div className="row4">
+            <div className="small_rec1"></div>
+            <div className="small_rec2"></div>
+          </div>
         </div>
         <div className="desktop_blank">
           <div className="first_blank">
@@ -40,8 +45,29 @@ const cardItems = [
               <div className="rec3"></div>
             </div>
           </div>
-          <div className="hr_line"></div>
+          <div className="hr"></div>
           <div className="second_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="third_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="hr2"></div>
+          <div className="fourth_blank">
             <div className="blank_left">
               <div className="rec1"></div>
               <div className="rec2"></div>
@@ -79,6 +105,11 @@ const cardItems = [
             <div className="small_rec1"></div>
             <div className="small_rec2"></div>
           </div>
+          <div className="hr_mb_line"></div>
+          <div className="row4">
+            <div className="small_rec1"></div>
+            <div className="small_rec2"></div>
+          </div>
         </div>
         <div className="desktop_blank">
           <div className="first_blank">
@@ -91,8 +122,29 @@ const cardItems = [
               <div className="rec3"></div>
             </div>
           </div>
-          <div className="hr_line"></div>
+          <div className="hr"></div>
           <div className="second_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="third_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="hr2"></div>
+          <div className="fourth_blank">
             <div className="blank_left">
               <div className="rec1"></div>
               <div className="rec2"></div>
@@ -131,6 +183,11 @@ const cardItems = [
             <div className="small_rec1"></div>
             <div className="small_rec2"></div>
           </div>
+          <div className="hr_mb_line"></div>
+          <div className="row4">
+            <div className="small_rec1"></div>
+            <div className="small_rec2"></div>
+          </div>
         </div>
         <div className="desktop_blank">
           <div className="first_blank">
@@ -143,9 +200,29 @@ const cardItems = [
               <div className="rec3"></div>
             </div>
           </div>
-
-          <div className="hr_line"></div>
+          <div className="hr"></div>
           <div className="second_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="third_blank">
+            <div className="blank_left">
+              <div className="rec1"></div>
+              <div className="rec2"></div>
+            </div>
+            <div className="blank_right">
+              <div className="rec1"></div>
+              <div className="rec3"></div>
+            </div>
+          </div>
+          <div className="hr2"></div>
+          <div className="fourth_blank">
             <div className="blank_left">
               <div className="rec1"></div>
               <div className="rec2"></div>

@@ -4,10 +4,10 @@
 
 .carousel-container {
   position: relative;
-  margin-top: -3px;
-  // margin-bottom: -45px;
+  margin-top: -13px;
+  // margin-bottom: -20px;
+
   width: 100%;
-  margin-bottom: -45px;
 
   .getStarted-button {
     margin-bottom: 100px;
@@ -39,7 +39,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 240px;
     margin-top: 50px;
     align-items: center;
 
@@ -98,7 +98,7 @@
       border-bottom: 0;
       margin: 70px 0 0 -5px;
       width: 295px;
-      height: 123px;
+      height: 160px;
       position: relative;
       z-index: 1;
     }
@@ -117,7 +117,7 @@
       width: 330px;
       // margin: auto;
       z-index: 2;
-      height: 210px;
+      height: 260px;
     }
     .card.active .hidden_title {
       display: none;
@@ -176,12 +176,15 @@
       top: 114px;
       left: 32px;
 
-      .first_blank {
+      .first_blank,
+      .third_blank {
         display: flex;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
-      .second_blank {
+      .second_blank,
+      .fourth_blank {
         display: flex;
+        margin-bottom: 20px;
       }
 
       .blank_right {
@@ -194,9 +197,13 @@
 
       .row1,
       .row2,
-      .row3 {
+      .row3,
+      .row4 {
         display: flex;
         margin-bottom: 8px;
+      }
+      .row4 {
+        margin-top: 35px;
       }
       .small_rec1 {
         width: 65px;
@@ -239,14 +246,14 @@
         background: #171717;
         // display: none;
       }
-
-      .hr_line {
+      .hr_mb_line {
         position: absolute;
         border: 0.5px solid #454c53;
 
-        top: 34px;
-        width: 116%;
-        left: -46px;
+        top: 98px;
+        width: 110%;
+
+        left: -15px;
       }
     }
   }
@@ -254,13 +261,16 @@
 
 @media screen and (min-width: 769px) {
   .carousel-container {
+    // margin-top: 0;
+    margin-bottom: -20px;
     height: 60%;
     .getStarted-button {
       display: none;
     }
     .card-carousel {
-      margin-top: -45px;
+      // margin-top: -45px;
       margin-bottom: 115px;
+      height: 320px;
 
       .card-carousel-btn {
         border-radius: 2px;
@@ -287,7 +297,7 @@
       }
       .copy {
         margin: 60px 25px 0 25px;
-        height: 140px;
+        height: 250px;
         width: 859px;
       }
 
@@ -298,7 +308,7 @@
       }
 
       .card.active {
-        height: 220px;
+        height: 330px;
         width: 960px;
       }
       .card.active .hidden_title {
@@ -344,13 +354,21 @@
         .desktop_blank {
           display: block;
         }
+        .hr_mb_line {
+          display: none;
+        }
 
-        .hr_line {
+        .hr,
+        .hr2 {
           position: absolute;
-          // border: 1px solid #454c53;
-          border: 1px solid #171717;
+          border: 0.5px solid #171717;
+          left: -46px;
+          top: 44px;
 
           width: 109%;
+        }
+        .hr2 {
+          top: 144px;
         }
       }
     }
