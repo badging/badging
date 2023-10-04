@@ -23,17 +23,20 @@ import { useMediaQuery } from 'react-responsive';
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 650 });
+  const myBackground = {
+    backgroundImage: `url(${
+      isMobile ? heroSectionBgMobile : heroSectionBgWeb
+    })`,
+    height: '100%',
+    backgroundPosition: 'center top',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
   return (
     <div>
       <Header />
-      <div
-        className="sub-nav"
-        style={{
-          background: `url(${
-            isMobile ? heroSectionBgMobile : heroSectionBgWeb
-          }) center top no-repeat`,
-        }}
-      >
+
+      <div className="sub-nav" style={myBackground}>
         <div className="hero-section">
           <div className="title">DEI Project Badging</div>
           <div className="parra">
