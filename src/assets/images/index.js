@@ -1,6 +1,6 @@
 import mail from "./icons/mail.svg";
 import twitter from "./icons/twitter.svg";
-import reddit from "./icons/reddit.svg";
+import githubIcon from "./icons/github.svg";
 import linkedin from "./icons/linkedin.svg";
 import search from "./icons/search.svg";
 import info from "./icons/info.svg";
@@ -47,14 +47,14 @@ export {
 	badgingLogo,
 	badgingLogoMobile,
 	twitter,
-	reddit,
+	github,
 	linkedin,
 	mail,
 	ApplySvgComponent,
 	ReviewSvgComponent,
 	GetBadgedSvgComponent,
 	loom,
-	github,
+	githubIcon,
 	discord,
 	dropbox,
 	goldBadge,
