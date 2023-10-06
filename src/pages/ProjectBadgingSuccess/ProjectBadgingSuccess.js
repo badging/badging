@@ -30,8 +30,8 @@ const ProjectBadgingSuccess = () => {
                   </div>
                 <p className='title-header'>Scan Successful!</p>
                 <div className='report'>
-                <p> Hello {state?.name}! You will receive a DEI.md</p>
-                <p>Scan report in 1-4days</p>
+                <p> Hello {state?.name}! You will receive an email shortly.</p>
+                <p>Kindly check your email {state?.email}.</p>
               </div>
               </div>
               

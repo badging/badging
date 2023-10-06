@@ -73,7 +73,7 @@ const SelectProjectRepo = () => {
 			// eslint-disable-next-line no-unused-vars
 			.then((data) => {
 				setUserData({ ...userData, reposToBadge: [] });
-				navigate("/project-badging-successful", { state: { name } }); // navigate to success page
+				navigate("/project-badging-successful", { state: { name, email } }); // navigate to success page
 			})
 			// eslint-disable-next-line no-unused-vars
 			.catch((error) => {
@@ -130,7 +130,7 @@ const SelectProjectRepo = () => {
 						// onBlur={() => setError(null)}
 						disabled={!reposToBadge.length > 0}
 					>
-						Scan Project
+						Scan Projects
 					</button>
 				</form>
 			</section>

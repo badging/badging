@@ -92,7 +92,9 @@ const Home = () => {
         }}>
         hello
       </div> */}
-      <section
+
+      {/* FAQ SECTION */}
+      {/* <section
         className="container"
         style={{
           background: `url(${!isMobile && faqBgWeb}) center top no-repeat`,
@@ -109,8 +111,8 @@ const Home = () => {
             return <Faq key={id} question={question} answer={answer} />;
           })}
         </div>
-      </section>
-      <hr className="reed" />
+      </section> */}
+      {/* <hr className="reed" /> */}
       <Footer />
     </div>
   );
