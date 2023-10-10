@@ -11,17 +11,17 @@
 5. Your project must attend to all metrics described below and must include at least one described effort associated with each metric.
 6. Always replace [Project Name] with the name of your project. 
   
-7. Do not use this file to create your DEI.md file. This file is only serves as a guide. Please download and use the DEI.md Template when creating your own DEI.md file. 
+7. Do not use this file to create your DEI.md file. This file is only serves as a guide. Please download and use the [DEI.md Template](https://github.com/AllInOpenSource/ProjectBadging/blob/main/Template.DEI.md) when creating your own DEI.md file. 
   
 ***
 
 # (Required:No Changes) DEI Project Statement
 
-#### (Required:Changes Needed) Include Your Project Name/Logo Here 
+(__Required:Changes Needed__) Include Your Project Name/Logo Here
 
-#### (Required:Changes Needed) Include a description of the scope of the DEI.md file. For example, does this DEI.md file cover one particular repository, a collection of repositories, or an entire organization?
+(__Required:Changes Needed__) Include a description of the scope of the DEI.md file. For example, does this DEI.md file cover one particular repository, a collection of repositories, or an entire organization?
 
-#### (Required:No Changes) [Project Name] prioritizes and reflects on DEI through a regular review of project policies and performance. This reflection is documented, in part, in the following DEI.md file based on specific [CHAOSS](https://chaoss.community) DEI metrics. 
+(__Required:No Changes__) [Project Name] prioritizes and reflects on DEI through a regular review of project policies and performance. This reflection is documented, in part, in the following DEI.md file based on specific [CHAOSS](https://chaoss.community) DEI metrics.
 
 ### (Required:No Changes) [Project Access](https://chaoss.community/?p=4953)
 (__Required:No Changes__) Project access is addressed in the [Project Name] through various efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include:
@@ -68,8 +68,8 @@
  6. (__Sample__) One or more of our project maintainers are a member of a working group related to a DEI initiative.
  7. (__Sample__) One or more of our project maintainers participate in DEI group meetings or events.
 
-#### (Required:No Changes) We recognize that the inclusion of the DEI.md file and the provided reflection on the specific DEI metrics does not ensure community safety nor community inclusiveness. The inclusion of the DEI.md file signals that we, as a project, are committed to centering DEI in our project and regularly reviewing and reflecting on our project DEI practices.
+(__Required:No Changes__) We recognize that the inclusion of the DEI.md file and the provided reflection on the specific DEI metrics does not ensure community safety nor community inclusiveness. The inclusion of the DEI.md file signals that we, as a project, are committed to centering DEI in our project and regularly reviewing and reflecting on our project DEI practices.
 
-#### (Required:Changes Needed) If you do not feel that the DEI.md file appropriately addresses concerns you have about community safety and inclusiveness, please let us know in the [Project Name]. You can do this by checking out our Code of Conduct (provide a link to your code of conduct) to raise concerns you have with the Code of Conduct team.
+(__Required:Changes Needed__) If you do not feel that the DEI.md file appropriately addresses concerns you have about community safety and inclusiveness, please let us know in the [Project Name]. You can do this by checking out our Code of Conduct (provide a link to your code of conduct) to raise concerns you have with the Code of Conduct team.
 
-#### (Required:Changes Needed) Last Reviewed: [Enter Date]
+(__Required:Changes Needed__) Last Reviewed: [Enter Date]
