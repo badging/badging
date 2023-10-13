@@ -16,6 +16,7 @@ import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces 
 import { Publish } from '@mui/icons-material';
 import { fetchProjects } from '../../hooks/fetchProjects';
 import { customAlphabet, nanoid } from 'nanoid';
+import RandomString from '../../components/RandomString';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -244,7 +245,7 @@ const Projects = () => {
                     <StyledTableCell align="left">
                       <img src={extractImageUrl(row.attachment)} width={100} height={100} alt="badgeImage" />
                     </StyledTableCell>
-                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{`github/${nanoid(7)}`}</a></StyledTableCell>
+                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{`github/${RandomString()}`}</a></StyledTableCell>
                   </StyledTableRow>
                 )))
                 
