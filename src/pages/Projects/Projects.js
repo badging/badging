@@ -15,7 +15,6 @@ import Paper from '@mui/material/Paper';
 import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces } from '../../assets/images';
 import { Publish } from '@mui/icons-material';
 import { fetchProjects } from '../../hooks/fetchProjects';
-import { customAlphabet, nanoid } from 'nanoid';
 import RandomString from '../../components/RandomString';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -162,7 +161,6 @@ const Projects = () => {
     console.log("match", match[1]);
     return match ? match[1] : null;
   }
-  const nanoid = customAlphabet('abcdefgh1jklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 10)
 
   return (
     <main>
