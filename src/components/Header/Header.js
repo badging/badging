@@ -46,7 +46,7 @@ const Header = () => {
           </Link>
           <Link to="/projects" className="nav-link nav-web">
             {pathname === '/projects' ? (
-              <ActiveNav pathname={`Project`} />
+              <ActiveNav pathname={`Projects`} />
             ) : (
               'Projects'
             )}

@@ -1,6 +1,9 @@
+@import '../../assets/styles/variables';
 .requirements {
   display: grid;
+
   grid-auto-rows: minmax(456px auto);
+
   padding-top: 100px;
 
   .section-one {
@@ -16,14 +19,22 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .requirements {
     display: grid;
-    grid-template-columns: 664px auto;
-    grid-template-rows: auto;
 
+    grid-template-columns: (664px auto);
+
+    min-height: 900px;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin: auto;
     .section-one {
-      width: 664px;
+      img {
+        object-fit: contain;
+        height: 723px;
+      }
       .bg-mobile-getStarted {
         display: none;
       }
@@ -33,6 +44,25 @@
     }
     .section-two {
       flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .requirements {
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 694px auto;
+    justify-content: center;
+    height: 100vh;
+
+    .section-one {
+      .bg-mobile-getStarted {
+        display: none;
+      }
+      .bg-getStarted {
+        display: block;
+      }
     }
   }
 }

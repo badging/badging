@@ -19,6 +19,7 @@ import discord from './logos/discord_logo.svg';
 import dropbox from './logos/dropbox_logo.svg';
 import badgingLogo from './logos/all-in-chaoss-logo.svg';
 import badgingLogoMobile from './logos/all-in-chaoss-logo-mobile.svg';
+import githubIcon from './icons/github.svg';
 import curlyBraces from './logos/curlyBraces.svg';
 import file from './icons/file.svg';
 import fileLink from './icons/fileLink.svg';
@@ -31,11 +32,16 @@ import bronzeBadge from './badges/bronze-badge.svg';
 import platinumBadge from './badges/platinum-badge.svg';
 import badge from './badges/badge.svg';
 
-import howItWorks from './others/bg-how-it-works-mobile.svg';
-import heroImage from './others/hero-background.svg';
+import howItWorksBgMobile from './others/bg-how-it-works-mobile.svg';
+// import heroImage from "./others/hero-background.svg";
 import getStartedArrow from './others/get-started.svg';
 import loginArrow from './icons/loginArrow.svg';
 import getBadgedFullBG from './others/get-badged-full-bg.svg';
+import howItWorksBgWeb from './others/bg-how-it-works-web.svg';
+import faqBgWeb from './others/bg-faq-web.svg';
+import heroSectionBgWeb from './others/bg-hero-section-web.svg';
+import faqBgMobile from './others/bg-faq-mobile.svg';
+import heroSectionBgMobile from './others/bg-hero-section-mobile.svg';
 
 import getBadgedMobile from './others/get-badged-mobile.svg';
 
@@ -51,6 +57,7 @@ export {
   twitter,
   reddit,
   linkedin,
+  githubIcon,
   mail,
   ApplySvgComponent,
   ReviewSvgComponent,
@@ -73,8 +80,7 @@ export {
   search,
   info,
   xMarkPink,
-  howItWorks,
-  heroImage,
+  // heroImage,
   curlyBraces,
   arrowRight,
   getStartedArrow,
@@ -83,5 +89,11 @@ export {
   getBadgedMobile,
   Filter,
   SearchIcon,
-  ScheduleIcon, DateIcon, AZicon
+  ScheduleIcon, DateIcon, AZicon,
+  howItWorksBgWeb,
+  howItWorksBgMobile,
+  faqBgWeb,
+  faqBgMobile,
+  heroSectionBgWeb,
+  heroSectionBgMobile,
 };

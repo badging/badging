@@ -22,7 +22,7 @@ body {
 .container {
 	max-width: 100%;
 	margin: auto;
-	padding: 10px 70px;
+	padding: 10px 119px;
 	// background-color: #fff;
 }
 
@@ -38,8 +38,8 @@ body {
 }
 
 h2 {
-	font-size: 54px;
-	background: $heroTitleBackground;
+	font-size: 3rem;
+	background: linear-gradient(164deg, #e9e9e9 41.39%, #bababa 80.66%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -104,7 +104,6 @@ nav .mobileNav.toggleDesctiptionButton {
 		width: 100% !important;
 		padding: 180px 20px 70px 30px;
 	}
-	
 }
 
 // @media screen and (max-width: 1030px) {
@@ -134,9 +133,9 @@ nav .mobileNav.toggleDesctiptionButton {
 		}
 	}
 
-	.get-started {
-		// display: none;
-	}
+	// .get-started {
+	// 	// display: none;
+	// }
 	.logo {
 		width: auto;
 	}

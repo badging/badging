@@ -4,47 +4,17 @@ import { useContext, useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
+
 // import useLoadingError from "../../hooks/useLoadingError";
 
 const SearchBar = ({ setShowInfo }) => {
 	const [inputValue, setInputValue] = useState("");
-  const [inputClicked, setInputClicked] = useState(false);
+	const [inputClicked, setInputClicked] = useState(false);
 	const [searchResults, setSearchResults] = useState([]);
 	const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
 	const { userData, setUserData } = useContext(DataContext);
 	// const { loading, setLoading, error, setError } = useLoadingError();
 	const searchBarRef = useRef(null);
-
-	useEffect(() => {
-		// setLoading(true);
-		const baseurl = "https://badging.allinopensource.org/api";
-		const urlParams = new URLSearchParams(document.location.search);
-		const code = urlParams.get("code");
-
-		fetch(`${baseurl}/callback`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ code }),
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				setUserData({
-					...userData,
-					username: data.username,
-					name: data.name,
-					email: data.email,
-					repos: data.repos,
-				});
-		    // setLoading(false);
-			})
-			.catch((error) => {
-		    // setLoading(false);
-		    // setError("An error occurred while fetching your data. Please try again later.");
-				console.log("an error occurred: ", error);
-			});
-	}, []);
 
 	useEffect(() => {
 		const handleClickOutside = (e) => {
@@ -68,13 +38,13 @@ const SearchBar = ({ setShowInfo }) => {
 		setSearchResults(results);
 	}
 
-  const handleInputClick = () => {
-    if (!inputClicked) {
-      setInputClicked(true);
-      setShowInfo(false);
-      setSearchResults(userData.repos);
-    }
-  };
+	const handleInputClick = () => {
+		if (!inputClicked) {
+			setInputClicked(true);
+			setShowInfo(false);
+			setSearchResults(userData.repos);
+		}
+	};
 
 	function performSearch(value) {
 		return userData.repos.filter((result) =>
@@ -99,7 +69,7 @@ const SearchBar = ({ setShowInfo }) => {
 
 	function clearSuggestions() {
 		setSearchResults([]);
-    setFocusedSuggestionIndex(-1);
+		setFocusedSuggestionIndex(-1);
 	}
 
 	return (
@@ -110,7 +80,7 @@ const SearchBar = ({ setShowInfo }) => {
 					type="text"
 					value={inputValue}
 					onChange={handleInputChange}
-          onClick={handleInputClick}
+					onClick={handleInputClick}
 					placeholder="Search"
 				/>
 			</div>
@@ -146,7 +116,7 @@ const SearchBar = ({ setShowInfo }) => {
 };
 
 SearchBar.propTypes = {
-  setShowInfo: PropTypes.func.isRequired,
-}
+	setShowInfo: PropTypes.func.isRequired,
+};
 
 export default SearchBar;

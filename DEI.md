@@ -1,8 +1,15 @@
-### _Disclaimer: This is currently a Pilot Program and this file may change based on the results and feedback._
+<!---
+The DEI.md file was originally created in the CHAOSS project. This comment provides attribution of that work as defined under the MIT license
+-->
+
+### _Disclaimer: This file should not be used when creating your DEI.md file. Please use the [Template.DEI.md](https://github.com/AllInOpenSource/ProjectBadging/blob/main/Template.DEI.md) and [Guide.DEI.md](https://github.com/AllInOpenSource/ProjectBadging/blob/main/Guide.DEI.md) when creating your own DEI.md file._
 
 # DEI Project Statement
 
 ### _Include Your Project Name/Logo Here_
+
+### _Include a description of the scope of the DEI.md file. For example, does this DEI.md file cover one particular repository, a collection of repositories, or an entire organization?_
+
 
 [Project Name] prioritizes and reflects on DEI through a regular review of project policies and performance based on the ever-evolving [CHAOSS project](https://chaoss.community) DEI metrics and information in the [All In DEI Resource Hub](https://allinopensource.org/maintainers/DEI-resources/). 
 
@@ -11,13 +18,15 @@
 1. [Project Access](https://chaoss.community/?p=4953)
 * Description of how your project addresses project access. A sample description is provided in the following points. These points are not required for your project but are meant to help consider things you could be doing or are already doing. The points could also include efforts that your project is doing but are not listed here:
   
-    * Project access is addressed in the [Project Name] through a variety of different efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include: 
-        1. All virtual meetings are transcribed via the Zoom annotation tool and members are able to join via their computer or phone. Video is not required to participate in virtual meetings.
-        2. Virtual meetings are attentive to global time zones. While the majority of our meetings occur during times that are most easily accessed by members in North America, South America, Western Europe, and Africa, virtual meetings are also held to support [Project Name] members in Asia-Pacific and Eastern Europe. 
-        3. Global chapters of [Project Name] have been established in Africa, LATAM, Asia-Pacific, and Eastern Europe to support activities and people in a variety of global regions. 
-        4. Translation services are provided for all website pages.
-        5. Our project regularly performs an accessibility audit on our website and project documentation.
-           
+    * Project access is addressed in the [Project Name] through various efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include:
+      1. All virtual meetings are transcribed via the Zoom annotation tool, and members can join via their computer or phone. Video is not required to participate in virtual meetings.
+      2. Virtual meetings are attentive to global time zones. While most of our meetings occur during times that are most easily accessed by members in North America, South America, Western Europe, and Africa, virtual meetings are also held to support [Project Name] members in Asia-Pacific and Eastern Europe.
+      3. [Project Name] project maintainers and merge request coaches span global time zones and work asynchronously with contributors across the world.
+      4. Translation services are provided for all website pages.
+      5. All areas of [Project Name] are considered open to community contributions. A stated goal of our project is that “everyone can contribute."
+      6. The [Project Name] SaaS product is conformant with the [Voluntary Product Accessibility Template (VPAT 2.4)](https://www.section508.gov/sell/vpat/) revised in June 2023 as well as to level AA of the [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+      7. [Project Name] is developing a unified contributor program that recognizes and rewards non-code contributors, including contributions through events, blog posts, and comments in issues and merge requests.
+
 2. [Communication Transparency](https://chaoss.community/?p=4957)
 * Description of how your project addresses communication transparency. A sample description is provided in the following points. These points are not required for your project but are meant to help consider things you could be doing or are already doing. The points could also include efforts that your project is doing but are not listed here:
   
@@ -27,6 +36,10 @@
         3. Slack channels are regularly reviewed to determine if they should be public or private channels as well as considering if a channel is needed any longer. 
         4. All virtual meetings are recorded and uploaded to our project YouTube channel.
         5. Decisions that impact the project are shared across numerous working groups meetings and associated Slack channels to ensure that as many project members can participate in the process.
+        6. Any information that cannot be made public (e.g. security and abuse vulnerabilities, financial information, private data) is marked as internal to the project. All of the internal information is listed publicly by name and any other information not marked as internal are available externally to the public.
+        7. [Project Name] operates using a single source of truth for all community members.
+        8. [Project Name]'s handbook is public and open to contribution.
+        9. [Project Name] operates an unfiltered YouTube channel that shares all publicly available meetings, recordings, and community pairing sessions.
            
 3. [Newcomer Experiences](https://chaoss.community/?p=4891)
 * Description of how your project addresses the newcomer experience. A sample description is provided in the following points. These points are not required for your project but are meant to help consider things you could be doing or are already doing. The points could also include efforts that your project is doing but are not listed here:

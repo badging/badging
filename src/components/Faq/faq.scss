@@ -2,19 +2,21 @@
 
 .faq {
 	width: 100%;
-	margin-top: 70px;
+	margin-top: 5.87rem;
+	margin-bottom: 5.87rem;
 	h2 {
-		margin: 0px 0px 20px 0px;
+		margin: 0 0 2rem 0;
 		text-align: center;
+		font-size: 3rem;
 	}
 	.faq-details {
 		display: flex;
 		flex-direction: column;
+		margin: auto;
 		margin-top: 5px;
 		// line-height: 70px;
-		border: 1px solid $primaryBorderColor;
-		max-width: 80rem;
-		margin: auto;
+		border: 1px solid $borderColor3;
+		max-width: 74rem;
 		height: auto; //91px;
 		font-family: $font-family_1;
 		padding: 30px 0;
@@ -22,6 +24,7 @@
 
 		p {
 			display: inline-block;
+			font-size: 18px;
 		}
 
 		p:nth-child(1) {
@@ -55,11 +58,6 @@
 
 	.faq-details:hover {
 		border: 1px solid;
-		border-image: linear-gradient(
-				to top,
-				rgb(219, 32, 157),
-				rgba(105, 199, 185, 1)
-			)
-			1;
+		border-image: $borderHoverGradient;
 	}
 }
