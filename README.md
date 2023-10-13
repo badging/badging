@@ -23,12 +23,12 @@ Currently, the DEI Project Badges are available in four levels
 | Level        | Badge        |  Requirements Met
 |--------------|--------------|-------------------------------------
 | Bronze       | ![Bronze-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/804cf75b-0c58-4fef-bf3d-a8d6f88c9f1f)  |  Presence of DEI.md File
-| Silver       | ![Silver-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/952bb182-a652-49bc-890a-1c75aab7c8f4)  |  Comming soon
-| Gold         | ![Gold-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/0471a7a5-46c0-4056-ada1-c7ad09f31d55)  |  Comming soon
-| Platinum     | ![Platinum](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/9de89540-ae31-4197-91b7-c978fcaac204) |  Comming soon
+| Silver       | ![Silver-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/952bb182-a652-49bc-890a-1c75aab7c8f4)  |  Coming soon
+| Gold         | ![Gold-Badge](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/0471a7a5-46c0-4056-ada1-c7ad09f31d55)  |  Coming soon
+| Platinum     | ![Platinum](https://github.com/Anita-ihuman/ProjectBadging/assets/62384659/9de89540-ae31-4197-91b7-c978fcaac204) |  Coming soon
 
 ## Contributing to this Project
-This project is still in pilot phase and will commence call for contributor soon.
+This project is still in pilot phase and will commence call for contributors soon.
 
 Don't forget to give the project a star! Thanks again!
 
