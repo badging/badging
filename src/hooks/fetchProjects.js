@@ -11,6 +11,7 @@ export function fetchProjects(apiUrl) {
       try {
         const response = await fetch(apiUrl, {
           // cache: 'force-cache',
+          // next: { revalidate: 180 },
         });
 
         if (!response.ok) {

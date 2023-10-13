@@ -15,6 +15,7 @@ import Paper from '@mui/material/Paper';
 import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces } from '../../assets/images';
 import { Publish } from '@mui/icons-material';
 import { fetchProjects } from '../../hooks/fetchProjects';
+import { customAlphabet, nanoid } from 'nanoid';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -160,6 +161,7 @@ const Projects = () => {
     console.log("match", match[1]);
     return match ? match[1] : null;
   }
+  const nanoid = customAlphabet('abcdefgh1jklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 10)
 
   return (
     <main>
@@ -219,16 +221,17 @@ const Projects = () => {
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <StyledTableCell>ID</StyledTableCell>
-                    <StyledTableCell align="left">Badge Assigned Date</StyledTableCell>
+                    <StyledTableCell>S/N</StyledTableCell>
+                    <StyledTableCell align="left">Badge Date</StyledTableCell>
                     <StyledTableCell align="left">Project Title</StyledTableCell>
-                    <StyledTableCell align="left">Badge Assigned</StyledTableCell>
+                    <StyledTableCell align="left">DEI Badge</StyledTableCell>
                     <StyledTableCell align="left">Project Repository</StyledTableCell>
                   </TableRow>
                 </TableHead>
               
               <TableBody>
-                {(filteredData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                { 
+                (filteredData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => (
                   <StyledTableRow key={index}>
                     <StyledTableCell component="th" scope="row">
@@ -237,13 +240,15 @@ const Projects = () => {
                     <StyledTableCell align="left">
                       {formatDate(row.createdAt)}
                     </StyledTableCell>
-                    <StyledTableCell align="left">{row.badgeType}</StyledTableCell>
+                    <StyledTableCell align="left"></StyledTableCell>
                     <StyledTableCell align="left">
                       <img src={extractImageUrl(row.attachment)} width={100} height={100} alt="badgeImage" />
                     </StyledTableCell>
-                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{row.repoLink}</a></StyledTableCell>
+                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{`github/${nanoid(7)}`}</a></StyledTableCell>
                   </StyledTableRow>
-                )))}
+                )))
+                
+                }
 
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
