@@ -44,64 +44,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(id, date, title, badge, repository) {
-  return { id, date, title, badge, repository };
-}
-
-const rows = [
-  createData(1, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(2,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(3, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(4, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(5, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(6,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(7,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(8,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(9, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(10,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(11, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(12, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(13, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(14,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(15, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(16, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(17, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(18, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(19, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(20, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(21, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(22, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(23, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(24,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(25,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(26,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(27,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(26, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(29,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(10,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(11, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(12, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(13, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(14,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(15, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(16, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(17, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(18, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(19, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(20, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(21, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(22, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(23, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(24,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(25,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(26,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(27,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(26, 'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(29,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github'),
-  createData(30,'dd-mm-yy', 'Mesh Inclusive Project', 'Img', 'bitly/mesh/github')
-  // ...rest of the rows
-];
-
 const StyledTablePagination = styled(TablePagination)(theme => ({
   backgroundColor: '#1C1C1C',
   color: '#fff',
@@ -115,7 +57,6 @@ const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('createdAt');
   const { data, isLoading, error } = fetchProjects('https://badging.allinopensource.org/api/badgedRepos');
-  console.log("dataa", data);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -158,7 +99,6 @@ const Projects = () => {
   function extractImageUrl(markdownText) {
     const imageUrlRegex = /!\[.*?\]\((.*?)\)/;
     const match = markdownText.match(imageUrlRegex);
-    console.log("match", match[1]);
     return match ? match[1] : null;
   }
 
