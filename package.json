@@ -4,12 +4,12 @@
   "description": "Website for DEI Project Badging with CHAOSS & All In",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint .",
-    "lint:fix": "npm run lint -- --fix",
+    "eslint": "npx eslint .",
+    "eslint:fix": "npm run eslint -- --fix",
     "prettier": "npx prettier . --check",
     "prettier:fix": "npm run prettier -- --write",
     "stylelint": "npx stylelint \"**/*.css\" --fix --allow-empty-input",
-    "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
+    "format": "npm run prettier:fix && npm run eslint:fix && npm run stylelint",
     "build": "webpack --mode production",
     "dev": "webpack serve",
     "test": "echo \"Error: no test specified\"",
@@ -76,16 +76,5 @@
   },
   "engines": {
     "node": ">= 16.15.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,md,html,css,scss}": [
-      "npm run format -v",
-      "git add -v"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit -v"
-    }
   }
 }

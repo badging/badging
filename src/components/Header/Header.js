@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../assets/styles/global.scss';
-import './header.scss';
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
+
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../../assets/styles/global.scss";
+import "./header.scss";
 
 import {
   DefaultMobileNavIcon,
   OpenMobileNavIcon,
-  MobileLogo,
   badgingLogo,
   badgingLogoMobile,
-  GetStartedArrrow,
-} from '../../assets/images';
-import { useMediaQuery } from 'react-responsive';
-import ActiveNav from '../ActiveNav/ActiveNav';
-import { Home } from '@mui/icons-material';
-import { useLocation } from 'react-router-dom';
+} from "../../assets/images";
+import { useMediaQuery } from "react-responsive";
+import ActiveNav from "../ActiveNav/ActiveNav";
+import { useLocation } from "react-router-dom";
 const Header = () => {
   // eslint-disable-next-line no-unused-vars
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -29,26 +28,24 @@ const Header = () => {
             src={isMobile ? badgingLogoMobile : badgingLogo}
             className="logo"
             alt="all-in-chaoss-logo"
-            // width={250}
-            // srcSet={`${MobileLogo} 1200w`}
           />
         </Link>
         <ul className="web">
           <Link to="/" className="nav-link nav-web">
-            {pathname === '/' ? <ActiveNav pathname={`Home`} /> : 'Home'}
+            {pathname === "/" ? <ActiveNav pathname={`Home`} /> : "Home"}
           </Link>
           <Link to="/about" className="nav-link nav-web">
-            {pathname === '/about' ? (
+            {pathname === "/about" ? (
               <ActiveNav pathname={`AboutDEIBadging`} />
             ) : (
-              'AboutDEIBadging'
+              "AboutDEIBadging"
             )}
           </Link>
           <Link to="/projects" className="nav-link nav-web">
-            {pathname === '/projects' ? (
+            {pathname === "/projects" ? (
               <ActiveNav pathname={`Projects`} />
             ) : (
-              'Projects'
+              "Projects"
             )}
           </Link>
         </ul>
@@ -61,7 +58,7 @@ const Header = () => {
             height="14"
             viewBox="0 0 18 14"
             fill="none"
-            style={{ marginLeft: '20px' }}
+            style={{ marginLeft: "20px" }}
           >
             <path
               fillRule="evenodd"
@@ -70,15 +67,20 @@ const Header = () => {
               fill="#06F395"
             />
           </svg>
-          {/* <img src={GetStartedArrrow} width={200} height={200} alt='2jekl' /> */}
         </Link>
 
         <img
           onClick={() => setNavbarOpen((prev) => !prev)}
+          onKeyUp={(e) => {
+            if (e.key === "Enter" || e.key === "Space") {
+              setNavbarOpen((prev) => !prev);
+            }
+          }}
+          role="button"
+          tabIndex={0}
           src={navbarOpen ? OpenMobileNavIcon : DefaultMobileNavIcon}
           alt="open"
           className="mobileNav"
-          // className={`mobileNav ${navbarOpen ? 'toggleDesctiptionButton' : ''}`}
         />
       </nav>
       {navbarOpen ? (
@@ -95,12 +97,12 @@ const Header = () => {
             </Link>
           </ul>
           <Link className="get-started-mobile" to="/badge">
-            {' '}
+            {" "}
             Get Started
           </Link>
         </div>
       ) : (
-        ''
+        ""
       )}
     </header>
   );
