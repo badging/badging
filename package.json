@@ -21,7 +21,7 @@
     "url": "git+https://github.com/AllInOpenSource/Project-Badging.git"
   },
   "author": "AllInOpenSource | CHAOSS",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AllInOpenSource/Project-Badging/issues"
   },
