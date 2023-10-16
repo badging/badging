@@ -183,7 +183,7 @@ const Projects = () => {
                     <StyledTableCell align="left">
                       <img src={extractImageUrl(row.attachment)} width={100} height={100} alt="badgeImage" />
                     </StyledTableCell>
-                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{`github/${RandomString()}`}</a></StyledTableCell>
+                    <StyledTableCell align="left"><a href={row.repoLink} target='_blank' style={{color: '#000'}}>{row.repoLink}</a></StyledTableCell>
                   </StyledTableRow>
                 )))
                 
