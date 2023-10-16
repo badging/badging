@@ -179,7 +179,7 @@ const Projects = () => {
                     <StyledTableCell align="left">
                       {formatDate(row.createdAt)}
                     </StyledTableCell>
-                    <StyledTableCell align="left"></StyledTableCell>
+                    <StyledTableCell align="left">{(()=>{const text=row.repoLink.split('/');return text[3]})()}</StyledTableCell>
                     <StyledTableCell align="left">
                       <img src={extractImageUrl(row.attachment)} width={100} height={100} alt="badgeImage" />
                     </StyledTableCell>
