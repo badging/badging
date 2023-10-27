@@ -27,9 +27,18 @@ Here are the steps to follow to contribute to All In CHAOSS Project badging:
 
 2. **Clone Your Fork**: Clone your fork of the repository to your local machine:
   
-   *git clone https://github.com/AllInOpenSource/ProjectBadging.git*
-   
+   *git clone https://github.com/your_username/ProjectBadging.git*
+
+   replace `your_username` with your actual github username
+
 ### Set up your Local Development Environment
+
+3. **Perform the following to get your working environment ready**: 
+
+      ```bash
+         cd ProjectBadging # move into project directory
+         npm install # installs packages and dependencies
+      ```
 
 4. **Create a Branch**: Create a new branch for your contribution:
 
@@ -42,7 +51,7 @@ Here are the steps to follow to contribute to All In CHAOSS Project badging:
 7. **Commit Changes**: Commit your changes with a clear and descriptive message.
 
    *git add .
-    git commit -s -m "<Brief description of your changes>"*
+    git commit -S -m "<Brief description of your changes>"*
 
 8. **Push Changes**: Push your changes to your fork on GitHub:
 
