@@ -42,14 +42,15 @@ import faqBgWeb from './others/bg-faq-web.svg';
 import heroSectionBgWeb from './others/bg-hero-section-web.svg';
 import faqBgMobile from './others/bg-faq-mobile.svg';
 import heroSectionBgMobile from './others/bg-hero-section-mobile.svg';
+import comingSoon from './others/coming-soon.svg';
 
 import getBadgedMobile from './others/get-badged-mobile.svg';
 
-import Filter from './icons/Filter.svg'
-import SearchIcon from './icons/SearchIcon.svg'
-import ScheduleIcon from './icons/ScheduleIcon.svg'
-import DateIcon from './icons/DateIcon.svg'
-import AZicon from './icons/AZIcon.svg'
+import Filter from './icons/Filter.svg';
+import SearchIcon from './icons/SearchIcon.svg';
+import ScheduleIcon from './icons/ScheduleIcon.svg';
+import DateIcon from './icons/DateIcon.svg';
+import AZicon from './icons/AZIcon.svg';
 
 export {
   badgingLogo,
@@ -87,9 +88,12 @@ export {
   loginArrow,
   getBadgedFullBG,
   getBadgedMobile,
+  comingSoon,
   Filter,
   SearchIcon,
-  ScheduleIcon, DateIcon, AZicon,
+  ScheduleIcon,
+  DateIcon,
+  AZicon,
   howItWorksBgWeb,
   howItWorksBgMobile,
   faqBgWeb,
