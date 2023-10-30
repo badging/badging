@@ -1,77 +1,81 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 
-main {
-  background-color: #fff;
-  height: 632px;
+.coming__soon {
+	main {
+		background-color: #fff;
+		height: 632px;
 
-  .soon-img {
-    width: 278px;
-    display: block;
-    margin: auto;
-    padding-top: 2rem;
-  }
-  img {
-    width: 290px;
-  }
+		.soon-img {
+			width: 278px;
+			display: block;
+			margin: auto;
+			padding-top: 2rem;
+		}
+		img {
+			width: 290px;
+		}
 
-  .soon-text {
-    width: 290px;
-    text-align: center;
-    margin: auto;
-    margin-top: 2rem;
-    color: green;
+		.soon-text {
+			width: 290px;
+			text-align: center;
+			margin: auto;
+			margin-top: 2rem;
+			color: green;
 
-    h1 {
-      color: $headingColor;
-      font-family: $font-family_1;
-      font-size: 32px;
-      font-weight: bolder;
-      padding-bottom: 0.5rem;
-    }
-    p {
-      color: $textColor3;
-      font-family: $font-family_2;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 2;
-    }
-  }
+			h1 {
+				color: $headingColor;
+				font-family: $font-family_1;
+				font-size: 32px;
+				font-weight: bolder;
+				padding-bottom: 0.5rem;
+			}
+			p {
+				color: $textColor3;
+				font-family: $font-family_2;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 2;
+			}
+		}
 
-  .back-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 6rem;
+		.back-link {
+			display: flex;
+			justify-content: center;
+			margin-top: 6rem;
 
-    a {
-      color: $textColor4;
-      background: $secondaryBtnColor2;
-      font-weight: 500;
-      font-size: 16px;
-      font-family: $font-family_2;
-      line-height: 24px;
-      padding: 26px 47px 26px 47px;
-      width: 263px;
-      text-align: center;
-    }
-  }
+			a {
+				color: $textColor4;
+				background: $secondaryBtnColor2;
+				font-weight: 500;
+				font-size: 16px;
+				font-family: $font-family_2;
+				line-height: 24px;
+				padding: 26px 47px 26px 47px;
+				width: 263px;
+				text-align: center;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 769px) {
-  main {
-    .soon-img {
-      width: 478px;
-      padding-top: 4rem;
-    }
-    img {
-      width: 478px;
-    }
-    .soon-text {
-      width: 492px;
+	.coming__soon {
+		main {
+			.soon-img {
+				width: 478px;
+				padding-top: 4rem;
+			}
+			img {
+				width: 478px;
+			}
+			.soon-text {
+				width: 492px;
 
-      h1 {
-        font-size: 38px;
-      }
-    }
-  }
+				h1 {
+					font-size: 38px;
+				}
+			}
+		}
+	}
 }
