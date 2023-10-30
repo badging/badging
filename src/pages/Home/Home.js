@@ -3,18 +3,18 @@ import './home.scss';
 import {
   Footer,
   Header,
-  Faq,
+  // Faq,
   CardComponent,
   CardCarousel,
 } from '../../components';
 
-import { faqData } from '../../components/Faq/data';
+// import { faqData } from '../../components/Faq/data';
 import { howItWorksData } from './data';
 import {
   howItWorksBgMobile,
   howItWorksBgWeb,
-  faqBgWeb,
-  faqBgMobile,
+  // faqBgWeb,
+  // faqBgMobile,
   heroSectionBgWeb,
   heroSectionBgMobile,
 } from '../../assets/images';
@@ -65,7 +65,7 @@ const Home = () => {
               <p className="text-lg">
                 Through the use of a DEI.md markdown document, open-source
                 maintainers can actively demonstrate their ongoing commitment to
-                promoting
+                promoting diversity, equity and inclusion.
               </p>
             </div>
             <div className="cards">
