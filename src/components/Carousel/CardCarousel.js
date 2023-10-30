@@ -277,7 +277,7 @@ const CardCarousel = () => {
   return (
     <div className="carousel-container">
       <div className="getStarted-button">
-        <button>
+        <button type='button'>
           Get Started{' '}
           <span>
             <img className="arrow" src={loginArrow} alt="arrow icon" />

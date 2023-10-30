@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ComingSoon = () => {
   return (
-    <div>
+    <div className='coming__soon'>
       <Header />
       <Jumbotron
         img={<img src={curlyBraces} alt="curly braces" />}
