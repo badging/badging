@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    username: "",
-    repos: [],
-    reposToBadge: [],
-  });
+  // const [userData, setUserData] = useState({
+  // 	name: "",
+  // 	email: "",
+  // 	username: "",
+  // 	repos: [],
+  // 	reposToBadge: [],
+  // });
 
   /**
    * KINDLY FOLLOW THESE STEPS TO TEST THIS PROGRAM ON YOUR LOCAL MACHINE
@@ -22,17 +22,13 @@ export const DataProvider = ({ children }) => {
    * Now you are good go!!!
    */
 
-  // const [userData, setUserData] = useState({
-  // 	email: "tochuks.chris@gmail.com",
-  // 	name: "Tochukwu",
-  // 	repos: [
-  // 		"AllInOpenSource/ProjectBadging",
-  // 		"animeshack/church-website",
-  // 		"badging/badging",
-  // 	],
-  // 	username: "teek-tech",
-  // 	reposToBadge: [],
-  // });
+  const [userData, setUserData] = useState({
+    email: "marco.zille@gmail.com",
+    name: "Marco Zille",
+    repos: ["zillemarco/ProjectBadging"],
+    username: "zillemarco",
+    reposToBadge: [],
+  });
 
   return (
     <DataContext.Provider value={{ userData, setUserData }}>
