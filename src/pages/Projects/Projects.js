@@ -16,6 +16,7 @@ import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces 
 import { Publish } from '@mui/icons-material';
 import { fetchProjects } from '../../hooks/fetchProjects';
 import RandomString from '../../components/RandomString';
+import settings from '../../settings.json';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -56,7 +57,7 @@ const Projects = () => {
   const [filterStatus, setFilterStatus] = useState("Published");
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('createdAt');
-  const { data, isLoading, error } = fetchProjects('https://badging.allinopensource.org/api/badgedRepos');
+  const { data, isLoading, error } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };

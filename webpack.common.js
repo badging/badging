@@ -1,10 +1,13 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const SettingsGeneratorPlugin = require("./settings_generator.js")
 
 module.exports = {
-	mode: "development",
+	devtool: "source-map",
 	entry: path.join(__dirname, "src", "index.js"),
 	output: {
+		publicPath: "/",
 		path: path.resolve(__dirname, "build"),
 		filename: "[name].bundle.js",
 	},
@@ -56,22 +59,8 @@ module.exports = {
 				"all-in-chaoss-logo.svg"
 			),
 		}),
-	],
-	devServer: {
-		static: {
-			directory: path.join(__dirname, "build"),
-		},
-		client: {
-			logging: "info",
-			overlay: true,
-			reconnect: 2,
-		},
-
-		historyApiFallback: true,
-
-		compress: true,
-		port: 5050,
-		hot: true,
-	},
-	devtool: "source-map",
+		new SettingsGeneratorPlugin({
+			API_BASE_URL: process.env.API_BASE_URL
+		})
+	]
 };

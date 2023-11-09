@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { Layout, Loader } from '../../components';
 import { loginArrow } from '../../assets/images';
 
+import settings from '../../settings.json';
+
 import '../../assets/styles/global.scss';
 import './getStartedBadging.scss';
 
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = 'https://badging.allinopensource.org/api';
+  const baseurl = settings.API_BASE_URL;
 
   const handleLogin = () => {
     setOpenLoader(true);
