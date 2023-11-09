@@ -10,8 +10,8 @@
     "prettier:fix": "npm run prettier -- --write",
     "stylelint": "npx stylelint \"**/*.css\" --fix --allow-empty-input",
     "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "test": "echo \"Error: no test specified\"",
     "precommit": "lint-staged",
     "prepare": "husky install"

@@ -1,30 +1,22 @@
-import React, { useState } from "react";
-import "../../assets/styles/global.scss";
-import "./project.scss";
-import { AboutDeiMobile, Footer, Header } from "../../components";
-import Jumbotron from "../../components/Jumbotron/Jumbotron";
-import { Pagination, TablePagination } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import {
-  AZicon,
-  DateIcon,
-  Filter,
-  ScheduleIcon,
-  SearchIcon,
-  badge,
-  curlyBraces,
-} from "../../assets/images";
-import { Publish } from "@mui/icons-material";
-import { fetchProjects } from "../../hooks/fetchProjects";
-import RandomString from "../../components/RandomString";
-import AboutNew from "../../components/AboutDeiBadgingCom/About";
+import React, { useState } from 'react';
+import '../../assets/styles/global.scss';
+import './project.scss';
+import { Footer, Header } from '../../components';
+import Jumbotron from '../../components/Jumbotron/Jumbotron';
+import { Pagination, TablePagination } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon, badge, curlyBraces } from '../../assets/images';
+import { Publish } from '@mui/icons-material';
+import { fetchProjects } from '../../hooks/fetchProjects';
+import RandomString from '../../components/RandomString';
+import settings from '../../settings.json';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -63,12 +55,9 @@ const Projects = () => {
   const [rowsPerPage, setRowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
   const [filterStatus, setFilterStatus] = useState("Published");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("createdAt");
-  const [swap, setSwap] = useState("about")
-  const { data, isLoading, error } = fetchProjects(
-    `${url}/badgedRepos`
-  );
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('createdAt');
+  const { data, isLoading, error } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
