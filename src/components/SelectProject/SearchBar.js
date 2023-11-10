@@ -47,22 +47,22 @@ const SearchBar = ({ setShowInfo }) => {
   };
 
   function performSearch(value) {
-    return userData.repos.filter((result) =>
-      result.toLowerCase().includes(value.toLowerCase())
+    return userData.repos.filter((repoData) =>
+      repoData.fullName.toLowerCase().includes(value.toLowerCase())
     );
   }
 
-  function handleRepoSelection(result) {
+  function handleRepoSelection(repoData) {
     setUserData({
       ...userData,
-      reposToBadge: [...userData.reposToBadge, result],
+      reposToBadge: [...userData.reposToBadge, repoData],
     });
     clearSuggestions();
   }
 
-  function handleSuggestionClick(result, index) {
+  function handleSuggestionClick(repoData, index) {
     if (focusedSuggestionIndex === index) {
-      handleRepoSelection(result);
+      handleRepoSelection(repoData);
     }
     setFocusedSuggestionIndex(index);
   }
@@ -86,14 +86,14 @@ const SearchBar = ({ setShowInfo }) => {
       </div>
       {searchResults.length > 0 && (
         <ul className="suggestions">
-          {searchResults.slice(0, 4).map((result, index) => (
+          {searchResults.slice(0, 4).map((repoData, index) => (
             <li key={index}>
               <button
                 type="button"
                 className="btn suggestion"
-                onClick={() => handleSuggestionClick(result, index)}
+                onClick={() => handleSuggestionClick(repoData, index)}
               >
-                {result}
+                {repoData.fullName}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"

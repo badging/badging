@@ -10,9 +10,14 @@ const GetStartedBadging = () => {
 
   const baseurl = process.env.API_BASE_URL;
 
-  const handleLogin = () => {
+  const handleLoginWithGitHub = () => {
     setOpenLoader(true);
     window.location.href = `${baseurl}/login?provider=github`;
+  };
+
+  const handleLoginWithGitLab = () => {
+    setOpenLoader(true);
+    window.location.href = `${baseurl}/login?provider=gitlab`;
   };
 
   return (
@@ -36,7 +41,11 @@ const GetStartedBadging = () => {
           </ol>
 
           <div className="login-btn">
-            <button type="button" className="login-btn" onClick={handleLogin}>
+            <button
+              type="button"
+              className="login-btn"
+              onClick={handleLoginWithGitHub}
+            >
               <img className="logo" src={githubCleanIcon} alt="github logo" />
               <span className="btn-mb-badge">Login with GitHub</span>
               <span className="btn-dt-badge">Login with GitHub</span>
@@ -45,7 +54,11 @@ const GetStartedBadging = () => {
           </div>
 
           <div className="login-btn">
-            <button type="button" className="login-btn" onClick={handleLogin}>
+            <button
+              type="button"
+              className="login-btn"
+              onClick={handleLoginWithGitLab}
+            >
               <img
                 className="logo"
                 src={gitlabIcon}

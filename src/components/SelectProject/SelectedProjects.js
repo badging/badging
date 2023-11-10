@@ -9,9 +9,11 @@ const SelectedProjects = () => {
 
   // const { loading, error } = useLoadingError();
 
-  const handleClearInput = (event, result) => {
+  const handleClearInput = (event, repoData) => {
     event.stopPropagation();
-    const repos = userData.reposToBadge.filter((repo) => repo !== result);
+    const repos = userData.reposToBadge.filter(
+      (repo) => repo.id !== repoData.id
+    );
 
     setUserData({
       ...userData,
@@ -30,13 +32,13 @@ const SelectedProjects = () => {
         // !loading &&
         // 	!error &&
 
-        filteredReposToBadge.map((result, index) => (
+        filteredReposToBadge.map((repoData, index) => (
           <li key={index} className="result">
-            {result}
+            {repoData.fullName}
             <button
               type="button"
               className="clear btn"
-              onClick={(event) => handleClearInput(event, result)}
+              onClick={(event) => handleClearInput(event, repoData)}
             >
               <CloseIcon />
             </button>
