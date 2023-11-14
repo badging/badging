@@ -1,7 +1,7 @@
 # DEI Project Badging
 
 ## About DEI Project Badging
-The DEI Project Badging Initiative is a collaboration between [AllIn](https://allinopensource.org/) and [CHAOSS](https://chaoss.community/) that awards badges to open-source projects that demonstrate diversity and inclusion. This initiative promotes leadership, self-reflection, and self-improvement on issues critical to building the Internet as a social good.
+The DEI Project Badging Initiative is a [CHAOSS](https://chaoss.community/) that awards badges to open-source projects that demonstrate diversity and inclusion. This initiative promotes leadership, self-reflection, and self-improvement on issues critical to building the Internet as a social good.
 
 The DEI project badges help open source project maintainers showcase their ongoing commitment to improving and supporting diversity, equity, and inclusion.
 
