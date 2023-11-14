@@ -51,8 +51,8 @@ jobs:
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           script: |
-            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.allinopensource.org/*
-            mkdir -p /var/www/badging.allinopensource.org/
+            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/project-badging/*
+            mkdir -p /var/www/badging.chaoss.community/project-badging
 
       - name: deploy new build
         uses: garygrossgarten/github-action-scp@release
@@ -61,7 +61,7 @@ jobs:
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           local: ${{ github.workspace }}/build
-          remote: "/var/www/badging.allinopensource.org/"
+          remote: "/var/www/badging.chaoss.community/project-badging"
 
       - name: restart nginx
         uses: appleboy/ssh-action@master
