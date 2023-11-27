@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import {
   Home,
   About,
@@ -8,15 +8,15 @@ import {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
-} from './pages';
+} from "./pages";
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from './components';
-import { DataProvider } from './contexts/DataContext';
-import { DesktopProvider } from './contexts/DesktopContext';
+} from "./components";
+import { DataProvider } from "./contexts/DataContext";
+import { DesktopProvider } from "./contexts/DesktopContext";
 
 const App = () => {
   return (

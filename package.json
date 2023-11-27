@@ -10,8 +10,8 @@
     "prettier:fix": "npm run prettier -- --write",
     "stylelint": "npx stylelint \"**/*.css\" --fix --allow-empty-input",
     "format": "npm run prettier:fix && npm run lint:fix && npm run stylelint",
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\"",
     "precommit": "lint-staged",
     "prepare": "husky install"
@@ -52,6 +52,7 @@
     "@svgr/webpack": "^7.0.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "dotenv": "16.3.1",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",

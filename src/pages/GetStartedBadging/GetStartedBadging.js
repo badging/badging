@@ -1,16 +1,14 @@
-import { useState } from 'react';
-import { Layout, Loader } from '../../components';
-import { loginArrow } from '../../assets/images';
+import { useState } from "react";
+import { Layout, Loader } from "../../components";
+import { loginArrow } from "../../assets/images";
 
-import settings from '../../settings.json';
-
-import '../../assets/styles/global.scss';
-import './getStartedBadging.scss';
+import "../../assets/styles/global.scss";
+import "./getStartedBadging.scss";
 
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = settings.API_BASE_URL;
+  const baseurl = process.env.API_BASE_URL;
 
   const handleLogin = () => {
     setOpenLoader(true);
@@ -43,7 +41,7 @@ const GetStartedBadging = () => {
               className="login-github"
               onClick={handleLogin}
             >
-              <span className="btn-mb-badge">Get Started</span>{' '}
+              <span className="btn-mb-badge">Get Started</span>{" "}
               <span className="btn-dt-badge"> Login with GitHub</span>
               <span>
                 <img className="arrow" src={loginArrow} alt="arrow icon" />

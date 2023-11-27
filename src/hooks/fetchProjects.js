@@ -1,5 +1,5 @@
 // utils/useFetchData.js
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export function fetchProjects(apiUrl) {
   const [data, setData] = useState([]);
@@ -15,7 +15,7 @@ export function fetchProjects(apiUrl) {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error("Failed to fetch data");
         }
 
         const jsonData = await response.json();
