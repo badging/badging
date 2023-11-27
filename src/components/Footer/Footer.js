@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { twitter, linkedin, mail, githubIcon } from '../../assets/images';
-import '../../assets/styles/global.scss';
-import './footer.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import { twitter, linkedin, mail, githubIcon } from "../../assets/images";
+import "../../assets/styles/global.scss";
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -28,14 +28,14 @@ const Footer = () => {
         </Link>
       </div>
       <div className="copyright">
-        Copyright &copy;{' '}
+        Copyright &copy;{" "}
         <Link to="https://allinopensource.org/" className="footer-note">
           Allin
-        </Link>{' '}
-        &{' '}
+        </Link>{" "}
+        &{" "}
         <Link to="https://chaoss.community/" className="footer-note">
           CHAOSS
-        </Link>{' '}
+        </Link>{" "}
         Project. <br />
         All rights reserved
       </div>

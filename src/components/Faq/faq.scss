@@ -1,63 +1,63 @@
 @import "../../assets/styles/variables";
 
 .faq {
-	width: 100%;
-	margin-top: 5.87rem;
-	margin-bottom: 5.87rem;
-	h2 {
-		margin: 0 0 2rem 0;
-		text-align: center;
-		font-size: 3rem;
-	}
-	.faq-details {
-		display: flex;
-		flex-direction: column;
-		margin: auto;
-		margin-top: 5px;
-		// line-height: 70px;
-		border: 1px solid $borderColor3;
-		max-width: 74rem;
-		height: auto; //91px;
-		font-family: $font-family_1;
-		padding: 30px 0;
-		cursor: pointer;
+  width: 100%;
+  margin-top: 5.87rem;
+  margin-bottom: 5.87rem;
+  h2 {
+    margin: 0 0 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .faq-details {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5px;
+    // line-height: 70px;
+    border: 1px solid $borderColor3;
+    max-width: 74rem;
+    height: auto; //91px;
+    font-family: $font-family_1;
+    padding: 30px 0;
+    cursor: pointer;
 
-		p {
-			display: inline-block;
-			font-size: 18px;
-		}
+    p {
+      display: inline-block;
+      font-size: 18px;
+    }
 
-		p:nth-child(1) {
-			display: flex;
-			justify-content: space-between;
-			// background-color: red;
-			width: inherit;
-			height: inherit;
-			align-items: center;
-			padding: 0 55px;
-			font-family: $font-family_1;
-			font-size: 20px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
-			letter-spacing: 0.36px;
-			text-align: start;
-		}
-		p:nth-child(2) {
-			padding: 0px 55px;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 18px;
-			font-family: $font-family_2;
-			text-align: start;
-		}
-		.toggleAnswer.openAnswer {
-			margin-top: 25px; /* Change this value to adjust the margin when clicked */
-		}
-	}
+    p:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      // background-color: red;
+      width: inherit;
+      height: inherit;
+      align-items: center;
+      padding: 0 55px;
+      font-family: $font-family_1;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.36px;
+      text-align: start;
+    }
+    p:nth-child(2) {
+      padding: 0px 55px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: $font-family_2;
+      text-align: start;
+    }
+    .toggleAnswer.openAnswer {
+      margin-top: 25px; /* Change this value to adjust the margin when clicked */
+    }
+  }
 
-	.faq-details:hover {
-		border: 1px solid;
-		border-image: $borderHoverGradient;
-	}
+  .faq-details:hover {
+    border: 1px solid;
+    border-image: $borderHoverGradient;
+  }
 }
