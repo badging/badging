@@ -6,7 +6,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
-import settings from "../../settings.json";
 import { useQuery } from "@tanstack/react-query";
 
 const callbackQuery = (provider, code) => ({
