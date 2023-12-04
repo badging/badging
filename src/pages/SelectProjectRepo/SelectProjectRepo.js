@@ -75,7 +75,9 @@ const SelectProjectRepo = () => {
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
         setUserData({ ...userData, reposToBadge: [] });
-        navigate("/project-badging-successful", { state: { name, email, provider } }); // navigate to success page
+        navigate("/project-badging-successful", {
+          state: { name, email, provider },
+        }); // navigate to success page
       })
       // eslint-disable-next-line no-unused-vars
       .catch((error) => {

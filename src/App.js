@@ -14,10 +14,10 @@ import {
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from './components';
-import { DataProvider } from './contexts/DataContext';
-import { DesktopProvider } from './contexts/DesktopContext';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+} from "./components";
+import { DataProvider } from "./contexts/DataContext";
+import { DesktopProvider } from "./contexts/DesktopContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,8 +26,8 @@ const queryClient = new QueryClient({
       refetchOnmount: false,
       refetchOnReconnect: false,
       retry: false,
-    }
-  }
+    },
+  },
 });
 
 const App = () => {
@@ -48,7 +48,10 @@ const App = () => {
                 <Route path="/about/dei-badge" element={<DeiBadge />} />
               </Route>
               <Route path="/badge" element={<GetStartedBadging />} />
-              <Route path="/select-project/:provider" element={<SelectProjectRepo />} />
+              <Route
+                path="/select-project/:provider"
+                element={<SelectProjectRepo />}
+              />
               <Route exact path="/projects" element={<Projects />} />
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route
