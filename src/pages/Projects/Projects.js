@@ -259,7 +259,8 @@ const Projects = () => {
                               <a
                                 href={row.repoLink}
                                 target="_blank"
-                                style={{ color: "#000" }} rel="noreferrer"
+                                style={{ color: "#000" }}
+                                rel="noreferrer"
                               >
                                 {row.repoLink}
                               </a>

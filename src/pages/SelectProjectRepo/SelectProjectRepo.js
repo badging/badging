@@ -1,79 +1,83 @@
 import "../../assets/styles/global.scss";
 import "./selectProjectRepo.scss";
 import { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
+import settings from "../../settings.json";
+import { useQuery } from "@tanstack/react-query";
+
+const callbackQuery = (provider, code) => ({
+  queryKey: ["callback", provider, code],
+  queryFn: async () => {
+    if (!provider || !code) {
+      throw new Error("Invalid code or provider");
+    }
+
+    const response = await fetch(
+      `${settings.API_BASE_URL}/callback/${provider}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ code }),
+      }
+    );
+
+    return await response.json();
+  },
+});
 
 const SelectProjectRepo = () => {
   const { userData, setUserData } = useContext(DataContext);
   // const { error, setError } = useLoadingError();
   const { name, email, reposToBadge } = userData;
   const [showInfo, setShowInfo] = useState(true);
-  const [openLoaderDark, setOpenLoaderDark] = useState(false);
   const [openLoaderLight, setOpenLoaderLight] = useState(false);
+  const { provider } = useParams();
+  const [searchParams] = useSearchParams();
 
   const navigate = useNavigate();
 
+  const { data: fetchedUserData, isPending: fetchingUserData } = useQuery(
+    callbackQuery(provider, searchParams.get("code"))
+  );
+
   useEffect(() => {
-    const baseurl = "https://badging.allinopensource.org/api";
-    const urlParams = new URLSearchParams(document.location.search);
-    const code = urlParams.get("code");
-
-    if (!code) {
-      //  ?? get data from local storage
-      setShowInfo(false);
-      return;
-    }
-
-    setOpenLoaderDark(true);
-
-    fetch(`${baseurl}/callback`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ code }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUserData({
-          ...userData,
-          username: data.username,
-          name: data.name,
-          email: data.email,
-          repos: data.repos,
-        });
-
-        setOpenLoaderDark(false);
-      })
-      .catch((error) => {
-        setOpenLoaderDark(false);
-        // setError("An error occurred while fetching your data. Please try again later.");
-        console.log("an error occurred: ", error);
+    if (fetchedUserData) {
+      setUserData({
+        ...userData,
+        username: fetchedUserData.username,
+        name: fetchedUserData.name,
+        email: fetchedUserData.email,
+        repos: fetchedUserData.repos,
+        provider: fetchedUserData.provider,
       });
-  }, []);
+    }
+  }, [fetchedUserData]);
 
   const handleSubmit = () => {
     // open loader
     setOpenLoaderLight(true);
 
     // api call to get badged
-    const baseurl = "https://badging.allinopensource.org/api";
-    fetch(`${baseurl}/repos-to-badge`, {
+    fetch(`${process.env.API_BASE_URL}/repos-to-badge`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, repos: reposToBadge }),
+      body: JSON.stringify({ name, email, repos: reposToBadge, provider }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
         setUserData({ ...userData, reposToBadge: [] });
-        navigate("/project-badging-successful", { state: { name, email } }); // navigate to success page
+        navigate("/project-badging-successful", {
+          state: { name, email, provider },
+        }); // navigate to success page
       })
       // eslint-disable-next-line no-unused-vars
       .catch((error) => {
@@ -134,7 +138,7 @@ const SelectProjectRepo = () => {
           </button>
         </form>
       </section>
-      <Loader open={openLoaderDark}>
+      <Loader open={fetchingUserData}>
         <p>Authenticating User</p>
       </Loader>
       <Loader open={openLoaderLight} bgColor={"#fff"}>
