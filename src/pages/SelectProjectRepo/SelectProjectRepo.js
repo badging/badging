@@ -64,7 +64,7 @@ const SelectProjectRepo = () => {
     setOpenLoaderLight(true);
 
     // api call to get badged
-    fetch(`${settings.API_BASE_URL}/repos-to-badge`, {
+    fetch(`${process.env.API_BASE_URL}/repos-to-badge`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
