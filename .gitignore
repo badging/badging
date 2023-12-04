@@ -18,7 +18,3 @@ yarn-error.log*
 .env
 
 .DS_Store
-
-# Settings file is dynamically generated inside webpack.common.js
-# using data from the .env files
-settings.json

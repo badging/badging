@@ -19,6 +19,8 @@ import dropbox from "./logos/dropbox_logo.svg";
 import badgingLogo from "./logos/all-in-chaoss-logo.svg";
 import badgingLogoMobile from "./logos/all-in-chaoss-logo-mobile.svg";
 import githubIcon from "./icons/github.svg";
+import githubCleanIcon from "./icons/github_clean.svg";
+import gitlabIcon from "./icons/gitlab.svg";
 import curlyBraces from "./logos/curlyBraces.svg";
 import file from "./icons/file.svg";
 import fileLink from "./icons/fileLink.svg";
@@ -57,6 +59,8 @@ export {
   twitter,
   linkedin,
   githubIcon,
+  githubCleanIcon,
+  gitlabIcon,
   mail,
   ApplySvgComponent,
   ReviewSvgComponent,

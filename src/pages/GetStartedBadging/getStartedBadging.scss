@@ -7,7 +7,7 @@
 
   .section-wrap {
     padding: 29px 32px 34px 37px;
-    height: 462px;
+    height: 550px;
     width: 367px;
     margin: auto;
     border: 1px solid $borderColor2;
@@ -45,7 +45,11 @@
         line-height: 38px;
       }
     }
-    .login-github {
+    .login-btn {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+
       button {
         font-family: $font-family_2;
         font-weight: 700;
@@ -57,15 +61,22 @@
         border: none;
         cursor: pointer;
         line-height: 24px;
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+
+        .logo {
+          height: 32px;
+          margin-right: 8px;
+        }
+
         .btn-mb-badge {
+          flex: 1;
+          display: inline-flex;
           color: $textColor4;
         }
         .btn-dt-badge {
           display: none;
-        }
-        img {
-          padding-top: 4px;
-          margin-left: 20px;
         }
       }
     }
@@ -95,22 +106,18 @@
           line-height: 35px;
         }
       }
-      .login-github {
+      .login-btn {
         button {
           width: 273px;
           height: 64px;
-          padding: 4px, 4px, 4px, 6px;
 
           .btn-dt-badge {
+            flex: 1;
             display: inline-flex;
             color: $textColor4;
           }
           .btn-mb-badge {
             display: none;
-          }
-          img {
-            padding-top: 4px;
-            margin-left: 30px;
           }
         }
       }

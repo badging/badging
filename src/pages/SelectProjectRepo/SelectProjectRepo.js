@@ -6,7 +6,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
-import settings from "../../settings.json";
 import { useQuery } from "@tanstack/react-query";
 
 const callbackQuery = (provider, code) => ({
@@ -34,7 +33,7 @@ const callbackQuery = (provider, code) => ({
 const SelectProjectRepo = () => {
   const { userData, setUserData } = useContext(DataContext);
   // const { error, setError } = useLoadingError();
-  const { name, email, reposToBadge } = userData;
+  const { userId, name, email, reposToBadge } = userData;
   const [showInfo, setShowInfo] = useState(true);
   const [openLoaderLight, setOpenLoaderLight] = useState(false);
   const { provider } = useParams();
@@ -50,6 +49,7 @@ const SelectProjectRepo = () => {
     if (fetchedUserData) {
       setUserData({
         ...userData,
+        userId: fetchedUserData.userId,
         username: fetchedUserData.username,
         name: fetchedUserData.name,
         email: fetchedUserData.email,
@@ -69,7 +69,11 @@ const SelectProjectRepo = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, repos: reposToBadge, provider }),
+      body: JSON.stringify({
+        userId,
+        provider,
+        repos: reposToBadge.map((repoData) => repoData.id),
+      }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
