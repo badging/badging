@@ -5,7 +5,7 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 -->
 
 <!---
-Please use the DEI.md Guide at https://github.com/AllInOpenSource/ProjectBadging/blob/main/Guide.DEI.md when creating your DEI.md file
+Please use the DEI.md Guide at https://github.com/badging/ProjectBadging/blob/main/Guide.DEI.md when creating your DEI.md file
 -->
 
 Project Name/Logo Here
