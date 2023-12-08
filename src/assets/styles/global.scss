@@ -12,6 +12,11 @@ a {
 	text-decoration: none;
 	color: $primaryTextColor;
 }
+.container-new {
+	
+	max-width: 1240px !important;
+	margin: auto;
+  }
 li {
 	list-style: none;
 }

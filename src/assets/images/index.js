@@ -51,6 +51,14 @@ import ScheduleIcon from './icons/ScheduleIcon.svg';
 import DateIcon from './icons/DateIcon.svg';
 import AZicon from './icons/AZIcon.svg';
 
+//new
+import chaossLogo from "./logos-new/choass.svg"
+import gitLabLogo from "./icons-new/gitlab.svg"
+
+
+
+
+
 export {
   badgingLogo,
   badgingLogoMobile,
@@ -98,4 +106,8 @@ export {
   faqBgMobile,
   heroSectionBgWeb,
   heroSectionBgMobile,
+
+
+
+  chaossLogo, gitLabLogo
 };

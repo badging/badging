@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+  padding: 50px 30px;
+  z-index: 1;
+//   width: 100%;
+
+  img {
+    left: 20px;
+    position: absolute;
+  }
+  ul {
+    display: flex;
+    gap: 50px;
+    background-color: #fff;
+
+  }
+}
