@@ -10,7 +10,7 @@ import "../../assets/styles/global.scss";
 import "./LatestBadging.scss";
 
 const LatestBadgingSample = () => {
-  const baseurl = process.env.API_BASE_URL;
+  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
 
   const handleLogin = () => {
     window.location.href = `${baseurl}/login`;

@@ -57,6 +57,7 @@ const StyledTablePagination = styled(TablePagination)((theme) => ({
 }));
 
 const Projects = () => {
+  const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
@@ -64,7 +65,7 @@ const Projects = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("createdAt");
   const { data, isLoading, error } = fetchProjects(
-    `${process.env.API_BASE_URL}/badgedRepos`
+    `${url}/badgedRepos`
   );
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

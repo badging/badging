@@ -15,8 +15,10 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
+    const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
+
     const response = await fetch(
-      `${settings.API_BASE_URL}/callback/${provider}`,
+      `${url}/callback/${provider}`,
       {
         method: "POST",
         headers: {
@@ -64,7 +66,7 @@ const SelectProjectRepo = () => {
     setOpenLoaderLight(true);
 
     // api call to get badged
-    fetch(`${process.env.API_BASE_URL}/repos-to-badge`, {
+    fetch(`${url}/repos-to-badge`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
