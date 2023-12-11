@@ -12,12 +12,12 @@ const GetStartedBadging = () => {
 
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=github`;
+    window.location.href = `${baseurl}/auth/github`;
   };
 
   const handleLoginWithGitLab = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=gitlab`;
+    window.location.href = `${baseurl}/auth/gitlab`;
   };
 
   return (
@@ -74,7 +74,7 @@ const GetStartedBadging = () => {
         </div>
       </div>
       <Loader open={openLoader}>
-        <p>Redirecting to GitHub Authentication</p>
+        <p>Redirecting to Authentication</p>
       </Loader>
     </Layout>
   );
