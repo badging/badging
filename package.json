@@ -1,7 +1,7 @@
 {
   "name": "project-badging",
   "version": "1.0.0",
-  "description": "Website for DEI Project Badging with CHAOSS & All In",
+  "description": "Website for DEI Project Badging with CHAOSS",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint .",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AllInOpenSource/Project-Badging.git"
+    "url": "git+https://github.com/badging/ProjectBadging.git"
   },
   "author": "AllInOpenSource | CHAOSS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AllInOpenSource/Project-Badging/issues"
+    "url": "https://github.com/badging/ProjectBadging/issues"
   },
-  "homepage": "https://github.com/AllInOpenSource/Project-Badging#readme",
+  "homepage": "https://github.com/badging/ProjectBadging#readme",
   "dependencies": {
     "@emotion/react": "11.11.0",
     "@emotion/styled": "11.11.0",
