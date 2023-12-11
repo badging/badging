@@ -4,7 +4,7 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 
 # Authoring Your Project's DEI.md File
 
-1. When creating your own DEI.md file please use the this guide as well as the [Template.DEI.md](https://github.com/AllInOpenSource/ProjectBadging/blob/main/Template.DEI.md) file in your process.
+1. When creating your own DEI.md file please use the this guide as well as the [Template.DEI.md](https://github.com/badging/ProjectBadging/blob/main/Template.DEI.md) file in your process.
 2. If using a development platform, place the DEI.md file in a public, organizationally available repository, similar to your CODE_OF_CONDUCT.md file
 3. If an organizationally available folder is not available or used, place the DEI.md file in a public community repository
 4. If you have a project website, provide a link to your DEI.md file from the main project navigation
@@ -16,7 +16,7 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 
 6. If a statement is labeled (**Required:No Changes**), do not make any changes to the line. It is important to keep these statements as-is for badging purposes.
 7. Your project must attend to all metrics described below and must include at least one described effort associated with each metric.
-8. Do not use this file to create your DEI.md file. This file is only serves as a guide. Please download and use the [DEI.md Template](https://github.com/AllInOpenSource/ProjectBadging/blob/main/Template.DEI.md) when creating your own DEI.md file.
+8. Do not use this file to create your DEI.md file. This file is only serves as a guide. Please download and use the [DEI.md Template](https://github.com/badging/ProjectBadging/blob/main/Template.DEI.md) when creating your own DEI.md file.
 9. The [CHAOSS DEI.md](https://github.com/chaoss/community/blob/main/DEI.md) file is available for further reference.
 10. If you have discovered the Guide.DEI.md or Template.DEI.md file, please note that there is an associated badging process to which your project can receive a DEI Project Badge to recognize your efforts. The badging process is [available here](update link when final).
 
