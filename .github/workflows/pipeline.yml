@@ -47,26 +47,26 @@ jobs:
       - name: remove old build
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.DROPLET_IP_ADDRESS }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           script: |
-            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/projectbadging/*
-            mkdir -p /var/www/projectbadging
+            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
+            mkdir -p /var/www/badging.chaoss.community
 
       - name: deploy new build
         uses: garygrossgarten/github-action-scp@release
         with:
-          host: ${{ secrets.DROPLET_IP_ADDRESS }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           local: ${{ github.workspace }}/build
-          remote: "/var/www/projectbadging"
+          remote: "/var/www/badging.chaoss.community"
 
       - name: restart nginx
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.DROPLET_IP_ADDRESS }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           script: |
