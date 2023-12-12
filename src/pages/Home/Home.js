@@ -1,7 +1,7 @@
 import {chaossLogo, gitLabLogo } from '../../assets/images';
 import '../../assets/styles/global.scss';
-import Footer from '../../components/new/Footer/Footer';
-import Nav from '../../components/new/Nav/Nav';
+import Nav from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import './home.scss';
 
 
@@ -20,11 +20,15 @@ const Home = () => {
     
       
         <div className='hero-header'>
-          <h1>CHAOSS DEI </h1>
-          <h1>Badging Initiative</h1>
+          <h1>CHAOSS DEI Badging Initiative</h1>
           <div>
-            <p>Lorem ipsum dolor sit amet consectetur. Potenti</p>
-            <p> vitae tortor donec sodales sed in. </p>
+            <p>
+              The DEI Badging initiative is a CHAOSS 
+              project that awards badges to open-source projects 
+              and events. These badges are used to showcase
+               commitment to improving and supporting 
+               diversity, equity, and inclusion. 
+              </p>
           </div>
         </div>
 
@@ -38,7 +42,7 @@ const Home = () => {
             </div>
           </div>
           <div className='s-list'>
-            <p>Founding Partners</p>
+            <p>Our Partners</p>
             <div className='sponsors-logo'>
             <img src={gitLabLogo} alt="logo" />
             <img src={gitLabLogo} alt="logo" />

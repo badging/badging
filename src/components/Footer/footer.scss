@@ -1,62 +1,41 @@
-@import "../../assets/styles/variables";
+.footer-container {
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
+    gap: 0 !important;
+    
+    .social {
+    background-color: #000;
+    width: 100%;
+	gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
 
-footer {
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
-	font-family: $font-family_2;
-	font-style: regular;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 150%;
-	letter-spacing: 0.02em;
-	color: $primaryTextColor;
-	text-align: center;
+    a {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 30px;
+    }
+    }
 
-	.social {
-		display: flex;
-		gap: 20px;
+    .copyright {
+        padding: 15px 10px;
+        background-color: #BDFFF5;
+        color: #000;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
 
-		img {
-			width: 40px;
-			height: 40px;
-			transition: transform 0.3s;
-
-			/* Apply the zoom effect on hover */
-			&:hover {
-				transform: scale(1.2);
-			}
-		}
-	}
-
-	.copyright {
-		a {
-			text-decoration: underline;
-		}
-
-		a:nth-child(1) {
-			color: #06f395;
-		}
-
-		a:nth-child(2) {
-			color: #69c7b9;
-		}
-	}
-}
-
-footer.container {
-	padding: 3.5rem 3.9rem;
-}
-
-@media screen and (min-width: 769px) {
-	br {
-		display: none;
-	}
-
-	footer.container {
-		padding: 2.5rem 7.5rem;
-	}
+        a {
+            color: #000 !important;
+            margin: 0 5px;
+        }
+        a:hover {
+            background-color: skyblue;
+        }
+    }
 }
