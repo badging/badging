@@ -10,13 +10,15 @@ const Home = () => {
   return (
     <div className='home-container '>
      <Nav />
-     <section className='hero container-new'>
-      <div className='overlay'>
-      <div className='bgRight'></div>
-      <div className='bgCenter'></div>
-      <div className='bgLeft'></div>
+    
+     <div className='overlay'>
+        <div className='bgRight'></div>
+        <div className='bgCenter'></div>
+        <div className='bgLeft'></div>
       </div>
-     
+     <section className='hero container-new'>
+    
+      
         <div className='hero-header'>
           <h1>CHAOSS DEI </h1>
           <h1>Badging Initiative</h1>
