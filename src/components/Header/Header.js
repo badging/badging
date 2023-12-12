@@ -11,9 +11,9 @@ const Nav = () => {
     <nav className='container-new'>
         <img src={chaossLogo} alt="logo" className='logo'/>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
           <li><a href="/">Event Badging</a></li>
-          <li><a href="/projects">Project Badging</a></li>
+          <li><a href="/projects" className={pathname == '/projects'? 'activeNav': ''}>Project Badging</a></li>
           <li><a href="/">FAQ</a></li>
         </ul>
         <img className='mobileNav' src={mobileMenuIcon} alt="logo" />

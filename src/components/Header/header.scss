@@ -6,18 +6,38 @@ nav {
 	margin-top: 30px;
 	padding: 50px 30px 10px 30px;
 	z-index: 1;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0); /* Semi-transparent background for the glass effect */
+	backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+	// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	
   //   width: 100%;
   
-	img {
-	//   left: 20px;
-	//   position: absolute;
-	}
 	ul {
 	  display: flex;
 	  gap: 50px;
-	  background-color: #fff;
+	  background-color: #ffffff00;
   
 	}
+	.activeNav{
+		border-bottom: 2px solid #D61B5E;
+		padding-bottom: 5px;
+		transition: border-bottom 0.3s ease, padding-bottom 0.3s ease;
+		font-weight: bold;
+		color: #D61B5E;
+	}
+
+	ul li a:hover {
+		border-bottom: 2px solid #D61B5E;
+		padding-bottom: 5px;
+		color: #D61B5E;
+	}
+	
 
 	.apply-btn {
 		background-color: #222D33;
@@ -36,6 +56,8 @@ nav {
 
   @media screen and (max-width: 700px) {
 	nav {
+		// background-color: #fff;
+		
 		padding: 20px 10px 0px 10px;
 		.mobileNav {
 			display: block;

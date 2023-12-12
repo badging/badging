@@ -102,27 +102,37 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     .sponsors-logo {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
   }
 }
 
 
 @media screen and (max-width: 700px) {
+  .hero {
+    height: auto !important;
+  }
   .hero-header {
     h1 {
       text-align: left !important;
       padding: 0 10px;
+      margin-top: 10rem;
     }
     p {
       text-align: left !important;
     }
   }
   .sponsors  {
+    gap: 30px !important;
     padding: 0 10px !important;
     justify-content: flex-start !important;
+    margin-bottom: 40px;
     .s-list {
       text-align: left !important;
       
+    }
+    .sponsors-logo {
+      gap: 20px !important;
     }
     
   }
