@@ -1,7 +1,7 @@
 nav {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	position: relative;
 	margin-top: 30px;
 	padding: 50px 30px 10px 30px;
@@ -9,14 +9,56 @@ nav {
   //   width: 100%;
   
 	img {
-	  left: 20px;
-	  position: absolute;
+	//   left: 20px;
+	//   position: absolute;
 	}
 	ul {
 	  display: flex;
 	  gap: 50px;
 	  background-color: #fff;
   
+	}
+
+	.apply-btn {
+		background-color: #222D33;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 10px;
+	}
+
+	.mobileNav {
+		background-color: #000;
+		padding: 15px;
+		border-radius: 50px;
+		display: none;
+	}
+  }
+
+  @media screen and (max-width: 700px) {
+	nav {
+		padding: 20px 10px 0px 10px;
+		.mobileNav {
+			display: block;
+		}
+		ul {
+			display: none;
+			gap: 20px;
+		}
+		.apply-btn  {
+			display: none;
+		}
+		.hidden-box {
+			display: none;
+		}
+	}
+  }
+
+  @media screen and (max-width: 800px) {
+	nav {
+		
+		ul {
+			gap: 20px;
+		}
 	}
   }
   
