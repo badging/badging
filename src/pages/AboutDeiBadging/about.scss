@@ -1,285 +1,285 @@
 @import "../../assets/styles/variables";
 
 .about-dei {
-	* > * {
-		color: inherit;
-	}
+  * > * {
+    color: inherit;
+  }
 
-	.header {
-		.container {
-			padding: 1.5rem;
-		}
+  .header {
+    .container {
+      padding: 1.5rem;
+    }
 
-		.jumbotron__container {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			text-align: center;
-			align-items: center;
+    .jumbotron__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
       row-gap: 1.5rem;
       padding-top: 10rem;
       padding-bottom: 5rem;
 
-			h1 {
-				font-size: 3rem;
-				font-family: $font-family_1;
-				background: $heroTitleBackground2;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
+      h1 {
+        font-size: 3rem;
+        font-family: $font-family_1;
+        background: $heroTitleBackground2;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-			.jumbotron {
-				padding: 6rem 0 1.8rem 0;
-				margin: 0rem 0rem;
-				max-width: 70.875rem;
+      .jumbotron {
+        padding: 6rem 0 1.8rem 0;
+        margin: 0rem 0rem;
+        max-width: 70.875rem;
 
-				h2 {
-					font-size: 3rem;
-				}
+        h2 {
+          font-size: 3rem;
+        }
 
-				h3 {
-					font-size: 1.125rem;
-					margin: 0;
-				}
+        h3 {
+          font-size: 1.125rem;
+          margin: 0;
+        }
 
-				p {
-					max-width: inherit;
-					font-size: 1.125rem;
-					padding-right: 3.8rem;
-				}
-			}
-		}
-	}
+        p {
+          max-width: inherit;
+          font-size: 1.125rem;
+          padding-right: 3.8rem;
+        }
+      }
+    }
+  }
 
-	main {
-		background-color: #fff;
+  main {
+    background-color: #fff;
 
-		&.container {
-			padding: 4rem 1rem;
-		}
+    &.container {
+      padding: 4rem 1rem;
+    }
 
-		.main__container {
-			background: #fff;
+    .main__container {
+      background: #fff;
 
-			h3,
-			h2 {
-				background: linear-gradient(
-					180deg,
-					$headingColor 0%,
-					$headingColor 100%
-				);
-				-webkit-background-clip: text;
-				background-clip: text;
-			}
+      h3,
+      h2 {
+        background: linear-gradient(
+          180deg,
+          $headingColor 0%,
+          $headingColor 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
 
-			h3 {
-				font-family: $font-family_2;
-				font-size: 1rem;
-				// margin: 0;
-			}
+      h3 {
+        font-family: $font-family_2;
+        font-size: 1rem;
+        // margin: 0;
+      }
 
-			p {
-				color: $textColor2;
-				line-height: 1.8;
-			}
+      p {
+        color: $textColor2;
+        line-height: 1.8;
+      }
 
-			.page__content {
-				ul {
-					padding: 0 0 0 1.5rem;
+      .page__content {
+        ul {
+          padding: 0 0 0 1.5rem;
 
-					li {
-						list-style: disc;
-						line-height: 1.8;
-						color: $textColor2;
-					}
-				}
+          li {
+            list-style: disc;
+            line-height: 1.8;
+            color: $textColor2;
+          }
+        }
 
-				h3 {
-					margin-top: 1rem;
-				}
+        h3 {
+          margin-top: 1rem;
+        }
 
-				a {
-					color: $chaossPink;
-				}
+        a {
+          color: $chaossPink;
+        }
 
-				p:not(:first-of-type) {
-					margin-top: 1.5rem;
-				}
+        p:not(:first-of-type) {
+          margin-top: 1.5rem;
+        }
 
-				.what__is__dei {
-					h3 {
-						font-size: 1.5rem;
-						font-weight: bold;
-						margin-top: 0;
-					}
+        .what__is__dei {
+          h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 0;
+          }
 
-					.objectives {
-						margin-top: 2.375rem;
-					}
-				}
+          .objectives {
+            margin-top: 2.375rem;
+          }
+        }
 
-				.application_process,
-				.dei__file,
-				.dei__badges {
-					a {
-						text-decoration: underline;
-					}
-				}
+        .application_process,
+        .dei__file,
+        .dei__badges {
+          a {
+            text-decoration: underline;
+          }
+        }
 
-				.dei__file {
-					ul {
-						margin-top: 1.5rem;
-					}
-				}
+        .dei__file {
+          ul {
+            margin-top: 1.5rem;
+          }
+        }
 
-				.dei__badges {
-					h4 {
-						margin-top: 1rem;
-					}
+        .dei__badges {
+          h4 {
+            margin-top: 1rem;
+          }
 
-					.badges {
-						display: flex;
-						flex-wrap: wrap;
-						gap: 0.5rem 1rem;
-						margin-bottom: 1rem;
-					}
-				}
-			}
-		}
-	}
+          .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 769px) {
-	.about-dei {
-		.header {
-			.container {
-				padding: 0.625rem 7.5rem;
-			}
+  .about-dei {
+    .header {
+      .container {
+        padding: 0.625rem 7.5rem;
+      }
 
-			.jumbotron__container {
-				display: flex;
-				flex-direction: row;
-				justify-content: flex-start;
-				align-items: center;
-				text-align: left;
-				width: 1440px;
+      .jumbotron__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        width: 1440px;
         padding: 10rem 8rem 6rem 8rem;
-				column-gap: 1.5rem;
+        column-gap: 1.5rem;
 
-				h1 {
-					font-size: 3.375rem;
-					font-family: $font-family_1;
-					background: $heroTitleBackground2;
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
+        h1 {
+          font-size: 3.375rem;
+          font-family: $font-family_1;
+          background: $heroTitleBackground2;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
-				.jumbotron {
-					// padding: 10rem 0 6rem 0;
-					gap: 0 1rem;
-					max-width: 902px;
+        .jumbotron {
+          // padding: 10rem 0 6rem 0;
+          gap: 0 1rem;
+          max-width: 902px;
 
-					p {
-						padding: 0;
-					}
+          p {
+            padding: 0;
+          }
 
-					& > p {
-						margin-top: 1.5rem;
-					}
-				}
-			}
-		}
+          & > p {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
 
-		main {
-			display: flex;
-			justify-content: center;
+    main {
+      display: flex;
+      justify-content: center;
 
-			&.container {
-				padding: 0 7.5rem;
-			}
+      &.container {
+        padding: 0 7.5rem;
+      }
 
-			.main__container {
-				display: flex;
-				color: $textColor2;
-				padding: 6.12rem 0;
-				gap: 0 4rem;
-				align-items: flex-start;
-				width: 1200px;
+      .main__container {
+        display: flex;
+        color: $textColor2;
+        padding: 6.12rem 0;
+        gap: 0 4rem;
+        align-items: flex-start;
+        width: 1200px;
 
-				.page__nav {
-					width: 265px;
+        .page__nav {
+          width: 265px;
           position: sticky;
           top: 10rem;
 
-					ul {
-						li {
-							cursor: pointer;
-							transition: all 0.3s ease-in-out;
-							margin-bottom: 0.75rem;
+          ul {
+            li {
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+              margin-bottom: 0.75rem;
 
-							.main__link {
-								display: flex;
-								align-items: center;
-								margin-bottom: 0.75rem;
+              .main__link {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.75rem;
 
-								a {
-									line-height: 150%;
+                a {
+                  line-height: 150%;
 
-									&.active {
-										color: $chaossPink;
-										font-weight: 600;
+                  &.active {
+                    color: $chaossPink;
+                    font-weight: 600;
 
-										& ~ img {
-											display: block;
-											margin-left: 8px;
-										}
-									}
-								}
-							}
+                    & ~ img {
+                      display: block;
+                      margin-left: 8px;
+                    }
+                  }
+                }
+              }
 
-							.sub__links {
-								border-left: 3px solid $chaossPink;
-								padding: 0px 0 4px 12px;
-								display: flex;
-								flex-direction: column;
-								row-gap: 0.75rem;
+              .sub__links {
+                border-left: 3px solid $chaossPink;
+                padding: 0px 0 4px 12px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.75rem;
 
-								a {
-									display: block;
-								}
-							}
+                a {
+                  display: block;
+                }
+              }
 
-							img {
-								display: none;
-							}
-						}
-					}
-				}
+              img {
+                display: none;
+              }
+            }
+          }
+        }
 
-				.page__content {
-					width: calc(100% - 265px);
-					max-width: 719px;
+        .page__content {
+          width: calc(100% - 265px);
+          max-width: 719px;
 
-					h2 {
-						font-size: 2rem;
-						font-family: $font-family_1;
-						font-weight: bolder;
-						margin-bottom: 1rem;
-						background: linear-gradient(
-							180deg,
-							$headingColor 0%,
-							$headingColor 100%
-						);
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-						background-clip: text;
-					}
-				}
-			}
-		}
-	}
+          h2 {
+            font-size: 2rem;
+            font-family: $font-family_1;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+            background: linear-gradient(
+              180deg,
+              $headingColor 0%,
+              $headingColor 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+      }
+    }
+  }
 }

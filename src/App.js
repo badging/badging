@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import {
   Home,
   About,
@@ -8,45 +8,62 @@ import {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
-} from './pages';
+} from "./pages";
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from './components';
-import { DataProvider } from './contexts/DataContext';
-import { DesktopProvider } from './contexts/DesktopContext';
+} from "./components";
+import { DataProvider } from "./contexts/DataContext";
+import { DesktopProvider } from "./contexts/DesktopContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      refetchOnmount: false,
+      refetchOnReconnect: false,
+      retry: false,
+    },
+  },
+});
 
 const App = () => {
   return (
     <>
-      <DesktopProvider>
-        <DataProvider>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />}>
-              <Route path="/about" element={<WhatIsDeiBadging />} />
+      <QueryClientProvider client={queryClient}>
+        <DesktopProvider>
+          <DataProvider>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />}>
+                <Route path="/about" element={<WhatIsDeiBadging />} />
+                <Route
+                  path="/about/application-process"
+                  element={<ApplicationProcess />}
+                />
+                <Route path="/about/dei-file" element={<DeiFile />} />
+                <Route path="/about/dei-badge" element={<DeiBadge />} />
+              </Route>
+              <Route path="/badge" element={<GetStartedBadging />} />
               <Route
-                path="/about/application-process"
-                element={<ApplicationProcess />}
+                path="/select-project/:provider"
+                element={<SelectProjectRepo />}
               />
-              <Route path="/about/dei-file" element={<DeiFile />} />
-              <Route path="/about/dei-badge" element={<DeiBadge />} />
-            </Route>
-            <Route path="/badge" element={<GetStartedBadging />} />
-            <Route path="/select-project" element={<SelectProjectRepo />} />
-            <Route exact path="/projects" element={<Projects />} />
-            <Route exact path="/comingsoon" element={<ComingSoon />} />
-            <Route
-              exact
-              path="/project-badging-successful"
-              element={<SuccessfullyBadged />}
-            />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </DataProvider>
-      </DesktopProvider>
+              <Route exact path="/projects" element={<Projects />} />
+              <Route exact path="/comingsoon" element={<ComingSoon />} />
+              <Route
+                exact
+                path="/project-badging-successful"
+                element={<SuccessfullyBadged />}
+              />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </DataProvider>
+        </DesktopProvider>
+      </QueryClientProvider>
     </>
   );
 };

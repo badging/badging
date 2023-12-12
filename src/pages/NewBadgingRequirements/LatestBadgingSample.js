@@ -1,16 +1,16 @@
-import React from 'react';
-import { Footer, Header } from '../../components';
+import React from "react";
+import { Footer, Header } from "../../components";
 import {
   loginArrow,
   getBadgedFullBG,
   getBadgedMobile,
-} from '../../assets/images';
+} from "../../assets/images";
 
-import '../../assets/styles/global.scss';
-import './LatestBadging.scss';
+import "../../assets/styles/global.scss";
+import "./LatestBadging.scss";
 
 const LatestBadgingSample = () => {
-  const baseurl = 'https://badging.allinopensource.org/api';
+  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
 
   const handleLogin = () => {
     window.location.href = `${baseurl}/login`;
@@ -60,7 +60,7 @@ const LatestBadgingSample = () => {
                 className="login-github"
                 onClick={handleLogin}
               >
-                <span className="btn-mb-badge">Get Started</span>{' '}
+                <span className="btn-mb-badge">Get Started</span>{" "}
                 <span className="btn-dt-badge"> Login with GitHub</span>
                 <span>
                   <img className="arrow" src={loginArrow} alt="arrow icon" />

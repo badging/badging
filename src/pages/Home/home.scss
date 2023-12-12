@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 
 body{
   background-color: #fff !important;
@@ -69,6 +69,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
 
   h1 {
     font-size: 40px;
+    margin-top: 10rem;
     // line-height: 30px;
   }
   .hero-header {

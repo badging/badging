@@ -1,18 +1,23 @@
-import { useState } from 'react';
-import { Layout, Loader } from '../../components';
-import { loginArrow } from '../../assets/images';
+import { useState } from "react";
+import { Layout, Loader } from "../../components";
+import { loginArrow, githubCleanIcon, gitlabIcon } from "../../assets/images";
 
-import '../../assets/styles/global.scss';
-import './getStartedBadging.scss';
+import "../../assets/styles/global.scss";
+import "./getStartedBadging.scss";
 
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = 'https://badging.allinopensource.org/api';
+  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
 
-  const handleLogin = () => {
+  const handleLoginWithGitHub = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login`;
+    window.location.href = `${baseurl}/auth/github`;
+  };
+
+  const handleLoginWithGitLab = () => {
+    setOpenLoader(true);
+    window.location.href = `${baseurl}/auth/gitlab`;
   };
 
   return (
@@ -35,23 +40,41 @@ const GetStartedBadging = () => {
             <li>Ensure you have your DEI.md File</li>
           </ol>
 
-          <div className="login-github">
+          <div className="login-btn">
             <button
               type="button"
-              className="login-github"
-              onClick={handleLogin}
+              className="login-btn"
+              onClick={handleLoginWithGitHub}
             >
-              <span className="btn-mb-badge">Get Started</span>{' '}
-              <span className="btn-dt-badge"> Login with GitHub</span>
-              <span>
-                <img className="arrow" src={loginArrow} alt="arrow icon" />
-              </span>
+              <img className="logo" src={githubCleanIcon} alt="github logo" />
+              <span className="btn-mb-badge">Login with GitHub</span>
+              <span className="btn-dt-badge">Login with GitHub</span>
+              <img className="arrow" src={loginArrow} alt="arrow icon" />
+            </button>
+          </div>
+
+          <div className="login-btn">
+            <button
+              type="button"
+              className="login-btn"
+              onClick={handleLoginWithGitLab}
+            >
+              <img
+                className="logo"
+                src={gitlabIcon}
+                alt="github logo"
+                width={32}
+                height={32}
+              />
+              <span className="btn-mb-badge">Login with GitLab</span>
+              <span className="btn-dt-badge">Login with GitLab</span>
+              <img className="arrow" src={loginArrow} alt="arrow icon" />
             </button>
           </div>
         </div>
       </div>
       <Loader open={openLoader}>
-        <p>Redirecting to GitHub Authentication</p>
+        <p>Redirecting to Authentication</p>
       </Loader>
     </Layout>
   );
