@@ -13,7 +13,7 @@ const Nav = () => {
         <ul>
           <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
           <li><a href="/">Event Badging</a></li>
-          <li><a href="/projects" className={pathname == '/projects'? 'activeNav': ''}>Project Badging</a></li>
+          <li><a href="/about-project-badging" className={pathname == '/about-project-badging'? 'activeNav': ''}>Project Badging</a></li>
           <li><a href="/">FAQ</a></li>
         </ul>
         <img className='mobileNav' src={mobileMenuIcon} alt="logo" />
