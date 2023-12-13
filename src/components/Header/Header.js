@@ -8,7 +8,7 @@ const Nav = () => {
   const pathname = location.pathname;
 
   return (
-    <nav className='container-new'>
+    <header className='container-new'>
         <img src={chaossLogo} alt="logo" className='logo'/>
         <ul>
           <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
@@ -25,7 +25,7 @@ const Nav = () => {
           )
         }
         
-     </nav>
+     </header>
   )
 }
 

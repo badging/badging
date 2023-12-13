@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/styles/global.scss";
 import "./project.scss";
-import { Footer, Header } from "../../components";
+import { AboutDeiMobile, Footer, Header } from "../../components";
 import Jumbotron from "../../components/Jumbotron/Jumbotron";
 import { Pagination, TablePagination } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -24,6 +24,7 @@ import {
 import { Publish } from "@mui/icons-material";
 import { fetchProjects } from "../../hooks/fetchProjects";
 import RandomString from "../../components/RandomString";
+import AboutNew from "../../components/AboutDeiBadgingCom/About";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -64,6 +65,7 @@ const Projects = () => {
   const [filterStatus, setFilterStatus] = useState("Published");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("createdAt");
+  const [swap, setSwap] = useState("about")
   const { data, isLoading, error } = fetchProjects(
     `${url}/badgedRepos`
   );
@@ -116,27 +118,41 @@ const Projects = () => {
     return match ? match[1] : null;
   }
 
+const swapHandler = (toggle) => {
+  setSwap(toggle)
+}
+
   return (
     <main>
       <Header />
       <div className="container jumbotron__container">
-      <div className='overlay'>
+      {/* <div className='overlay'>
         <div className='bgRight'></div>
         <div className='bgCenter'></div>
         <div className='bgLeft'></div>
-      </div>
+      </div> */}
         {/* <img src={curlyBraces} alt="badging-logo" /> */}
         <h1>Project Badging</h1>
+        <div className="about-project">
+          <button onClick={() =>swapHandler('about')} className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}>About Project Badging</button>
+          <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button>
+        </div>
       </div>
+
+
       <section className="project">
-        <p className="projectIntro container">
+        {
+          swap && swap == 'project' ? (
+            <>
+            <p className="projectIntro container">
         The All in CHAOSS Badging project is helping open source 
         communities prioritize diversity, equity, and inclusion.
          Using the CHAOSS DEI metrics as an industry benchmark, we are 
          creating more inclusive and welcoming open-source environments for all. 
          Our badged projects serve as exemplary demonstrations:
+         <hr className="divider" />
         </p>
-        <hr className="divider" />
+        
         {!isLoading ? (
           <div className="badging container">
             <div className="container-holder">
@@ -284,7 +300,7 @@ const Projects = () => {
                 </TableContainer>
               </div>
               <div className="badging-footer">
-                {/* <Pagination
+                <Pagination
                   count={Math.ceil(data.length / rowsPerPage)}
                   page={page + 1}
                   onChange={(event, newPage) => setPage(newPage - 1)}
@@ -292,13 +308,21 @@ const Projects = () => {
                   shape="rounded"
                   color="success"
                   className="pagination"
-                /> */}
+                />
               </div>
             </div>
           </div>
         ) : (
           <p>Error Retrieving Data....</p>
         )}
+            </>
+          ): (
+          <AboutNew />
+          )
+        }
+        
+
+        
       </section>
       <Footer />
     </main>
