@@ -19,6 +19,7 @@ import { DataProvider } from "./contexts/DataContext";
 import { DesktopProvider } from "./contexts/DesktopContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
+import Faq from "./pages/FAQ/Faq";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -65,6 +66,7 @@ const App = () => {
               />
               {/* <Route exact path="/projects" element={<Projects />} /> */}
               <Route exact path="/comingsoon" element={<ComingSoon />} />
+              <Route exact path="/faq" element={<Faq />} />
               <Route
                 exact
                 path="/project-badging-successful"
