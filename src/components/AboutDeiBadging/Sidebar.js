@@ -9,9 +9,9 @@ const Sidebar = () => {
     <ul>
       <li>
         <div className="main__link">
-          <NavLink
+          <NavLink 
             exact="true"
-            to="/about"
+            to="/about-project-badging"
             id="what-is-dei-badging"
             end
             onClick={() => setIsActive(1)}
@@ -22,7 +22,7 @@ const Sidebar = () => {
         </div>
         {isActive === 1 && (
           <div className="sub__links">
-            <NavLink exact="true" to="/about">
+            <NavLink exact="true" to="/about-project-badging">
               What is DEI Project Badging?
             </NavLink>
           </div>
@@ -33,7 +33,7 @@ const Sidebar = () => {
         <div className="main__link">
           <NavLink
             exact="true"
-            to="/about/application-process"
+            to="/about-project-badging/application-process"
             onClick={() => setIsActive(2)}
           >
             How it Works
@@ -42,19 +42,19 @@ const Sidebar = () => {
         </div>
         {isActive === 2 && (
           <div className="sub__links">
-            <NavLink exact="true" to="/about/application-process">
+            <NavLink exact="true" to="/about-project-badging/application-process">
               Self-Assessment & Documen...
             </NavLink>
-            <NavLink exact="true" to="/about/application-process">
+            <NavLink exact="true" to="/about-project-badging/application-process">
               Project Application
             </NavLink>
-            <NavLink exact="true" to="/about/application-process">
+            <NavLink exact="true" to="/about-project-badging/application-process">
               Badging Evaluation
             </NavLink>
-            <NavLink exact="true" to="/about/application-process">
+            <NavLink exact="true" to="/about-project-badging/application-process">
               Recognition and Badging
             </NavLink>
-            <NavLink exact="true" to="/about/application-process">
+            <NavLink exact="true" to="/about-project-badging/application-process">
               Continued Engagement
             </NavLink>
           </div>
@@ -62,7 +62,7 @@ const Sidebar = () => {
       </li>
       <li>
         <div className="main__link">
-          <NavLink exact="true" to="/about/dei-file">
+          <NavLink exact="true" to="/about-project-badging/dei-file">
             DEI.md File
           </NavLink>
           <img src={arrowRight} alt="arrow" />
@@ -72,7 +72,7 @@ const Sidebar = () => {
         <div className="main__link">
           <NavLink
             exact="true"
-            to="/about/dei-badge"
+            to="/about-project-badging/dei-badge"
             onClick={() => setIsActive(4)}
           >
             DEI Badges
@@ -81,10 +81,10 @@ const Sidebar = () => {
         </div>
         {isActive === 4 && (
           <div className="sub__links">
-            <NavLink exact="true" to="/about/dei-badge">
+            <NavLink exact="true" to="/about-project-badging/dei-badge">
               Bronze Badge
             </NavLink>
-            <NavLink exact="true" to="/about/dei-badge">
+            <NavLink exact="true" to="/about-project-badging/dei-badge">
               Criteria
             </NavLink>
             {/* commented out as only bronze badge is being introduced at the moment */}

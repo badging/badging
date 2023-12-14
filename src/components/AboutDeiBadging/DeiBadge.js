@@ -1,8 +1,8 @@
 import {
   bronzeBadge,
-  // goldBadge,
-  // silverBadge,
-  // platinumBadge,
+  goldBadge,
+  silverBadge,
+  platinumBadge,
 } from "../../assets/images";
 
 const DeiBadge = () => {
@@ -13,9 +13,9 @@ const DeiBadge = () => {
       <div className="badges">
         <img src={bronzeBadge} alt="Bronze badge" />
         {/* commented out for future use */}
-        {/* <img src={silverBadge} alt="Silver badge" />
+        <img src={silverBadge} alt="Silver badge" />
         <img src={goldBadge} alt="Gold badge" />
-        <img src={platinumBadge} alt="Platinum badge" /> */}
+        <img src={platinumBadge} alt="Platinum badge" />
       </div>
 
       <div>
