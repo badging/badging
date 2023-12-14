@@ -225,6 +225,7 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 0.75rem;
+                gap: 20px;
 
                 a {
                   line-height: 150%;
@@ -283,3 +284,18 @@
     }
   }
 }
+
+
+// @media screen and (max-width: 700px) {
+//   .page__nav {
+
+//     ul {
+//       li {
+
+//         .main__link {
+//           gap: 100px;
+//         }
+//       }
+//     }
+//   }
+// }

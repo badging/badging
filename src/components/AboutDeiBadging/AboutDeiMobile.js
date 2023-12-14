@@ -22,32 +22,37 @@ const AboutDeiMobile = () => {
           id="panel1a-header"
         >
           <Typography component={"div"}>
-            What is All in CHAOSS
-            <br /> DEI Badging
+            What is Project Badging?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography component={"div"}>
             <div>
               <p>
-                The All In CHAOSS DEI Project Badging is an initiative developed
-                in partnership between All In and the CHAOSS project to
-                recognize open source projects that exemplify best practices for
-                diversity, equity, and inclusion (DEI) work within their
-                respective communities.
+              Project Badging is an initiative developed 
+              by the CHAOSS project to recognize open source 
+              projects that exemplify best practices for diversity, 
+              equity, and inclusion (DEI) work within their 
+              respective communities. The initiative uses 
+              CHAOSS DEI metrics as a benchmark to reflect 
+              on DEI efforts in an open source project. 
+              All CHAOSS DEI metrics are developed in an 
+              open and collaborative setting. More information 
+              about the CHAOSS DEI metrics development process 
+              can be found <a href="##">here</a>..
               </p>
-              <p>
+              {/* <p>
                 The initiative uses CHAOSS DEI metrics as a benchmark to reflect
                 on DEI efforts in an open source project. All CHAOSS DEI metrics
                 are developed in an open and collaborative setting. More
                 information about the CHAOSS DEI metrics development process can
                 be found <a href="##">here</a>.
-              </p>
+              </p> */}
             </div>
             <div className="objectives">
-              <h3>DEI Project Badging Objective</h3>
+              <h3>Project Badging Objective</h3>
               <p>
-                The primary objective of the All In CHAOSS DEI Badging
+                The primary objective of the Project Badging
                 Initiative is to enable open source maintainers to signal their
                 ongoing efforts in improving and prioritizing DEI within their
                 communities.
@@ -90,19 +95,25 @@ const AboutDeiMobile = () => {
                 Leadership, Communication Transparency, and Newcomer Experience.
                 After the reflective process, maintainers can document how the
                 project attends to and prioritizes DEI around these areas in a
-                markdown file called the <a href="##">DEI.md file</a>. This
+                markdown file called the <a href="https://github.com/AllInOpenSource/All-In/blob/main/DEI.md">DEI.md file</a>. This
                 DEI.md file should exist within the project&#39;s repository for
                 easy feedback from the community.
               </p>
             </div>
             <div>
-              <h3>All in CHAOSS DEI Badge Application:</h3>
+              <h3>Badging Application:</h3>
               <p>
                 Once the DEI.md file is published and publicly available,
                 project maintainers can proceed to apply here. The applicant
                 must be an admin or maintainer of the project, and the
                 repository that holds the DEI.md file must be specified.
               </p>
+              <ul className='bullet-list'>
+                  <li>Project Access</li>
+                  <li>Inclusive Leadership </li>
+                  <li>Communication Transparency</li>
+                  <li>Newcomer Experience</li>
+              </ul>
             </div>
             <div>
               <h3>Badging Evaluation:</h3>
@@ -111,7 +122,7 @@ const AboutDeiMobile = () => {
                 scans the project repository for the presence of a DEI.md file.
                 The bot will review the DEI.md file for relevant information
                 provided by the maintainer and its alignment with the CHAOSS DEI
-                metrics stated in the <a href="##">DEI.md template</a> to
+                metrics stated in the <a href="https://github.com/AllInOpenSource/ProjectBadging/blob/main/DEI.md">DEI.md template</a> to
                 determine eligibility for the badge. Upon successful review of
                 the DEI.md file, a project badge will be issued. The four CHAOSS
                 metrics used in the DEI.md file include:
@@ -203,9 +214,9 @@ const AboutDeiMobile = () => {
           <Typography component={"div"}>
             <div className="badges">
               <img src={bronzeBadge} alt="Bronze badge" />
-              <img src={silverBadge} alt="Silver badge" />
+              {/* <img src={silverBadge} alt="Silver badge" />
               <img src={goldBadge} alt="Gold badge" />
-              <img src={platinumBadge} alt="Platinum badge" />
+              <img src={platinumBadge} alt="Platinum badge" /> */}
             </div>
 
             <div>

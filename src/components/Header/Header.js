@@ -12,7 +12,7 @@ const Nav = () => {
         <img src={chaossLogo} alt="logo" className='logo'/>
         <ul>
           <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
-          <li><a href="/event-badging">Event Badging</a></li>
+          <li><a href="/event-badging" className={pathname == '/event-badging'? 'activeNav': ''}>Event Badging</a></li>
           <li><a href="/about-project-badging" className={pathname == '/about-project-badging'? 'activeNav': ''}>Project Badging</a></li>
           <li><a href="/">FAQ</a></li>
         </ul>

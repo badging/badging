@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <ul>
       <li>
-        <div className="main__link">
+        <div className="main__link linkGap">
           <NavLink 
             exact="true"
             to="/about-project-badging"
