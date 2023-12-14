@@ -137,6 +137,27 @@ main {
         .info {
             max-width: 700px;
             margin: 0px !important;
+            .about-parag {
+
+              .pTitle {
+                font-weight: bold;
+                margin: 0px !important;
+              }
+              .a-line {
+                color: blue;
+                text-decoration-line: underline;
+            }
+              .bullet-list {
+                margin-left: 3rem;
+                margin-bottom: 1rem;
+                
+                li {
+                    list-style-type: disc;
+                    margin-top: 10px;
+                }
+                
+            }
+            }
             h1 {
                 margin-bottom: 20px;
                 font-size: 32px;

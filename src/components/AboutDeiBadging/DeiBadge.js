@@ -8,7 +8,7 @@ import {
 const DeiBadge = () => {
   return (
     <div className="dei__badges ">
-      <h2 id="dei-badges">DEI Badges</h2>
+      <h2 id="dei-badges">DEI Badge Level</h2>
 
       <div className="badges">
         <img src={bronzeBadge} alt="Bronze badge" />
@@ -20,10 +20,10 @@ const DeiBadge = () => {
 
       <div>
         <p>
-          The All In CHAOSS DEI badging initiative currently offers one badge
+          The Project Badging initiative currently offers one badge
           level: bronze. As the project evolves, it is our intention to include
           additional CHAOSS metrics in the DEI.md file as indicators of silver,
-          gold, and platinum level badges. The All In CHAOSS DEI Project Badging
+          gold, and platinum level badges. The Project Badging
           process is intended to follow an incremental approach that requires
           the presence of one badge to apply for the next and an understanding
           of the criteria associated with each badge level. This will enable
