@@ -16,8 +16,10 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
+    const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
+
     const response = await fetch(
-      `${settings.API_BASE_URL}/callback/${provider}`,
+      `${url}/callback/${provider}`,
       {
         method: "POST",
         headers: {
@@ -65,7 +67,7 @@ const SelectProjectRepo = () => {
     setOpenLoaderLight(true);
 
     // api call to get badged
-    fetch(`${settings.API_BASE_URL}/repos-to-badge`, {
+    fetch(`${url}/repos-to-badge`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +78,9 @@ const SelectProjectRepo = () => {
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
         setUserData({ ...userData, reposToBadge: [] });
-        navigate("/project-badging-successful", { state: { name, email, provider } }); // navigate to success page
+        navigate("/project-badging-successful", {
+          state: { name, email, provider },
+        }); // navigate to success page
       })
       // eslint-disable-next-line no-unused-vars
       .catch((error) => {
