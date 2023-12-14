@@ -18,6 +18,7 @@ import {
 import { DataProvider } from "./contexts/DataContext";
 import { DesktopProvider } from "./contexts/DesktopContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import EventBadging from "./pages/EventBadging/EventBadging";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -56,6 +57,7 @@ const App = () => {
                 <Route path="/about-project-badging/dei-file" element={<DeiFile />} />
                 <Route path="/about-project-badging/dei-badge" element={<DeiBadge />} />
               </Route>
+              <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
               <Route
                 path="/select-project/:provider"
