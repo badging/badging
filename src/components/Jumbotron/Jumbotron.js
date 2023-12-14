@@ -2,38 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../assets/styles/global.scss";
 import "./jumbotron.scss";
-const Jumbotron = ({
-  title,
-  description,
-  img,
-  subheading = null,
-  subtitle,
-  children,
-}) => {
+import { Header } from "..";
+
+const Jumbotron = ({title}) => {
   return (
-    <div className="jumbotron">
-      <div className="jumbo-main">
-        {img} <h1>{title}</h1>
-        <p className="sub">{subtitle}</p>
+    <>
+      <main>
+        <div className='overlay'>
+            <div className='bgRight'></div>
+            <div className='bgCenter'></div>
+            <div className='bgLeft'></div>
+        </div>
+      <Header />
+      <div className="container jumbotron__container">
+      
+        {/* <img src={curlyBraces} alt="badging-logo" /> */}
+        <h1>{title}</h1>
+        
       </div>
-
-      <div>
-        {subheading && <h3>{subheading}</h3>}
-        <p>{description}</p>
-      </div>
-      {/* add any other children */}
-      {children}
-    </div>
+      </main>
+    </>
   );
-};
-
-Jumbotron.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  subheading: PropTypes.string,
-  children: PropTypes.node,
-  img: PropTypes.any,
-  subtitle: PropTypes.string,
 };
 
 export default Jumbotron;
