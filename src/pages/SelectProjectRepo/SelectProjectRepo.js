@@ -3,7 +3,7 @@ import "./selectProjectRepo.scss";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
+import { SearchBar, SelectedProjects, Layout, Loader, Jumbotron, Footer } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
 import { useQuery } from "@tanstack/react-query";
@@ -99,9 +99,10 @@ const SelectProjectRepo = () => {
         // );
       });
   };
-
+const title = "Get Started"
   return (
-    <Layout>
+    <div>
+      <Jumbotron title={title} />
       <section className="main__content">
         <form className="select__project__form">
           {showInfo && (
@@ -117,11 +118,14 @@ const SelectProjectRepo = () => {
               </div>
             </div>
           )}
-          <h2>Search For Project Repository</h2>
+          <div className="select-header">
+            <h2>Search For Project Repository</h2>
           <p className="text">
             <strong>Note: </strong>The selected repository must have the
             presence of a DEI.md file.
           </p>
+          </div>
+          
           <SearchBar setShowInfo={setShowInfo} />
           {/* {error && !reposToBadge && <p className="error">{error}</p>} */}
           {reposToBadge.length > 0 && (
@@ -134,6 +138,9 @@ const SelectProjectRepo = () => {
               <SelectedProjects />
             </div>
           )}
+
+          
+
           <button
             type="button"
             onClick={handleSubmit}
@@ -150,7 +157,9 @@ const SelectProjectRepo = () => {
       <Loader open={openLoaderLight} bgColor={"#fff"}>
         <p style={{ color: "#030303" }}>...scanning Repository</p>
       </Loader>
-    </Layout>
+
+      <Footer />
+    </div>
   );
 };
 
