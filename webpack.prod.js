@@ -1,4 +1,3 @@
-const CreateFileWebpack = require("create-file-webpack");
 const { merge } = require("webpack-merge");
 
 const dotenv = require("dotenv");

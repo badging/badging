@@ -14,12 +14,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # dotenv environment variable files
-.env*
-.env.development.local
+.env.development*
 .env.test.local
-.env.production.local
 .env.local
-!.env.development
+.env.production.local
+!.env.production
 
 .DS_Store
 
