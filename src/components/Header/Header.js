@@ -24,7 +24,7 @@ const Nav = () => {
         <img className='mobileNav' onClick={() => setToggleNav(!toggleNav)} src={mobileMenuIcon} alt="logo" />
         {
           pathname && pathname !== '/' ? (
-            <a href='/' className='apply-btn'>Apply for Badging</a>
+            <a href='/badge' className='apply-btn'>Apply for Badging</a>
           ): (
             <div className='hidden-box'></div>
           )
