@@ -25,6 +25,7 @@ import { Publish } from "@mui/icons-material";
 import { fetchProjects } from "../../hooks/fetchProjects";
 import RandomString from "../../components/RandomString";
 import AboutNew from "../../components/AboutDeiBadgingCom/About";
+import settings from '../../settings.json';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -58,7 +59,6 @@ const StyledTablePagination = styled(TablePagination)((theme) => ({
 }));
 
 const Projects = () => {
-  const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
@@ -66,9 +66,7 @@ const Projects = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("createdAt");
   const [swap, setSwap] = useState("about")
-  const { data, isLoading, error } = fetchProjects(
-    `${url}/badgedRepos`
-  );
+  const { data, isLoading, error } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };

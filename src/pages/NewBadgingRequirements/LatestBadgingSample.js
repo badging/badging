@@ -6,11 +6,13 @@ import {
   getBadgedMobile,
 } from "../../assets/images";
 
-import "../../assets/styles/global.scss";
-import "./LatestBadging.scss";
+import settings from '../../settings.json';
+
+import '../../assets/styles/global.scss';
+import './LatestBadging.scss';
 
 const LatestBadgingSample = () => {
-  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
+  const baseurl = settings.API_BASE_URL;
 
   const handleLogin = () => {
     window.location.href = `${baseurl}/login`;

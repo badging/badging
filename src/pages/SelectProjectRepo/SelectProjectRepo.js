@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { SearchBar, SelectedProjects, Layout, Loader } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
+import settings from "../../settings.json";
 import { useQuery } from "@tanstack/react-query";
 
 const callbackQuery = (provider, code) => ({
@@ -15,10 +16,8 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
-    const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
-
     const response = await fetch(
-      `${url}/callback/${provider}`,
+      `${settings.API_BASE_URL}/callback/${provider}`,
       {
         method: "POST",
         headers: {
@@ -51,7 +50,6 @@ const SelectProjectRepo = () => {
     if (fetchedUserData) {
       setUserData({
         ...userData,
-        userId: fetchedUserData.userId,
         username: fetchedUserData.username,
         name: fetchedUserData.name,
         email: fetchedUserData.email,
@@ -66,24 +64,18 @@ const SelectProjectRepo = () => {
     setOpenLoaderLight(true);
 
     // api call to get badged
-    fetch(`${url}/repos-to-badge`, {
+    fetch(`${settings.API_BASE_URL}/repos-to-badge`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        userId,
-        provider,
-        repos: reposToBadge.map((repoData) => repoData.id),
-      }),
+      body: JSON.stringify({ name, email, repos: reposToBadge, provider }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
         setUserData({ ...userData, reposToBadge: [] });
-        navigate("/project-badging-successful", {
-          state: { name, email, provider },
-        }); // navigate to success page
+        navigate("/project-badging-successful", { state: { name, email, provider } }); // navigate to success page
       })
       // eslint-disable-next-line no-unused-vars
       .catch((error) => {

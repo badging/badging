@@ -7,8 +7,21 @@ node_modules
 # production
 build
 
+.env
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# dotenv environment variable files
+.env.development*
+.env.test.local
+.env.local
+.env.production.local
+!.env.production
+
 .DS_Store
+
+# Settings file is dynamically generated inside webpack.common.js
+# using data from the .env files
+settings.json

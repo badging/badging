@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Layout, Loader } from "../../components";
 import { loginArrow, githubCleanIcon, gitlabIcon } from "../../assets/images";
+import settings from "../../settings.json";
 
 import "../../assets/styles/global.scss";
 import "./getStartedBadging.scss";
@@ -8,16 +9,16 @@ import "./getStartedBadging.scss";
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
+  const baseurl = settings.API_BASE_URL;
 
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/auth/github`;
+    window.location.href = `${baseurl}/login?provider=github`;
   };
 
   const handleLoginWithGitLab = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/auth/gitlab`;
+    window.location.href = `${baseurl}/login?provider=gitlab`;
   };
 
   return (
@@ -74,7 +75,7 @@ const GetStartedBadging = () => {
         </div>
       </div>
       <Loader open={openLoader}>
-        <p>Redirecting to Authentication</p>
+        <p>Redirecting to GitHub Authentication</p>
       </Loader>
     </Layout>
   );
