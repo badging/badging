@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Layout, Loader } from "../../components";
 import { loginArrow, githubCleanIcon, gitlabIcon } from "../../assets/images";
+import settings from "../../settings.json";
 
 import "../../assets/styles/global.scss";
 import "./getStartedBadging.scss";
@@ -13,6 +14,11 @@ const GetStartedBadging = () => {
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);
     window.location.href = `${baseurl}/login?provider=github`;
+  };
+
+  const handleLoginWithGitLab = () => {
+    setOpenLoader(true);
+    window.location.href = `${baseurl}/login?provider=gitlab`;
   };
 
   return (
@@ -69,7 +75,7 @@ const GetStartedBadging = () => {
         </div>
       </div>
       <Loader open={openLoader}>
-        <p>Redirecting to Authentication</p>
+        <p>Redirecting to GitHub Authentication</p>
       </Loader>
     </Layout>
   );
