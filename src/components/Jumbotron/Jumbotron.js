@@ -4,7 +4,7 @@ import "../../assets/styles/global.scss";
 import "./jumbotron.scss";
 import { Header } from "..";
 
-const Jumbotron = () => {
+const Jumbotron = ({title}) => {
   return (
     <>
       <main>
@@ -17,12 +17,8 @@ const Jumbotron = () => {
       <div className="container jumbotron__container">
       
         {/* <img src={curlyBraces} alt="badging-logo" /> */}
-        <h1>Event Badging</h1>
-        <div className="about-project">
-          <button onClick={() =>swapHandler('about')} className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}>About Project Badging</button>
-          <a href="/about-project-badging">Badged Projects</a>
-          {/* <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button> */}
-        </div>
+        <h1>{title}</h1>
+        
       </div>
       </main>
     </>

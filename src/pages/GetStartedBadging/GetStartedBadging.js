@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout, Loader } from "../../components";
+import { Jumbotron, Layout, Loader } from "../../components";
 import { loginArrow, githubCleanIcon, gitlabIcon } from "../../assets/images";
 
 import "../../assets/styles/global.scss";
@@ -19,9 +19,10 @@ const GetStartedBadging = () => {
     setOpenLoader(true);
     window.location.href = `${baseurl}/auth/gitlab`;
   };
-
+const title = "Get Started"
   return (
-    <Layout>
+    <section>
+      <Jumbotron title={title} />
       <div className="section-two">
         <div className="section-wrap">
           <div className="section-title">
@@ -76,7 +77,7 @@ const GetStartedBadging = () => {
       <Loader open={openLoader}>
         <p>Redirecting to Authentication</p>
       </Loader>
-    </Layout>
+    </section>
   );
 };
 
