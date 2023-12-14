@@ -9,21 +9,21 @@ const Footer = () => {
     <footer className='footer-container'>
         <span className='social'>
         <Link
-          to="https://github.com/AllInOpenSource/ProjectBadging"
+          to="https://github.com/badging/ProjectBadging"
           target="blank"
         >
           <img src={githubIcon} alt="github-icon" />
         </Link>
         <Link
-          to="https://www.linkedin.com/company/all-in-open-source/"
+          to="https://www.linkedin.com/company/chaoss/"
           target="blank"
         >
           <img src={linkedin} alt="linkedin-icon" />
         </Link>
-        <Link to="https://twitter.com/AllInOpenSource" target="blank">
+        <Link to="https://twitter.com/chaossproj" target="blank">
           <img src={twitter} alt="twitter-icon" />
         </Link>
-        <Link to="mailto:maintainers@allinopensource.org" target="blank">
+        <Link to="mailto:chaossbadge@gmail.com" target="blank">
           <img src={mail} alt="mail-icon" />
         </Link>
         </span>
