@@ -1,4 +1,4 @@
-import {chaossLogo, gitLabLogo } from '../../assets/images';
+import {chaossLogo, gitLabLogo, githubSponsor } from '../../assets/images';
 import '../../assets/styles/global.scss';
 import Nav from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -37,16 +37,12 @@ const Home = () => {
             <p>Founding Partners</p>
             <div className='sponsors-logo'>
             <img src={gitLabLogo} alt="logo" />
-            <img src={gitLabLogo} alt="logo" />
-            <img src={gitLabLogo} alt="logo" />
             </div>
           </div>
           <div className='s-list'>
             <p>Our Partners</p>
-            <div className='sponsors-logo'>
-            <img src={gitLabLogo} alt="logo" />
-            <img src={gitLabLogo} alt="logo" />
-            <img src={gitLabLogo} alt="logo" />
+            <div className='sponsors-logo' style={{padding: "12px"}}>
+              <img src={githubSponsor} alt="logo" />
             </div>
           </div>
         </div>

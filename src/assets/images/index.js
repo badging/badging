@@ -57,7 +57,7 @@ import AZicon from "./icons/AZIcon.svg";
 import chaossLogo from "./logos-new/choass.svg"
 import gitLabLogo from "./icons-new/gitlab.svg"
 import mobileMenuIcon from "./icons-new/menu.svg"
-
+import githubSponsor from "./icons/github-sponsor.svg"
 
 
 
@@ -114,5 +114,5 @@ export {
 
 
 
-  chaossLogo, gitLabLogo, mobileMenuIcon
+  chaossLogo, gitLabLogo, mobileMenuIcon, githubSponsor
 };
