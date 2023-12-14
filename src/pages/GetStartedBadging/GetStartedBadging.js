@@ -8,16 +8,16 @@ import settings from "../../settings.json";
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = settings.API_BASE_URL;
+  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
 
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=github`;
+    window.location.href = `${baseurl}/auth/github`;
   };
 
   const handleLoginWithGitLab = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=gitlab`;
+    window.location.href = `${baseurl}/auth/gitlab`;
   };
 const title = "Get Started"
   return (
