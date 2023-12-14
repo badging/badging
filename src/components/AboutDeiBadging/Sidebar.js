@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <ul>
       <li>
-        <div className="main__link">
+        <div className="main__link linkGap">
           <NavLink 
             exact="true"
             to="/about-project-badging"
@@ -16,7 +16,7 @@ const Sidebar = () => {
             end
             onClick={() => setIsActive(1)}
           >
-            What is All-In CHAOSS DEI...
+            What is Project Badging?
           </NavLink>
           <img src={arrowRight} alt="arrow" />
         </div>
@@ -45,9 +45,9 @@ const Sidebar = () => {
             <NavLink exact="true" to="/about-project-badging/application-process">
               Self-Assessment & Documen...
             </NavLink>
-            <NavLink exact="true" to="/about-project-badging/application-process">
+            {/* <NavLink exact="true" to="/about-project-badging/application-process">
               Project Application
-            </NavLink>
+            </NavLink> */}
             <NavLink exact="true" to="/about-project-badging/application-process">
               Badging Evaluation
             </NavLink>

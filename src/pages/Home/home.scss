@@ -90,20 +90,31 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 10rem;
     flex-wrap: wrap;
     margin-top: 5rem;
     
     .s-list {
       display: flex;
+      align-items: center;
       flex-direction: column;
-      gap: 15px;
+      gap: 5px;
+
+      p {
+        color: #1C1C1C;
+        font-weight: bold;
+      }
     }
 
     .sponsors-logo {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+
+      // img {
+      //   width: 70px;
+      //   height: 50px;
+      // }
     }
   }
 }
@@ -111,7 +122,8 @@ li, a, p, h1, h2, h3, h4, h5, h6{
 
 @media screen and (max-width: 700px) {
   .hero {
-    height: auto !important;
+    // height: auto !important;
+    
   }
   .hero-header {
     h1 {
@@ -127,7 +139,9 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     gap: 30px !important;
     padding: 0 10px !important;
     justify-content: flex-start !important;
-    margin-bottom: 40px;
+    // align-items: flex-start;
+    // margin-bottom: 40px;
+    width: 100%;
     .s-list {
       text-align: left !important;
       

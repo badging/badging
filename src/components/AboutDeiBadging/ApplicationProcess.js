@@ -13,16 +13,16 @@ const ApplicationProcess = () => {
           Project Access, Inclusive Leadership, Communication Transparency, and
           Newcomer Experience. After the reflective process, maintainers can
           document how the project attends to and prioritizes DEI around these
-          areas in a markdown file called the <a href="##">DEI.md file</a>. This
+          areas in a markdown file called the <a href="https://github.com/AllInOpenSource/All-In/blob/main/DEI.md">DEI.md file</a>. This
           DEI.md file should exist within the project&#39;s repository for easy
           feedback from the community.
         </p>
       </div>
       <div>
-        <h3>All in CHAOSS DEI Badge Application:</h3>
+        <h3>Badging Application:</h3>
         <p>
           Once the DEI.md file is published and publicly available, project
-          maintainers can proceed to apply here. The applicant must be an admin
+          maintainers can proceed to <a href="##">apply here</a>. The applicant must be an admin
           or maintainer of the project, and the repository that holds the DEI.md
           file must be specified.
         </p>
@@ -34,10 +34,16 @@ const ApplicationProcess = () => {
           the project repository for the presence of a DEI.md file. The bot will
           review the DEI.md file for relevant information provided by the
           maintainer and its alignment with the CHAOSS DEI metrics stated in the{" "}
-          <a href="##">DEI.md template</a> to determine eligibility for the
+          <a href="https://github.com/AllInOpenSource/ProjectBadging/blob/main/DEI.md">DEI.md template</a> to determine eligibility for the
           badge. Upon successful review of the DEI.md file, a project badge will
           be issued. The four CHAOSS metrics used in the DEI.md file include:
         </p>
+        <ul className='bullet-list'>
+          <li>Project Access</li>
+          <li>Inclusive Leadership </li>
+          <li>Communication Transparency</li>
+          <li>Newcomer Experience</li>
+      </ul>
       </div>
       <div>
         <h3>Recognition and Badging:</h3>
