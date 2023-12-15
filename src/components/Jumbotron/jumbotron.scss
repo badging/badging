@@ -1,54 +1,97 @@
 @import "../../assets/styles/variables";
-
-.jumbo-main {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  row-gap: 1.5rem;
-  padding-top: 3rem;
-
-  h1 {
-    font-size: 3.2rem;
-    padding-left: 1.4rem;
-    font-family: $font-family_1;
-    background: $heroTitleBackground2;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  p {
-    text-align: center;
-    background: rgba(255, 255, 255, 1);
-    color: $chaossPink;
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-.jumbotron {
-  padding: 5.5rem 0 1.8rem 0;
-  margin: 0rem 0rem;
-  max-width: 70.875rem;
-
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .jumbo-main {
-    display: flex;
-    flex-direction: row;
-    padding-top: 6rem;
-    padding-bottom: 5rem;
-    p {
-      margin-left: 1rem;
-      margin-top: 0.5rem;
-      padding: 4px 8px;
+main {
+//   width: 100%;
+//   max-width: 1440px;
+  margin: auto;
+  
+  .overlay {
+    // background-color: #000;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+   
+    .bgLeft {
+      width: 50%;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 107, 160, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      height: 100%;
+      position: absolute;
+      right: -10rem;
+      overflow: hidden;
+      top: -7rem;
+      
+    }
+  
+    .bgRight {
+      width: 50%;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(94, 184, 148, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);   
+      height: 100%;
+      position: absolute;
+      left: -10rem;
+      top: -7rem;
+      // overflow: hidden;
+    }
+  
+    .bgCenter {
+      width: 100%;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(98, 203, 251, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      height: 100%;
+      position: absolute;
+      top: -8rem;
     }
   }
-  .jumbotron {
-    margin: 0rem auto;
+}
+
+.jumbotron__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 400px;
+  margin: auto;
+  max-width: 1440px;
+  border-bottom: 1px solid #ADCFF8;
+  position: relative;
+
+  h1 {
+    margin-top: 5rem;
+    font-size: 3.375rem;
+    font-family: $font-family_1;
+    // background: $heroTitleBackground2;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
+
+  .about-project {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.3s ease;
+    // display: flex;
+
+    button, a {
+      padding: 10px 30px;
+      border-radius: 8px 8px 0px 0px;
+      border: 1px solid #ADCFF8;
+      background-color: #fff;
+      color: #000;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 5px;
+
+    //   &:hover {
+    //     background-color: #D61B5E;
+    //     color: #fff;
+    //   }
+    }
+    .buttonActive {
+      background-color: #000;
+      color: #fff;
+    }
+   
+  }
+
+  
 }
