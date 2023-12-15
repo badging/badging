@@ -74,6 +74,7 @@ const SelectProjectRepo = () => {
       },
       body: JSON.stringify({ userId, name, email, repos: reposToBadge, provider }),
     })
+    
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
       .then((data) => {
