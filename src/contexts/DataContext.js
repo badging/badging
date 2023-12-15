@@ -5,7 +5,7 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [userData, setUserData] = useState({
-    userId: -1,
+    userId: "",
     name: "",
     email: "",
     username: "",

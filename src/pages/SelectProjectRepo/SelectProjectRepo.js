@@ -50,6 +50,7 @@ const SelectProjectRepo = () => {
     if (fetchedUserData) {
       setUserData({
         ...userData,
+        userId: fetchedUserData.userId,
         username: fetchedUserData.username,
         name: fetchedUserData.name,
         email: fetchedUserData.email,
@@ -69,7 +70,7 @@ const SelectProjectRepo = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, repos: reposToBadge, provider }),
+      body: JSON.stringify({ userId, name, email, repos: reposToBadge, provider }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
@@ -81,14 +82,6 @@ const SelectProjectRepo = () => {
       .catch((error) => {
         setUserData({ ...userData, reposToBadge: [] });
         setOpenLoaderLight(false);
-
-        // setError(
-        // 	"an error occurred while submitting repo for badging. Please try again"
-        // );
-        // console.log(
-        // 	"an error occurred while submitting repo for badging: ",
-        // 	error
-        // );
       });
   };
 
