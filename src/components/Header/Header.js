@@ -19,7 +19,7 @@ const Nav = () => {
           <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
           <li><a href="/event-badging" className={pathname == '/event-badging'? 'activeNav': ''}>Event Badging</a></li>
           <li><a href="/about-project-badging" className={pathname == '/about-project-badging'? 'activeNav': ''}>Project Badging</a></li>
-          <li><a href="/">FAQ</a></li>
+          <li><a href="/faq">FAQ</a></li>
         </ul>
         <img className='mobileNav' onClick={() => setToggleNav(!toggleNav)} src={mobileMenuIcon} alt="logo" />
         {
@@ -35,7 +35,7 @@ const Nav = () => {
             <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
             <li><a href="/event-badging" className={pathname == '/event-badging'? 'activeNav': ''}>Event Badging</a></li>
             <li><a href="/about-project-badging" className={pathname == '/about-project-badging'? 'activeNav': ''}>Project Badging</a></li>
-            <li><a href="/">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </div>
     </div>
