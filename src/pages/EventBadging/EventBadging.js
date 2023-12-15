@@ -27,8 +27,8 @@ const EventBadging = () => {
         {/* <img src={curlyBraces} alt="badging-logo" /> */}
         <h1>Event Badging</h1>
         <div className="about-project">
-          <button onClick={() =>swapHandler('about')} className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}>About Project Badging</button>
-          <a href="/about-project-badging">Badged Projects</a>
+          <button onClick={() =>swapHandler('about')} className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}>About Event Badging</button>
+          <a href="https://github.com/badging/event-diversity-and-inclusion#badges-granted-version-3" target='_blank'>Badged Events</a>
           {/* <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button> */}
         </div>
       </div>
