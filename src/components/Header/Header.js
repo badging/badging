@@ -24,7 +24,7 @@ const Nav = () => {
         <img className='mobileNav' onClick={() => setToggleNav(!toggleNav)} src={mobileMenuIcon} alt="logo" />
         {
           pathname && pathname !== '/' ? (
-            <a href='/badge' className='apply-btn'>Apply for Badging</a>
+            <a href={pathname == '/event-badging'? 'https://chaoss.community/diversity-and-inclusion-badging/': 'badge'} className='apply-btn'>Apply for Badge</a>
           ): (
             <div className='hidden-box'></div>
           )

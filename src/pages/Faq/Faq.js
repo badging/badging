@@ -63,8 +63,8 @@ const Faq = () => {
         <Jumbotron  title={title}/>
         <section className='faq container'>
          <ul className='main-list'>
-                <li onClick={() =>eventHandler('event')} className={showAbout == 'event' ? 'aboutEventHeader': ''} >What is Event Badging {showAbout == 'event' && (<img src={arrowRight} alt="arrow" />)} </li>
-                <li onClick={() =>eventHandler('project')} className={showAbout == 'project' ? 'aboutEventHeader': ''}>How It Works {showAbout == 'project' && (<img src={arrowRight} alt="arrow" />)}</li>
+                <li onClick={() =>eventHandler('event')} className={showAbout == 'event' ? 'aboutEventHeader': ''} >Event Badging {showAbout == 'event' && (<img src={arrowRight} alt="arrow" />)} </li>
+                <li onClick={() =>eventHandler('project')} className={showAbout == 'project' ? 'aboutEventHeader': ''}>Poject Badging {showAbout == 'project' && (<img src={arrowRight} alt="arrow" />)}</li>
             </ul>
             
 
