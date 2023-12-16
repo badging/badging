@@ -20,22 +20,22 @@ const Faq = () => {
     const eventFaqs = [
         {
             "id": 1,
-            "title" : "What requirements are needed before I apply for a badge?",
-            "description" : "To submit an application for your event/conference, you will need to have a GitHub account, as well as the information in the following documents:"
+            "title" : "What requirements are needed before I apply for a CHAOSS DEI Event Badge?",
+            "description" : "To submit an application for your event/conference, you will need to have a GitHub account, as well as information about how your event/conference attends to particular DEI criteria"
         },
         {
             "id":2,
-            "title" : "Why do I need a DEI badge?",
-            "description" : "Events, projects, and organizations can apply for the DEI badge to help measure and demonstrate their commitment to DEI values and practices and inspire others to follow in their footsteps."
+            "title" : "Why do I need a CHAOSS DEI Event Badge?",
+            "description" : "Events organizers can apply for the DEI badge to help measure and demonstrate their commitment to DEI values and practices and inspire others to follow in their footsteps."
         },
         {
             "id":3,
-            "title" : "What happens if my event is awarded 'Pending'?",
-            "description" : "Pending events have an opportunity to improve their badge level by altering their processes and procedures and improving the information that is available on the event website. This is a partnership with CHAOSS and event organizers can work with the badge reviewers on ideas for improvement."
+            "title" : "What happens when my event receives a CHAOSS DEI Event Badge?",
+            "description" : "You have an opportunity to display your badge prominently on your event website. We will also list your badged event in our CHAOSS Badged Events table."
         },
         {
             "id": 4,
-            "title": "If my event happens every year, can I use the badge from past events?",
+            "title": "If my event happens every year, can I use the CHAOSS DEI Event Badge from past events?",
             "description": "No. We ask that you submit a new application for every separate event. We will occasionally be changing the metrics used in the application, and in some cases, there will be different questions on the application from year to year."
         }
     ]
@@ -43,18 +43,18 @@ const Faq = () => {
     const projectFaqs = [
         {
             "id": 1,
-            "title" : "What are the requirements needed to apply for a badge?",
-            "description" : "To apply for a badge, you need to meet the following requirements:"
+            "title" : "What are the requirements needed to apply for a CHAOSS DEI Project Badge?",
+            "description" : "To apply for a badge, you need to address the requirements as specified in the DEI.md template"
         },
         {
             "id":2,
-            "title" : "How do I get a badge?",
+            "title" : "How do I get a CHAOSS DEI Project Badge?",
             "description" : "To obtain a badge, simply follow the detailed instructions provided. You can submit your application here."
         },
         {
             "id":3,
-            "title" : "How frequently can I apply for a badge?",
-            "description" : "You can apply for the project badge for any open-source project or organization annually."
+            "title" : "How frequently should I apply for a CHAOSS DEI Project Badge?",
+            "description" : "We ask that you apply for the project badge for any open source project annually."
         }
     ]
 
@@ -82,10 +82,10 @@ const Faq = () => {
                                 { faq == 2 && (
                                     <ul className='fac-li'>
                                     <li >
-                                    <a href="#">Event Submission Requirements:</a> This document describes the minimum requirements for an event/conference to be eligible for a CHAOSS badging process.
+                                    <a href="#">CHAOSS DEI Event Submission Requirements:</a> The application process will disply the minimum requirements for an event/conference to be able to receive a CHAOSS DEI Event badge.
                                     </li>
                                     <li>
-                                    <a href="#">Event Submission Guidelines:</a> This document describes guidelines and steps on how an event can gain a badge under the CHAOSS Badging program.
+                                    <a href="#">Event Submission Guidelines:</a> The application process describes guidelines and steps on how your event can gain a CHAOSS DEI Event Badge.
                                     </li>
                                 </ul>
                                 )}
@@ -110,10 +110,10 @@ const Faq = () => {
                                 { faq == 1 && (
                                     <ul className='fac-li'>
                                     <li >
-                                    Ensure your project or organization has a GitHub, GitLab, or any private web-based repository that can be accessed
+                                    Ensure your project has a pubic GitHub or GitLab repository where your DEI.md file is located or
                                     </li>
                                     <li>
-                                    Ensure the repository provided has a DEI.md file that follows this format.
+                                    If you have a priviate GitHub or GitLab repository, enusre that your DEI.md file is available on a website or other public location.
                                     </li>
                                 </ul>
                                 )}
