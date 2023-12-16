@@ -110,7 +110,7 @@ const Faq = () => {
                                 { faq == 1 && (
                                     <ul className='fac-li'>
                                     <li >
-                                    Ensure your project has a pubic GitHub or GitLab repository where your DEI.md file is located or
+                                    Ensure your project has a public GitHub or GitLab repository where your DEI.md file is located or
                                     </li>
                                     <li>
                                     If you have a priviate GitHub or GitLab repository, enusre that your DEI.md file is available on a website or other public location.
