@@ -23,7 +23,7 @@ const Home = () => {
           <h1>CHAOSS DEI Badging Initiative</h1>
           <div>
             <p>
-              The DEI Badging initiative is a CHAOSS 
+              The DEI Badging initiative is a <a src="https://chaoss.community">CHAOSS</a> 
               project that awards badges to open-source projects 
               and events. These badges are used to showcase
                commitment to improving and supporting 
@@ -34,13 +34,13 @@ const Home = () => {
 
         <div className='sponsors'>
           <div className='s-list'>
-            <p>Founding Partners</p>
+            <p>Founding Partner</p>
             <div className='sponsors-logo'>
             <img src={githubSponsor} alt="logo"  style={{padding: "12px"}} />
             </div>
           </div>
           <div className='s-list'>
-            <p>Sponsors</p>
+            <p>Contributing Partners</p>
             <div className='sponsors-logo'>
               <img src={gitLabLogo} alt="logo" />
             </div>
