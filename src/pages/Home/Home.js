@@ -36,13 +36,13 @@ const Home = () => {
           <div className='s-list'>
             <p>Founding Partner</p>
             <div className='sponsors-logo'>
-            <img src={githubSponsor} alt="logo"  style={{padding: "12px"}} />
+            <img src={githubSponsor} alt="logo" width={80} height={20} />
             </div>
           </div>
           <div className='s-list'>
             <p>Contributing Partners</p>
             <div className='sponsors-logo'>
-              <img src={gitLabLogo} alt="logo" />
+              <img src={gitLabLogo} alt="logo" width={90} height={20} />
             </div>
           </div>
         </div>

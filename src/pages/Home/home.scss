@@ -110,6 +110,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      margin-top: 20px;
 
       // img {
       //   width: 70px;
@@ -148,6 +149,8 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     }
     .sponsors-logo {
       gap: 20px !important;
+      margin-top: 10px !important;
+      justify-content: start;
     }
     
   }
