@@ -21,21 +21,21 @@ const Faq = () => {
         {
             "id": 1,
             "title" : "What requirements are needed before I apply for a CHAOSS DEI Event Badge?",
-            "description" : "To submit an application for your event/conference, you will need to have a GitHub account, as well as information about how your event/conference attends to particular DEI criteria"
+            "description" : "To submit an application for your event/conference, you will need to have a GitHub account, as well as the information listed in the Event Badging section of the site."
         },
         {
             "id":2,
             "title" : "Why do I need a CHAOSS DEI Event Badge?",
-            "description" : "Events organizers can apply for the DEI badge to help measure and demonstrate their commitment to DEI values and practices and inspire others to follow in their footsteps."
+            "description" : "Events, projects, and organizations can apply for the DEI badge to help measure and demonstrate their commitment to DEI values and practices and inspire others to follow in their footsteps."
         },
         {
             "id":3,
-            "title" : "What happens when my event receives a CHAOSS DEI Event Badge?",
-            "description" : "You have an opportunity to display your badge prominently on your event website. We will also list your badged event in our CHAOSS Badged Events table."
+            "title" : "What happens if my event is awarded a 'Pending' badge?",
+            "description" : "Pending events have an opportunity to improve their badge level by altering their processes and procedures and improving the information that is available on the event website. This is a partnership with CHAOSS and event organizers can work with the badge reviewers on ideas for improvement."
         },
         {
             "id": 4,
-            "title": "If my event happens every year, can I use the CHAOSS DEI Event Badge from past events?",
+            "title": "If my event happens every year, can I use the badge from past events?",
             "description": "No. We ask that you submit a new application for every separate event. We will occasionally be changing the metrics used in the application, and in some cases, there will be different questions on the application from year to year."
         }
     ]
@@ -44,17 +44,17 @@ const Faq = () => {
         {
             "id": 1,
             "title" : "What are the requirements needed to apply for a CHAOSS DEI Project Badge?",
-            "description" : "To apply for a badge, you need to address the requirements as specified in the DEI.md template"
+            "description" : "To apply for a badge, you will need a DEI.md file that is publicly available. You can learn more about this file in the Project Badging section of this site."
         },
         {
             "id":2,
-            "title" : "How do I get a CHAOSS DEI Project Badge?",
-            "description" : "To obtain a badge, simply follow the detailed instructions provided. You can submit your application here."
+            "title" : "How do I get a badge?",
+            "description" : "To obtain a badge, simply click the 'Apply for a Badge button at the top of the site, then follow the directions from there.'"
         },
         {
             "id":3,
-            "title" : "How frequently should I apply for a CHAOSS DEI Project Badge?",
-            "description" : "We ask that you apply for the project badge for any open source project annually."
+            "title" : "How frequently can I apply for a badge?",
+            "description" : "You can apply for the project badge for any open-source project or organization annually."
         }
     ]
 
@@ -64,7 +64,7 @@ const Faq = () => {
         <section className='faq container'>
          <ul className='main-list'>
                 <li onClick={() =>eventHandler('event')} className={showAbout == 'event' ? 'aboutEventHeader': ''} >Event Badging {showAbout == 'event' && (<img src={arrowRight} alt="arrow" />)} </li>
-                <li onClick={() =>eventHandler('project')} className={showAbout == 'project' ? 'aboutEventHeader': ''}>Poject Badging {showAbout == 'project' && (<img src={arrowRight} alt="arrow" />)}</li>
+                <li onClick={() =>eventHandler('project')} className={showAbout == 'project' ? 'aboutEventHeader': ''}>Project Badging {showAbout == 'project' && (<img src={arrowRight} alt="arrow" />)}</li>
             </ul>
             
 
