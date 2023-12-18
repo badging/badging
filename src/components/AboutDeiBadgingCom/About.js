@@ -14,7 +14,7 @@ const AboutNew = () => {
         <Header />
         <div className="container jumbotron__container">
           <img src={curlyBraces} alt="badging-logo" />
-          <h1>About DEI Badging</h1>
+          <h1>About CHAOSS DEI Project Badging</h1>
         </div>
       </div> */}
       <main className="container">
