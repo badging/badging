@@ -49,14 +49,14 @@ const App = () => {
                 <Route path="/about/dei-file" element={<DeiFile />} />
                 <Route path="/about/dei-badge" element={<DeiBadge />} />
               </Route> */}
-              <Route path="/about-project-badging" element={<Projects />}>
-                <Route path="/about-project-badging" element={<WhatIsDeiBadging />} />
+              <Route path="/project-badging" element={<Projects />}>
+                <Route path="/project-badging" element={<WhatIsDeiBadging />} />
                 <Route
-                  path="/about-project-badging/application-process"
+                  path="/project-badging/application-process"
                   element={<ApplicationProcess />}
                 />
-                <Route path="/about-project-badging/dei-file" element={<DeiFile />} />
-                <Route path="/about-project-badging/dei-badge" element={<DeiBadge />} />
+                <Route path="/project-badging/dei-file" element={<DeiFile />} />
+                <Route path="/project-badging/dei-badge" element={<DeiBadge />} />
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
