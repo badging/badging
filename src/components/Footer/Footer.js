@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='footer-container'>
         <span className='social'>
         <Link
-          to="https://github.com/badging/ProjectBadging"
+          to="https://github.com/badging/badging"
           target="blank"
         >
           <img src={githubIcon} alt="github-icon" />

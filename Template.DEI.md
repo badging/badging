@@ -1,13 +1,5 @@
 # Diversity, Equity, and Inclusion Project Statement
 
-<!---
-The DEI.md file was originally created in the CHAOSS project. This comment provides attribution of that work as defined under the MIT license.
--->
-
-<!---
-Please use the DEI.md Guide at https://github.com/badging/ProjectBadging/blob/main/Guide.DEI.md when creating your DEI.md file
--->
-
 Project Name/Logo Here
 
 Scope of the DEI.md File

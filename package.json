@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/badging/ProjectBadging.git"
+    "url": "git+https://github.com/badging/badging.git"
   },
   "author": "AllInOpenSource | CHAOSS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/badging/ProjectBadging/issues"
+    "url": "https://github.com/badging/badging/issues"
   },
-  "homepage": "https://github.com/badging/ProjectBadging#readme",
+  "homepage": "https://github.com/badging/badging#readme",
   "dependencies": {
     "@emotion/react": "11.11.0",
     "@emotion/styled": "11.11.0",

@@ -122,7 +122,7 @@ const AboutDeiMobile = () => {
                 scans the project repository for the presence of a DEI.md file.
                 The bot will review the DEI.md file for relevant information
                 provided by the maintainer and its alignment with the CHAOSS DEI
-                metrics stated in the <a href="https://github.com/AllInOpenSource/ProjectBadging/blob/main/DEI.md">DEI.md template</a> to
+                metrics stated in the <a href="https://github.com/badging/badging/blob/main/DEI.md">DEI.md template</a> to
                 determine eligibility for the badge. Upon successful review of
                 the DEI.md file, a project badge will be issued. The four CHAOSS
                 metrics used in the DEI.md file include:

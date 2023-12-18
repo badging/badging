@@ -13,9 +13,9 @@ const ApplicationProcess = () => {
           Project Access, Inclusive Leadership, Communication Transparency, and
           Newcomer Experience. After the reflective process, maintainers can
           document how the project attends to and prioritizes DEI around these
-          areas in a markdown file called the <a href="https://github.com/badging/ProjectBadging/blob/main/Template.DEI.md">DEI.md file</a>. This
+          areas in a markdown file called the <a href="https://github.com/badging/badging/blob/main/Template.DEI.md">DEI.md file</a>. This
           DEI.md file should exist within the project&#39;s repository for easy
-          feedback from the community. A guide for putting together your DEI.md file is avaialble through the <a href="https://github.com/badging/ProjectBadging/blob/main/Guide.DEI.md">DEI.md Guide</a>
+          feedback from the community. A guide for putting together your DEI.md file is avaialble through the <a href="https://github.com/badging/badging/blob/main/Guide.DEI.md">DEI.md Guide</a>
         </p>
       </div>
       <div>
@@ -34,7 +34,7 @@ const ApplicationProcess = () => {
           the project repository for the presence of a DEI.md file. The bot will
           review the DEI.md file for relevant information provided by the
           maintainer and its alignment with the CHAOSS DEI metrics stated in the
-          <a href="https://github.com/badging/ProjectBadging/blob/main/Template.DEI.md">DEI.md template</a> to determine eligibility for the
+          <a href="https://github.com/badging/badging/blob/main/Template.DEI.md">DEI.md template</a> to determine eligibility for the
           badge. Upon successful review of the DEI.md file, a project badge will
           be issued. The four CHAOSS metrics used in the DEI.md file include:
         </p>

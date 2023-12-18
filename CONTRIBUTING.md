@@ -29,7 +29,7 @@ Here are the steps to follow to contribute to All In CHAOSS Project badging:
 
 2. **Clone Your Fork**: Clone your fork of the repository to your local machine:
 
-   _git clone https://github.com/your_username/ProjectBadging.git_
+   _git clone https://github.com/your_username/badging.git_
 
    replace `your_username` with your actual github username
 
@@ -38,7 +38,7 @@ Here are the steps to follow to contribute to All In CHAOSS Project badging:
 3. **Perform the following to get your working environment ready**:
 
    ```bash
-      cd ProjectBadging # move into project directory
+      cd badging # move into project directory
       npm install # installs packages and dependencies
    ```
 
@@ -81,7 +81,7 @@ All In CHAOSS Project Badging follows a specific code style and coding standards
 
 ### Issue Tracking
 
-If you're looking for ways to contribute but don't have specific code changes in mind, you can check the [issue tracker](https://github.com/AllInOpenSource/ProjectBadging/issues) for All In CHAOSS Project badging on GitHub. You might find issues marked as "help wanted" or "good first issue."
+If you're looking for ways to contribute but don't have specific code changes in mind, you can check the [issue tracker](https://github.com/badging/badging/issues) for All In CHAOSS Project badging on GitHub. You might find issues marked as "help wanted" or "good first issue."
 
 Ask for help
 If you have any questions or need assistance with your contribution, please contact get in touch with the project maintainers.
