@@ -6,7 +6,7 @@ const WhatIsDeiBadging = () => {
       </h2>
       <div>
         <p>
-        Project Badging is an initiative developed 
+        CHAOSS DEI Project Badging is an initiative developed 
               by the CHAOSS project to recognize open source 
               projects that exemplify best practices for diversity, 
               equity, and inclusion (DEI) work within their 
@@ -14,29 +14,25 @@ const WhatIsDeiBadging = () => {
               CHAOSS DEI metrics as a benchmark to reflect 
               on DEI efforts in an open source project. 
               All CHAOSS DEI metrics are developed in an 
-              open and collaborative setting. More information 
-              about the CHAOSS DEI metrics development process 
-              can be found <a href="##">here</a>..
+              open and collaborative setting. 
         </p>
       </div>
       <div className="objectives">
         <h3>Project Badging Objective</h3>
           <p>
-              The primary objective of the Project Badging
-              Initiative is to enable open source maintainers to signal their
-              ongoing efforts in improving and prioritizing DEI within their
-              communities.
+              The primary objective of CHAOSS DEI Project Badging is to enable open source members to signal their
+              ongoing efforts in improving and prioritizing DEI within their communities.
           </p>
         <ul>
           <li>
-            To assess and address DEI standards in open source projects
+            To assess and address DEI efforts in open source projects
           </li>
           <li>
             Recognize projects and communities for their DEI efforts
           </li>
           <li>
             Enable organizations to make informed decisions and take
-            targeted actions to create a more inclusive and equitable
+            thoughtful actions to create a more inclusive and equitable
             environment
           </li>
         </ul>
