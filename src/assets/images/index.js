@@ -55,7 +55,7 @@ import AZicon from "./icons/AZIcon.svg";
 
 //new
 import chaossLogo from "./logos-new/choass.svg"
-import gitLabLogo from "./icons-new/gitlab.svg"
+import gitLabLogo from "./icons-new/gitlab-logo-100.png"
 import mobileMenuIcon from "./icons-new/menu.svg"
 import githubSponsor from "./icons/github-sponsor.svg"
 
