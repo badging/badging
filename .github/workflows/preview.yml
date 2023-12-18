@@ -5,11 +5,11 @@ on:
     branches:
       - "*"
 env:
-  SUB_DOMAIN: ${{ github.sha }}
+  SUB_DOMAIN: ${{github.head_ref}}
 
 
 jobs:
-  build:
+  preview:
     runs-on: ubuntu-latest
     steps:
       - name: install dependencies and build
@@ -23,3 +23,15 @@ jobs:
           path: './build'
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+
+      - name: comment preview link on PR
+        uses: actions/github-script@v7.0.1
+        with:
+          script: |
+            const subdomain = `${{env.SUB_DOMAIN}}`
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "👋 To see how your changes look like, go to ---> [" + subdomain + ".surge.sh](https://" + subdomain + ".surge.sh)"
+            })
