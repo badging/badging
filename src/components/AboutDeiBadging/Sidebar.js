@@ -16,14 +16,14 @@ const Sidebar = () => {
             end
             onClick={() => setIsActive(1)}
           >
-            What is Project Badging?
+            What is CHAOSS DEI Project Badging?
           </NavLink>
           <img src={arrowRight} alt="arrow" />
         </div>
         {isActive === 1 && (
           <div className="sub__links">
             <NavLink exact="true" to="/about-project-badging">
-              What is DEI Project Badging?
+              Objective
             </NavLink>
           </div>
         )}
@@ -43,7 +43,7 @@ const Sidebar = () => {
         {isActive === 2 && (
           <div className="sub__links">
             <NavLink exact="true" to="/about-project-badging/application-process">
-              Self-Assessment & Documen...
+              Self-Assessment
             </NavLink>
             {/* <NavLink exact="true" to="/about-project-badging/application-process">
               Project Application
