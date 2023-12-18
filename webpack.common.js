@@ -56,7 +56,7 @@ module.exports = {
 				__dirname,
 				"/src/assets/images",
 				"logos",
-				"all-in-chaoss-logo.svg"
+				"chaoss-circle-logo.svg"
 			),
 		}),
 		new SettingsGeneratorPlugin({
