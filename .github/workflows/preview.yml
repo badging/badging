@@ -1,6 +1,9 @@
+name: Deploy for Preview (surge.sh)
+
 on:
-  push:
-    branches: [ main ]
+  pull_request:
+    branches:
+      - "*"
 
 env:
   SUB_DOMAIN: ${{ github.repository}}-${{ github.sha }}
