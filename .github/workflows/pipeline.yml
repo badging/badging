@@ -1,9 +1,6 @@
-name: CI/CD Pipeline
+name: Deploy to Production
 on:
   push:
-    branches:
-      - "*"
-  pull_request:
     branches:
       - main
 jobs:
