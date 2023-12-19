@@ -31,7 +31,6 @@ import goldBadge from "./badges/gold-badge.svg";
 import silverBadge from "./badges/silver-badge.svg";
 import bronzeBadge from "./badges/bronze-badge.svg";
 import platinumBadge from "./badges/platinum-badge.svg";
-import badge from "./badges/badge.svg";
 
 import howItWorksBgMobile from "./others/bg-how-it-works-mobile.svg";
 // import heroImage from "./others/hero-background.svg";
@@ -85,7 +84,6 @@ export {
   DefaultMobileNavIcon,
   OpenMobileNavIcon,
   MobileLogo,
-  badge,
   file,
   fileLink,
   team,
