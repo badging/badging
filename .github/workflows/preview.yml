@@ -15,6 +15,7 @@ jobs:
       - name: install dependencies and build
         uses: actions/checkout@v3
       - run: npm ci && npm run build
+      - run: cp ./build/index.html ./build/200.html
 
       - name: deploying to surge
         uses: mahmoudgalalz/surge-action@v0.1.5
