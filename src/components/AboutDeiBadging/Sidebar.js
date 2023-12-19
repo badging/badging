@@ -22,8 +22,8 @@ const Sidebar = () => {
         </div>
         {isActive === 1 && (
           <div className="sub__links">
-            <NavLink exact="true" to="/project-badging">
-              What is DEI Project Badging?
+            <NavLink exact="true" to="#">
+              Objective
             </NavLink>
           </div>
         )}

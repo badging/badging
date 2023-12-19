@@ -23,12 +23,13 @@ const Nav = () => {
         </ul>
         <img className='mobileNav' onClick={() => setToggleNav(!toggleNav)} src={mobileMenuIcon} alt="logo" />
         {
-          pathname && pathname == '/event-badging' || pathname == '/project-badging' ? (
-            <a href={pathname == '/event-badging'? 'https://chaoss.community/diversity-and-inclusion-badging/': 'badge'} className='apply-btn' target='_blank'>Apply for Badge</a>
-          ): (
-            <div className='hidden-box'></div>
-          )
-        }
+        pathname && (pathname.includes('/event-badging') || pathname.includes('/project-badging')) ? (
+          <a href={pathname.includes('/event-badging') ? 'https://chaoss.community/diversity-and-inclusion-badging/' : 'badge'} className='apply-btn' target='_blank'>Apply for Badge</a>
+        ) : (
+          <div className='hidden-box'></div>
+        )
+      }
+
      </header>
      <div className="mobileNavContainer" style={{display: toggleNav ==true ? '' : 'none'}}>
           <ul className='mobile-list'>
