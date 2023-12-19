@@ -8,11 +8,11 @@ import {
 const DeiBadge = () => {
   return (
     <div className="dei__badges ">
-      <h2 id="dei-badges">DEI Badge Level</h2>
+      <h2 id="dei-badges">CHAOSS DEI Project Badge Levels</h2>
 
       <div className="badges">
-        <img src={bronzeBadge} alt="Bronze badge" />
         {/* commented out for future use */}
+        <img src={bronzeBadge} alt="Bronze badge" />
         {/* <img src={silverBadge} alt="Silver badge" />
         <img src={goldBadge} alt="Gold badge" />
         <img src={platinumBadge} alt="Platinum badge" /> */}
@@ -20,11 +20,10 @@ const DeiBadge = () => {
 
       <div>
         <p>
-          The Project Badging initiative currently offers one badge
-          level: bronze. As the project evolves, it is our intention to include
-          additional CHAOSS metrics in the DEI.md file as indicators of silver,
-          gold, and platinum level badges. The Project Badging
-          process is intended to follow an incremental approach that requires
+          CHAOSS DEI Project Badging  currently offers one badge
+          level: Bronze. As the project evolves, it is our intention to include
+          additional CHAOSS metrics in the DEI.md file as indicators of Silver,
+          Gold, and Platinum level badges. CHAOSS DEI Project Badging is intended to follow an incremental approach that requires
           the presence of one badge to apply for the next and an understanding
           of the criteria associated with each badge level. This will enable
           applicants to showcase their commitment, dedication, and consistent
@@ -39,16 +38,16 @@ const DeiBadge = () => {
           </p>
           <h4>Criteria:</h4>
           <ul>
-            <li>Having a DEI.md file</li>
+            <li>Having a DEI.md file in your project repository</li>
             <li>The presence of required metrics headers in the DEI.md file</li>
             <li>
               The presence of details on how the project attends to the four
               metrics: Project Access, Inclusive Leadership, Communication
-              Transparency, and Newcomer Experience metrics.
+              Transparency, and Newcomer Experiences.
             </li>
           </ul>
           <p>
-            Silver, Gold and Platinum Badges will be coming soon. Please join us
+            Silver, Gold, and Platinum Badges will be coming soon. Please join us
             in our open and collaborative conversations when considering what
             CHAOSS metrics would be best suited as indicators of these badges.
             You can join the CHAOSS project through their{" "}
