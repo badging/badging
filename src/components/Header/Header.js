@@ -18,13 +18,13 @@ const Nav = () => {
         <ul>
           <li><a href="/" className={pathname == '/'? 'activeNav': ''}>Home</a></li>
           <li><a href="/event-badging" className={pathname == '/event-badging'? 'activeNav': ''}>Event Badging</a></li>
-          <li><a href="/project-badging" className={pathname == '/project-badging'? 'activeNav': ''}>Project Badging</a></li>
-          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/project-badging" className={pathname.includes('/project-badging') ? 'activeNav': ''}>Project Badging</a></li>
+          <li><a href="/faq" className={pathname == '/faq'? 'activeNav': ''}>FAQ</a></li>
         </ul>
         <img className='mobileNav' onClick={() => setToggleNav(!toggleNav)} src={mobileMenuIcon} alt="logo" />
         {
         pathname && (pathname.includes('/event-badging') || pathname.includes('/project-badging')) ? (
-          <a href={pathname.includes('/event-badging') ? 'https://chaoss.community/diversity-and-inclusion-badging/' : 'badge'} className='apply-btn' target='_blank'>Apply for Badge</a>
+          <a href={pathname.includes('/event-badging') ? 'https://chaoss.community/diversity-and-inclusion-badging/' : '/badge'} className='apply-btn' target='_blank'>Apply for Badge</a>
         ) : (
           <div className='hidden-box'></div>
         )

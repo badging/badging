@@ -8,7 +8,7 @@ import settings from "../../settings.json";
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
 
-  const baseurl = process.env.API_BASE_URL || "https://badging.chaoss.community/api";
+  const baseurl = settings.API_BASE_URL;
 
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);

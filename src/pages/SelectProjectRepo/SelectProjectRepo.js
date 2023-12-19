@@ -16,7 +16,7 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
-    const url = process.env.API_BASE_URL || "https://badging.chaoss.community/api"
+    const url = settings.API_BASE_URL;
 
     const response = await fetch(
       `${url}/callback/${provider}`,
