@@ -5,7 +5,7 @@ on:
     branches:
       - "*"
 env:
-  SUB_DOMAIN: ${{github.head_ref}}
+  SUB_DOMAIN: ${{github.head_ref}}-chaoss-badging
 
 
 jobs:
