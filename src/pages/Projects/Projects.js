@@ -122,6 +122,11 @@ const swapHandler = (toggle) => {
 
   return (
     <main>
+      <div className='overlay'>
+            <div className='bgRight'></div>
+            <div className='bgCenter'></div>
+            <div className='bgLeft'></div>
+        </div>
       <Header />
       <div className="container jumbotron__container">
       {/* <div className='overlay'>

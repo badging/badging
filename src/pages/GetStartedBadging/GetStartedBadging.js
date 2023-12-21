@@ -12,12 +12,12 @@ const GetStartedBadging = () => {
 
   const handleLoginWithGitHub = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=github`;
+    window.location.href = `${baseurl}/auth/github`;
   };
 
   const handleLoginWithGitLab = () => {
     setOpenLoader(true);
-    window.location.href = `${baseurl}/login?provider=gitlab`;
+    window.location.href = `${baseurl}/auth/gitlab`;
   };
 const title = "Get Started"
   return (
