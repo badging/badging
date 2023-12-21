@@ -1,4 +1,4 @@
-![Bronze Badge](https://github.com/Anita-ihuman/badging/assets/62384659/5be3da84-56f5-40e6-851b-6cd5daa3da7b)# DEI Project Badging
+# DEI Project Badging
 
 ## About DEI Project Badging
 
