@@ -1,4 +1,4 @@
-# DEI Project Badging
+![Bronze Badge](https://github.com/Anita-ihuman/badging/assets/62384659/5be3da84-56f5-40e6-851b-6cd5daa3da7b)# DEI Project Badging
 
 ## About DEI Project Badging
 
@@ -23,10 +23,12 @@ Currently, the DEI Project Badges are available in four levels
 
 | Level    | Badge                                                                                                                | Requirements Met        |
 | -------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Bronze   | ![Bronze-Badge](https://github.com/Anita-ihuman/badging/assets/62384659/804cf75b-0c58-4fef-bf3d-a8d6f88c9f1f) | Presence of DEI.md File |
-| Silver   | ![Silver-Badge](https://github.com/Anita-ihuman/badging/assets/62384659/952bb182-a652-49bc-890a-1c75aab7c8f4) | Coming soon             |
-| Gold     | ![Gold-Badge](https://github.com/Anita-ihuman/badging/assets/62384659/0471a7a5-46c0-4056-ada1-c7ad09f31d55)   | Coming soon             |
-| Platinum | ![Platinum](https://github.com/Anita-ihuman/badging/assets/62384659/9de89540-ae31-4197-91b7-c978fcaac204)     | Coming soon             |
+| Bronze   | ![Bronze Badge](https://github.com/Anita-ihuman/badging/assets/62384659/e238ed36-88a3-4ff7-9cb2-e10084aca30f) | Presence of DEI.md File |
+
+
+
+
+
 
 ## Contributing to this Project
 
@@ -44,3 +46,4 @@ Our heartfelt gratitude to all the maintainers of this project. Thank you for yo
 - [iyimide adegunloye](https://github.com/mide358)
 - [Ruth Ikegah](https://github.com/Ruth-ikegah)
 - [Anita Ihuman](https://github.com/Anita-ihuman)
+- [Kingsley Mkpandiok](https://github.com/iamkingsleey)
