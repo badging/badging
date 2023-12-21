@@ -19,14 +19,11 @@ The DEI project badges help open source project maintainers showcase their ongoi
 
 ## Badging Levels
 
-Currently, the DEI Project Badges are available in four levels
+Currently, the DEI Project Badge is available in one level
 
 | Level    | Badge                                                                                                                | Requirements Met        |
 | -------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------- |
 | Bronze   | ![Bronze Badge](https://github.com/Anita-ihuman/badging/assets/62384659/e238ed36-88a3-4ff7-9cb2-e10084aca30f) | Presence of DEI.md File |
-
-
-
 
 
 
