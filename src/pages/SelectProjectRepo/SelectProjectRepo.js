@@ -9,6 +9,8 @@ import { DataContext } from "../../contexts/DataContext";
 import { useQuery } from "@tanstack/react-query";
 import settings from "../../settings.json";
 
+const url = settings.API_BASE_URL;
+
 const callbackQuery = (provider, code) => ({
   queryKey: ["callback", provider, code],
   queryFn: async () => {
@@ -16,7 +18,6 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
-    const url = settings.API_BASE_URL;
 
     const response = await fetch(
       `${url}/callback/${provider}`,
