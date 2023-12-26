@@ -4,40 +4,39 @@
   color: #000;
   height: 50vh;
   padding-top: 3rem;
-    h1 {
-      margin-bottom: 20px;
-    }
+  h1 {
+    margin-bottom: 20px;
+  }
 
-    .section-list {
-      li {
-        list-style-type: styleL;
-        margin-top: 10px; 
-        margin-left: 2rem;
+  .section-list {
+    li {
+      list-style-type: styleL;
+      margin-top: 10px;
+      margin-left: 2rem;
     }
-    }
-    .login {
-      // background-color: red;
-      width: 100%;
-      display: flex;
-      gap: 10px;
-      margin-top: 2rem;
+  }
+  .login {
+    // background-color: red;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
 
-      button {
-        // font-size: 16px;
-        padding: 15px 4rem;
-        border-radius: 10px;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-       
-      }
-      .github {
-        background-color:#222D33;
-      }
-      .gitlab {
-        background-color:#D61B5E;
-      }
+    button {
+      // font-size: 16px;
+      padding: 15px 4rem;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
     }
+    .github {
+      background-color: #222d33;
+    }
+    .gitlab {
+      background-color: #d61b5e;
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {

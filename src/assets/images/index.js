@@ -53,13 +53,10 @@ import DateIcon from "./icons/DateIcon.svg";
 import AZicon from "./icons/AZIcon.svg";
 
 //new
-import chaossLogo from "./logos-new/choass.svg"
-import gitLabLogo from "./icons-new/gitlab-logo-100.png"
-import mobileMenuIcon from "./icons-new/menu.svg"
-import githubSponsor from "./icons/github-sponsor.svg"
-
-
-
+import chaossLogo from "./logos-new/choass.svg";
+import gitLabLogo from "./icons-new/gitlab-logo-100.png";
+import mobileMenuIcon from "./icons-new/menu.svg";
+import githubSponsor from "./icons/github-sponsor.svg";
 
 export {
   badgingLogo,
@@ -109,8 +106,8 @@ export {
   faqBgMobile,
   heroSectionBgWeb,
   heroSectionBgMobile,
-
-
-
-  chaossLogo, gitLabLogo, mobileMenuIcon, githubSponsor
+  chaossLogo,
+  gitLabLogo,
+  mobileMenuIcon,
+  githubSponsor,
 };

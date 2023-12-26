@@ -7,7 +7,6 @@ on:
 env:
   SUB_DOMAIN: ${{github.head_ref}}-chaoss-badging
 
-
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -20,8 +19,8 @@ jobs:
       - name: deploying to surge
         uses: mahmoudgalalz/surge-action@v0.1.5
         with:
-          domain: '${{env.SUB_DOMAIN}}.surge.sh'
-          path: './build'
+          domain: "${{env.SUB_DOMAIN}}.surge.sh"
+          path: "./build"
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
 

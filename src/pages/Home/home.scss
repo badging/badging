@@ -1,10 +1,18 @@
 @import "../../assets/styles/variables";
 
-body{
+body {
   background-color: #fff !important;
 }
 
-li, a, p, h1, h2, h3, h4, h5, h6{
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #000;
 }
 
@@ -13,7 +21,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   // position: relative;
   // width: 100%;
 }
- 
+
 .overlay {
   // background-color: #000;
   height: 100%;
@@ -23,18 +31,25 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   overflow: hidden;
   .bgLeft {
     width: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 107, 160, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 107, 160, 0.3) 0%,
+      rgba(255, 255, 255, 0) 62.81%
+    );
     height: 100%;
     position: absolute;
     right: -15rem;
     overflow: hidden;
     top: 2rem;
-    
   }
 
   .bgRight {
     width: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(94, 184, 148, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);   
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(94, 184, 148, 0.3) 0%,
+      rgba(255, 255, 255, 0) 62.81%
+    );
     height: 100%;
     position: absolute;
     left: -15rem;
@@ -44,7 +59,11 @@ li, a, p, h1, h2, h3, h4, h5, h6{
 
   .bgCenter {
     width: 100%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(98, 203, 251, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(98, 203, 251, 0.3) 0%,
+      rgba(255, 255, 255, 0) 62.81%
+    );
     height: 100%;
     position: absolute;
     top: -12rem;
@@ -61,10 +80,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   text-align: center;
   position: relative;
 
-// filter: blur(5px);
- 
-
- 
+  // filter: blur(5px);
 
   h1 {
     font-size: 40px;
@@ -80,7 +96,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     p {
       line-height: 30px;
     }
-    
   }
 
   .sponsors {
@@ -92,7 +107,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     gap: 10rem;
     flex-wrap: wrap;
     margin-top: 5rem;
-    
+
     .s-list {
       display: flex;
       align-items: center;
@@ -100,7 +115,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
       gap: 5px;
 
       p {
-        color: #1C1C1C;
+        color: #1c1c1c;
         font-weight: bold;
       }
     }
@@ -119,11 +134,9 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   }
 }
 
-
 @media screen and (max-width: 700px) {
   .hero {
     // height: auto !important;
-    
   }
   .hero-header {
     h1 {
@@ -135,7 +148,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
       text-align: left !important;
     }
   }
-  .sponsors  {
+  .sponsors {
     gap: 30px !important;
     padding: 0 10px !important;
     justify-content: flex-start !important;
@@ -144,13 +157,11 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     width: 100%;
     .s-list {
       text-align: left !important;
-
     }
     .sponsors-logo {
       gap: 20px !important;
       margin-top: 10px !important;
       justify-content: start;
     }
-    
   }
 }

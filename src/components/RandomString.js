@@ -1,5 +1,3 @@
-import React from "react";
-
 function RandomString() {
   const generateRandomString = (length = 7) => {
     const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

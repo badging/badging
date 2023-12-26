@@ -1,7 +1,6 @@
 import "./about.scss";
 import "../../assets/styles/global.scss";
-import { Footer, Header, Sidebar, AboutDeiMobile } from "..";
-import { curlyBraces } from "../../assets/images";
+import { Sidebar, AboutDeiMobile } from "..";
 import { useDesktop } from "../../contexts/DesktopContext";
 import { Outlet } from "react-router-dom";
 
@@ -10,13 +9,6 @@ const AboutNew = () => {
 
   return (
     <div className="about-dei">
-      {/* <div className="header">
-        <Header />
-        <div className="container jumbotron__container">
-          <img src={curlyBraces} alt="badging-logo" />
-          <h1>About CHAOSS DEI Project Badging</h1>
-        </div>
-      </div> */}
       <main className="container">
         <div className="main__container">
           {isDesktop && (
@@ -36,7 +28,6 @@ const AboutNew = () => {
           )}
         </div>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };

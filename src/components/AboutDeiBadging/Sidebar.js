@@ -9,7 +9,7 @@ const Sidebar = () => {
     <ul>
       <li>
         <div className="main__link linkGap">
-          <NavLink 
+          <NavLink
             exact="true"
             to="/project-badging"
             id="what-is-dei-badging"

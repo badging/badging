@@ -6,10 +6,10 @@ import {
   getBadgedMobile,
 } from "../../assets/images";
 
-import settings from '../../settings.json';
+import settings from "../../settings.json";
 
-import '../../assets/styles/global.scss';
-import './LatestBadging.scss';
+import "../../assets/styles/global.scss";
+import "./LatestBadging.scss";
 
 const LatestBadgingSample = () => {
   const baseurl = settings.API_BASE_URL;

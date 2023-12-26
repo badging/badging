@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import {
   Home,
-  About,
   Projects,
   GetStartedBadging,
   SelectProjectRepo,
@@ -56,7 +55,10 @@ const App = () => {
                   element={<ApplicationProcess />}
                 />
                 <Route path="/project-badging/dei-file" element={<DeiFile />} />
-                <Route path="/project-badging/dei-badge" element={<DeiBadge />} />
+                <Route
+                  path="/project-badging/dei-badge"
+                  element={<DeiBadge />}
+                />
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />

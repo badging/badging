@@ -5,7 +5,7 @@ import "./ProjectBadgingSuccess.scss";
 
 const ProjectBadgingSuccess = () => {
   const location = useLocation();
-  const { state } = location
+  const { state } = location;
   return (
     <div>
       <Header />
@@ -73,13 +73,15 @@ const ProjectBadgingSuccess = () => {
               <p>Kindly check your email {state?.email}.</p>
             </div>
           </div>
-          <div className='badge-more'>
-                <div className="item">
-                  <Link to={`/select-project/${state?.provider}`}>Badge more repos</Link>
-                </div>
-              </div>
-              </div>
-        </main>
+          <div className="badge-more">
+            <div className="item">
+              <Link to={`/select-project/${state?.provider}`}>
+                Badge more repos
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };

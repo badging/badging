@@ -1,10 +1,10 @@
 @import "../../assets/styles/variables.scss";
 
 main {
-//   width: 100%;
-//   max-width: 1440px;
+  //   width: 100%;
+  //   max-width: 1440px;
   margin: auto;
-  
+
   .overlay {
     // background-color: #000;
     height: 100%;
@@ -12,31 +12,42 @@ main {
     z-index: -1;
     position: absolute;
     overflow: hidden;
-   
+
     .bgLeft {
       width: 50%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 107, 160, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 107, 160, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       right: -10rem;
       overflow: hidden;
       top: -7rem;
-      
     }
-  
+
     .bgRight {
       width: 50%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(94, 184, 148, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);   
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(94, 184, 148, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       left: -10rem;
       top: -7rem;
       // overflow: hidden;
     }
-  
+
     .bgCenter {
       width: 100%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(98, 203, 251, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(98, 203, 251, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       top: -8rem;
@@ -51,9 +62,9 @@ main {
   height: 400px;
   margin: auto;
   max-width: 1440px;
-  border-bottom: 1px solid #ADCFF8;
+  border-bottom: 1px solid #adcff8;
   position: relative;
-  
+
   h1 {
     margin-top: 5rem;
     font-size: 3.375rem;
@@ -71,10 +82,11 @@ main {
     transition: transform 0.3s ease;
     // display: flex;
 
-    button, a {
+    button,
+    a {
       padding: 10px 30px;
       border-radius: 8px 8px 0px 0px;
-      border: 1px solid #ADCFF8;
+      border: 1px solid #adcff8;
       background-color: #fff;
       color: #000;
       font-size: 15px;
@@ -82,195 +94,182 @@ main {
       transition: background-color 0.3s ease;
       margin-left: 5px;
 
-    //   &:hover {
-    //     background-color: #D61B5E;
-    //     color: #fff;
-    //   }
+      //   &:hover {
+      //     background-color: #D61B5E;
+      //     color: #fff;
+      //   }
     }
     .buttonActive {
       background-color: #000;
       color: #fff;
     }
-   
   }
-
-  
 }
 
 .main-event {
-    margin-top: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  color: #000 !important;
+  gap: 5rem;
+  margin-bottom: 5rem;
+
+  .main-list {
     display: flex;
-    color: #000 !important;
-    gap: 5rem;
-    margin-bottom: 5rem;
-    
-    
-    .main-list {
-        display: flex;
-        gap: 20px;
-        flex-direction: column;
-        height: 50vh;
-        
-        li {
-            font-size: 17px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+    gap: 20px;
+    flex-direction: column;
+    height: 50vh;
 
-            &:hover {
-                color: #D61B5E;
-            }
-           
-        }
-        .aboutEventHeader {
-            color: #D61B5E;
+    li {
+      font-size: 17px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-        }
+      &:hover {
+        color: #d61b5e;
+      }
     }
-    
+    .aboutEventHeader {
+      color: #d61b5e;
+    }
+  }
 
-    .desc-group {
-       .showDesc {
-        display: block;
-        
-        .info {
-            max-width: 700px;
+  .desc-group {
+    .showDesc {
+      display: block;
+
+      .info {
+        max-width: 700px;
+        margin: 0px !important;
+        .about-parag {
+          .pTitle {
+            font-weight: bold;
             margin: 0px !important;
-            .about-parag {
+          }
+          .a-line {
+            color: blue;
+            text-decoration-line: underline;
+          }
+          .bullet-list {
+            margin-left: 3rem;
+            margin-bottom: 1rem;
 
-              .pTitle {
-                font-weight: bold;
-                margin: 0px !important;
-              }
-              .a-line {
-                color: blue;
-                text-decoration-line: underline;
+            li {
+              list-style-type: disc;
+              margin-top: 10px;
             }
-              .bullet-list {
-                margin-left: 3rem;
-                margin-bottom: 1rem;
-                
-                li {
-                    list-style-type: disc;
-                    margin-top: 10px;
-                }
-                
-            }
-            }
-            h1 {
-                margin-bottom: 20px;
-                font-size: 32px;
-            }
-            p {
-                margin-bottom: 1.5rem;
-                font-size: 16px;
-                line-height: 180%
-            }
-
-            .des-bullets {
-
-                .Smalltitle {
-                    font-size: 22px;
-                    color: #000 !important;
-                    font-weight: bold;
-                    margin: 0;
-                    margin-top: 20px;
-                }
-                .Dtitle {
-                    font-size: 18px;
-                    color: #000 !important;
-                    font-weight: bold;
-                    margin: 0;
-                    margin-bottom: 10px;
-                }
-                .bullet-list {
-                    margin-left: 3rem;
-                    margin-bottom: 1rem;
-                    
-                    li {
-                        list-style-type: disc;
-                        margin-top: 10px;
-                    }
-                    .a-line {
-                        color: blue;
-                        text-decoration-line: underline;
-                    }
-                }
-                .num {
-                    li {
-                        list-style-type: styleL;
-                        margin-top: 10px; 
-                    }
-                }
-            }
-            
+          }
         }
-       }
-       .hideDesc {
-        display: none;
-       }
+        h1 {
+          margin-bottom: 20px;
+          font-size: 32px;
+        }
+        p {
+          margin-bottom: 1.5rem;
+          font-size: 16px;
+          line-height: 180%;
+        }
+
+        .des-bullets {
+          .Smalltitle {
+            font-size: 22px;
+            color: #000 !important;
+            font-weight: bold;
+            margin: 0;
+            margin-top: 20px;
+          }
+          .Dtitle {
+            font-size: 18px;
+            color: #000 !important;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+          .bullet-list {
+            margin-left: 3rem;
+            margin-bottom: 1rem;
+
+            li {
+              list-style-type: disc;
+              margin-top: 10px;
+            }
+            .a-line {
+              color: blue;
+              text-decoration-line: underline;
+            }
+          }
+          .num {
+            li {
+              list-style-type: styleL;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
     }
+    .hideDesc {
+      display: none;
+    }
+  }
 }
-
-
 
 @media screen and (max-width: 700px) {
-    .jumbotron__container {
-      padding: 0 10px !important;
-      h1 {
-        font-size: 2.375rem;
-        margin-top: 3rem;
-      }
-  
-      .about-project {
-        button, a {
-          padding: 7px 12px;
-          font-size: 12px;
-        }
-      }
-    }
-    .container {
-        padding: 10px !important;
-    }
-
-    // .main-event {
-    //     gap: 1rem !important;
-
-    // }
-    .main-event {
-        .main-list {
-            height: auto !important;
-        }
-    }
-}
-
-@media screen and (max-width: 610px) {
-    .main-event {
-        gap: 2rem !important;
-        flex-direction: column;
-        // margin: 0 !important;
-        margin-top: 1.5rem !important;
-        
-        .main-list {
-            gap: 10px !important;
-            li {
-                gap: 5px !important;
-            }
-        }
-    }
-    .des-bullets {
-
-        .bullet-list {
-            margin-left: 2rem !important;
-        }
+  .jumbotron__container {
+    padding: 0 10px !important;
+    h1 {
+      font-size: 2.375rem;
+      margin-top: 3rem;
     }
 
     .about-project {
-        button, a {
-          padding: 5px 8px;
-          font-size: 12px;
-        }
+      button,
+      a {
+        padding: 7px 12px;
+        font-size: 12px;
       }
-      
+    }
+  }
+  .container {
+    padding: 10px !important;
+  }
+
+  // .main-event {
+  //     gap: 1rem !important;
+
+  // }
+  .main-event {
+    .main-list {
+      height: auto !important;
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .main-event {
+    gap: 2rem !important;
+    flex-direction: column;
+    // margin: 0 !important;
+    margin-top: 1.5rem !important;
+
+    .main-list {
+      gap: 10px !important;
+      li {
+        gap: 5px !important;
+      }
+    }
+  }
+  .des-bullets {
+    .bullet-list {
+      margin-left: 2rem !important;
+    }
+  }
+
+  .about-project {
+    button,
+    a {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+  }
 }

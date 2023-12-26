@@ -3,7 +3,13 @@ import "./selectProjectRepo.scss";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import { SearchBar, SelectedProjects, Layout, Loader, Jumbotron, Footer } from "../../components";
+import {
+  SearchBar,
+  SelectedProjects,
+  Loader,
+  Jumbotron,
+  Footer,
+} from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
 import { useQuery } from "@tanstack/react-query";
@@ -18,17 +24,13 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
-
-    const response = await fetch(
-      `${url}/callback/${provider}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code }),
-      }
-    );
+    const response = await fetch(`${url}/callback/${provider}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ code }),
+    });
 
     return await response.json();
   },
@@ -73,7 +75,13 @@ const SelectProjectRepo = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userId, name, email, repos: reposToBadge, provider }),
+      body: JSON.stringify({
+        userId,
+        name,
+        email,
+        repos: reposToBadge,
+        provider,
+      }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
@@ -89,7 +97,7 @@ const SelectProjectRepo = () => {
         setOpenLoaderLight(false);
       });
   };
-const title = "Get Started"
+  const title = "Get Started";
   return (
     <div>
       <Jumbotron title={title} />
@@ -110,14 +118,13 @@ const title = "Get Started"
           )}
           <div className="select-header">
             <h2>Search For Project Repository</h2>
-          <p className="text">
-            <strong>Note: </strong>The selected repository must have the
-            presence of a DEI.md file.
-          </p>
+            <p className="text">
+              <strong>Note: </strong>The selected repository must have the
+              presence of a DEI.md file.
+            </p>
           </div>
-          
+
           <SearchBar setShowInfo={setShowInfo} />
-          {/* {error && !reposToBadge && <p className="error">{error}</p>} */}
           {reposToBadge.length > 0 && (
             <div className="search__results">
               <h3>SEARCH RESULT</h3>
@@ -128,8 +135,6 @@ const title = "Get Started"
               <SelectedProjects />
             </div>
           )}
-
-          
 
           <button
             type="button"
