@@ -1,15 +1,15 @@
-import "../../assets/styles/global.scss";
-import "./home.scss";
+import '../../assets/styles/global.scss';
+import './home.scss';
 import {
   Footer,
   Header,
   // Faq,
   CardComponent,
   CardCarousel,
-} from "../../components";
+} from '../../components';
 
 // import { faqData } from '../../components/Faq/data';
-import { howItWorksData } from "./data";
+import { howItWorksData } from './data';
 import {
   howItWorksBgMobile,
   howItWorksBgWeb,
@@ -17,9 +17,9 @@ import {
   // faqBgMobile,
   heroSectionBgWeb,
   heroSectionBgMobile,
-} from "../../assets/images";
+} from '../../assets/images';
 // import zIndex from '@mui/material/styles/zIndex';
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive';
 
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 650 });
@@ -27,10 +27,10 @@ const Home = () => {
     backgroundImage: `url(${
       isMobile ? heroSectionBgMobile : heroSectionBgWeb
     })`,
-    height: "100%",
-    backgroundPosition: "center top",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
+    height: '100%',
+    backgroundPosition: 'center top',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
   };
   return (
     <div>
@@ -93,8 +93,8 @@ const Home = () => {
         hello
       </div> */}
 
-      {/* FAQ SECTION */}
-      {/* <section
+      {/* FAQ SECTION
+      <section
         className="container"
         style={{
           background: `url(${!isMobile && faqBgWeb}) center top no-repeat`,
@@ -111,8 +111,9 @@ const Home = () => {
             return <Faq key={id} question={question} answer={answer} />;
           })}
         </div>
-      </section> */}
-      {/* <hr className="reed" /> */}
+      </section>
+      */}
+      <hr className="reed" />
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import {
   Home,
   About,
@@ -8,16 +8,19 @@ import {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
-} from "./pages";
+  FaqPage,
+  ProjectFaq,
+} from './pages';
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from "./components";
-import { DataProvider } from "./contexts/DataContext";
-import { DesktopProvider } from "./contexts/DesktopContext";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+} from './components';
+import { DataProvider } from './contexts/DataContext';
+import { DesktopProvider } from './contexts/DesktopContext';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Accordion from './pages/Accordion/Accordion';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -52,7 +55,10 @@ const App = () => {
                 path="/select-project/:provider"
                 element={<SelectProjectRepo />}
               />
+              <Route exact path="/accordion" element={<Accordion />} />
               <Route exact path="/projects" element={<Projects />} />
+              <Route exact path="/faq" element={<FaqPage />} />
+              <Route exact path="/projectfaq" element={<ProjectFaq />} />
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route
                 exact

@@ -1,88 +1,92 @@
 /* ==================== START IMPORT FONTS ======================= */
 @font-face {
-  font-family: "Theinhardt";
-  src: url("../fonts/Theinhardt/Theinhardt-Light.otf") format("opentype");
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Light.otf') format('opentype');
   font-style: normal;
   font-weight: lighter;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Theinhardt";
-  src: url("../fonts/Theinhardt/Theinhardt-Regular.otf") format("opentype");
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Theinhardt";
-  src: url("../fonts/Theinhardt/TheinhardtMed.otf") format("opentype");
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/TheinhardtMed.otf') format('opentype');
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Theinhardt";
-  src: url("../fonts/Theinhardt/Theinhardt-Bold.otf") format("opentype");
+  font-family: 'Theinhardt';
+  src: url('../fonts/Theinhardt/Theinhardt-Bold.otf') format('opentype');
   font-style: normal;
   font-weight: bolder;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf")
-    format("truetype");
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf')
+    format('truetype');
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Medium.ttf")
-    format("truetype");
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Medium.ttf')
+    format('truetype');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Bold.ttf")
-    format("truetype");
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-Bold.ttf')
+    format('truetype');
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-1.0.0/JetBrainsMono-ExtraBold.ttf")
-    format("truetype");
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-1.0.0/JetBrainsMono-ExtraBold.ttf')
+    format('truetype');
   font-style: normal;
   font-weight: bolder;
   font-display: swap;
 }
 
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap';
+
 /* ==================== END IMPORT FONTS ======================= */
 
-$font-family_1: "JetBrains Mono";
-$font-family_2: "Theinhardt", sans-serif;
+$font-family_1: 'JetBrains Mono';
+$font-family_2: 'Theinhardt', sans-serif;
+$font-family_3: 'Inter', sans-serif;
+
 $sectionTitleBackground: radial-gradient(
   34.77% 34.77% at 50% 50%,
   rgba(29, 232, 98, 0.2) 0%,
   rgba(29, 232, 98, 0) 100%
 );
-$primaryTextColor: #fff;
+$primaryTextColor: #222d33;
 $textColor2: #24292e;
 $textColor3: #000000;
 $textColor4: #030303;
 $headingColor: #030303;
 $secondaryTextColor: #858c90;
-$primaryBackgroundColor: #000;
+$primaryBackgroundColor: #fff;
 $primaryBorderColor: #454c53;
 $borderColor2: #bebebe;
 $borderColor3: #222d33;

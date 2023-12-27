@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../../assets/styles/global.scss";
-import "./header.scss";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../assets/styles/global.scss';
+import './header.scss';
 
 import {
   DefaultMobileNavIcon,
   OpenMobileNavIcon,
   badgingLogo,
   badgingLogoMobile,
-} from "../../assets/images";
-import { useMediaQuery } from "react-responsive";
-import ActiveNav from "../ActiveNav/ActiveNav";
+} from '../../assets/images';
+import { useMediaQuery } from 'react-responsive';
+import ActiveNav from '../ActiveNav/ActiveNav';
 // import { Home } from '@mui/icons-material';
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 const Header = () => {
   // eslint-disable-next-line no-unused-vars
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -33,21 +33,24 @@ const Header = () => {
         </Link>
         <div className="web">
           <Link to="/" className="nav-link nav-web">
-            {pathname === "/" ? <ActiveNav pathname={`Home`} /> : "Home"}
+            {pathname === '/' ? <ActiveNav pathname={`Home`} /> : 'Home'}
           </Link>
           <Link to="/about" className="nav-link nav-web">
-            {pathname === "/about" ? (
+            {pathname === '/about' ? (
               <ActiveNav pathname={`AboutDEIBadging`} />
             ) : (
-              "AboutDEIBadging"
+              'AboutDEIBadging'
             )}
           </Link>
           <Link to="/projects" className="nav-link nav-web">
-            {pathname === "/projects" ? (
+            {pathname === '/projects' ? (
               <ActiveNav pathname={`Projects`} />
             ) : (
-              "Projects"
+              'Projects'
             )}
+          </Link>
+          <Link to="/faq" className="nav-link nav-web">
+            {pathname === '/faq' ? <ActiveNav pathname={`FAQ`} /> : 'FAQ'}
           </Link>
         </div>
         <Link className="get-started" to="/badge">
@@ -59,7 +62,7 @@ const Header = () => {
             height="14"
             viewBox="0 0 18 14"
             fill="none"
-            style={{ marginLeft: "20px" }}
+            style={{ marginLeft: '20px' }}
           >
             <path
               fillRule="evenodd"
@@ -99,12 +102,12 @@ const Header = () => {
             </Link>
           </div>
           <Link className="get-started-mobile" to="/badge">
-            {" "}
+            {' '}
             Get Started
           </Link>
         </div>
       ) : (
-        ""
+        ''
       )}
     </header>
   );
