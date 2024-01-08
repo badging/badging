@@ -33,8 +33,7 @@ const title = "Get Started"
               A repository is required within which to put the DEI.md file
             </li>
             <li>
-              The person applying for the badge must be a project admin or
-              maintainer
+              The person applying for the badge must be a project owner
             </li>
 
             <li>The Project must be Open Source</li>
@@ -82,8 +81,7 @@ const title = "Get Started"
               A repository is required within which to put the DEI.md file
             </li>
             <li>
-              The person applying for the badge must be a project admin or
-              maintainer
+              The person applying for the badge must be a project owner 
             </li>
 
             <li>The Project must be Open Source</li>
