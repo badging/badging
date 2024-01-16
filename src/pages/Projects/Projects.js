@@ -148,7 +148,7 @@ const swapHandler = (toggle) => {
           swap && swap == 'project' ? (
             <>
             <p className="projectIntro container">
-        The All in CHAOSS Badging project is helping open source 
+        CHAOSS Project Badging is helping open source 
         communities prioritize diversity, equity, and inclusion.
          Using the CHAOSS DEI metrics as an industry benchmark, we are 
          creating more inclusive and welcoming open-source environments for all. 
