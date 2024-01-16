@@ -22,9 +22,8 @@ const ApplicationProcess = () => {
         <h3>Badging Application:</h3>
         <p>
           Once the DEI.md file is published and publicly available, project
-          maintainers can proceed to <a href="https://badging.chaoss.community/badge">apply here</a>. The applicant must be an administrator
-          or maintainer of the project, and the repository that holds the DEI.md
-          file must be specified.
+          owners can proceed to <a href="https://badging.chaoss.community/badge">apply here</a>. The applicant must be a project owner and
+          the repository that holds the DEI.md file must be specified.
         </p>
       </div>
       <div>
