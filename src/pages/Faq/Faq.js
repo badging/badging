@@ -37,6 +37,11 @@ const Faq = () => {
             "id": 4,
             "title": "If my event happens every year, can I use the badge from past events?",
             "description": "No. We ask that you submit a new application for every separate event. We will occasionally be changing the metrics used in the application, and in some cases, there will be different questions on the application from year to year."
+        },
+        {
+            "id": 5,
+            "title": "Where can I ask questions about Event Badging?",
+            "description": "If you have quesitons about Event Badging, please either [open an issue in our badging repo](https://github.com/badging/badging) or reach on the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg)"
         }
     ]
 
@@ -55,6 +60,16 @@ const Faq = () => {
             "id":3,
             "title" : "How frequently can I apply for a badge?",
             "description" : "You can apply for the project badge for any open-source project or organization annually."
+        },
+        {
+            "id": 4,
+            "title": "Where can I ask questions about Project Badging?",
+            "description": "If you have quesitons about Project Badging, please either [open an issue in our badging repo](https://github.com/badging/badging) or reach on the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg)"
+        },
+        {
+            "id": 5,
+            "title": "What if I'm not seeing my repository when applying for a badge?",
+            "description": "If you aren't seeing your repository during the application process, try clearning out your cache or trying a different browser. If that doesn't help [open an issue in our badging repo](https://github.com/badging/badging) or reach on the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg)"
         }
     ]
 
