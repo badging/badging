@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" width="48px" height="48px" fill="none">
+<path transform="translate(10, 9)" d="M17.5,14L17.5,14c-1.381,0-2.5-1.119-2.5-2.5v-6C15,4.119,16.119,3,17.5,3h0C18.881,3,20,4.119,20,5.5v6C20,12.881,18.881,14,17.5,14z" fill="white"/>
+<path transform="translate(10, 9)" d="M23.5,9c-1.381,0-2.5,1.119-2.5,2.5V14h2.5c1.381,0,2.5-1.119,2.5-2.5C26,10.119,24.881,9,23.5,9z" fill="white"/>
+<path transform="translate(10, 9)" d="M15,17.5L15,17.5c0-1.381,1.119-2.5,2.5-2.5h6c1.381,0,2.5,1.119,2.5,2.5v0c0,1.381-1.119,2.5-2.5,2.5h-6C16.119,20,15,18.881,15,17.5z" fill="white"/>
+<path transform="translate(10, 9)" d="M20,23.5c0-1.381-1.119-2.5-2.5-2.5H15v2.5c0,1.381,1.119,2.5,2.5,2.5C18.881,26,20,24.881,20,23.5z" fill="white"/>
+<path transform="translate(10, 9)" d="M11.5,15L11.5,15c1.381,0,2.5,1.119,2.5,2.5v6c0,1.381-1.119,2.5-2.5,2.5h0C10.119,26,9,24.881,9,23.5v-6C9,16.119,10.119,15,11.5,15z" fill="white"/>
+<path transform="translate(10, 9)" d="M5.5,20C6.881,20,8,18.881,8,17.5V15H5.5C4.119,15,3,16.119,3,17.5C3,18.881,4.119,20,5.5,20z" fill="white"/>
+<path transform="translate(10, 9)" d="M14,11.5L14,11.5c0,1.381-1.119,2.5-2.5,2.5h-6C4.119,14,3,12.881,3,11.5v0C3,10.119,4.119,9,5.5,9h6C12.881,9,14,10.119,14,11.5z" fill="white"/>
+<path transform="translate(10, 9)" d="M9,5.5C9,6.881,10.119,8,11.5,8H14V5.5C14,4.119,12.881,3,11.5,3C10.119,3,9,4.119,9,5.5z" fill="white"/>
+<rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#444444"/>
+</svg>
