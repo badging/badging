@@ -22,7 +22,7 @@
       gap: 10px;
       margin-top: 2rem;
 
-      button {
+      button, a {
         // font-size: 16px;
         padding: 15px 4rem;
         border-radius: 10px;
@@ -31,18 +31,25 @@
         cursor: pointer;
        
       }
-      .github {
+      .github, .self__hosted {
         background-color:#222D33;
       }
       .gitlab {
         background-color:#D61B5E;
+      }
+      .self__hosted {
+        text-align: center;
+        font-size: 0.83rem;
       }
     }
 }
 
 @media screen and (max-width: 700px) {
   .badge {
-    height: 50vh;
+    .login {
+      flex-wrap: wrap;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,8 +60,7 @@
 @media screen and (max-width: 500px) {
   .badge {
     .login {
-      flex-wrap: wrap;
-      button {
+      button, a {
         // font-size: 16px;
         padding: 20px 3rem !important;
       }
@@ -63,9 +69,11 @@
 }
 @media screen and (max-width: 430px) {
   .badge {
+    min-height: 50vh;
+    height: fit-content;
+
     .login {
-      flex-wrap: wrap;
-      button {
+      button, a {
         // font-size: 16px;
         padding: 8px 15px !important;
       }
