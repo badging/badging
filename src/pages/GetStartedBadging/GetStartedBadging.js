@@ -20,7 +20,7 @@ const GetStartedBadging = () => {
     window.location.href = `${baseurl}/auth/gitlab`;
   };
 
-const title = "Get Started"
+  const title = "Get Started";
   return (
     <section>
       <Jumbotron title={title} />
@@ -78,22 +78,42 @@ const title = "Get Started"
         <h1>Prerequisite</h1>
 
         <ul className="section-list">
-            <li>
-              A repository is required within which to put the DEI.md file
-            </li>
-            <li>
-              The person applying for the badge must be a project owner 
-            </li>
+          <li>A repository is required within which to put the DEI.md file</li>
+          <li>The person applying for the badge must be a project owner</li>
 
-            <li>The Project must be Open Source</li>
-            <li>Ensure you have your DEI.md File</li>
-          </ul>
+          <li>The Project must be Open Source</li>
+          <li>Ensure you have your DEI.md File</li>
+        </ul>
 
-          <div className="login">
-            <button className="github" type="button" onClick={handleLoginWithGitHub}>Login with GitHub</button>
-            <button className="gitlab" type="button" onClick={handleLoginWithGitLab}>Login with GitLab</button>
-            <a className="self__hosted" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdoKt4K8L_LuuZ-0xaUd1ZL8JrIZ5dGt20XAFP7x2SfkAASdw/viewform">Login for Self-hosted projects</a>
-          </div>
+        <div className="login">
+          <button
+            className="github"
+            type="button"
+            onClick={handleLoginWithGitHub}
+          >
+            Login with GitHub
+          </button>
+          <button
+            className="gitlab"
+            type="button"
+            onClick={handleLoginWithGitLab}
+          >
+            Login with GitLab
+          </button>
+          <p className="self__hosted__info">
+            Please use this{" "}
+            <a
+              className="self__hosted"
+              target="_blank"
+              rel="noreferrer"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdoKt4K8L_LuuZ-0xaUd1ZL8JrIZ5dGt20XAFP7x2SfkAASdw/viewform"
+            >
+              form
+            </a>{" "}
+            if you are applying for a CHAOSS DEI Project Badge when using
+            self-hosted software development and version control solutions
+          </p>
+        </div>
       </div>
       <Loader open={openLoader}>
         <p>Redirecting to Authentication</p>

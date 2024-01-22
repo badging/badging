@@ -21,8 +21,9 @@
       display: flex;
       gap: 10px;
       margin-top: 2rem;
+      flex-wrap: wrap;
 
-      button, a {
+      button {
         // font-size: 16px;
         padding: 15px 4rem;
         border-radius: 10px;
@@ -31,15 +32,20 @@
         cursor: pointer;
        
       }
-      .github, .self__hosted {
+      .github {
         background-color:#222D33;
       }
       .gitlab {
         background-color:#D61B5E;
       }
-      .self__hosted {
-        text-align: center;
-        font-size: 0.83rem;
+
+      .self__hosted__info{
+        flex-basis: 100%;
+        margin-top: 1rem;
+
+        a {
+          color: #D61B5E;
+        }
       }
     }
 }
