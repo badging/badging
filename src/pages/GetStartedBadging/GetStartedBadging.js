@@ -19,6 +19,7 @@ const GetStartedBadging = () => {
     setOpenLoader(true);
     window.location.href = `${baseurl}/auth/gitlab`;
   };
+
 const title = "Get Started"
   return (
     <section>
@@ -91,6 +92,7 @@ const title = "Get Started"
           <div className="login">
             <button className="github" type="button" onClick={handleLoginWithGitHub}>Login with GitHub</button>
             <button className="gitlab" type="button" onClick={handleLoginWithGitLab}>Login with GitLab</button>
+            <a className="self__hosted" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdoKt4K8L_LuuZ-0xaUd1ZL8JrIZ5dGt20XAFP7x2SfkAASdw/viewform">Login for Self-hosted projects</a>
           </div>
       </div>
       <Loader open={openLoader}>

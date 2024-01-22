@@ -25,7 +25,9 @@
         .mainFaq {
             cursor: pointer;
             max-width: 100%;
+            
             .faqTitle {
+                display: block;
                 background-color: skyblue;
                 width: 100%;
                 padding: 24.508px 43.463px 18.492px 46.395px;
@@ -55,6 +57,10 @@
                     color: #222D33;
                     line-height: 150%; /* 24px */
                     letter-spacing: 0.32px;
+
+                    a{
+                        color: #D61B5E;
+                    }
                 }
                 .faq-info-title {
                     font-size: 20px;
