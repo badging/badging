@@ -29,13 +29,13 @@ import settings from '../../settings.json';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: "#1C1C1C",
+    backgroundColor: "#ffffff",
     color: theme.palette.common.white,
     borderBottom: "1px solid #030303",
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-    backgroundColor: "#131314",
+    backgroundColor: "#ffffff",
     color: theme.palette.common.white,
   },
 }));
@@ -54,8 +54,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const StyledTablePagination = styled(TablePagination)((theme) => ({
-  backgroundColor: "#1C1C1C",
-  color: "#fff",
+  backgroundColor: "#fff",
+  color: "#000000",
 }));
 
 const Projects = () => {
