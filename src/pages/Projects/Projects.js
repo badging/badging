@@ -236,13 +236,13 @@ const swapHandler = (toggle) => {
                   <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                       <TableRow>
-                        <StyledTableCell>S/N</StyledTableCell>
+                        {/* <StyledTableCell>S/N</StyledTableCell> */}
                         <StyledTableCell align="left">
                           Badge Date
                         </StyledTableCell>
-                        <StyledTableCell align="left">
+                        {/* <StyledTableCell align="left">
                           Project Title
-                        </StyledTableCell>
+                        </StyledTableCell> */}
                         <StyledTableCell align="left">
                           DEI Badge
                         </StyledTableCell>
@@ -260,18 +260,18 @@ const swapHandler = (toggle) => {
                         )
                         .map((row, index) => (
                           <StyledTableRow key={index}>
-                            <StyledTableCell component="th" scope="row">
+                            {/* <StyledTableCell component="th" scope="row">
                               {row.id}
-                            </StyledTableCell>
+                            </StyledTableCell> */}
                             <StyledTableCell align="left">
                               {formatDate(row.createdAt)}
                             </StyledTableCell>
-                            <StyledTableCell align="left">
+                            {/* <StyledTableCell align="left">
                               {(() => {
                                 const text = row.repoLink.split("/");
                                 return text[3];
                               })()}
-                            </StyledTableCell>
+                            </StyledTableCell> */}
                             <StyledTableCell align="left">
                               <img
                                 src={extractImageUrl(row.attachment)}
