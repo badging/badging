@@ -2,7 +2,7 @@
 The DEI.md file was originally created in the CHAOSS project. This comment provides attribution of that work as defined under the MIT license
 -->
 
-# Authoring Your Project's DEI.md File
+# Authoring Your Project's DEI.md File 
 
 1. When creating your own DEI.md file please use the this guide as well as the [Template.DEI.md](https://github.com/badging/badging/blob/main/Template.DEI.md) file in your process.
 2. If using a development platform, place the DEI.md file in a public, organizationally available repository, similar to your CODE_OF_CONDUCT.md file
