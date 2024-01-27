@@ -263,7 +263,7 @@ const swapHandler = (toggle) => {
                             {/* <StyledTableCell component="th" scope="row">
                               {row.id}
                             </StyledTableCell> */}
-                            <StyledTableCell align="left">
+                            <StyledTableCell align="left" style={{ color: "black" }}>
                               {formatDate(row.createdAt)}
                             </StyledTableCell>
                             {/* <StyledTableCell align="left">
