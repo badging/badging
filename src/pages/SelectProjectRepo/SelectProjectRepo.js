@@ -3,11 +3,19 @@ import "./selectProjectRepo.scss";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
-import { SearchBar, SelectedProjects, Layout, Loader, Jumbotron, Footer } from "../../components";
+import {
+  SearchBar,
+  SelectedProjects,
+  Layout,
+  Loader,
+  Jumbotron,
+  Footer,
+} from "../../components";
 import { DataContext } from "../../contexts/DataContext";
 // import useLoadingError from "../../hooks/useLoadingError";
 import { useQuery } from "@tanstack/react-query";
 import settings from "../../settings.json";
+import { Link } from "react-router-dom";
 
 const url = settings.API_BASE_URL;
 
@@ -18,17 +26,13 @@ const callbackQuery = (provider, code) => ({
       throw new Error("Invalid code or provider");
     }
 
-
-    const response = await fetch(
-      `${url}/callback/${provider}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code }),
-      }
-    );
+    const response = await fetch(`${url}/callback/${provider}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ code }),
+    });
 
     return await response.json();
   },
@@ -36,7 +40,6 @@ const callbackQuery = (provider, code) => ({
 
 const SelectProjectRepo = () => {
   const { userData, setUserData } = useContext(DataContext);
-  // const { error, setError } = useLoadingError();
   const { userId, name, email, reposToBadge } = userData;
   const [showInfo, setShowInfo] = useState(true);
   const [openLoaderLight, setOpenLoaderLight] = useState(false);
@@ -73,7 +76,13 @@ const SelectProjectRepo = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userId, name, email, repos: reposToBadge, provider }),
+      body: JSON.stringify({
+        userId,
+        name,
+        email,
+        repos: reposToBadge,
+        provider,
+      }),
     })
       .then((response) => response.json())
       // eslint-disable-next-line no-unused-vars
@@ -89,56 +98,95 @@ const SelectProjectRepo = () => {
         setOpenLoaderLight(false);
       });
   };
-const title = "Get Started"
+  const title = "Get Started";
+  const isUserDataValid = userId && name && email && reposToBadge;
   return (
     <div>
       <Jumbotron title={title} />
       <section className="main__content">
         <form className="select__project__form">
-          {showInfo && (
-            <div className="select__project__info">
-              <CloseIcon onClick={() => setShowInfo(false)} />
-              <div>
-                <p>Hello {name}!</p>
-                <p>We appreciate you choosing to badge your project.</p>
-                <p>
-                  Enter your desired project in the search box below before you
-                  proceed to scan. You can scan as many projects as you desire.
+          {isUserDataValid ? (
+            <>
+              {showInfo && (
+                <div className="select__project__info">
+                  <CloseIcon onClick={() => setShowInfo(false)} />
+                  <div>
+                    <p>Hello {name}!</p>
+                    <p>We appreciate you choosing to badge your project.</p>
+                    <p>
+                      Enter your desired project in the search box below before
+                      you proceed to scan. You can scan as many projects as you
+                      desire.
+                    </p>
+                  </div>
+                </div>
+              )}
+              <div className="select-header">
+                <h2>Search For Project Repository</h2>
+                <p className="text">
+                  <strong>Note: </strong>The selected repository must have the
+                  presence of a DEI.md file.
                 </p>
               </div>
-            </div>
-          )}
-          <div className="select-header">
-            <h2>Search For Project Repository</h2>
-          <p className="text">
-            <strong>Note: </strong>The selected repository must have the
-            presence of a DEI.md file.
-          </p>
-          </div>
-          
-          <SearchBar setShowInfo={setShowInfo} />
-          {/* {error && !reposToBadge && <p className="error">{error}</p>} */}
-          {reposToBadge.length > 0 && (
-            <div className="search__results">
-              <h3>SEARCH RESULT</h3>
-              <p>
-                You can proceed to scan the selected project below or search to
-                add more projects
-              </p>
-              <SelectedProjects />
-            </div>
-          )}
 
-          
+              <SearchBar setShowInfo={setShowInfo} />
+              {reposToBadge.length > 0 && (
+                <div className="search__results">
+                  <h3>SEARCH RESULT</h3>
+                  <p>
+                    You can proceed to scan the selected project below or search
+                    to add more projects
+                  </p>
+                  <SelectedProjects />
+                </div>
+              )}
 
-          <button
-            type="button"
-            onClick={handleSubmit}
-            // onBlur={() => setError(null)}
-            disabled={!reposToBadge.length > 0}
-          >
-            Scan Projects
-          </button>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                disabled={!reposToBadge.length > 0}
+              >
+                Scan Projects
+              </button>
+            </>
+          ) : (
+            <>
+              <div
+                className="select__project__info"
+                style={{ backgroundColor: "#FFDADA", border: "none" }}
+              >
+                <div>
+                  <p>
+                    Unfortunately some of your data was not captured correctly
+                    yet it is necessary for processing your badge.{" "}
+                  </p>
+                  <br />
+                  <p>
+                    Please make sure that either your{" "}
+                    <strong>name, email, or username</strong> is{" "}
+                    <strong>public</strong>.
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                style={{
+                  borderRadius: "5px",
+                  backgroundColor: "#f3f5f6",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#06f395";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#f3f5f6";
+                }}
+              >
+                <Link to="/">Back to Home</Link>
+              </button>
+            </>
+          )}
         </form>
       </section>
       <Loader open={fetchingUserData}>
