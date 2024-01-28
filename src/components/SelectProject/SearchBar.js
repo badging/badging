@@ -86,7 +86,7 @@ const SearchBar = ({ setShowInfo }) => {
       </div>
       {searchResults.length > 0 && (
         <ul className="suggestions">
-          {searchResults.slice(0, 4).map((repoData, index) => (
+          {searchResults.map((repoData, index) => (
             <li key={index}>
               <button
                 type="button"
