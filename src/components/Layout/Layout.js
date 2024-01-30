@@ -2,7 +2,7 @@
 import React from "react";
 import { Footer, Header } from "../../components";
 import { getBadgedFullBG, getBadgedMobile } from "../../assets/images";
-import "./Layout.scss";
+import "./layout.scss";
 
 // Pass the child props
 const Layout = ({ children, className }) => {
@@ -22,13 +22,9 @@ const Layout = ({ children, className }) => {
             className="bg-mobile-getStarted"
             src={getBadgedMobile}
             alt="hero section mobile background"
-            // style={{ width: '100%' }}
           />
         </div>
-        {/* <div className="section-two"> */}
         <div className={className}>{children} </div>
-        {/* {children} */}
-        {/* </div> */}
       </div>
 
       <Footer />

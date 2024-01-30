@@ -41,14 +41,8 @@ const AboutDeiMobile = () => {
               about the CHAOSS DEI metrics development process 
               can be found <a href="##">here</a>..
               </p>
-              {/* <p>
-                The initiative uses CHAOSS DEI metrics as a benchmark to reflect
-                on DEI efforts in an open source project. All CHAOSS DEI metrics
-                are developed in an open and collaborative setting. More
-                information about the CHAOSS DEI metrics development process can
-                be found <a href="##">here</a>.
-              </p> */}
             </div>
+
             <div className="objectives">
               <h3>Project Badging Objective</h3>
               <p>
@@ -214,9 +208,6 @@ const AboutDeiMobile = () => {
           <Typography component={"div"}>
             <div className="badges">
               <img src={bronzeBadge} alt="Bronze badge" />
-              {/* <img src={silverBadge} alt="Silver badge" />
-              <img src={goldBadge} alt="Gold badge" />
-              <img src={platinumBadge} alt="Platinum badge" /> */}
             </div>
 
             <div>

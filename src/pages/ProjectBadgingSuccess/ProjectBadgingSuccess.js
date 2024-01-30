@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../../components";
 import { Link, useLocation } from "react-router-dom";
-import "./ProjectBadgingSuccess.scss";
+import "./project-badging-success.scss";
 
 const ProjectBadgingSuccess = () => {
   const location = useLocation();

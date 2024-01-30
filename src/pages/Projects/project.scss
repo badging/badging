@@ -4,7 +4,6 @@ main {
   width: 100%;
 
   .overlay {
-    // background-color: #000;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -29,7 +28,7 @@ main {
       position: absolute;
       left: -10rem;
       top: 5rem;
-      // overflow: hidden;
+      
     }
   
     .bgCenter {
@@ -56,18 +55,12 @@ main {
     margin-top: 5rem;
     font-size: 3.375rem;
     font-family: $font-family_1;
-    // background: $heroTitleBackground2;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
   }
 
   .about-project {
     position: absolute;
     bottom: 0;
     transition: transform 0.3s ease;
-    // display: flex;
 
     button {
       padding: 10px 30px;
@@ -108,10 +101,8 @@ main {
   }
 
   height: auto;
-  // padding: 100px 20px 50px;
   max-width: 1440px;
   margin: auto;
-  // color: #000 !important;
   .badging > div {
     color: #000;
   }
@@ -160,7 +151,6 @@ main {
           .filter button {
             background-color: #000;
             font-size: 16px;
-            // padding: 0px 30px;
             border: none;
             margin-right: 10px;
           }
@@ -214,7 +204,6 @@ main {
           }
 
           .search {
-            // background-color: red;
             display: flex;
             align-items: center;
             width: 100%;
@@ -299,7 +288,6 @@ main {
     }
 
     .badging-footer {
-      // background-color: red !important;
       padding: 20px 1px;
       color: #000;
       display: flex;
@@ -345,9 +333,7 @@ main {
   color: #000; // Replace with your desired pagination text color
   background-color: #fff;
 }
-//   .MuiPagination-root .MuiPaginationItem-root.Mui-selected > * {
-//     color: #000 !important;
-//   }
+
 
 .MuiPagination-root .MuiPaginationItem-root {
   color: #000;
@@ -359,7 +345,7 @@ main {
 }
 .MuiPagination-ul {
   color: #000 !important;
-  // background-color: red !important;
+  
 }
 .MuiPagination-ul button {
   background-color: #000;
@@ -381,11 +367,7 @@ main {
   }
 }
 
-@media screen and (max-width: 520px) {
-  .container-holder {
-    // padding: 0 !important;
-  }
-}
+
 
 @media screen and (max-width: 700px) {
   .jumbotron__container {
@@ -398,7 +380,6 @@ main {
     .about-project {
       button {
         padding: 7px 12px;
-        // font-size: 12px;
       }
     }
   }
@@ -408,7 +389,6 @@ main {
     align-items: flex-start !important;
 
     .filter-projects {
-      // background-color: red !important;
       width: 100%;
     }
     .filter button {
@@ -416,7 +396,6 @@ main {
     }
   }
   .filter-dropdown {
-    // background-color: red !important;
     width: 250px !important;
 
     .activeFilter {

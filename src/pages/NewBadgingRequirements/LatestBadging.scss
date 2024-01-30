@@ -4,56 +4,23 @@
   width: 100%;
 
   padding-top: 100px;
-  // max-width: 1300px;
-  // width: 100%;
-
-  // margin: auto;
-  // gap: 20px;
-
-  // font-family: $font-family_1, sans-serif;
-
+  
   .section-one {
-    // width: 100vh;
     .bg-getStarted {
       display: none;
     }
     height: 456px;
     img {
-      // margin: auto;
       background-position: center;
       width: 100%;
       height: 456px;
     }
-    // flex: 1;
-    // padding-top: 20px;
-    // padding-left: 120px;
-    // width: 760px;
-
-    // h1 {
-    //   font-family: $font-family_1;
-    //   font-size: 48px;
-    //   font-weight: 600;
-    //   line-height: 59px;
-    //   width: 370px;
-
-    //   // height: 177px;
-    //   background: -webkit-linear-gradient(#e9e9e9, #bababa);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    //   background-clip: text;
-    // }
+    
   }
   .section-two {
     background-color: white;
-    // background-position: top 20px;
     height: 696px;
     padding: 84px 31px 150px 31px;
-
-    // width: 600px;
-    // height: 303px;
-    // margin-top: 40px;
-    // margin-right: 0;
-    // padding-right: 0;
 
     .section-wrap {
       padding: 89px 87px 114px 77px;
@@ -80,8 +47,6 @@
       }
 
       .section-list {
-        // width: 382px;
-        // height: 338px;
         color: $textColor3;
         margin-bottom: 50px;
         li {
@@ -125,14 +90,10 @@
   .requirements {
     min-height: 100vh;
     padding-top: 100px;
-    // max-width: 1300px;
-    // width: 100%;
     display: flex;
     flex-direction: row;
     margin: auto;
-    // gap: 20px;
-
-    // font-family: $font-family_1, sans-serif;
+   
 
     .section-one {
       .bg-mobile-getStarted {
@@ -144,33 +105,13 @@
       flex: 1;
       padding-top: 20px;
       padding-left: 120px;
-      // width: 760px;
-
-      // h1 {
-      //   font-family: $font-family_1;
-      //   font-size: 48px;
-      //   font-weight: 600;
-      //   line-height: 59px;
-      //   width: 370px;
-
-      //   // height: 177px;
-      //   background: -webkit-linear-gradient(#e9e9e9, #bababa);
-      //   -webkit-background-clip: text;
-      //   -webkit-text-fill-color: transparent;
-      //   background-clip: text;
-      // }
     }
     .section-two {
-      // background-position: top 20px;
-
       flex: 1;
       padding: 100px 50px 70px 120px;
-
       width: 600px;
-      // height: 303px;
-      // margin-top: 40px;
       margin-right: 0;
-      // padding-right: 0;
+   
 
       .section-wrap {
         padding: 89px 87px 114px 77px;
@@ -197,8 +138,6 @@
         }
 
         .section-list {
-          // width: 382px;
-          // height: 338px;
           color: $textColor3;
           margin-bottom: 50px;
           li {

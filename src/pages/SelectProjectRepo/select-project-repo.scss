@@ -1,29 +1,5 @@
 @import "../../assets/styles/variables";
 
-// .select__project {
-// 	display: flex;
-// 	flex-direction: column;
-
-// main {
-// display: grid;
-// grid-template-columns: 1fr 1.2fr;
-// margin-top: 92px;
-// height: calc(100vh - 92px);
-
-// aside {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	padding: 0 23.2%;
-
-// 	// flex: 0 0 41.125rem;
-
-// 	p.heading__2 {
-// 		font-family: $font-family_1, sans-serif;
-// 		font-size: 3rem;
-// 		margin: 0;
-// 	}
-// }
 
 .main__content {
   background: #fff;
@@ -33,10 +9,7 @@
   justify-content: center;
   padding: 5.8rem 10px;
   height: 100%;
- 
 
-  // width: 100%;
-  // flex: 1 1 auto;
 
   * > * {
     color: $headingColor;
@@ -81,7 +54,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
-      // margin-bottom: 1rem;
       font-weight: 700;
     }
 
@@ -201,7 +173,6 @@
 @media screen and (max-width: 700px) {
   .main__content {
     padding: 5.8rem 10px !important;
-    // background-color: red;
 
     .select__project__form {
 

@@ -1,5 +1,5 @@
 import "../../assets/styles/global.scss";
-import "./selectProjectRepo.scss";
+import "./select-project-repo.scss";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
@@ -12,7 +12,6 @@ import {
   Footer,
 } from "../../components";
 import { DataContext } from "../../contexts/DataContext";
-// import useLoadingError from "../../hooks/useLoadingError";
 import { useQuery } from "@tanstack/react-query";
 import settings from "../../settings.json";
 import { Link } from "react-router-dom";
