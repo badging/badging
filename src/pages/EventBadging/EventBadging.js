@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Footer, Header } from "../../components";
-import AboutNew from "../../components/AboutDeiBadgingCom/About";
-import "./eventBadging.scss";
+import "./event-badging.scss";
 import "../../assets/styles/global.scss";
 import { arrowRight } from "../../assets/images";
 const EventBadging = () => {
@@ -23,7 +22,7 @@ const EventBadging = () => {
         </div>
         <Header />
         <div className="container jumbotron__container">
-          {/* <img src={curlyBraces} alt="badging-logo" /> */}
+         
           <h1>Event Badging</h1>
           <div className="about-project">
             <button
@@ -38,7 +37,7 @@ const EventBadging = () => {
             >
               Badged Events
             </a>
-            {/* <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button> */}
+           
           </div>
         </div>
         <section className="container">

@@ -28,7 +28,6 @@ body {
   max-width: 1440px;
   margin: auto;
   padding: 10px 119px;
-  // background-color: #fff;
 }
 
 .loading,
@@ -64,9 +63,8 @@ h3 {
 }
 
 main {
-  // max-width: 100%;
   height: auto;
-  // padding: 0px 40px;
+  
 }
 
 .jumbotron {
@@ -111,25 +109,7 @@ nav .mobileNav.toggleDesctiptionButton {
   }
 }
 
-// @media screen and (max-width: 1030px) {
-//   nav {
-//     ul {
-//       display: none !important;
-//     }
-//   }
-//   .get-started {
-//     display: none;
-//   }
-//   .logo {
-//     width: auto;
-//   }
-//   .container {
-//     padding: 30px 30px;
-//   }
-//   .hero-section {
-//     padding: 0px 20px;
-//   }
-// }
+
 
 @media screen and (max-width: 1030px) {
   nav {
@@ -138,9 +118,6 @@ nav .mobileNav.toggleDesctiptionButton {
     }
   }
 
-  // .get-started {
-  // 	// display: none;
-  // }
   .logo {
     width: auto;
   }
@@ -157,13 +134,3 @@ nav .mobileNav.toggleDesctiptionButton {
     display: none;
   }
 }
-
-// .faq {
-// 	max-width: 100%;
-// 	margin: auto;
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	background: url(../images/others/faq-background.svg);
-// 	margin-bottom: 100px;
-// }

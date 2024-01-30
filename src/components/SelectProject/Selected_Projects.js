@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { DataContext } from "../../contexts/DataContext";
-// import useLoadingError from "../../hooks/useLoadingError";
+
 
 const SelectedProjects = () => {
   const { userData, setUserData } = useContext(DataContext);
   const filteredReposToBadge = [...new Set(userData.reposToBadge)];
-
-  // const { loading, error } = useLoadingError();
 
   const handleClearInput = (event, repoData) => {
     event.stopPropagation();

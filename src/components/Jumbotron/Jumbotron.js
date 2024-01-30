@@ -15,8 +15,6 @@ const Jumbotron = ({title}) => {
         </div>
       <Header />
       <div className="container jumbotron__container">
-      
-        {/* <img src={curlyBraces} alt="badging-logo" /> */}
         <h1>{title}</h1>
         
       </div>

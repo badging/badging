@@ -1,5 +1,5 @@
 import "../../assets/styles/global.scss";
-import "./comingSoon.scss";
+import "./coming-soon.scss";
 import { Footer, Header, Jumbotron } from "../../components";
 import { comingSoon, curlyBraces } from "../../assets/images";
 import { Link } from "react-router-dom";

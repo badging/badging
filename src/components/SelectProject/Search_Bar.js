@@ -1,11 +1,10 @@
 import "../../assets/styles/global.scss";
-import "./searchbar.scss";
+import "./search-bar.scss";
 import { useContext, useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
 
-// import useLoadingError from "../../hooks/useLoadingError";
 
 const SearchBar = ({ setShowInfo }) => {
   const [inputValue, setInputValue] = useState("");
@@ -13,7 +12,6 @@ const SearchBar = ({ setShowInfo }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
   const { userData, setUserData } = useContext(DataContext);
-  // const { loading, setLoading, error, setError } = useLoadingError();
   const searchBarRef = useRef(null);
 
   useEffect(() => {

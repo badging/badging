@@ -12,7 +12,7 @@ const cardItems = [
       </p>
     ),
     copy: "",
-    // button: <button className="card-carousel-btn">Get Started </button>,
+    
     blankDiv: (
       <div className="blank_div">
         <div className="mobile_blank">

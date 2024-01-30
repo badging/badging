@@ -45,9 +45,6 @@ const Sidebar = () => {
             <NavLink exact="true" to="/project-badging/application-process">
               Self-Assessment & Documen...
             </NavLink>
-            {/* <NavLink exact="true" to="/project-badging/application-process">
-              Project Application
-            </NavLink> */}
             <NavLink exact="true" to="/project-badging/application-process">
               Badging Evaluation
             </NavLink>
@@ -87,25 +84,6 @@ const Sidebar = () => {
             <NavLink exact="true" to="/project-badging/dei-badge">
               Criteria
             </NavLink>
-            {/* commented out as only bronze badge is being introduced at the moment */}
-            {/* <NavLink exact="true" to="/about/dei-badge">
-							Silver Badge
-						</NavLink>
-						<NavLink exact="true" to="/about/dei-badge">
-							Criteria
-						</NavLink>
-						<NavLink exact="true" to="/about/dei-badge">
-							Gold Badge
-						</NavLink>
-						<NavLink exact="true" to="/about/dei-badge">
-							Criteria
-						</NavLink>
-						<NavLink exact="true" to="/about/dei-badge">
-							Platinum Badge
-						</NavLink>
-						<NavLink exact="true" to="/about/dei-badge">
-							Criteria
-						</NavLink> */}
           </div>
         )}
       </li>

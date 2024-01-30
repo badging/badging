@@ -9,7 +9,7 @@ import {
 import settings from '../../settings.json';
 
 import '../../assets/styles/global.scss';
-import './LatestBadging.scss';
+import './latest-badging.scss';
 
 const LatestBadgingSample = () => {
   const baseurl = settings.API_BASE_URL;
