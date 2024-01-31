@@ -48,7 +48,7 @@ import comingSoon from './others/coming-soon.svg';
 
 import getBadgedMobile from './others/get-badged-mobile.svg';
 import bgFaqNew from './others/bg-faq-new.svg';
-
+import circleLogo from './logos/chaoss-circle-logo.svg';
 import Filter from './icons/Filter.svg';
 import SearchIcon from './icons/SearchIcon.svg';
 import ScheduleIcon from './icons/ScheduleIcon.svg';
@@ -110,4 +110,5 @@ export {
   slack,
   bgFaq,
   bgRecent,
+  circleLogo,
 };

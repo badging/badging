@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { arrowRight } from '../../assets/images';
 import { useState } from 'react';
-import './faq.scss';
+import '../../pages/FAQ/faq.scss';
 
 const FaqSidebar = () => {
   const [isActive, setIsActive] = useState(1);
@@ -13,12 +13,16 @@ const FaqSidebar = () => {
           <NavLink
             exact="true"
             to="/faq"
+            style={({ isActive }) => {
+              return isActive ? { color: '#d61b5e' } : {};
+            }}
             id="event-badging"
             end
             onClick={() => setIsActive(1)}
           >
             Event Badging
           </NavLink>
+          &nbsp;&nbsp;&nbsp;
           <img src={arrowRight} alt="arrow" />
         </div>
         {isActive === 1 && (
@@ -33,11 +37,15 @@ const FaqSidebar = () => {
           <NavLink
             exact="true"
             to="/projectfaq"
+            style={({ isActive }) => {
+              return isActive ? { color: '#d61b5e' } : {};
+            }}
             end
             onClick={() => setIsActive(2)}
           >
             Project Badging
-          </NavLink>
+          </NavLink>{' '}
+          &nbsp;
           <img src={arrowRight} alt="arrow" />
         </div>
         {isActive === 2 && (

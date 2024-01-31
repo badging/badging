@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../assets/styles/global.scss';
-import './faq.scss';
+import '../../pages/FAQ/faq.scss';
 
 const Faq = ({ question, answer }) => {
   const [displayInfo, setDisplayInfo] = useState(false);
