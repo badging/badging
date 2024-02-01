@@ -13,8 +13,8 @@ import DeiFile from "./AboutDeiBadging/Dei_File";
 import DeiBadge from "./AboutDeiBadging/Dei_Badge";
 import SelectedProjects from "./SelectProject/Selected_Projects";
 import Layout from "./Layout/Layout";
-import Spinner from "./Loader/Spinner";
-import Loader from "./Loader/Loader";
+import Spinner from "./loader/Spinner";
+import Loader from "./loader/Loader";
 
 export {
   Header,

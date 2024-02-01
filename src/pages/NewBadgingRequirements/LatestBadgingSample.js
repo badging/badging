@@ -7,7 +7,6 @@ import {
 } from "../../assets/images";
 
 import settings from '../../settings.json';
-
 import '../../assets/styles/global.scss';
 import './latest-badging.scss';
 
@@ -33,8 +32,6 @@ const LatestBadgingSample = () => {
             src={getBadgedMobile}
             alt="arrow pointer design"
           />
-          {/* <h1> Getting Started With Project Badging</h1> */}
-          {/* <img src={getStartedBg} alt="get started background" /> */}
         </div>
 
         <div className="section-two">

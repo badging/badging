@@ -15,7 +15,7 @@ const Layout = ({ children, className }) => {
         <div className="section-one">
           <img
             className="bg-getStarted"
-            src={getBadgedFullBG}
+            src={getBadgedFullBG} 
             alt="hero section desktop background"
           />
           <img
