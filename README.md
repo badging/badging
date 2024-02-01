@@ -29,7 +29,7 @@ Currently, the DEI Project Badge is available in one level
 
 ## Contributing to this Project
 
-This project is still in pilot phase and will commence call for contributors soon.
+This is a living repository, meaning we are very open to changes and improvements. We follow the GitHub pull-request workflow. More details on specifically what that means can be found in the CONTRIBUTING.md file. If you would like to contribute but you aren't sure how to go about doing so, please reach out to the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg) or Elizabeth Barron (@ElizabethN). We are happy to help!
 
 Don't forget to give the project a star! Thanks again!
 
