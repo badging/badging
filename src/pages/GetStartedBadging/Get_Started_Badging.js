@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Footer, Jumbotron, Layout, Loader } from "../../components";
+import { Footer, Jumbotron, Loader } from "../../components";
 import "../../assets/styles/global.scss";
 import "./get-started-badging.scss";
 import settings from "../../settings.json";

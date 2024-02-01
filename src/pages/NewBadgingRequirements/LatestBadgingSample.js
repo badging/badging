@@ -5,7 +5,6 @@ import {
   getBadgedFullBG,
   getBadgedMobile,
 } from "../../assets/images";
-
 import settings from '../../settings.json';
 import '../../assets/styles/global.scss';
 import './latest-badging.scss';
