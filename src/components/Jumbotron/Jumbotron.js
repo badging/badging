@@ -15,8 +15,11 @@ const Jumbotron = ({title}) => {
         </div>
       <Header />
       <div className="container jumbotron__container">
+<<<<<<< HEAD
       
         {/* <img src={curlyBraces} alt="badging-logo" /> */}
+=======
+>>>>>>> 4644e8a (fixing)
         <h1>{title}</h1>
         
       </div>
