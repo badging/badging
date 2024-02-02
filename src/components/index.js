@@ -3,7 +3,7 @@ import Footer from "./Footer/Footer";
 import Faq from "./Faq/Faq";
 import CardComponent from "./HowItWorks/Card";
 import CardCarousel from "./Carousel/Card_Carousel";
-import SearchBar from "./SelectProject/Search_Bar";
+import SearchBar from "./SelectProject/Search_Bar"
 import Sidebar from "./AboutDeiBadging/Side_bar";
 import Jumbotron from "./Jumbotron/Jumbotron";
 import AboutDeiMobile from "./AboutDeiBadging/About_Dei_Mobile";

@@ -2,7 +2,7 @@
 import React from "react";
 import { Footer, Header } from "../../components";
 import { getBadgedFullBG, getBadgedMobile } from "../../assets/images";
-import "./layout.scss";
+import "./layout.scss"
 
 // Pass the child props
 const Layout = ({ children, className }) => {
