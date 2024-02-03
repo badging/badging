@@ -1,7 +1,7 @@
 import React from 'react';
 import { Faq, FaqSidebar, Footer, Jumbotron } from '../../components';
 import { slackLogo } from '../../assets/images';
-import './faq.scss';
+import './freq.scss';
 import { faqData } from '../../components/Faq/data';
 
 const FaqProject = () => {

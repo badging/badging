@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { arrowRight } from '../../assets/images';
 import { useState } from 'react';
-import '../../pages/Faq/faq.scss';
+import '../../pages/Faq/freq.scss';
 
 const FaqSidebar = () => {
   const [isActive, setIsActive] = useState(1);

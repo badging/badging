@@ -2,6 +2,7 @@ import React from 'react';
 import { Faq, FaqSidebar, Footer, Jumbotron } from '../../components';
 import { faqData } from '../../components/Faq/data';
 import { slackLogo } from '../../assets/images';
+import './freq.scss';
 
 const FaqPage = () => {
   const title = 'Frequently Asked Questions';
