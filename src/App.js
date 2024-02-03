@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import {
   Home,
   About,
@@ -8,18 +8,21 @@ import {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
-} from "./pages";
+} from './pages';
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from "./components";
-import { DataProvider } from "./contexts/DataContext";
-import { DesktopProvider } from "./contexts/DesktopContext";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import EventBadging from "./pages/EventBadging/EventBadging";
-import Faq from "./pages/Faq/Faq";
+} from './components';
+import { DataProvider } from './contexts/DataContext';
+import { DesktopProvider } from './contexts/DesktopContext';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import EventBadging from './pages/EventBadging/EventBadging';
+
+import FaqProject from './pages/Faq/FaqProject';
+
+import FaqPage from './pages/Faq/FaqPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -56,7 +59,10 @@ const App = () => {
                   element={<ApplicationProcess />}
                 />
                 <Route path="/project-badging/dei-file" element={<DeiFile />} />
-                <Route path="/project-badging/dei-badge" element={<DeiBadge />} />
+                <Route
+                  path="/project-badging/dei-badge"
+                  element={<DeiBadge />}
+                />
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
@@ -66,7 +72,8 @@ const App = () => {
               />
               {/* <Route exact path="/projects" element={<Projects />} /> */}
               <Route exact path="/comingsoon" element={<ComingSoon />} />
-              <Route exact path="/faq" element={<Faq />} />
+              <Route exact path="/faq" element={<FaqPage />} />
+              <Route exact path="/faqproject" element={<FaqProject />} />
               <Route
                 exact
                 path="/project-badging-successful"
