@@ -23,7 +23,7 @@ const Footer = () => {
           <img src={slack} alt="slack-icon" />
         </Link>
       </span>
-      <span className="copyright">
+      <span className="copy-right">
         Copyright &copy; <a href="/">CHAOSS.</a> All rights reserved a Linux
         Foundation Project
       </span>

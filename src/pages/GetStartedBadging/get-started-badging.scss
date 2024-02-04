@@ -1,0 +1,82 @@
+@import "../../assets/styles/variables";
+
+.badge {
+  color: #000;
+  height: 50vh;
+  padding-top: 3rem;
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .section-list {
+      li {
+        list-style-type: styleL;
+        margin-top: 10px; 
+        margin-left: 2rem;
+    }
+    }
+    .login {
+      // background-color: red;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      margin-top: 2rem;
+
+      button, a {
+        // font-size: 16px;
+        padding: 15px 4rem;
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+       
+      }
+      .github, .self__hosted {
+        background-color:#222D33;
+      }
+      .gitlab {
+        background-color:#D61B5E;
+      }
+      .self__hosted {
+        text-align: center;
+        font-size: 0.83rem;
+      }
+    }
+}
+
+@media screen and (max-width: 700px) {
+  .badge {
+    .login {
+      flex-wrap: wrap;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // justify-content: center;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .badge {
+    .login {
+      button, a {
+        // font-size: 16px;
+        padding: 20px 3rem !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .badge {
+    min-height: 50vh;
+    height: fit-content;
+
+    .login {
+      button, a {
+        // font-size: 16px;
+        padding: 8px 15px !important;
+      }
+    }
+  }
+}
