@@ -9,18 +9,7 @@ const AboutNew = () => {
   const { isDesktop } = useDesktop();
 
   return (
-<<<<<<< HEAD
-    <div className="about-dei">
-      {/* <div className="header">
-        <Header />
-        <div className="container jumbotron__container">
-          <img src={curlyBraces} alt="badging-logo" />
-          <h1>About CHAOSS DEI Project Badging</h1>
-        </div>
-      </div> */}
-=======
     <div className="about-dei">    
->>>>>>> 4644e8a (fixing)
       <main className="container">
         <div className="main__container">
           {isDesktop && (
@@ -40,10 +29,6 @@ const AboutNew = () => {
           )}
         </div>
       </main>
-<<<<<<< HEAD
-      {/* <Footer /> */}
-=======
->>>>>>> 4644e8a (fixing)
     </div>
   );
 };

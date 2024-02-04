@@ -4,10 +4,6 @@ main {
   width: 100%;
 
   .overlay {
-<<<<<<< HEAD
-    // background-color: #000;
-=======
->>>>>>> 4644e8a (fixing)
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -32,11 +28,7 @@ main {
       position: absolute;
       left: -10rem;
       top: 5rem;
-<<<<<<< HEAD
-      // overflow: hidden;
-=======
       
->>>>>>> 4644e8a (fixing)
     }
   
     .bgCenter {
@@ -63,24 +55,12 @@ main {
     margin-top: 5rem;
     font-size: 3.375rem;
     font-family: $font-family_1;
-<<<<<<< HEAD
-    // background: $heroTitleBackground2;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-=======
->>>>>>> 4644e8a (fixing)
   }
 
   .about-project {
     position: absolute;
     bottom: 0;
     transition: transform 0.3s ease;
-<<<<<<< HEAD
-    // display: flex;
-=======
->>>>>>> 4644e8a (fixing)
 
     button {
       padding: 10px 30px;
@@ -121,15 +101,8 @@ main {
   }
 
   height: auto;
-<<<<<<< HEAD
-  // padding: 100px 20px 50px;
   max-width: 1440px;
   margin: auto;
-  // color: #000 !important;
-=======
-  max-width: 1440px;
-  margin: auto;
->>>>>>> 4644e8a (fixing)
   .badging > div {
     color: #000;
   }
@@ -178,10 +151,6 @@ main {
           .filter button {
             background-color: #000;
             font-size: 16px;
-<<<<<<< HEAD
-            // padding: 0px 30px;
-=======
->>>>>>> 4644e8a (fixing)
             border: none;
             margin-right: 10px;
           }
@@ -235,10 +204,6 @@ main {
           }
 
           .search {
-<<<<<<< HEAD
-            // background-color: red;
-=======
->>>>>>> 4644e8a (fixing)
             display: flex;
             align-items: center;
             width: 100%;
@@ -323,10 +288,6 @@ main {
     }
 
     .badging-footer {
-<<<<<<< HEAD
-      // background-color: red !important;
-=======
->>>>>>> 4644e8a (fixing)
       padding: 20px 1px;
       color: #000;
       display: flex;
@@ -372,13 +333,6 @@ main {
   color: #000; // Replace with your desired pagination text color
   background-color: #fff;
 }
-<<<<<<< HEAD
-//   .MuiPagination-root .MuiPaginationItem-root.Mui-selected > * {
-//     color: #000 !important;
-//   }
-=======
-
->>>>>>> 4644e8a (fixing)
 
 .MuiPagination-root .MuiPaginationItem-root {
   color: #000;
@@ -390,11 +344,7 @@ main {
 }
 .MuiPagination-ul {
   color: #000 !important;
-<<<<<<< HEAD
-  // background-color: red !important;
-=======
   
->>>>>>> 4644e8a (fixing)
 }
 .MuiPagination-ul button {
   background-color: #000;
@@ -416,15 +366,6 @@ main {
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 520px) {
-  .container-holder {
-    // padding: 0 !important;
-  }
-}
-=======
-
->>>>>>> 4644e8a (fixing)
 
 @media screen and (max-width: 700px) {
   .jumbotron__container {
@@ -437,10 +378,6 @@ main {
     .about-project {
       button {
         padding: 7px 12px;
-<<<<<<< HEAD
-        // font-size: 12px;
-=======
->>>>>>> 4644e8a (fixing)
       }
     }
   }
@@ -450,10 +387,6 @@ main {
     align-items: flex-start !important;
 
     .filter-projects {
-<<<<<<< HEAD
-      // background-color: red !important;
-=======
->>>>>>> 4644e8a (fixing)
       width: 100%;
     }
     .filter button {
@@ -461,10 +394,6 @@ main {
     }
   }
   .filter-dropdown {
-<<<<<<< HEAD
-    // background-color: red !important;
-=======
->>>>>>> 4644e8a (fixing)
     width: 250px !important;
 
     .activeFilter {

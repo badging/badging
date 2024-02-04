@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { Footer, Header } from "../../components";
-<<<<<<< HEAD
-import AboutNew from "../../components/AboutDeiBadgingCom/About";
-import "./eventBadging.scss";
-=======
 import "./event-badging.scss";
->>>>>>> 4644e8a (fixing)
 import "../../assets/styles/global.scss";
 import { arrowRight } from "../../assets/images";
 const EventBadging = () => {
@@ -27,11 +22,7 @@ const EventBadging = () => {
         </div>
         <Header />
         <div className="container jumbotron__container">
-<<<<<<< HEAD
-          {/* <img src={curlyBraces} alt="badging-logo" /> */}
-=======
          
->>>>>>> 4644e8a (fixing)
           <h1>Event Badging</h1>
           <div className="about-project">
             <button
@@ -46,11 +37,7 @@ const EventBadging = () => {
             >
               Badged Events
             </a>
-<<<<<<< HEAD
-            {/* <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button> */}
-=======
            
->>>>>>> 4644e8a (fixing)
           </div>
         </div>
         <section className="container">

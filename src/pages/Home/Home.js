@@ -46,12 +46,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* <div className='bgLeft'></div> */}
-=======
->>>>>>> 4644e8a (fixing)
      </section>
-
      <Footer />
     </div>
   );

@@ -14,10 +14,9 @@
     flex-direction: column;
     margin: auto;
     margin-top: 5px;
-    // line-height: 70px;
     border: 1px solid $borderColor3;
     max-width: 74rem;
-    height: auto; //91px;
+    height: auto;
     font-family: $font-family_1;
     padding: 30px 0;
     cursor: pointer;
@@ -30,10 +29,6 @@
     p:nth-child(1) {
       display: flex;
       justify-content: space-between;
-<<<<<<< HEAD
-      // background-color: red;
-=======
->>>>>>> 4644e8a (fixing)
       width: inherit;
       height: inherit;
       align-items: center;

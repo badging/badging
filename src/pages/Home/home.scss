@@ -8,26 +8,12 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   color: #000;
 }
 
-<<<<<<< HEAD
-.home-container {
-  // height: 100%;
-  // position: relative;
-  // width: 100%;
-}
- 
-.overlay {
-  // background-color: #000;
-  height: 100%;
-  width: 100%;
-  // z-index: 99;
-=======
 
  
 .overlay {
   height: 100%;
   width: 100%;
 
->>>>>>> 4644e8a (fixing)
   position: absolute;
   overflow: hidden;
   .bgLeft {
@@ -48,10 +34,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     position: absolute;
     left: -15rem;
     top: 3rem;
-<<<<<<< HEAD
-    // overflow: hidden;
-=======
->>>>>>> 4644e8a (fixing)
   }
 
   .bgCenter {
@@ -63,10 +45,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   }
 }
 .hero {
-<<<<<<< HEAD
-  // height: 500px;
-=======
->>>>>>> 4644e8a (fixing)
   width: 100%;
   height: 100vh;
   align-items: center;
@@ -75,11 +53,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   flex-direction: column;
   text-align: center;
   position: relative;
-<<<<<<< HEAD
-
-// filter: blur(5px);
-=======
->>>>>>> 4644e8a (fixing)
  
 
  
@@ -87,10 +60,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   h1 {
     font-size: 40px;
     margin-top: 10rem;
-<<<<<<< HEAD
-    // line-height: 30px;
-=======
->>>>>>> 4644e8a (fixing)
   }
   .hero-header {
     div {
@@ -105,11 +74,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
   }
 
   .sponsors {
-<<<<<<< HEAD
-    // position: absolute;
-    // bottom: 0;
-=======
->>>>>>> 4644e8a (fixing)
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,28 +98,13 @@ li, a, p, h1, h2, h3, h4, h5, h6{
       gap: 20px;
       flex-wrap: wrap;
       margin-top: 20px;
-<<<<<<< HEAD
-
-      // img {
-      //   width: 70px;
-      //   height: 50px;
-      // }
-=======
->>>>>>> 4644e8a (fixing)
     }
   }
 }
 
 
 @media screen and (max-width: 700px) {
-<<<<<<< HEAD
-  .hero {
-    // height: auto !important;
-    
-  }
-=======
   
->>>>>>> 4644e8a (fixing)
   .hero-header {
     h1 {
       text-align: left !important;
@@ -170,11 +119,6 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     gap: 30px !important;
     padding: 0 10px !important;
     justify-content: flex-start !important;
-<<<<<<< HEAD
-    // align-items: flex-start;
-    // margin-bottom: 40px;
-=======
->>>>>>> 4644e8a (fixing)
     width: 100%;
     .s-list {
       text-align: left !important;
