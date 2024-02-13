@@ -2,13 +2,14 @@ import React from 'react';
 import { Faq, FaqSidebar, Footer, Jumbotron } from '../../components';
 import { eventFaqs } from '../../components/Faq/data';
 import { slackLogo } from '../../assets/images';
+import '../../assets/styles/global.scss';
 import './freq.scss';
 
 const FaqPage = () => {
   const title = 'Frequently Asked Questions';
 
   return (
-    <>
+    <div className="faq_wrapper">
       <Jumbotron title={title} />
       <main className=" faq_container">
         <aside className="sidebar">
@@ -35,7 +36,7 @@ const FaqPage = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ const FaqProject = () => {
   const title = 'Frequently Asked Questions';
 
   return (
-    <>
+    <div className="faq_wrapper">
       <Jumbotron title={title} />
       <main className=" faq_container">
         <aside className="sidebar">
@@ -35,7 +35,7 @@ const FaqProject = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

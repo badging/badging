@@ -24,6 +24,7 @@ export const eventFaqs = [
       <>
         If you have quesitons about Event Badging, please either
         <a
+          className="faq_data_link"
           href="https://github.com/badging/badging"
           target="_blank"
           rel="noreferrer"
@@ -33,6 +34,7 @@ export const eventFaqs = [
         </a>{' '}
         or reach us at the{' '}
         <a
+          className="faq_data_link"
           href="https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg"
           target="_blank"
           rel="noreferrer"
