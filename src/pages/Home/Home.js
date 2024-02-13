@@ -46,9 +46,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className='bgLeft'></div> */}
      </section>
-
      <Footer />
     </div>
   );

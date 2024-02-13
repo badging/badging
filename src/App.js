@@ -43,15 +43,6 @@ const App = () => {
           <DataProvider>
             <Routes>
               <Route exact path="/" element={<Home />} />
-              {/* <Route path="/about" element={<About />}>
-                <Route path="/about" element={<WhatIsDeiBadging />} />
-                <Route
-                  path="/about/application-process"
-                  element={<ApplicationProcess />}
-                />
-                <Route path="/about/dei-file" element={<DeiFile />} />
-                <Route path="/about/dei-badge" element={<DeiBadge />} />
-              </Route> */}
               <Route path="/project-badging" element={<Projects />}>
                 <Route path="/project-badging" element={<WhatIsDeiBadging />} />
                 <Route
@@ -70,7 +61,6 @@ const App = () => {
                 path="/select-project/:provider"
                 element={<SelectProjectRepo />}
               />
-              {/* <Route exact path="/projects" element={<Projects />} /> */}
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route exact path="/faq" element={<FaqPage />} />
               <Route exact path="/faqproject" element={<FaqProject />} />

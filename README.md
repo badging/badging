@@ -8,7 +8,7 @@ The DEI project badges help open source project maintainers showcase their ongoi
 
 ## How does DEI Project Badging work?
 
-- Open Source projects submit their project repository containing a DEI.md file. Check out what a DEI.md file entails and how to create one [here](https://github.com/AllInOpenSource/All-In/blob/main/DEI.md).
+- Open Source projects submit their project repository containing a DEI.md file. Check out what a DEI.md file entails and how to create one [here](https://github.com/badging/badging/blob/main/DEI.md).
 
 - The project badging scanner bot will search through the DEI.md file in the specified repository for evidence of required metrics.
 
@@ -29,7 +29,7 @@ Currently, the DEI Project Badge is available in one level
 
 ## Contributing to this Project
 
-This is a living repository, meaning we are very open to changes and improvements. We follow the GitHub pull-request workflow. More details on specifically what that means can be found in the CONTRIBUTING.md file. If you would like to contribute but you aren't sure how to go about doing so, please reach out to the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg) or Elizabeth Barron (@ElizabethN). We are happy to help!
+This is a living repository, meaning we are very open to changes and improvements. We follow the GitHub pull-request workflow. More details on specifically what that means can be found in the CONTRIBUTING.md file. If you would like to contribute but aren't sure how to go about doing so, please reach out to the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg) or Elizabeth Barron (@ElizabethN). We are happy to help!
 
 Don't forget to give the project a star! Thanks again!
 
