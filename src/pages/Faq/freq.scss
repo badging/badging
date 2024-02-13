@@ -10,6 +10,10 @@
   margin: 0 auto;
   height: 508px;
 
+  a {
+    // color: $chaossPink;
+  }
+
   .faq_sidebar {
     height: 380px;
     padding-right: 1rem;
@@ -78,6 +82,9 @@
   .faq-details:hover {
     border: 1px solid;
     border-image: $borderHoverGradient;
+  }
+  .arr {
+    display: none;
   }
 }
 

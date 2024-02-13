@@ -4,57 +4,60 @@ import { useState } from 'react';
 import '../../pages/Faq/freq.scss';
 
 const FaqSidebar = () => {
-  const [isActive, setIsActive] = useState(1);
+  const [tabIndex, setTabIndex] = useState(1);
 
   return (
-    <ul className="faq_sidebar">
-      <li>
-        <div className="main__link">
-          <NavLink
-            exact="true"
-            to="/faq"
-            style={({ isActive }) => {
-              return isActive ? { color: '#d61b5e' } : {};
-            }}
-            id="event-badging"
-            end
-            onClick={() => setIsActive(1)}
-          >
-            Event Badging
-          </NavLink>
-          &nbsp;&nbsp;&nbsp;
-          <img src={arrowRight} alt="arrow" />
-        </div>
-        {isActive === 1 && (
-          <div className="sub__links">
-            <NavLink exact="true" to="/faq"></NavLink>
+    <div>
+      <ul className="faq_sidebar">
+        <li>
+          <div className="main__link">
+            <NavLink
+              // exact="true"
+              to="/faq"
+              style={({ isActive }) => {
+                return isActive ? { color: '#d61b5e' } : {};
+              }}
+              id="event-badging"
+              end
+              onClick={() => setTabIndex(1)}
+            >
+              Event Badging
+            </NavLink>
           </div>
-        )}
-      </li>
+          {tabIndex == 1
+            ? 'Event Badging' && (
+                <img className="arr" src={arrowRight} alt="arrow" />
+              )
+            : 'Event Badging'}
+        </li>
 
-      <li>
-        <div className="main__link">
-          <NavLink
-            exact="true"
-            to="/faqproject"
-            style={({ isActive }) => {
-              return isActive ? { color: '#d61b5e' } : {};
-            }}
-            end
-            onClick={() => setIsActive(2)}
-          >
-            Project Badging
-          </NavLink>{' '}
-          &nbsp;
-          <img src={arrowRight} alt="arrow" />
-        </div>
-        {isActive === 2 && (
-          <div className="sub__links">
-            <NavLink exact="true" to="/projectfaq"></NavLink>
+        <li>
+          <div className="main__link">
+            <NavLink
+              to="/faqproject"
+              style={({ isActive }) => {
+                return isActive
+                  ? {
+                      color: '#d61b5e',
+                    }
+                  : {};
+              }}
+              end
+              onClick={() => setTabIndex(2)}
+            >
+              Project Badging
+            </NavLink>{' '}
+            &nbsp;
           </div>
-        )}
-      </li>
-    </ul>
+          {tabIndex == 2
+            ? 'Project Badging' && <img src={arrowRight} alt="arrow" />
+            : ''}
+        </li>
+      </ul>
+
+      {/* {tabIndex === 1 && <img src={arrowRight} alt="arrow" />}
+      {tabIndex === 2 && <img src={arrowRight} alt="arrow" />} */}
+    </div>
   );
 };
 

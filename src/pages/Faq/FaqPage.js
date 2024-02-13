@@ -1,6 +1,6 @@
 import React from 'react';
 import { Faq, FaqSidebar, Footer, Jumbotron } from '../../components';
-import { faqData } from '../../components/Faq/data';
+import { eventFaqs } from '../../components/Faq/data';
 import { slackLogo } from '../../assets/images';
 import './freq.scss';
 
@@ -15,7 +15,7 @@ const FaqPage = () => {
           <FaqSidebar />
         </aside>
         <section className="faqPage">
-          {faqData.map(({ question, answer }, id) => {
+          {eventFaqs.map(({ question, answer }, id) => {
             return <Faq key={id} question={question} answer={answer} />;
           })}
 

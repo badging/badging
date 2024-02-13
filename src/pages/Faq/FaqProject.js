@@ -2,10 +2,10 @@ import React from 'react';
 import { Faq, FaqSidebar, Footer, Jumbotron } from '../../components';
 import { slackLogo } from '../../assets/images';
 import './freq.scss';
-import { faqData } from '../../components/Faq/data';
+import { projectFaqs } from '../../components/Faq/data';
 
 const FaqProject = () => {
-  const title = 'Project Questions';
+  const title = 'Frequently Asked Questions';
 
   return (
     <>
@@ -15,7 +15,7 @@ const FaqProject = () => {
           <FaqSidebar />
         </aside>
         <section className="faqPage">
-          {faqData.map(({ question, answer }, id) => {
+          {projectFaqs.map(({ question, answer }, id) => {
             return <Faq key={id} question={question} answer={answer} />;
           })}
 
