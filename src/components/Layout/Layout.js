@@ -11,7 +11,6 @@ const Layout = ({ children, className }) => {
       <Header />
       <div className="requirements">
         {/* Attaching all file components */}
-
         <div className="section-one">
           <img
             className="bg-getStarted"
