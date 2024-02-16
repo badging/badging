@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Footer, Header } from '../../components';
-import './event-badging.scss';
+import '../EventBadging/event-badging.scss';
 import '../../assets/styles/global.scss';
 import { arrowRight } from '../../assets/images';
-const EventBadging = () => {
+const EventBadgingForm = () => {
   const [swap, setSwap] = useState('about');
   const [showAbout, setShowAbout] = useState('what');
   const swapHandler = toggle => {
@@ -22,7 +22,7 @@ const EventBadging = () => {
         </div>
         <Header />
         <div className="container jumbotron__container">
-          <h1>Event Badging</h1>
+          <h1>Apply for Event Badging</h1>
           <div className="about-project">
             <button
               onClick={() => swapHandler('about')}
@@ -32,13 +32,14 @@ const EventBadging = () => {
             </button>
             <a
               href="https://github.com/badging/event-diversity-and-inclusion#badges-granted-version-3"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               Badged Events
             </a>
           </div>
         </div>
-        <section className="container">
+        {/* <section className="container">
           <div className="main-event">
             <ul className="main-list">
               <li
@@ -208,7 +209,8 @@ const EventBadging = () => {
                         <a
                           href="https://chaoss.community/diversity-and-inclusion-badging/"
                           target="_blank"
-                          className="a-line" rel="noreferrer"
+                          className="a-line"
+                          rel="noreferrer"
                         >
                           CHAOSS DEI Event Badging submission form
                         </a>{' '}
@@ -249,11 +251,11 @@ const EventBadging = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>
   );
 };
 
-export default EventBadging;
+export default EventBadgingForm;
