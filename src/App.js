@@ -21,6 +21,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
 import Faq from "./pages/Faq/Faq";
 import ProtectedRoute from "./components/ProtectedRoute";
+import EventBadgingForm from './pages/EventBadgingForm/EventBadgingForm';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -72,7 +73,7 @@ const App = () => {
               <Route
                 exact
                 path="/event-badging-form"
-                element={<SuccessfullyBadged />}
+                element={<EventBadgingForm />}
               />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
