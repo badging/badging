@@ -1,21 +1,17 @@
-import React from "react";
-import { Footer, Header } from "../../components";
+import React from 'react';
+import { Footer, Header } from '../../components';
 import {
   loginArrow,
   getBadgedFullBG,
   getBadgedMobile,
-} from "../../assets/images";
-<<<<<<< HEAD
+} from '../../assets/images';
 
 import settings from '../../settings.json';
 
 import '../../assets/styles/global.scss';
 import './LatestBadging.scss';
-=======
-import settings from '../../settings.json';
 import '../../assets/styles/global.scss';
 import './latest-badging.scss';
->>>>>>> 4644e8a (fixing)
 
 const LatestBadgingSample = () => {
   const baseurl = settings.API_BASE_URL;
@@ -39,11 +35,6 @@ const LatestBadgingSample = () => {
             src={getBadgedMobile}
             alt="arrow pointer design"
           />
-<<<<<<< HEAD
-          {/* <h1> Getting Started With Project Badging</h1> */}
-          {/* <img src={getStartedBg} alt="get started background" /> */}
-=======
->>>>>>> 4644e8a (fixing)
         </div>
 
         <div className="section-two">
@@ -71,7 +62,7 @@ const LatestBadgingSample = () => {
                 className="login-github"
                 onClick={handleLogin}
               >
-                <span className="btn-mb-badge">Get Started</span>{" "}
+                <span className="btn-mb-badge">Get Started</span>{' '}
                 <span className="btn-dt-badge"> Login with GitHub</span>
                 <span>
                   <img className="arrow" src={loginArrow} alt="arrow icon" />

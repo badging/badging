@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Footer, Header } from "../../components";
-import "./event-badging.scss";
-import "../../assets/styles/global.scss";
-import { arrowRight } from "../../assets/images";
+import React, { useState } from 'react';
+import { Footer, Header } from '../../components';
+import './event-badging.scss';
+import '../../assets/styles/global.scss';
+import { arrowRight } from '../../assets/images';
 const EventBadging = () => {
-  const [swap, setSwap] = useState("about");
-  const [showAbout, setShowAbout] = useState("what");
-  const swapHandler = (toggle) => {
+  const [swap, setSwap] = useState('about');
+  const [showAbout, setShowAbout] = useState('what');
+  const swapHandler = toggle => {
     setSwap(toggle);
   };
-  const eventHandler = (about) => {
+  const eventHandler = about => {
     setShowAbout(about);
   };
   return (
@@ -22,53 +22,51 @@ const EventBadging = () => {
         </div>
         <Header />
         <div className="container jumbotron__container">
-         
           <h1>Event Badging</h1>
           <div className="about-project">
             <button
-              onClick={() => swapHandler("about")}
-              className={swap == "about" ? "buttonActive" : "buttonInActive"}
+              onClick={() => swapHandler('about')}
+              className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}
             >
               About Event Badging
             </button>
             <a
               href="https://github.com/badging/event-diversity-and-inclusion#badges-granted-version-3"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               Badged Events
             </a>
-           
           </div>
         </div>
         <section className="container">
           <div className="main-event">
             <ul className="main-list">
               <li
-                onClick={() => eventHandler("what")}
-                className={showAbout == "what" ? "aboutEventHeader" : ""}
+                onClick={() => eventHandler('what')}
+                className={showAbout == 'what' ? 'aboutEventHeader' : ''}
               >
-                What is Event Badging{" "}
-                {showAbout == "what" && <img src={arrowRight} alt="arrow" />}{" "}
+                What is Event Badging{' '}
+                {showAbout == 'what' && <img src={arrowRight} alt="arrow" />}{' '}
               </li>
               <li
-                onClick={() => eventHandler("works")}
-                className={showAbout == "works" ? "aboutEventHeader" : ""}
+                onClick={() => eventHandler('works')}
+                className={showAbout == 'works' ? 'aboutEventHeader' : ''}
               >
-                How It Works{" "}
-                {showAbout == "works" && <img src={arrowRight} alt="arrow" />}
+                How It Works{' '}
+                {showAbout == 'works' && <img src={arrowRight} alt="arrow" />}
               </li>
               <li
-                onClick={() => eventHandler("apply")}
-                className={showAbout == "apply" ? "aboutEventHeader" : ""}
+                onClick={() => eventHandler('apply')}
+                className={showAbout == 'apply' ? 'aboutEventHeader' : ''}
               >
-                How to Apply{" "}
-                {showAbout == "apply" && <img src={arrowRight} alt="arrow" />}
+                How to Apply{' '}
+                {showAbout == 'apply' && <img src={arrowRight} alt="arrow" />}
               </li>
             </ul>
 
             <div className="desc-group">
               <div
-                className={`${showAbout == "what" ? "showDesc" : "hideDesc"}`}
+                className={`${showAbout == 'what' ? 'showDesc' : 'hideDesc'}`}
               >
                 <div className="info">
                   <h1>What is CHAOSS DEI Event badging</h1>
@@ -89,7 +87,7 @@ const EventBadging = () => {
                 </div>
               </div>
               <div
-                className={`${showAbout == "works" ? "showDesc" : "hideDesc"}`}
+                className={`${showAbout == 'works' ? 'showDesc' : 'hideDesc'}`}
               >
                 <div className="info">
                   <h1>How it Works</h1>
@@ -138,7 +136,7 @@ const EventBadging = () => {
                 </div>
               </div>
               <div
-                className={`${showAbout == "apply" ? "showDesc" : "hideDesc"}`}
+                className={`${showAbout == 'apply' ? 'showDesc' : 'hideDesc'}`}
               >
                 <div className="info">
                   <h1>How to apply</h1>
@@ -185,13 +183,13 @@ const EventBadging = () => {
                     <p className="Dtitle">General guidelines</p>
                     <ul className="bullet-list">
                       <li>
-                        Make sure all the{" "}
+                        Make sure all the{' '}
                         <a
                           href="https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/requirements.md"
                           className="a-line"
                         >
                           requirements
-                        </a>{" "}
+                        </a>{' '}
                         are fulfilled before initiating a CHAOSS DEI Event
                         Badging application.
                       </li>
@@ -206,14 +204,14 @@ const EventBadging = () => {
                     <p className="Dtitle">Application guide</p>
                     <ul className="bullet-list num">
                       <li>
-                        Navigate to the{" "}
+                        Navigate to the{' '}
                         <a
                           href="https://chaoss.community/diversity-and-inclusion-badging/"
                           target="_blank"
-                          className="a-line"
+                          className="a-line" rel="noreferrer"
                         >
                           CHAOSS DEI Event Badging submission form
-                        </a>{" "}
+                        </a>{' '}
                       </li>
                       <li>
                         Fill out the web form to the best of your ability and
@@ -235,11 +233,11 @@ const EventBadging = () => {
                       </li>
                       <li>
                         The review ends when a maintainer confirms that the
-                        initial checks are met, and everything is in order.{" "}
+                        initial checks are met, and everything is in order.{' '}
                       </li>
                       <li>
                         Then, a badge is generated for you according to the
-                        information provided, and the checklist is completed.{" "}
+                        information provided, and the checklist is completed.{' '}
                       </li>
                       <li>
                         The issue will be closed by a maintainer using the /end
