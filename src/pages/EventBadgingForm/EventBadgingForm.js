@@ -4,6 +4,7 @@ import '../EventBadging/event-badging.scss';
 import './EventBadgingForm.scss';
 import '../../assets/styles/global.scss';
 import { arrowRight } from '../../assets/images';
+// eslint-disable-next-line import/namespace
 import TextField from '../../components/Forms/TextField';
 
 const EventBadgingForm = () => {
@@ -65,7 +66,7 @@ const InPersonForm = () => {
         ratione culpa.
       </p>
 
-      <TextField placeholder="Enter Event Name" />
+      <TextField placeholder="Enter Event Name" error message={"Please enter a value"}/>
     </div>
   );
 };

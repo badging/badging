@@ -2,17 +2,6 @@
 import React from 'react';
 import './TextField.scss';
 
-// export interface TextFieldProps extends Partial<HTMLInputElement> {
-//   onClick?: () => void;
-//   error?: boolean;
-//   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-//   success?: boolean;
-//   label?: string;
-//   inputRef?: string;
-//   message?: string;
-//   props?: ComponentProps<JSXElementConstructor<any>>;
-//   inputClass?: string;
-// }
 const TextField = ({
   type,
   placeholder,
