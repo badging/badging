@@ -1,18 +1,18 @@
-import React, { ComponentProps, JSXElementConstructor } from 'react';
+import React from 'react';
 import './TextField.scss';
 
-export interface TextFieldProps extends Partial<HTMLInputElement> {
-  onClick?: () => void;
-  error?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  success?: boolean;
-  label?: string;
-  inputRef?: string;
-  message?: string;
-  props?: ComponentProps<JSXElementConstructor<any>>;
-  inputClass?: string;
-}
-const TextField: React.FC<TextFieldProps> = ({
+// export interface TextFieldProps extends Partial<HTMLInputElement> {
+//   onClick?: () => void;
+//   error?: boolean;
+//   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   success?: boolean;
+//   label?: string;
+//   inputRef?: string;
+//   message?: string;
+//   props?: ComponentProps<JSXElementConstructor<any>>;
+//   inputClass?: string;
+// }
+const TextField = ({
   type,
   placeholder,
   value,
@@ -25,8 +25,8 @@ const TextField: React.FC<TextFieldProps> = ({
   inputRef,
   message,
   inputClass,
-  props,
   disabled,
+  ...props
 }) => {
   return (
     <div className={`field__container`}>

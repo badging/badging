@@ -4,6 +4,7 @@ import '../EventBadging/event-badging.scss';
 import './EventBadgingForm.scss';
 import '../../assets/styles/global.scss';
 import { arrowRight } from '../../assets/images';
+import TextField from '../../components/Forms/TextField';
 
 const EventBadgingForm = () => {
   const [swap, setSwap] = useState('in-person');
@@ -63,6 +64,8 @@ const InPersonForm = () => {
         quas? Ea soluta velit numquam, laboriosam dolores corrupti ad quaerat
         ratione culpa.
       </p>
+
+      <TextField placeholder="Enter Event Name" />
     </div>
   );
 };

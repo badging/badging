@@ -1,18 +1,14 @@
-@import '../../../styles/mixins';
-@import '../../../styles/variables';
-
-// bg-transparent outline-none rounded py-4 h-12 w-full focus:border-primary transition-all duration-200 ease-in-out',
-// rounded w-full h-12 my-1 focus:border-primary
+@import '../../assets/styles/variables.scss';
 
 .field__container {
-  font-family: $secondary-font;
   width: 100%;
   label {
-    font-size: fontSize('sm');
+    font-size: 20px;
     margin-bottom: 6px;
   }
   .text__field__container {
-    @include flexItem;
+    display: flex;
+    align-items: center;
     width: 100%;
     .text__field {
       background-color: transparent;
@@ -29,7 +25,7 @@
         border: 1px solid $error;
       }
       &:focus {
-        border: 1px solid $primary-color;
+        border: 1px solid;
       }
     }
   }
