@@ -6,6 +6,10 @@ import '../../assets/styles/global.scss';
 import { arrowRight } from '../../assets/images';
 // eslint-disable-next-line import/namespace
 import TextField from '../../components/Forms/TextField';
+import BasicInfo from '../../pages/EventBadgingForm/Forms/InPerson/BasicInfo/BasicInfo';
+import CodeOfConduct from './Forms/InPerson/CodeOfConduct/CodeOfConduct';
+import DiversityAccessTickets from './Forms/InPerson/DiversityAccessTickets/DiversityAccessTickets';
+import FamilyFriendliness from './Forms/InPerson/FamilyFriendliness/FamilyFriendliness';
 
 const EventBadgingForm = () => {
   const [swap, setSwap] = useState('in-person');
@@ -14,7 +18,8 @@ const EventBadgingForm = () => {
   };
 
   const route = {
-    'in-person': <InPersonForm />,
+    'in-person': <BasicInfo />,
+    // 'in-person': <FamilyFriendliness />,
     virtual: <Virtual />,
   };
 
@@ -53,23 +58,7 @@ const EventBadgingForm = () => {
   );
 };
 
-const InPersonForm = () => {
-  return (
-    <div>
-      <h2>Physical</h2>
-      <p>
-        ipsum dolor sit amet consectetur adipisicing elit. Debitis amet quis
-        repellendus nostrum facere eligendi possimus voluptate aperiam
-        perspiciatis natus similique dicta iste, tenetur soluta quasi ipsa minus
-        sit aliquid enim. Similique suscipit excepturi dicta a obcaecati beatae
-        quas? Ea soluta velit numquam, laboriosam dolores corrupti ad quaerat
-        ratione culpa.
-      </p>
 
-      <TextField placeholder="Enter Event Name" error message={"Please enter a value"}/>
-    </div>
-  );
-};
 
 const Virtual = () => {
   return (

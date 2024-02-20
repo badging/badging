@@ -21,13 +21,17 @@ const TextField = ({
   return (
     <div className={`field__container`}>
       {label && (
-        <label style={{ color: error ? '#e11900 ' : '0' }}>{label}</label>
+        <label style={{ color: error ? '#e11900 ' : '#000000', fontSize: "16px", marginBottom: "8px", display: "block" }}>
+          <>
+            {label} {<span style={{ color: '#e11900' }}>*</span>}
+          </>
+        </label>
       )}
       <div
         className={[
           className,
           `text__field__container
-              ${error ? 'error__border' : '0'}`,
+              ${error ? 'error__border' : 'border'}`,
         ].join(' ')}
       >
         <input
@@ -36,7 +40,7 @@ const TextField = ({
             inputClass,
             'text__field',
             error ? 'error__border' : 'border',
-            error ? 'error__border' : '0',
+            error ? 'error__border' : 'border',
           ].join(' ')}
           placeholder={placeholder || 'Enter a value'}
           value={value}
