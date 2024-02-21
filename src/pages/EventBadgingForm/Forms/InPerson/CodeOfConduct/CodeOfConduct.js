@@ -9,6 +9,9 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
+import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
+
 
 const CodeOfConduct = () => {
     const [value, setValue] = useState("");
@@ -30,47 +33,34 @@ const CodeOfConduct = () => {
                 <form style={{ marginTop: "4rem" }} className='form-container'>
                     <div className='physical-input'>
                         <p style={{ fontWeight: "600", fontSize: "1.1rem" }}>Code of Conduct at Event</p>
-                        <Checkbox label="Ddd" value="dsjd" sx={{
-                            color: pink[800],
-                            '&.Mui-checked': {
-                                color: pink[600],
-                            },
-                        }} />
-                        <span style={{ color: "#000" }}>
-                            This event commits to the Code of Conduct at Event
-                        </span>
+                        <div>
+                            <BpCheckbox style={{ fontSize: "12px" }} label="This event commits to the Code of Conduct at Event." />
+                        </div>
                     </div>
 
-                    <div>
-                        <p>
-                            References
-                        </p>
+                    <div style={{ marginTop: "1rem" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <p style={{ color: "#000000" }}>
+                                References
+                            </p>
+                            {" "}
+                            <img src={arrowRight} alt="right arrow" />
+                        </div>
                     </div>
 
                     <div className='physical-input'>
-                        <FormLabel style={{ color: "#000000" }} id="demo-controlled-radio-buttons-group">
-                            Is the code of conduct posted at Event venue? <span style={{ color: "#D61B5E" }}>*</span>
-                        </FormLabel>
+                        <p>
+                            Is the code of conduct posted at Event venue? *
+                        </p>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <div>
+                                <BpCheckbox label="Yes" />
+                            </div>
 
-                        <RadioGroup
-                            aria-labelledby="demo-controlled-radio-buttons-group"
-                            name="controlled-radio-buttons-group"
-                            value={value}
-                            onChange={handleRadioChange}
-
-                            style={{ display: "flex" }}
-                        >
-                            <FormControlLabel value="yes" control={<Radio color="success" />} label="Yes" />
-                            <FormControlLabel value="no" control={
-                                <Radio
-                                    sx={{
-                                        color: pink[800], // Change color for 'Yes'
-                                        '&.Mui-checked': {
-                                            color: pink[600],
-                                        },
-                                    }}
-                                />} label="No" />
-                        </RadioGroup>
+                            <div>
+                                <BpCheckbox label="No" />
+                            </div>
+                        </div>
                     </div>
 
                     <div className='physical-input'>

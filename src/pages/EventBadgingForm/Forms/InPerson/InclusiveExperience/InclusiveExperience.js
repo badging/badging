@@ -3,6 +3,8 @@ import './InclusiveExperience.scss';
 import Button from '../../../../../components/Button/Button';
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
+import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
+import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
 
 const InclusiveExperience = () => {
     return (
@@ -18,21 +20,9 @@ const InclusiveExperience = () => {
                 <form style={{ marginTop: "4rem" }} className='form-container'>
                     <div className='physical-input'>
                         <p style={{ fontWeight: "600", fontSize: "1.2rem" }}>Inclusive Experience at Event</p>
-                        <Checkbox label="Ddd" value="dsjd" sx={{
-                            color: pink[800],
-                            '&.Mui-checked': {
-                                color: pink[600],
-                            },
-                        }} />
-                        <span style={{ color: "#000" }}>
-                            This event commits to Speaker Diversity & Inclusion.
-                        </span>
-                    </div>
-
-                    <div>
-                        <p>
-                            References
-                        </p>
+                        <div>
+                            <BpCheckbox style={{ fontSize: "12px" }} label="This event commits to Attendee Diversity & Inclusion." />
+                        </div>
                     </div>
 
                     <div className='physical-input'>

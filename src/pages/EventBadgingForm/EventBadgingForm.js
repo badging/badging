@@ -10,6 +10,8 @@ import BasicInfo from '../../pages/EventBadgingForm/Forms/InPerson/BasicInfo/Bas
 import CodeOfConduct from './Forms/InPerson/CodeOfConduct/CodeOfConduct';
 import DiversityAccessTickets from './Forms/InPerson/DiversityAccessTickets/DiversityAccessTickets';
 import FamilyFriendliness from './Forms/InPerson/FamilyFriendliness/FamilyFriendliness';
+import EventDemographics from './Forms/InPerson/EventDemographics/EventDemographics';
+import InclusiveExperience from './Forms/InPerson/InclusiveExperience/InclusiveExperience';
 
 const EventBadgingForm = () => {
   const [swap, setSwap] = useState('in-person');
@@ -18,8 +20,8 @@ const EventBadgingForm = () => {
   };
 
   const route = {
-    'in-person': <BasicInfo />,
-    // 'in-person': <FamilyFriendliness />,
+    // 'in-person': <BasicInfo />,
+    'in-person': <InclusiveExperience/>,
     virtual: <Virtual />,
   };
 

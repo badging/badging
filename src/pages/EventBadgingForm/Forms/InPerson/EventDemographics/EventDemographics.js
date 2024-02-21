@@ -5,6 +5,8 @@ import Button from '../../../../../components/Button/Button';
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
 import './EventDemographics.scss';
+import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
+import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -29,12 +31,20 @@ const EventDemographics = () => {
 
         <form className='form-container'>
           <div className='physical-input'>
-            <Checkbox label="Ddd" value="dsjd" sx={{
-              color: pink[800],
-              '&.Mui-checked': {
-                color: pink[600],
-              },
-            }} />
+            <p style={{ fontWeight: "600", fontSize: "1.2rem" }}>Diversity Access Tickets</p>
+            <div>
+              <BpCheckbox style={{ fontSize: "12px" }} label="This event commits to Speaker Diversity & Inclusion." />
+            </div>
+          </div>
+
+          <div style={{ marginTop: "1rem" }}>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <p style={{ color: "#000000" }}>
+                References
+              </p>
+              {" "}
+              <img src={arrowRight} alt="right arrow" />
+            </div>
           </div>
 
           <div className='physical-input'>

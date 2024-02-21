@@ -9,6 +9,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { pink } from '@mui/material/colors';
+import Checkbox from '@mui/material/Checkbox';
+import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const index = () => {
     const [value, setValue] = useState("");
@@ -17,6 +21,7 @@ const index = () => {
     const handleRadioChange = (value) => {
         setValue(value)
     }
+
     return (
         <div className='container'>
             <div className='in-person-form'>
@@ -41,25 +46,15 @@ const index = () => {
                             Are you an organizer of this event? <span style={{ color: "#D61B5E" }}>*</span>
                         </FormLabel>
 
-                        <RadioGroup
-                            aria-labelledby="demo-controlled-radio-buttons-group"
-                            name="controlled-radio-buttons-group"
-                            value={value}
-                            onChange={handleRadioChange}
+                        <div style={{display:"flex", alignItems:"center"}}>
+                            <div>
+                                <BpCheckbox label="Yes" />
+                            </div>
 
-                            style={{ display: "flex"}}
-                        >
-                            <FormControlLabel value="yes" control={<Radio color="success" />} label="Yes" />
-                            <FormControlLabel value="no" control={
-                                <Radio
-                                    sx={{
-                                        color: pink[800], // Change color for 'Yes'
-                                        '&.Mui-checked': {
-                                            color: pink[600],
-                                        },
-                                    }}
-                                />} label="No" />
-                        </RadioGroup>
+                            <div>
+                                <BpCheckbox label="No" />
+                            </div>
+                        </div>
                     </div>
 
                     <Button className="btn-primary btn-next" disabled>

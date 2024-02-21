@@ -4,6 +4,8 @@ import Button from '../../../../../components/Button/Button';
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '../../../../../components/Forms/TextField';
+import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
+import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
 
 const FamilyFriendliness = () => {
     return (
@@ -16,24 +18,22 @@ const FamilyFriendliness = () => {
                     can apply for virtual events <a href="#" style={{ color: "#D61B5E" }}> here </a>
                 </p>
 
-                <form style={{ marginTop: "4rem" }} className='form-container'>
+                <form style={{ marginTop: "4rem" }} className='form-container'> 
                     <div className='physical-input'>
                         <p style={{ fontWeight: "600", fontSize: "1.2rem" }}>Family Friendliness</p>
-                        <Checkbox label="Ddd" value="dsjd" sx={{
-                            color: pink[800],
-                            '&.Mui-checked': {
-                                color: pink[600],
-                            },
-                        }} />
-                        <span style={{ color: "#000" }}>
-                            This event commits to the Diversity Access Tickets.
-                        </span>
+                        <div>
+                            <BpCheckbox style={{ fontSize: "12px" }} label="This event commits to Speaker Diversity & Inclusion." />
+                        </div>
                     </div>
 
-                    <div>
-                        <p>
-                            References
-                        </p>
+                    <div style={{ marginTop: "1rem" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <p style={{ color: "#000000" }}>
+                                References
+                            </p>
+                            {" "}
+                            <img src={arrowRight} alt="right arrow" />
+                        </div>
                     </div>
 
                     <div className='physical-input'>
@@ -78,8 +78,8 @@ const FamilyFriendliness = () => {
                     </div>
 
                     <div className='callout-note-on-sibmit'>
-                        Once you click "submit", you must use your GitHub 
-                        account to finalize the issue on their Website by 
+                        Once you click "submit", you must use your GitHub
+                        account to finalize the issue on their Website by
                         clicking "Create New Issue".
                     </div>
 
