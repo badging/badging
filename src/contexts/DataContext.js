@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
-export const DataContext = createContext();
+export const DataContext = createContext(); 
 
 export const DataProvider = ({ children }) => {
   const [userData, setUserData] = useState({

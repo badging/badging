@@ -3,13 +3,7 @@ import React, { useState } from 'react';
 import TextField from '../../../../../components/Forms/TextField';
 import Button from '../../../../../components/Button/Button';
 import './BasicInfo.scss';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import { pink } from '@mui/material/colors';
-import Checkbox from '@mui/material/Checkbox';
 import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };

@@ -6,6 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import TextField from '../../../../../components/Forms/TextField';
 import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
 import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
+import TextArea from '../../../../../components/TextArea/TextArea';
 
 const DiversityAccessTickets = () => {
     return (
@@ -23,7 +24,7 @@ const DiversityAccessTickets = () => {
                         <p style={{ fontWeight: "600", fontSize: "1.2rem" }}>Diversity Access Tickets</p>
                         <div>
                             <BpCheckbox style={{ fontSize: "12px" }} label="This event commits to the Code of Conduct at Event." />
-                        </div>                      
+                        </div>
                     </div>
 
                     <div style={{ marginTop: "1rem" }}>
@@ -36,24 +37,26 @@ const DiversityAccessTickets = () => {
                         </div>
                     </div>
 
-                    <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            How many different types of diversity access tickets are available for the event? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                    <div className='physical-input'>                     
+                        <TextArea
+                            label="How many different types of diversity access tickets are available for the event?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                     </div>
 
-                    <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            What are the criteria for qualifying for a diversity access ticket? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                    <div className='physical-input'>                    
+                        <TextArea
+                            label="What are the criteria for qualifying for a diversity access ticket?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                     </div>
 
-                    <div style={{fontWeight: "normal"}} className='physical-input'>
-                        <TextField style={{fontWeight: "normal"}}  placeholder="Enter your answer here" label="Provide a link to the page containing information about Diversity Access Tickets." message={"Please enter a value"} />
+                    <div style={{ fontWeight: "normal" }} className='physical-input'>
+                        <TextField style={{ fontWeight: "normal" }} placeholder="Enter your answer here" label="Provide a link to the page containing information about Diversity Access Tickets." message={"Please enter a value"} />
                     </div>
 
                     <div className='step-5-criteria'>

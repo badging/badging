@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
 
-
+//0476938307 GTB triumph
 const SearchBar = ({ setShowInfo }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputClicked, setInputClicked] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
   const { userData, setUserData } = useContext(DataContext);
-  const searchBarRef = useRef(null);
+  const searchBarRef = useRef(null); 
 
   useEffect(() => {
     const handleClickOutside = (e) => {

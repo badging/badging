@@ -5,6 +5,7 @@ import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
 import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
 import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
+import TextArea from '../../../../../components/TextArea/TextArea';
 
 const InclusiveExperience = () => {
     return (
@@ -26,54 +27,55 @@ const InclusiveExperience = () => {
                     </div>
 
                     <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            Provide an example of the Event Feedback page if available. <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                        <TextArea label="Provide an example of the Event Feedback page if available." rows={6} cols={6} placeholder="Enter your answer here" />
                     </div>
 
                     <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            Is the event team using feedback from previous event's attendees, speakers, and volunteers to improve DEI at this event? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                        <TextArea
+                            label="Is the event team using feedback from previous event's attendees, speakers, and volunteers to improve DEI at this event?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                         <p>If so, provide an example</p>
                     </div>
 
                     <div className='physical-input'>
-                        <label>
-                            Does the event team plan to use feedback from this event's attendees, speakers, and volunteers to improve DEI at future events? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                        <TextArea
+                            label="Does the event team plan to use feedback from this event's attendees, speakers, and volunteers to improve DEI at future events?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                         <p>If so, provide a summary of the strategy involved</p>
                     </div>
 
                     <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            How can attendees learn more about accessibility at the event? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                        <TextArea
+                            label="How can attendees learn more about accessibility at the event?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                     </div>
 
                     <div className='physical-input'>
-                        <label>
-                            Does the event platform allow attendees to suggest future accomodations for the event? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                        <TextArea
+                            label="Does the event platform allow attendees to suggest future accomodations for the event?"
+                            rows={6}
+                            cols={6}
+                            placeholder="Enter your answer here"
+                        />
                         <p>If yes, provide the process </p>
                     </div>
 
-                    <div className='physical-input'>
-                        <label>
-                            Will the event platform be accessible to attendees and speakers after the event? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                    <div className='physical-input'>                       
+                        <TextArea
+                            label="Will the event platform be accessible to attendees and speakers after the event?" 
+                            rows={6} 
+                            cols={6} 
+                            placeholder="Enter your answer here" 
+                        />
                         <p>If yes, provide the name of the platform </p>
                     </div>
 

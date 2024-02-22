@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Footer, Header } from '../../components';
 import '../EventBadging/event-badging.scss';
 import './EventBadgingForm.scss';
@@ -12,50 +12,59 @@ import DiversityAccessTickets from './Forms/InPerson/DiversityAccessTickets/Dive
 import FamilyFriendliness from './Forms/InPerson/FamilyFriendliness/FamilyFriendliness';
 import EventDemographics from './Forms/InPerson/EventDemographics/EventDemographics';
 import InclusiveExperience from './Forms/InPerson/InclusiveExperience/InclusiveExperience';
+import { InPersonEventContext, InPersonEventProvider } from './context/InPersonEventContext';
+
 
 const EventBadgingForm = () => {
+  const { formData, setFormData } = useContext(InPersonEventContext);
+  console.log("yes", formData);
   const [swap, setSwap] = useState('in-person');
   const swapHandler = toggle => {
     setSwap(toggle);
   };
 
   const route = {
-    // 'in-person': <BasicInfo />,
-    'in-person': <InclusiveExperience/>,
+    'in-person': <BasicInfo />,
+    // 'in-person': <InclusiveExperience />,
     virtual: <Virtual />,
   };
 
   return (
     <>
-      <main>
-        <div className="overlay">
-          <div className="bgRight"></div>
-          <div className="bgCenter"></div>
-          <div className="bgLeft"></div>
-        </div>
-        <Header />
-        <div className="container jumbotron__container">
-          <h1>Apply for Event Badging</h1>
-          <div className="about-project">
-            <button
-              onClick={() => swapHandler('in-person')}
-              className={
-                swap == 'in-person' ? 'buttonActive' : 'buttonInActive'
-              }
-            >
-              In-Person Event
-            </button>
-            <button
-              onClick={() => swapHandler('virtual')}
-              className={swap == 'virtual' ? 'buttonActive' : 'buttonInActive'}
-            >
-              Virtual Event
-            </button>
+      <InPersonEventProvider value={{formData}}>
+        <main>
+          <div className="overlay">
+            <div className="bgRight"></div>
+            <div className="bgCenter"></div>
+            <div className="bgLeft"></div>
           </div>
-        </div>
-        <section className="event-form-container">{route[swap]}</section>
-      </main>
-      <Footer />
+          <Header />
+          <div className="container jumbotron__container">
+            <h1>Apply for Event Badging</h1>
+            <div className="about-project">
+              <button
+                onClick={() => swapHandler('in-person')}
+                className={
+                  swap == 'in-person' ? 'buttonActive' : 'buttonInActive'
+                }
+              >
+                In-Person Event
+              </button>
+              <button
+                onClick={() => swapHandler('virtual')}
+                className={swap == 'virtual' ? 'buttonActive' : 'buttonInActive'}
+              >
+                Virtual Event
+              </button>
+            </div>
+          </div>
+          <section className="event-form-container">
+            {route[swap]}
+
+          </section>
+        </main>
+        <Footer />
+      </InPersonEventProvider>
     </>
   );
 };

@@ -6,6 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import TextField from '../../../../../components/Forms/TextField';
 import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
 import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
+import TextArea from '../../../../../components/TextArea/TextArea';
 
 const FamilyFriendliness = () => {
     return (
@@ -36,12 +37,13 @@ const FamilyFriendliness = () => {
                         </div>
                     </div>
 
-                    <div className='physical-input'>
-                        <label style={{ fontWeight: "normal" }}>
-                            Does the Event provide childcare facilities for its attendees and speakers? <span style={{ color: "#D61B5E" }}>*</span>
-                        </label>
-                        <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-                        </textarea>
+                    <div className='physical-input'>                        
+                        <TextArea
+                            label="Does the Event provide childcare facilities for its attendees and speakers?" 
+                            rows={6} 
+                            cols={6} 
+                            placeholder="Enter your answer here" 
+                        />
                     </div>
 
                     <div style={{ fontWeight: "normal" }} className='physical-input'>

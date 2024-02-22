@@ -7,6 +7,7 @@ import Checkbox from '@mui/material/Checkbox';
 import './EventDemographics.scss';
 import arrowRight from '../../../../../assets/images/others/arrow-right.svg';
 import BpCheckbox from '../../../../../components/Checkbox/BpCheckbox';
+import TextArea from '../../../../../components/TextArea/TextArea';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -48,29 +49,32 @@ const EventDemographics = () => {
           </div>
 
           <div className='physical-input'>
-            <label>
-              Detail the process for measuring Event Demographics <span style={{ color: "#D61B5E" }}>*</span>
-            </label>
-            <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-            </textarea>
+            <TextArea
+              label="Detail the process for measuring Event Demographics"
+              rows={6}
+              cols={6}
+              placeholder="Enter your answer here"
+            />
             <p>For example, the option of "Prefer not to answer".</p>
           </div>
 
-          <div className='physical-input'>
-            <label>
-              Provide an example of an opt-out option on the Event registration page if available.<span style={{ color: "#D61B5E" }}>*</span>
-            </label>
-            <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-            </textarea>
+          <div className='physical-input'>            
+            <TextArea
+              label="Provide an example of an opt-out option on the Event registration page if available."
+              rows={6}
+              cols={6}
+              placeholder="Enter your answer here"
+            />
             <p>For example, the option of "Prefer not to answer".</p>
           </div>
 
-          <div className='physical-input'>
-            <label>
-              Provide an example of a demographics text input box on the Event registration page if available.<span style={{ color: "#D61B5E" }}>*</span>
-            </label>
-            <textarea placeholder='Enter your answer here' rows={6} cols={6} style={{ width: "100%", color: "#BEBEBE" }}>
-            </textarea>
+          <div className='physical-input'>           
+            <TextArea
+              label="Provide an example of a demographics text input box on the Event registration page if available."
+              rows={6}
+              cols={6}
+              placeholder="Enter your answer here"
+            />
             <p>For example, an alternative identity input for gender.</p>
           </div>
 

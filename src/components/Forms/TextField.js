@@ -49,6 +49,7 @@ const TextField = ({
           name={name}
           disabled={disabled}
           ref={inputRef}
+          style={{color:"#000"}}
           {...props}
         />
       </div>
