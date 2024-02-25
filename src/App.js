@@ -20,6 +20,7 @@ import { DesktopProvider } from "./contexts/DesktopContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
 import Faq from "./pages/Faq/Faq";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -51,10 +52,13 @@ const App = () => {
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
-              <Route
-                path="/select-project/:provider"
-                element={<SelectProjectRepo />}
-              />
+
+              <Route element={<ProtectedRoute />}>
+                <Route
+                  path="/select-project/:provider"
+                  element={<SelectProjectRepo />}
+                />
+              </Route>
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route
