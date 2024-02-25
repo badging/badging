@@ -59,11 +59,6 @@ const App = () => {
                   element={<SelectProjectRepo />}
                 />
               </Route>
-
-              {/* <Route
-                path="/select-project/:provider"
-                element={<SelectProjectRepo />}
-              /> */}
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route
