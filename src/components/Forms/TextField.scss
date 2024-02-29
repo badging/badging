@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables.scss';
+
+.field__container {
+  width: 100%;
+
+  label {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .text__field__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .text__field {
+      background-color: transparent;
+      outline: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      height: 50px;
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+      padding: 20px 10px;
+      border: 1px solid #bebebe;
+      font-size: fontSize('sm');
+      border-radius: 4px;
+
+      &.error__border {
+        border: 1px solid $error;
+      }
+
+      &:focus {
+        border: 1px solid #030303;
+        color: #030303;
+      }
+
+      &.border {
+        // border: 1px solid #bebebe;
+      }
+    }
+  }
+}

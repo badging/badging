@@ -1,0 +1,33 @@
+.btn-primary {}
+
+.btn {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    padding: 8px 24.1px;
+    border-radius: 12px;
+    color: #030303;
+    cursor: pointer;
+    background: #FEFEFE;
+    border: 1px solid #ADCFF8;
+    transition: all 0.3s ease;
+}
+
+
+.btn-primary:hover {
+    background-color: #D61B5E;
+    color: #fff;
+}
+
+.btn-primary:active {
+    background: #222D33;
+    transform: translateY(1px);
+    color: #fff;
+}
+
+.btn-primary:disabled {
+    background-color: #F3F5F6;
+    color: #5B656B;
+    cursor: not-allowed;
+    border: none;
+}

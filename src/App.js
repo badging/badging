@@ -7,7 +7,7 @@ import {
   SelectProjectRepo,
   ErrorPage,
   SuccessfullyBadged,
-  ComingSoon,
+  ComingSoon
 } from "./pages";
 import {
   WhatIsDeiBadging,
@@ -21,6 +21,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
 import Faq from "./pages/Faq/Faq";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ProjectBadgingForm from "./pages/ProjectBadgingForm/ProjectBadgingForm";
+import ProjectBadgingSuccess from "./pages/ProjectBadgingSuccess/Project_Badging_Success";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -52,6 +54,7 @@ const App = () => {
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
+              
 
               <Route element={<ProtectedRoute />}>
                 <Route
@@ -66,6 +69,9 @@ const App = () => {
                 path="/project-badging-successful"
                 element={<SuccessfullyBadged />}
               />
+              <Route 
+              exact 
+              path="/application" element={<ProjectBadgingForm />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </DataProvider>
