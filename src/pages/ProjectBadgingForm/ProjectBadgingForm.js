@@ -60,17 +60,20 @@ const ProjectBadgingForm = () => {
 
       <div className="project-badging container">
         <div className="project-badging-form">
-          <h4 style={{ color: '#000000' }}>Self-Hosted Projects</h4>
-          <p style={{ marginTop: '1rem', marginBottom: '3.375rem' }}>
-            Please only use this form if you are applying for a CHAOSS DEI
-            Project Badge when using self-hosted software development and
-            version control solutions. If you are using web-hosted solutions (by
-            GitLab or GitHub), please apply for the CHAOSS DEI Project Badge{' '}
-            <a href="#" style={{ color: '#D61B5E' }}>
-              {' '}
-              here.{' '}
-            </a>
-          </p>
+          <div style={{ marginBottom: '3.375rem' }}>
+            <h4 style={{ color: '#000000' }}>Self-Hosted Projects</h4>
+            <p style={{ marginTop: '1rem' }}>
+              Please only use this form if you are applying for a CHAOSS DEI
+              Project Badge when using self-hosted software development and
+              version control solutions. If you are using web-hosted solutions
+              (by GitLab or GitHub), please apply for the CHAOSS DEI Project
+              Badge{' '}
+              <a href="#" style={{ color: '#D61B5E' }}>
+                {' '}
+                here.{' '}
+              </a>
+            </p>
+          </div>
 
           <Formik
             initialValues={initialValues}
@@ -202,7 +205,7 @@ const ProjectBadgingForm = () => {
                         fontSize: '14px',
                         display: 'block',
                         color: '#030303',
-                        lineHeight: '2',
+                        lineHeight: '1.5',
                       }}
                     >
                       For example, this could be in your project repository or
