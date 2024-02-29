@@ -5,6 +5,7 @@ import { FormLabel } from '@mui/material';
 import Button from '../../components/Button/Button';
 import TextField from '../../components/Forms/TextField';
 import { Field, Form, Formik } from 'formik';
+import * as yup from 'yup';
 // eslint-disable-next-line import/namespace
 
 const ProjectBadgingForm = () => {
@@ -17,35 +18,13 @@ const ProjectBadgingForm = () => {
     projectDeiUrl: ""
   }
 
-  const validateForm = (values) => {
-    const errors = {}
-
-    if (!values.projectName) {
-      errors.projectName = "Project name is required";
-    } else if (values.projectName.length <= 3) {
-      errors.projectName = 'Must be 3 characters or more';
-    }
-
-    if (!values.yourName) {
-      errors.yourName = "Your name is required";
-    } else if (values.yourName.length <= 3) {
-      errors.yourName = 'Must be 3 characters or more';
-    }
-
-    if (!values.yourEmail) {
-      errors.yourEmail = "Email is required";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.yourEmail)
-    ) {
-      errors.yourEmail = "Invalid email address";
-    }
-
-    if (!values.projectOwner) {
-      errors.projectOwner = "Project owner field is required"
-    }
-
-    return errors
-  }
+  const validationSchema = yup.object().shape({
+    projectName: yup.string().required('Project name is required'),
+    yourName: yup.string().required('Name is required'),
+    yourEmail: yup.string().email('Invalid email address').required('Email is required'),
+    projectOwner: yup.string().required('Project owner is required'),  
+    projectDeiUrl: yup.string().required('Project DEI URL is required'),  
+  });
 
   const onContactFormSubmission = (values) => {
     console.log(values);
@@ -75,8 +54,8 @@ const ProjectBadgingForm = () => {
           </p>
 
           <Formik
-            initialValues={initialValues}
-            validate={validateForm}
+            initialValues={initialValues}            
+            validationSchema={validationSchema}
             onSubmit={(values) => {
               onContactFormSubmission(values);
             }}
