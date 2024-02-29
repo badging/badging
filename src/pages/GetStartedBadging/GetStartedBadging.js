@@ -1,9 +1,10 @@
-import { useState } from "react";
-import { Footer, Jumbotron, Layout, Loader } from "../../components";
-import { loginArrow, githubCleanIcon, gitlabIcon } from "../../assets/images";
-import "../../assets/styles/global.scss";
-import "./getStartedBadging.scss";
-import settings from "../../settings.json";
+import { useState } from 'react';
+import { Footer, Jumbotron, Layout, Loader } from '../../components';
+import { loginArrow, githubCleanIcon, gitlabIcon } from '../../assets/images';
+import '../../assets/styles/global.scss';
+import './getStartedBadging.scss';
+import settings from '../../settings.json';
+import { Link } from 'react-router-dom';
 
 const GetStartedBadging = () => {
   const [openLoader, setOpenLoader] = useState(false);
@@ -20,7 +21,7 @@ const GetStartedBadging = () => {
     window.location.href = `${baseurl}/auth/gitlab`;
   };
 
-const title = "Get Started"
+  const title = 'Get Started';
   return (
     <section>
       <Jumbotron title={title} />
@@ -78,22 +79,32 @@ const title = "Get Started"
         <h1>Prerequisite</h1>
 
         <ul className="section-list">
-            <li>
-              A repository is required within which to put the DEI.md file
-            </li>
-            <li>
-              The person applying for the badge must be a project owner 
-            </li>
+          <li>A repository is required within which to put the DEI.md file</li>
+          <li>The person applying for the badge must be a project owner</li>
 
-            <li>The Project must be Open Source</li>
-            <li>Ensure you have your DEI.md File</li>
-          </ul>
+          <li>The Project must be Open Source</li>
+          <li>Ensure you have your DEI.md File</li>
+        </ul>
 
-          <div className="login">
-            <button className="github" type="button" onClick={handleLoginWithGitHub}>Login with GitHub</button>
-            <button className="gitlab" type="button" onClick={handleLoginWithGitLab}>Login with GitLab</button>
-            <a className="self__hosted" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdoKt4K8L_LuuZ-0xaUd1ZL8JrIZ5dGt20XAFP7x2SfkAASdw/viewform">Apply for Self-Hosted Projects</a>
-          </div>
+        <div className="login">
+          <button
+            className="github"
+            type="button"
+            onClick={handleLoginWithGitHub}
+          >
+            Login with GitHub
+          </button>
+          <button
+            className="gitlab"
+            type="button"
+            onClick={handleLoginWithGitLab}
+          >
+            Login with GitLab
+          </button>
+          <Link className="self__hosted" to="/apply-for-self-hosted-projects">
+            Apply for Self-Hosted Projects
+          </Link>
+        </div>
       </div>
       <Loader open={openLoader}>
         <p>Redirecting to Authentication</p>

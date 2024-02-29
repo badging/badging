@@ -1,68 +1,67 @@
 .event-form-container {
-    background-color: white;
-    color: #000;
-    width: 100%;
-    // height: 70vh;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  // height: 70vh;
+  color: black !important;
+
+  div {
     color: black !important;
+  }
 
-    div {
-        color: black !important;
-    }
+  h1 {
+    color: '#222222';
+  }
 
-    h1 {
-        color: "#222222";
-    }
-
-    .buttonActive {
-        background: #222D33;
-    }
+  .buttonActive {
+    background: #222d33;
+  }
 }
 
 .project-badging-form {
-    width: 950px;
-    padding-right: 120px;
+  width: 950px;
+  padding-right: 120px;
 
-    h4 {
-        margin-top: 3rem;
-        font-size: 32px;
-        color: #000000;
-    }
+  h4 {
+    margin-top: 3rem;
+    font-size: 32px;
+    color: #000000;
+  }
+
+  p {
+    line-height: 28.8px;
+  }
+
+  .physical-input {
+    margin-top: 2rem;
+    color: #030303;
 
     p {
-        line-height: 28.8px;
+      padding: 4px 0px;
+      font-size: 14px;
     }
 
-    .physical-input {
-        margin-top: 2rem;
-        color: #030303;
-
-        p {
-            padding: 4px 0px;
-            font-size: 14px;
-        }
-
-        span {
-            margin: 8px 0px;
-        }
+    span {
+      margin: 8px 0px;
     }
-
-
+  }
 }
 
-.form-submit {
-    margin-top: 4rem;
+.form-submit-btn {
+  margin-top: 4rem;
+  height: 60px;
+  border-radius: 12px !important;
 }
 
 .project-badging {
-    padding-bottom: 8rem;
+  padding-bottom: 8rem;
 }
 
 .flex-between-center {
-    display: flex;
-    align-items: center;       
+  display: flex;
+  align-items: center;
 }
 
 .radio-btn {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
-
