@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button';
 import TextField from '../../components/Forms/TextField';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line import/namespace
 
 const ProjectBadgingForm = () => {
@@ -21,41 +22,13 @@ const ProjectBadgingForm = () => {
     projectName: Yup.string()
       .required('Project name is required')
       .min(3, 'Must be 3 characters or more'),
-    name: Yup.string().required('Your name is required').min(3, 'Must be 3 characters or more'),
+    name: Yup.string()
+      .required('Your name is required')
+      .min(3, 'Must be 3 characters or more'),
     email: Yup.string()
       .email('Invalid email address')
       .required('Email is required'),
   });
-
-  const validateForm = values => {
-    const errors = {};
-
-    if (!values.projectName) {
-      errors.projectName = 'Project name is required';
-    } else if (values.projectName.length <= 3) {
-      errors.projectName = 'Must be 3 characters or more';
-    }
-
-    if (!values.yourName) {
-      errors.yourName = 'Your name is required';
-    } else if (values.yourName.length <= 3) {
-      errors.yourName = 'Must be 3 characters or more';
-    }
-
-    if (!values.yourEmail) {
-      errors.yourEmail = 'Email is required';
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.yourEmail)
-    ) {
-      errors.yourEmail = 'Invalid email address';
-    }
-
-    if (!values.projectOwner) {
-      errors.projectOwner = 'Project owner field is required';
-    }
-
-    return errors;
-  };
 
   const onContactFormSubmission = values => {
     console.log(values);
@@ -107,57 +80,61 @@ const ProjectBadgingForm = () => {
                       message={'Please enter a value'}
                       value={values.projectName}
                     />
-                    <p style={{ color: 'red', fontSize: '14px' }}>
-                      {errors.projectName &&
-                        touched.projectName &&
-                        errors.projectName}
-                    </p>
+                    {errors.projectName && touched.projectName && (
+                      <p style={{ color: 'red', fontSize: '14px' }}>
+                        {errors.projectName}
+                      </p>
+                    )}
                   </div>
 
                   <div className="physical-input">
                     <TextField
-                      value={values.yourName}
+                      value={values.name}
                       onChange={handleChange}
                       name="yourName"
                       placeholder="Enter your name "
                       label="Your name: "
                       message={'Please enter a value'}
                     />
-                    <p style={{ color: 'red', fontSize: '14px' }}>
-                      {errors.yourName && touched.yourName && errors.yourName}
-                    </p>
+
+                    {errors.name && touched.name && (
+                      <p style={{ color: 'red', fontSize: '14px' }}>
+                        {errors.name}
+                      </p>
+                    )}
                   </div>
 
                   <div className="physical-input">
                     <TextField
-                      value={values.yourEmail}
+                      value={values.email}
                       onChange={handleChange}
                       name="yourEmail"
                       placeholder="Enter your email address"
                       label="Your email (where we will send a successful badge): "
                       message={'Please enter a value'}
                     />
-                    <p style={{ color: 'red', fontSize: '14px' }}>
-                      {errors.yourEmail &&
-                        touched.yourEmail &&
-                        errors.yourEmail}
-                    </p>
+                    {errors.email && touched.email && (
+                      <p style={{ color: 'red', fontSize: '14px' }}>
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   <div className="physical-input">
                     <span style={{ color: '#000', fontSize: '16px' }}>
                       Like publicly hosted projects, we only accept applications
                       from project owners. Are you a project owner?{' '}
-                      <a href="#" style={{ color: '#D61B5E' }}>
+                      <Link href="#" style={{ color: '#D61B5E' }}>
                         {' '}
                         *{' '}
-                      </a>
+                      </Link>
                     </span>
 
                     <div style={{ marginTop: '6px' }}>
                       <div role="group" aria-labelledby="my-radio-group">
                         <label
                           style={{ color: '#030303', marginRight: '1.2rem' }}
+                          htmlFor="projectOwner"
                         >
                           <Field
                             type="radio"
@@ -170,7 +147,10 @@ const ProjectBadgingForm = () => {
                             Yes
                           </span>
                         </label>
-                        <label style={{ color: '#030303' }}>
+                        <label
+                          style={{ color: '#030303' }}
+                          htmlFor="projectOwner"
+                        >
                           <Field
                             type="radio"
                             name="projectOwner"
@@ -183,11 +163,11 @@ const ProjectBadgingForm = () => {
                           </span>
                         </label>
                       </div>
-                      <p style={{ color: 'red', fontSize: '14px' }}>
-                        {errors.projectOwner &&
-                          touched.projectOwner &&
-                          errors.projectOwner}
-                      </p>
+                      {errors.projectName && touched.projectName && (
+                        <p style={{ color: 'red', fontSize: '14px' }}>
+                          {errors.projectName}
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -225,13 +205,6 @@ const ProjectBadgingForm = () => {
                   <Button
                     type="submit"
                     className="form-submit btn-primary btn-next"
-                    disabled={
-                      !values.projectName ||
-                      !values.yourName ||
-                      !values.yourEmail ||
-                      !values.projectOwner ||
-                      !values.projectDeiUrl
-                    }
                   >
                     Submit
                   </Button>
