@@ -71,7 +71,7 @@ const App = () => {
               />
               <Route 
               exact 
-              path="/application" element={<ProjectBadgingForm />} />
+              path="/apply-for-self-hosted-projects" element={<ProjectBadgingForm />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </DataProvider>
