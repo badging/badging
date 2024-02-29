@@ -123,7 +123,7 @@ const ProjectBadgingForm = () => {
                     <TextField
                       value={values.email}
                       onChange={handleChange}
-                      name="yourEmail"
+                      name="email"
                       placeholder="Enter your email address"
                       label="Your email (where we will send a successful badge): "
                       message={'Please enter a value'}
