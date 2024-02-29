@@ -18,6 +18,16 @@ const ProjectBadgingForm = () => {
     projectDeiUrl: '',
   };
 
+  /**
+  TODOS:
+
+  - sticking to scss intead in inline styling
+  - encapsulating the textfield components, each having their own labels
+  - use React Link tags instead of anchor tags
+  - improve on the pixel perfect design based of what we have on figma
+  
+  **/
+
   const validationSchema = Yup.object({
     projectName: Yup.string()
       .required('Project name is required')
@@ -28,6 +38,8 @@ const ProjectBadgingForm = () => {
     email: Yup.string()
       .email('Invalid email address')
       .required('Email is required'),
+    projectDeiUrl: Yup.string().required('Project DEI Url is required'),
+    projectOwner: Yup.string().required('ProjectOwner is required'),
   });
 
   const onContactFormSubmission = values => {
@@ -49,7 +61,7 @@ const ProjectBadgingForm = () => {
       <div className="project-badging container">
         <div className="project-badging-form">
           <h4 style={{ color: '#000000' }}>Self-Hosted Projects</h4>
-          <p style={{ marginTop: '1rem' }}>
+          <p style={{ marginTop: '1rem', marginBottom: '3.375rem' }}>
             Please only use this form if you are applying for a CHAOSS DEI
             Project Badge when using self-hosted software development and
             version control solutions. If you are using web-hosted solutions (by
@@ -91,7 +103,7 @@ const ProjectBadgingForm = () => {
                     <TextField
                       value={values.name}
                       onChange={handleChange}
-                      name="yourName"
+                      name="name"
                       placeholder="Enter your name "
                       label="Your name: "
                       message={'Please enter a value'}
@@ -163,9 +175,9 @@ const ProjectBadgingForm = () => {
                           </span>
                         </label>
                       </div>
-                      {errors.projectName && touched.projectName && (
+                      {errors.projectOwner && touched.projectOwner && (
                         <p style={{ color: 'red', fontSize: '14px' }}>
-                          {errors.projectName}
+                          {errors.projectOwner}
                         </p>
                       )}
                     </div>
@@ -180,31 +192,31 @@ const ProjectBadgingForm = () => {
                       label="URL to your project's DEI.md file: "
                       message={'Please enter a value'}
                     />
-                    <p style={{ color: 'red', fontSize: '14px' }}>
-                      {errors.projectDeiUrl &&
-                        touched.projectDeiUrl &&
-                        errors.projectDeiUrl}
-                    </p>
+                    {errors.projectDeiUrl && touched.projectDeiUrl && (
+                      <p style={{ color: 'red', fontSize: '14px' }}>
+                        {errors.projectDeiUrl}
+                      </p>
+                    )}
                     <span
                       style={{
                         fontSize: '14px',
                         display: 'block',
                         color: '#030303',
+                        lineHeight: '2',
                       }}
                     >
                       For example, this could be in your project repository or
                       on your project website. If you have further questions
                       about the DEI.md file please see our{' '}
-                      <a href="#" style={{ color: '#D61B5E' }}>
-                        {' '}
+                      <Link href="#" style={{ color: '#D61B5E' }}>
                         DEI.md Guide.{' '}
-                      </a>
+                      </Link>
                     </span>
                   </div>
 
                   <Button
                     type="submit"
-                    className="form-submit btn-primary btn-next"
+                    className="form-submit-btn btn-primary btn-next"
                   >
                     Submit
                   </Button>
