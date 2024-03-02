@@ -5,9 +5,9 @@ import { FormLabel } from '@mui/material';
 import Button from '../../components/Button/Button';
 import TextField from '../../components/Forms/TextField';
 import { Field, Form, Formik } from 'formik';
-import * as yup from 'yup';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import RadioInput from '../../components/Forms/RadioInput';
 // eslint-disable-next-line import/namespace
 
 const ProjectBadgingForm = () => {
@@ -61,18 +61,18 @@ const ProjectBadgingForm = () => {
 
       <div className="project-badging container">
         <div className="project-badging-form">
-          <div style={{ marginBottom: '3.375rem' }}>
-            <h4 style={{ color: '#000000' }}>Self-Hosted Projects</h4>
-            <p style={{ marginTop: '1rem' }}>
+          <div className='projects-header'>
+            <h4>Self-Hosted Projects</h4>
+            <p>
               Please only use this form if you are applying for a CHAOSS DEI
               Project Badge when using self-hosted software development and
               version control solutions. If you are using web-hosted solutions
               (by GitLab or GitHub), please apply for the CHAOSS DEI Project
               Badge{' '}
-              <a href="#" style={{ color: '#D61B5E' }}>
+              <Link to="#">
                 {' '}
                 here.{' '}
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -97,7 +97,7 @@ const ProjectBadgingForm = () => {
                       value={values.projectName}
                     />
                     {errors.projectName && touched.projectName && (
-                      <p style={{ color: 'red', fontSize: '14px' }}>
+                      <p>
                         {errors.projectName}
                       </p>
                     )}
@@ -114,7 +114,7 @@ const ProjectBadgingForm = () => {
                     />
 
                     {errors.name && touched.name && (
-                      <p style={{ color: 'red', fontSize: '14px' }}>
+                      <p>
                         {errors.name}
                       </p>
                     )}
@@ -130,57 +130,43 @@ const ProjectBadgingForm = () => {
                       message={'Please enter a value'}
                     />
                     {errors.email && touched.email && (
-                      <p style={{ color: 'red', fontSize: '14px' }}>
+                      <p>
                         {errors.email}
                       </p>
                     )}
                   </div>
 
                   <div className="physical-input">
-                    <span style={{ color: '#000', fontSize: '16px' }}>
+                    <span>
                       Like publicly hosted projects, we only accept applications
                       from project owners. Are you a project owner?{' '}
-                      <Link href="#" style={{ color: '#D61B5E' }}>
+                      <Link href="#">
                         {' '}
                         *{' '}
                       </Link>
                     </span>
 
-                    <div style={{ marginTop: '6px' }}>
+                    <div className='radio-field'>
                       <div role="group" aria-labelledby="my-radio-group">
-                        <label
-                          style={{ color: '#030303', marginRight: '1.2rem' }}
+                        <RadioInput
+                          name="projectOwner"
+                          value="Yes"
+                          onChange={handleChange}
+                          label="Yes"
                           htmlFor="projectOwner"
-                        >
-                          <Field
-                            type="radio"
-                            name="projectOwner"
-                            value="Yes"
-                            onChange={handleChange}
-                            style={{ color: '#030303' }}
-                          />
-                          <span style={{ marginLeft: '4px', color: '#030303' }}>
-                            Yes
-                          </span>
-                        </label>
-                        <label
-                          style={{ color: '#030303' }}
+                        />
+
+                        <RadioInput
+                          name="projectOwner"
+                          value="No"
+                          onChange={handleChange}
+                          label="No"
                           htmlFor="projectOwner"
-                        >
-                          <Field
-                            type="radio"
-                            name="projectOwner"
-                            value="No"
-                            onChange={handleChange}
-                            style={{ color: '#030303' }}
-                          />
-                          <span style={{ marginLeft: '4px', color: '#030303' }}>
-                            No
-                          </span>
-                        </label>
+                          className="radio-btn"
+                        />
                       </div>
                       {errors.projectOwner && touched.projectOwner && (
-                        <p style={{ color: 'red', fontSize: '14px' }}>
+                        <p>
                           {errors.projectOwner}
                         </p>
                       )}
@@ -197,22 +183,17 @@ const ProjectBadgingForm = () => {
                       message={'Please enter a value'}
                     />
                     {errors.projectDeiUrl && touched.projectDeiUrl && (
-                      <p style={{ color: 'red', fontSize: '14px' }}>
+                      <p>
                         {errors.projectDeiUrl}
                       </p>
                     )}
                     <span
-                      style={{
-                        fontSize: '14px',
-                        display: 'block',
-                        color: '#030303',
-                        lineHeight: '1.5',
-                      }}
+                      className='info'                     
                     >
                       For example, this could be in your project repository or
                       on your project website. If you have further questions
                       about the DEI.md file please see our{' '}
-                      <Link href="#" style={{ color: '#D61B5E' }}>
+                      <Link href="#" className='info-link'>
                         DEI.md Guide.{' '}
                       </Link>
                     </span>
@@ -221,6 +202,7 @@ const ProjectBadgingForm = () => {
                   <Button
                     type="submit"
                     className="form-submit-btn btn-primary btn-next"
+                    disabled={!values.email}
                   >
                     Submit
                   </Button>

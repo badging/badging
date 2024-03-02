@@ -1,67 +1,103 @@
+@import "../../assets/styles/variables.scss";
+
 .event-form-container {
-  background-color: white;
-  color: #000;
-  width: 100%;
-  // height: 70vh;
-  color: black !important;
-
-  div {
+    background-color: white;
+    color: #000;
+    width: 100%;
+    // height: 70vh;
     color: black !important;
-  }
 
-  h1 {
-    color: '#222222';
-  }
+    div {
+        color: black !important;
+    }
 
-  .buttonActive {
-    background: #222d33;
-  }
+    h1 {
+        color: '#222222';
+    }
+
+    .buttonActive {
+        background: #222d33;
+    }
 }
 
 .project-badging-form {
-  width: 950px;
-  padding-right: 120px;
+    width: 950px;
+    padding-right: 120px;
 
-  h4 {
-    margin-top: 3rem;
-    font-size: 32px;
-    color: #000000;
-  }
+    .projects-header {
+        margin-bottom: 3.375rem;
 
-  p {
-    line-height: 28.8px;
-  }
+        a {
+            color: #D61B5E;
+        }
 
-  .physical-input {
-    margin-top: 2rem;
-    color: #030303;
+        p {
+            margin-top: 1rem;
+        }
+    }
+
+    h4 {
+        margin-top: 3rem;
+        font-size: 32px;
+        color: #000000;
+    }
 
     p {
-      padding: 4px 0px;
-      font-size: 14px;
+        line-height: 28.8px;
     }
 
-    span {
-      margin: 8px 0px;
+    .physical-input {
+        margin-top: 2rem;
+        color: #030303;
+
+        p {
+            padding: 4px 0px;
+            font-size: 14px;
+            color: red;
+        }
+
+        span {
+            margin: 8px 0px;
+            font-size: 16px;
+            color: #000;
+
+            a {
+                color: #D61B5E;
+            }
+        }
+
+        .info {
+            font-size: 14px;
+            display: block;
+            color: #030303;
+            line-height: 1.5;
+
+            .info-link {
+                color: $chaossPink;
+            }
+        }
     }
-  }
+}
+
+.radio-field {
+    margin-top: 6px;
 }
 
 .form-submit-btn {
-  margin-top: 4rem;
-  height: 60px;
-  border-radius: 12px !important;
+    margin-top: 4rem;
+    height: 60px;
+    border-radius: 12px !important;
 }
 
 .project-badging {
-  padding-bottom: 8rem;
+    padding-bottom: 8rem;
 }
 
 .flex-between-center {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .radio-btn {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
