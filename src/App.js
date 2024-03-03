@@ -15,14 +15,16 @@ import {
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from './components';
-import { DataProvider } from './contexts/DataContext';
-import { DesktopProvider } from './contexts/DesktopContext';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import EventBadging from './pages/EventBadging/EventBadging';
-import Faq from './pages/Faq/Faq';
-import ProtectedRoute from './components/ProtectedRoute';
+
+} from "./components";
+import { DataProvider } from "./contexts/DataContext";
+import { DesktopProvider } from "./contexts/DesktopContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import EventBadging from "./pages/EventBadging/EventBadging";
+import Faq from "./pages/Faq/Faq";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Virtual from './pages/ApplyBadgingForm/Virtual';
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
