@@ -21,6 +21,7 @@ import { DesktopProvider } from './contexts/DesktopContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import EventBadging from './pages/EventBadging/EventBadging';
 import Faq from './pages/Faq/Faq';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const queryClient = new QueryClient({
   defaultOptions: {
