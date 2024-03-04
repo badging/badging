@@ -1,13 +1,13 @@
 import React from 'react';
 import './ProjectBadgingForm.scss';
 import { Footer, Header } from '../../components';
-import { FormLabel } from '@mui/material';
 import Button from '../../components/Button/Button';
 import TextField from '../../components/Forms/TextField';
-import { Field, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import RadioInput from '../../components/Forms/RadioInput';
+
 // eslint-disable-next-line import/namespace
 
 const ProjectBadgingForm = () => {
@@ -18,16 +18,6 @@ const ProjectBadgingForm = () => {
     projectOwner: '',
     projectDeiUrl: '',
   };
-
-  /**
-  TODOS:
- 
-  - sticking to scss intead in inline styling
-  - encapsulating the textfield components, each having their own labels
-  - use React Link tags instead of anchor tags
-  - improve on the pixel perfect design based of what we have on figma
-  
-  **/
 
   const validationSchema = Yup.object({
     projectName: Yup.string()
@@ -61,18 +51,14 @@ const ProjectBadgingForm = () => {
 
       <div className="project-badging container">
         <div className="project-badging-form">
-          <div className='projects-header'>
+          <div className="projects-header">
             <h4>Self-Hosted Projects</h4>
             <p>
               Please only use this form if you are applying for a CHAOSS DEI
               Project Badge when using self-hosted software development and
               version control solutions. If you are using web-hosted solutions
               (by GitLab or GitHub), please apply for the CHAOSS DEI Project
-              Badge{' '}
-              <Link to="#">
-                {' '}
-                here.{' '}
-              </Link>
+              Badge <Link to="#"> here. </Link>
             </p>
           </div>
 
@@ -97,9 +83,7 @@ const ProjectBadgingForm = () => {
                       value={values.projectName}
                     />
                     {errors.projectName && touched.projectName && (
-                      <p>
-                        {errors.projectName}
-                      </p>
+                      <p>{errors.projectName}</p>
                     )}
                   </div>
 
@@ -113,11 +97,7 @@ const ProjectBadgingForm = () => {
                       message={'Please enter a value'}
                     />
 
-                    {errors.name && touched.name && (
-                      <p>
-                        {errors.name}
-                      </p>
-                    )}
+                    {errors.name && touched.name && <p>{errors.name}</p>}
                   </div>
 
                   <div className="physical-input">
@@ -129,24 +109,17 @@ const ProjectBadgingForm = () => {
                       label="Your email (where we will send a successful badge): "
                       message={'Please enter a value'}
                     />
-                    {errors.email && touched.email && (
-                      <p>
-                        {errors.email}
-                      </p>
-                    )}
+                    {errors.email && touched.email && <p>{errors.email}</p>}
                   </div>
 
                   <div className="physical-input">
                     <span>
                       Like publicly hosted projects, we only accept applications
                       from project owners. Are you a project owner?{' '}
-                      <Link href="#">
-                        {' '}
-                        *{' '}
-                      </Link>
+                      <Link href="#"> * </Link>
                     </span>
 
-                    <div className='radio-field'>
+                    <div className="radio-field">
                       <div role="group" aria-labelledby="my-radio-group">
                         <RadioInput
                           name="projectOwner"
@@ -166,9 +139,7 @@ const ProjectBadgingForm = () => {
                         />
                       </div>
                       {errors.projectOwner && touched.projectOwner && (
-                        <p>
-                          {errors.projectOwner}
-                        </p>
+                        <p>{errors.projectOwner}</p>
                       )}
                     </div>
                   </div>
@@ -183,17 +154,13 @@ const ProjectBadgingForm = () => {
                       message={'Please enter a value'}
                     />
                     {errors.projectDeiUrl && touched.projectDeiUrl && (
-                      <p>
-                        {errors.projectDeiUrl}
-                      </p>
+                      <p>{errors.projectDeiUrl}</p>
                     )}
-                    <span
-                      className='info'                     
-                    >
+                    <span className="info">
                       For example, this could be in your project repository or
                       on your project website. If you have further questions
                       about the DEI.md file please see our{' '}
-                      <Link href="#" className='info-link'>
+                      <Link href="#" className="info-link">
                         DEI.md Guide.{' '}
                       </Link>
                     </span>
@@ -218,4 +185,4 @@ const ProjectBadgingForm = () => {
   );
 };
 
-export default ProjectBadgingForm
+export default ProjectBadgingForm;
