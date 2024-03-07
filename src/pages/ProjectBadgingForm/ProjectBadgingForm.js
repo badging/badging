@@ -7,6 +7,8 @@ import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import RadioInput from '../../components/Forms/RadioInput';
+import settings from '../../settings.json'
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line import/namespace
 
@@ -33,8 +35,23 @@ const ProjectBadgingForm = () => {
     projectOwner: Yup.string().required('ProjectOwner is required'),
   });
 
+  const API_BASE_URL = settings.API_BASE_URL;
+  const navigate = useNavigate();
   const onContactFormSubmission = values => {
-    console.log(values);
+    fetch(`${API_BASE_URL}/self-hosted-projects`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    }).then(response => {
+      if (response.ok) {
+        console.log('DEI Badge application submitted successfully');
+      }
+      navigate('/project-badging-successful',{
+        state:  {name: values.name, email: values.email}
+      });
+    });
   };
 
   return (
