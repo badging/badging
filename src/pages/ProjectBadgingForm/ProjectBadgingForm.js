@@ -49,7 +49,7 @@ const ProjectBadgingForm = () => {
         console.log('DEI Badge application submitted successfully');
       }
       navigate('/project-badging-successful',{
-        state:  {name: values.name, email: values.email}
+        state:  {name: values.name, email: values.email, provider: 'self-host'}
       });
     });
   };
