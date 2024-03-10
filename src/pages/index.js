@@ -12,7 +12,7 @@ import ErrorPage from './Home/ErrorPage/ErrorPage';
 
 import SuccessfullyBadged from './ProjectBadgingSuccess/Project_Badging_Success';
 import ComingSoon from './ComingSoon/Coming_Soon';
-
+import BadgedEvents from './EventBadging/BadgedEvents';
 export {
   Home,
   About,
@@ -23,4 +23,5 @@ export {
   SuccessfullyBadged,
   ComingSoon,
   InPerson,
+  BadgedEvents,
 };
