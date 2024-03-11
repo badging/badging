@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { chaossLogo, mobileMenuIcon } from "../../assets/images";
-import "./header.scss";
-import { useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { chaossLogo, mobileMenuIcon } from '../../assets/images';
+import './header.scss';
+import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const location = useLocation();
@@ -11,102 +11,102 @@ const Nav = () => {
 
   return (
     <div>
-      <header className="container-new">
-        <img src={chaossLogo} alt="logo" className="logo" />
+      <header className='container-new'>
+        <img src={chaossLogo} alt='logo' className='logo' />
         <ul>
           <li>
-            <a href="/" className={pathname == "/" ? "activeNav" : ""}>
+            <a href='/' className={pathname == '/' ? 'activeNav' : ''}>
               Home
             </a>
           </li>
           <li>
             <a
-              href="/event-badging"
-              className={pathname == "/event-badging" ? "activeNav" : ""}
+              href='/event-badging'
+              className={pathname == '/event-badging' ? 'activeNav' : ''}
             >
               Event Badging
             </a>
           </li>
           <li>
             <a
-              href="/project-badging"
+              href='/project-badging'
               className={
-                pathname.includes("/project-badging") ? "activeNav" : ""
+                pathname.includes('/project-badging') ? 'activeNav' : ''
               }
             >
               Project Badging
             </a>
           </li>
           <li>
-            <a href="/faq" className={pathname == "/faq" ? "activeNav" : ""}>
+            <a href='/faq' className={pathname == '/faq' ? 'activeNav' : ''}>
               FAQ
             </a>
           </li>
         </ul>
         <img
-          className="mobile-nav"
+          className='mobile-nav'
           onClick={() => setToggleNav(!toggleNav)}
           src={mobileMenuIcon}
-          alt="logo"
+          alt='logo'
         />
         {pathname &&
-        (pathname.includes("/event-badging") ||
-          pathname.includes("/project-badging") ||
-          pathname.includes("/faq") ||
-          pathname === "/") ? (
-          <div className="apply-div">
+        (pathname.includes('/event-badging') ||
+          pathname.includes('/project-badging') ||
+          pathname.includes('/faq') ||
+          pathname === '/') ? (
+          <div className='apply-div'>
             <button
               onClick={() => setApplyBtn((toggle) => !toggle)}
-              className="apply-btn"
+              className='apply-btn'
             >
               Apply for Badge
             </button>
             {applyBtn && (
-              <div className="option-div">
+              <div className='option-div'>
                 <a
-                  href="https://chaoss.community/diversity-and-inclusion-badging/"
-                  className="apply-btn-option"
+                  href='https://chaoss.community/diversity-and-inclusion-badging/'
+                  className='apply-btn-option'
                 >
                   Event Badging
                 </a>
-                <a href="/badge" className="apply-btn-option">
+                <a href='/badge' className='apply-btn-option'>
                   Project Badging
                 </a>
               </div>
             )}
           </div>
         ) : (
-          <div className="hidden-box"></div>
+          <div className='hidden-box'></div>
         )}
       </header>
       <div
-        className="mobile-nav-container"
-        style={{ display: toggleNav == true ? "" : "none" }}
+        className='mobile-nav-container'
+        style={{ display: toggleNav == true ? '' : 'none' }}
       >
-        <ul className="mobile-list">
+        <ul className='mobile-list'>
           <li>
-            <a href="/" className={pathname == "/" ? "activeNav" : ""}>
+            <a href='/' className={pathname == '/' ? 'activeNav' : ''}>
               Home
             </a>
           </li>
           <li>
             <a
-              href="/event-badging"
-              className={pathname == "/event-badging" ? "activeNav" : ""}
+              href='/event-badging'
+              className={pathname == '/event-badging' ? 'activeNav' : ''}
             >
               Event Badging
             </a>
           </li>
           <li>
             <a
-              href="/project-badging"
-              className={pathname == "/project-badging" ? "activeNav" : ""}
+              href='/project-badging'
+              className={pathname == '/project-badging' ? 'activeNav' : ''}
             >
               Project Badging
             </a>
           </li>
           <li>
-            <a href="/faq">FAQ</a>
+            <a href='/faq'>FAQ</a>
           </li>
         </ul>
       </div>
