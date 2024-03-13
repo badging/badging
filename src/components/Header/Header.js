@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { chaossLogo, mobileMenuIcon } from '../../assets/images';
 import './header.scss';
 import { useLocation } from 'react-router-dom';
@@ -9,20 +9,34 @@ const Nav = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const [applyBtn, setApplyBtn] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (applyBtn && !event.target.closest('.apply-div')) {
+        setApplyBtn(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [applyBtn]);
+
   return (
     <div>
       <header className='container-new'>
         <img src={chaossLogo} alt='logo' className='logo' />
         <ul>
           <li>
-            <a href='/' className={pathname == '/' ? 'activeNav' : ''}>
+            <a href='/' className={pathname === '/' ? 'activeNav' : ''}>
               Home
             </a>
           </li>
           <li>
             <a
               href='/event-badging'
-              className={pathname == '/event-badging' ? 'activeNav' : ''}
+              className={pathname === '/event-badging' ? 'activeNav' : ''}
             >
               Event Badging
             </a>
@@ -38,7 +52,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href='/faq' className={pathname == '/faq' ? 'activeNav' : ''}>
+            <a href='/faq' className={pathname === '/faq' ? 'activeNav' : ''}>
               FAQ
             </a>
           </li>
@@ -56,7 +70,7 @@ const Nav = () => {
           pathname === '/') ? (
           <div className='apply-div'>
             <button
-              onClick={() => setApplyBtn((toggle) => !toggle)}
+              onClick={() => setApplyBtn(!applyBtn)}
               className='apply-btn'
             >
               Apply for Badge
@@ -81,18 +95,18 @@ const Nav = () => {
       </header>
       <div
         className='mobile-nav-container'
-        style={{ display: toggleNav == true ? '' : 'none' }}
+        style={{ display: toggleNav ? '' : 'none' }}
       >
         <ul className='mobile-list'>
           <li>
-            <a href='/' className={pathname == '/' ? 'activeNav' : ''}>
+            <a href='/' className={pathname === '/' ? 'activeNav' : ''}>
               Home
             </a>
           </li>
           <li>
             <a
               href='/event-badging'
-              className={pathname == '/event-badging' ? 'activeNav' : ''}
+              className={pathname === '/event-badging' ? 'activeNav' : ''}
             >
               Event Badging
             </a>
@@ -100,7 +114,7 @@ const Nav = () => {
           <li>
             <a
               href='/project-badging'
-              className={pathname == '/project-badging' ? 'activeNav' : ''}
+              className={pathname === '/project-badging' ? 'activeNav' : ''}
             >
               Project Badging
             </a>
