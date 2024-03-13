@@ -38,7 +38,7 @@ const ProjectBadgingForm = () => {
   const API_BASE_URL = settings.API_BASE_URL;
   const navigate = useNavigate();
   const onContactFormSubmission = values => {
-    fetch(`${API_BASE_URL}/self-hosted-projects`, {
+    fetch(`${API_BASE_URL}/self-host`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
