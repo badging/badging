@@ -1,16 +1,17 @@
-import Home from "./Home/Home";
-import Projects from "./Projects/Projects";
+import Home from './Home/Home';
+import Projects from './Projects/Projects';
+import InPerson from './ApplyBadgingForm/InPerson';
 
-import GetStartedBadging from "./GetStartedBadging/Get_Started_Badging";
+import GetStartedBadging from './GetStartedBadging/Get_Started_Badging';
 
-import About from "./AboutDeiBadging/About";
+import About from './AboutDeiBadging/About';
 
-import SelectProjectRepo from "./SelectProjectRepo/Select_Project_Repo";
+import SelectProjectRepo from './SelectProjectRepo/Select_Project_Repo';
 
-import ErrorPage from "./Home/ErrorPage/ErrorPage";
+import ErrorPage from './Home/ErrorPage/ErrorPage';
 
-import SuccessfullyBadged from "./ProjectBadgingSuccess/Project_Badging_Success";
-import ComingSoon from "./ComingSoon/Coming_Soon";
+import SuccessfullyBadged from './ProjectBadgingSuccess/Project_Badging_Success';
+import ComingSoon from './ComingSoon/Coming_Soon';
 
 export {
   Home,
@@ -21,4 +22,5 @@ export {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
+  InPerson,
 };

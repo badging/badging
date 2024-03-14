@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import {
   Home,
   About,
@@ -8,12 +8,14 @@ import {
   ErrorPage,
   SuccessfullyBadged,
   ComingSoon,
-} from "./pages";
+  InPerson,
+} from './pages';
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
+
 } from "./components";
 import { DataProvider } from "./contexts/DataContext";
 import { DesktopProvider } from "./contexts/DesktopContext";
@@ -21,6 +23,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
 import Faq from "./pages/Faq/Faq";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Virtual from './pages/ApplyBadgingForm/Virtual';
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -48,7 +52,10 @@ const App = () => {
                   element={<ApplicationProcess />}
                 />
                 <Route path="/project-badging/dei-file" element={<DeiFile />} />
-                <Route path="/project-badging/dei-badge" element={<DeiBadge />} />
+                <Route
+                  path="/project-badging/dei-badge"
+                  element={<DeiBadge />}
+                />
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
               <Route path="/badge" element={<GetStartedBadging />} />
@@ -66,6 +73,9 @@ const App = () => {
                 path="/project-badging-successful"
                 element={<SuccessfullyBadged />}
               />
+              <Route exact path="/inperson" element={<InPerson />} />
+
+              <Route exact path="/virtual" element={<Virtual />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </DataProvider>
