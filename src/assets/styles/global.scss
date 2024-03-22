@@ -4,7 +4,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: $font-family_2;
+  _font-family: $font-family_2;
+  font-family: "Inter", sans-serif;
   color: $primaryTextColor;
 }
 
@@ -13,10 +14,9 @@ a {
   color: $primaryTextColor;
 }
 .container-new {
-	
-	max-width: 1240px !important;
-	margin: auto;
-  }
+  max-width: 1240px !important;
+  margin: auto;
+}
 li {
   list-style: none;
 }
@@ -64,7 +64,6 @@ h3 {
 
 main {
   height: auto;
-  
 }
 
 .jumbotron {
@@ -108,7 +107,6 @@ nav .mobileNav.toggleDesctiptionButton {
     padding: 180px 20px 70px 30px;
   }
 }
-
 
 @media screen and (max-width: 1030px) {
   nav {

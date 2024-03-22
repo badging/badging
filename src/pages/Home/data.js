@@ -56,3 +56,22 @@ export const howItWorksData = [
     ),
   },
 ];
+
+export const navLinks = [
+  {
+    pathname: "Home",
+    url: "/",
+  },
+  {
+    pathname: "Event Badging",
+    url: "/event-badging",
+  },
+  {
+    pathname: "Project Badging",
+    url: "/project-badging",
+  },
+  {
+    pathname: "FAQ",
+    url: "/faq",
+  },
+];
