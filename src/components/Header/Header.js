@@ -9,6 +9,7 @@ const Nav = () => {
   const pathname = location.pathname;
   const [toggleNav, setToggleNav] = useState(false);
   const [applyBtn, setApplyBtn] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -56,8 +57,25 @@ const Nav = () => {
             ))}
           </ul>
 
-          <div className="apply-for-badge-wrapper">
-            <Link to="">Apply for Badge</Link>
+          <div className="wrapper">
+            <div className="apply-for-badge-wrapper">
+              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                Apply for Badge
+              </button>
+            </div>
+            {isDropdownOpen && (
+              <div className="dropdown-menu">
+                <a
+                  href="https://chaoss.community/diversity-and-inclusion-badging/"
+                  className="dropdown-option"
+                >
+                  Event Badging
+                </a>
+                <a href="/badge" className="dropdown-option">
+                  Project Badging
+                </a>
+              </div>
+            )}
           </div>
         </section>
       </div>
