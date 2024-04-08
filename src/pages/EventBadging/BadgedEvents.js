@@ -92,12 +92,10 @@ const BadgedEvents = () => {
       .sort((a, b) => {
         if (sortBy === 'Published') {
           return new Date(b.createdAt) - new Date(a.createdAt);
-        } else if (sortBy === 'Badged') {
-          return new Date(b.updatedAt) - new Date(a.updatedAt);
-        } else if (sortBy === 'Project') {
-          return a.badgeType.localeCompare(b.badgeType);
+        } else if (sortBy === 'Badge') {
+          return a.badge.name.localeCompare(b.badge.name);
         }
-        return 0;
+        return new Date(b.createdAt) - new Date(a.createdAt);
       });
 
   return (
@@ -162,20 +160,8 @@ const BadgedEvents = () => {
                             <span>Published Date</span>
                           </li>
                           <li
-                            className={sortBy === 'Badged' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Badged')}
-                          >
-                            <img
-                              src={DateIcon}
-                              width={25}
-                              height={25}
-                              alt="filter-icon"
-                            />
-                            <span>Date</span>
-                          </li>
-                          <li
-                            className={sortBy === 'Project' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Project')}
+                            className={sortBy === 'Badge' ? 'activeFilter' : ''}
+                            onClick={() => setSortBy('Badge')}
                           >
                             <img
                               src={AZicon}
@@ -183,7 +169,7 @@ const BadgedEvents = () => {
                               height={25}
                               alt="filter-icon"
                             />
-                            <span>Event name</span>
+                            <span>Badge Name</span>
                           </li>
                         </ul>
                       </div>
