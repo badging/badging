@@ -1,0 +1,413 @@
+@import '../../assets/styles/variables.scss';
+
+main {
+  width: 100%;
+  height: auto;
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+
+    .bgLeft {
+      width: 50%;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 107, 160, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
+      height: 100%;
+      position: absolute;
+      right: -10rem;
+      overflow: hidden;
+      top: 3rem;
+    }
+
+    .bgRight {
+      width: 50%;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(94, 184, 148, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
+      height: 100%;
+      position: absolute;
+      left: -10rem;
+      top: 5rem;
+    }
+
+    .bgCenter {
+      width: 100%;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(98, 203, 251, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
+      height: 100%;
+      position: absolute;
+      top: -3rem;
+    }
+  }
+}
+
+.jumbotron__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 400px;
+  margin: auto;
+  max-width: 1440px;
+  border-bottom: 1px solid #adcff8;
+  position: relative;
+
+  h1 {
+    margin-top: 5rem;
+    font-size: 3.375rem;
+    font-family: $font-family_1;
+  }
+
+  .about-project {
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.3s ease;
+
+    button {
+      padding: 10px 30px;
+      border-radius: 8px 8px 0px 0px;
+      border: 1px solid #adcff8;
+      background-color: #fff;
+      color: #000;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 5px;
+
+      &:hover {
+        background-color: #d61b5e;
+        color: #fff;
+      }
+    }
+    .buttonActive {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.project {
+  .projectIntro {
+    color: #000;
+    padding-top: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 180%;
+  }
+  .divider {
+    border: 0.2px solid gray;
+    margin: 30px 0px;
+  }
+
+  height: auto;
+  max-width: 1440px;
+  margin: auto;
+  .badging > div {
+    color: #000;
+  }
+
+  .badging {
+    width: 100%;
+    margin: auto;
+    // background-color: red;
+
+    p {
+      color: #000;
+    }
+    .container-holder {
+      background-color: #f5f5f5;
+      padding: 0px 20px 30px;
+      border-radius: 10px;
+
+      .table-top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+          font-size: 32px;
+          font-weight: 700;
+          font-family: $font-family_1;
+          padding: 10px 0px;
+        }
+
+        .filter-projects {
+          display: flex;
+          padding: 20px 0px;
+          align-items: center;
+          gap: 10px;
+          position: relative;
+
+          .filter {
+            display: flex;
+            background-color: #000;
+            border: none;
+            padding: 7px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+          }
+          .filter button {
+            background-color: #000;
+            font-size: 16px;
+            border: none;
+            margin-right: 10px;
+          }
+          .filter-dropdown {
+            position: absolute;
+            right: 0;
+            top: 4rem;
+            background-color: #fff;
+            height: auto;
+            width: auto;
+            padding: 10px;
+            border-radius: 8px;
+            border: 0.5px solid var(--neutral-gray-gr-07, #ededed);
+            background: #fff;
+            box-shadow: 0px 19px 15px 6px rgba(0, 0, 0, 0.05);
+
+            ul {
+              width: 250px;
+            }
+
+            ul li {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+              padding: 10px 5px;
+              cursor: pointer;
+
+              span {
+                color: #000 !important;
+                font-size: 14px;
+                font-weight: 400;
+              }
+              img {
+                color: #000 !important;
+              }
+            }
+            .activeFilter {
+              border-radius: 12px;
+              background-color: #d61b5e;
+              padding: 10px;
+
+              span {
+                color: #fff !important;
+                cursor: pointer;
+              }
+              img {
+                color: #fff !important;
+              }
+            }
+          }
+
+          .search {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+            input {
+              padding: 0 30px;
+              height: 40px;
+              color: #000;
+              font-size: 16px;
+              border-radius: 8px;
+              background: #e4e4e4;
+              max-width: 100%;
+              border: #858c90;
+            }
+
+            img {
+              position: absolute;
+              left: 2px;
+            }
+          }
+        }
+      }
+    }
+    .badging-table {
+      max-width: 100%;
+      margin: auto;
+    }
+    .search {
+      display: flex;
+      gap: 4px;
+      justify-content: end;
+      position: relative;
+      .filter {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 13px 24px;
+        gap: 4px;
+        width: 119px;
+        height: 50px;
+        background: #ededed;
+        font-family: $font-family_2;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #222d33;
+        border: none;
+      }
+      input {
+        box-sizing: border-box;
+        width: 564px;
+        height: 50px;
+        border: 1px solid #bebebe;
+      }
+      .search-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 9px 31px;
+        position: absolute;
+        width: 117px;
+        height: 42px;
+        right: 5px;
+        top: 4px;
+        background: #030303;
+        border: none;
+
+        font-family: $font-family_2;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    .badging-footer {
+      padding: 20px 1px;
+      color: #000;
+      display: flex;
+      background-color: #f5f5f5;
+      align-items: center;
+      max-width: inherit !important;
+      justify-content: flex-end;
+      margin: auto;
+
+      .pagination {
+        color: #000 !important;
+      }
+    }
+  }
+}
+
+.css-cisyew-MuiTableCell-root.MuiTableCell-body {
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.css-ux5ofw-MuiTableCell-root.MuiTableCell-head {
+  background-color: #ededed !important;
+  color: #000 !important;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: none !important;
+}
+.css-1gj0jdp-MuiTableRow-root th,
+.css-1gj0jdp-MuiTableRow-root td {
+  border-bottom: 1px solid gray !important;
+}
+
+.MuiPagination-root .MuiPaginationItem-root {
+  color: #fff; // Replace with your desired pagination text color
+  // border: #1C1C1C 1px solid;
+  border-bottom: none !important;
+}
+
+.MuiPagination-root .MuiPaginationItem-root.Mui-selected {
+  color: #000; // Replace with your desired pagination text color
+  background-color: #fff;
+}
+
+.MuiPagination-root .MuiPaginationItem-root {
+  color: #000;
+  border-bottom: none !important;
+}
+
+.css-1q1u3t4-MuiTableRow-root {
+  height: auto !important;
+}
+.MuiPagination-ul {
+  color: #000 !important;
+}
+.MuiPagination-ul button {
+  background-color: #000;
+  color: #000 !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .search {
+    input {
+      width: 400px !important;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .search {
+    input {
+      width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .jumbotron__container {
+    padding: 0 10px !important;
+    h1 {
+      font-size: 2.375rem;
+      margin-top: 3rem;
+    }
+
+    .about-project {
+      button {
+        padding: 7px 12px;
+      }
+    }
+  }
+  .table-top-header {
+    flex-direction: column !important;
+    gap: 0px !important;
+    align-items: flex-start !important;
+
+    .filter-projects {
+      width: 100%;
+    }
+    .filter button {
+      display: none;
+    }
+  }
+  .filter-dropdown {
+    width: 250px !important;
+
+    .activeFilter {
+      width: 220px;
+    }
+  }
+  .project .badging .badging-table {
+    padding: 0 !important;
+  }
+}
