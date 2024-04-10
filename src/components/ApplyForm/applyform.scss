@@ -1,0 +1,244 @@
+@import '../../assets/styles/variables';
+// * {
+//   border: 1px solid red;
+// }
+
+.badge_form {
+  display: flex;
+  flex-direction: column;
+  min-width: 256px;
+  height: auto;
+  margin-top: 1.5rem;
+
+  h4 {
+    padding-bottom: 8px;
+  }
+  .input-wrapper {
+    margin-bottom: 1.3rem;
+    label {
+      font-family: Theinhardt Pan;
+      color: black;
+    }
+    span {
+      color: red;
+    }
+    input[type='text'] {
+      width: 250px;
+      line-height: 40px;
+      padding: 13px, 10px, 13px, 10px;
+      border: 1px solid #bebebe;
+      border-radius: 4px;
+      color: black;
+      box-sizing: border-box;
+      padding-left: 1rem;
+    }
+    p.error {
+      color: red;
+    }
+
+    textarea.input_text {
+      resize: both;
+      width: 250px;
+      height: 50px;
+      line-height: 40px;
+      padding: 13px, 10px, 13px, 10px;
+      border: 1px solid #bebebe;
+      border-radius: 4px;
+      color: black;
+      box-sizing: border-box;
+      padding-left: 1rem;
+    }
+    ::placeholder {
+      line-height: 24px;
+      padding-left: 1rem;
+      font-family: Theinhardt Pan;
+    }
+    .reference {
+      margin-top: 0;
+      border: none;
+      font-size: 16px;
+      color: black;
+      // height: fit-content;
+      background-color: #fff;
+      display: inline-block;
+      p {
+        color: red;
+      }
+      span {
+        color: black;
+        img {
+          position: unset;
+          display: inline-block;
+          // position: relative;
+          margin-left: -10px;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      color: $chaossPink;
+      font-size: 14px;
+    }
+    .suffix-text {
+      padding-top: 0;
+      font-size: 14px;
+    }
+  }
+  .radio-input {
+    accent-color: $textColor4;
+    color: black !important;
+    font-size: 14px;
+    p.radio-input {
+      padding-bottom: 10px;
+    }
+
+    label {
+      color: $textColor4;
+      margin-right: 6px;
+    }
+    .radio-input input[type='radio'] {
+      width: 230px;
+      height: 29px;
+      margin-right: 8rem;
+    }
+
+    input[type='radio'].radio-input {
+      margin-right: 8px;
+    }
+  }
+  .submit-button {
+    margin-top: 0.5rem;
+    width: 306px;
+    height: 60px;
+    padding: 8px, 24.1px, 8px, 24.1px;
+    border: none;
+  }
+
+  .criteria {
+    padding-bottom: 1rem;
+    span {
+      color: #000;
+      font-weight: bold;
+    }
+    p {
+      line-height: 1.5;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 14px;
+      width: 300px;
+    }
+  }
+
+  .submit-info {
+    border: 1px solid #adcff8;
+    border-radius: 4px;
+    background-color: #adcff8;
+    padding: 2px 6px;
+    font-size: 12px;
+    min-width: 200px;
+    p {
+      // width: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .badge_form {
+    display: flex;
+    flex-direction: column;
+    width: 576px;
+    gap: 32px;
+    height: auto;
+    min-height: 1000px;
+    .input-wrapper {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 16px;
+      h3 {
+        color: black;
+      }
+
+      label {
+        font-family: Theinhardt Pan;
+        color: black;
+      }
+      span {
+        color: red;
+      }
+      input[type='text'] {
+        width: 566px;
+        line-height: 40px;
+
+        padding: 13px, 16px, 13px, 16px;
+        border: 1px solid #bebebe;
+        border-radius: 4px;
+        color: black;
+      }
+      textarea.input_text {
+        width: 556px;
+        height: 100px;
+        line-height: 40px;
+        padding: 13px, 10px, 13px, 10px;
+        border: 1px solid #bebebe;
+        border-radius: 4px;
+        color: black;
+      }
+      ::placeholder {
+        line-height: 24px;
+        padding-left: 1rem;
+        font-family: Theinhardt Pan;
+      }
+      .radio-input {
+        accent-color: $textColor4;
+        p {
+          padding-bottom: 10px;
+        }
+        .radio-input input[type='radio'] {
+          height: 29px;
+        }
+      }
+    }
+    .criteria {
+      span {
+        font-weight: bold;
+      }
+      p {
+        line-height: 2;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 14px;
+        width: 566px;
+      }
+    }
+
+    .submit-info {
+      border: 1px solid #85b0e3;
+      border-radius: 4px;
+      background-color: #adcff8;
+      padding: 2px 6px;
+      margin-bottom: 1.5rem;
+      font-size: 14px;
+      width: 550px;
+      p {
+        width: 550px;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 700px) {
+//   .page__nav {
+
+//     ul {
+//       li {
+
+//         .main__link {
+//           gap: 100px;
+//         }
+//       }
+//     }
+//   }
+// }
