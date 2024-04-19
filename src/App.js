@@ -7,7 +7,10 @@ import {
   SelectProjectRepo,
   ErrorPage,
   SuccessfullyBadged,
-  ComingSoon
+
+  ComingSoon,
+  InPerson,
+  BadgedEvents,
 } from "./pages";
 import {
   WhatIsDeiBadging,
@@ -20,9 +23,13 @@ import { DesktopProvider } from "./contexts/DesktopContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EventBadging from "./pages/EventBadging/EventBadging";
 import Faq from "./pages/Faq/Faq";
+
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProjectBadgingForm from "./pages/ProjectBadgingForm/ProjectBadgingForm";
 import ProjectBadgingSuccess from "./pages/ProjectBadgingSuccess/Project_Badging_Success";
+
+import Virtual from "./pages/ApplyBadgingForm/Virtual";
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -50,18 +57,20 @@ const App = () => {
                   element={<ApplicationProcess />}
                 />
                 <Route path="/project-badging/dei-file" element={<DeiFile />} />
-                <Route path="/project-badging/dei-badge" element={<DeiBadge />} />
+                <Route
+                  path="/project-badging/dei-badge"
+                  element={<DeiBadge />}
+                />
               </Route>
               <Route path="/event-badging" element={<EventBadging />} />
+              <Route path="/badged-events" element={<BadgedEvents />} />
               <Route path="/badge" element={<GetStartedBadging />} />
               
 
-              <Route element={<ProtectedRoute />}>
-                <Route
-                  path="/select-project/:provider"
-                  element={<SelectProjectRepo />}
-                />
-              </Route>
+              <Route
+                path="/select-project/:provider"
+                element={<SelectProjectRepo />}
+              />
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route
@@ -69,9 +78,15 @@ const App = () => {
                 path="/project-badging-successful"
                 element={<SuccessfullyBadged />}
               />
+
               <Route 
               exact 
               path="/select-project/self-host" element={<ProjectBadgingForm />} />
+
+              <Route exact path="/inperson" element={<InPerson />} />
+
+              <Route exact path="/virtual" element={<Virtual />} />
+
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </DataProvider>
