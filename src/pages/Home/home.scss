@@ -69,10 +69,29 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     }
     p {
       line-height: 30px;
+      
+
     }
+   
     
   }
+  .badge-counter{
+    width:fit-content;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #ADCFF8;
+    gap:8px;
+    margin-top: 12px;
+    background: rgb(246, 246, 250);
+  }
+  .badge-counter p{
+    font-size: 14px;
+    color: #413f3f;
+    font-weight: 500;
 
+  }
   .sponsors {
     display: flex;
     justify-content: center;
@@ -101,6 +120,7 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     }
   }
 }
+
 
 
 @media screen and (max-width: 700px) {
@@ -132,3 +152,22 @@ li, a, p, h1, h2, h3, h4, h5, h6{
     
   }
 }
+// @media screen and (max-width: 640px){
+//   .badge-counter{
+//     // width:fit-content;
+//     width: 250px;
+//     border-radius: 5px;
+//     border: 1px solid rgb(181, 181, 245);
+//     text-align: center;
+//     margin-top: 10px;
+//     background: rgb(246, 246, 250);
+
+
+//     p{
+//       font-size: 14px;
+     
+//       color: #413f3f;
+//       font-weight: 500;
+//     }
+//   }
+// }
