@@ -8,21 +8,18 @@ import settings from '../../settings.json';
 
 const Home = () => {
   const [eventsCount, setEventsCount] = useState(0);
-  const [projectsCount, setProjectsCount] = useState(0); 
+  const [projectsCount, setProjectsCount] = useState(0);
+  const { eventData, isLoading: eventsLoading, error: eventsError } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
+  const { projectData, isLoading: projectsLoading, error: projectsError } = fetchProjects(`${settings.API_BASE_URL}/badged_events`);
 
   useEffect(() => {
-    fetchProjects(`${settings.API_BASE_URL}/badgedRepos`)
-      .then(data => {
-        setProjectsCount(data.length);
-      })
-      .catch(error => console.error('Error fetching projects:', error));
-    
-    fetchProjects(`${settings.API_BASE_URL}/badged_events`)
-      .then(data => {
-        setEventsCount(data.length);
-      })
-      .catch(error => console.error('Error fetching events:', error));
-  }, []);
+    if (eventData) {
+      setProjectsCount(eventData.length);
+    }
+    if (projectData) {
+      setEventsCount(projectData.length);
+    }
+  }, [eventData, projectData]);
 
   return (
     <div className="home-container ">
@@ -48,7 +45,13 @@ const Home = () => {
         </div>
 
         <div className="numbers-count-label">
-          <p>{eventsCount} events and {projectsCount} projects badged</p>
+          {eventsLoading || projectsLoading ? (
+            <p>Loading...</p>
+          ) : eventsError || projectsError ? (
+            <p>Error fetching data</p>
+          ) : (
+            <p>{eventsCount} events and {projectsCount} projects badged</p>
+          )}
         </div>
 
         <div className="sponsors">
