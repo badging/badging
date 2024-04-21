@@ -13,13 +13,13 @@ const Home = () => {
   useEffect(() => {
     fetchProjects(`${settings.API_BASE_URL}/badgedRepos`)
       .then(data => {
-        setProjectsCount(data.length); // Assuming data is an array
+        setProjectsCount(data.length);
       })
       .catch(error => console.error('Error fetching projects:', error));
     
     fetchProjects(`${settings.API_BASE_URL}/badged_events`)
       .then(data => {
-        setEventsCount(data.length); // Assuming data is an array
+        setEventsCount(data.length);
       })
       .catch(error => console.error('Error fetching events:', error));
   }, []);
