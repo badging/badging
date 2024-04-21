@@ -51,9 +51,8 @@ const Home = () => {
           ) : eventsError || projectsError ? (
             <p>Error fetching data</p>
           ) : (
-            <div>
-            <img  src={TickBadge} alt="Tick Badge"></img>
-            <p>{eventsCount} events and {projectsCount} projects badged</p>
+            <div className='badge-count'>
+              <p> <img  src={TickBadge} alt="Tick Badge"></img> {eventsCount} events and {projectsCount} projects badged</p>
             </div>
           )}
         </div>
