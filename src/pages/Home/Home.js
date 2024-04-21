@@ -49,10 +49,10 @@ const Home = () => {
           {eventsLoading || projectsLoading ? (
             <p>Loading...</p>
           ) : eventsError || projectsError ? (
-            <p>Error fetching data</p>
+            <p className='badge-text'> <img className='count-icon' src={TickBadge} alt="Tick Badge"></img>Error fetching data</p>
           ) : (
             <div className='badge-count'>
-              <p> <img  src={TickBadge} alt="Tick Badge"></img> {eventsCount} events and {projectsCount} projects badged</p>
+              <p className='badge-text'> <img className='count-icon'  src={TickBadge} alt="Tick Badge"></img> {eventsCount} events and {projectsCount} projects badged</p>
             </div>
           )}
         </div>
