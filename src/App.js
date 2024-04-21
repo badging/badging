@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import {
   Home,
   About,
@@ -10,20 +10,19 @@ import {
   ComingSoon,
   InPerson,
   BadgedEvents,
-} from './pages';
+} from "./pages";
 import {
   WhatIsDeiBadging,
   ApplicationProcess,
   DeiBadge,
   DeiFile,
-} from './components';
-import { DataProvider } from './contexts/DataContext';
-import { DesktopProvider } from './contexts/DesktopContext';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import EventBadging from './pages/EventBadging/EventBadging';
-import Faq from './pages/Faq/Faq';
-import ProtectedRoute from './components/ProtectedRoute';
-import Virtual from './pages/ApplyBadgingForm/Virtual';
+} from "./components";
+import { DataProvider } from "./contexts/DataContext";
+import { DesktopProvider } from "./contexts/DesktopContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import EventBadging from "./pages/EventBadging/EventBadging";
+import Faq from "./pages/Faq/Faq";
+import Virtual from "./pages/ApplyBadgingForm/Virtual";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -60,12 +59,10 @@ const App = () => {
               <Route path="/badged-events" element={<BadgedEvents />} />
               <Route path="/badge" element={<GetStartedBadging />} />
 
-              <Route element={<ProtectedRoute />}>
-                <Route
-                  path="/select-project/:provider"
-                  element={<SelectProjectRepo />}
-                />
-              </Route>
+              <Route
+                path="/select-project/:provider"
+                element={<SelectProjectRepo />}
+              />
               <Route exact path="/comingsoon" element={<ComingSoon />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route
