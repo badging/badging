@@ -1,10 +1,29 @@
+import React, { useState, useEffect } from 'react';
 import { chaossLogo, gitLabLogo, githubSponsor } from "../../assets/images";
-import "../../assets/styles/global.scss";
 import Nav from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./home.scss";
+import { fetchProjects } from '../../hooks/fetchProjects';
+import settings from '../../settings.json';
 
 const Home = () => {
+  const [eventsCount, setEventsCount] = useState(0);
+  const [projectsCount, setProjectsCount] = useState(0); 
+
+  useEffect(() => {
+    fetchProjects(`${settings.API_BASE_URL}/badgedRepos`)
+      .then(data => {
+        setProjectsCount(data.length); // Assuming data is an array
+      })
+      .catch(error => console.error('Error fetching projects:', error));
+    
+    fetchProjects(`${settings.API_BASE_URL}/badged_events`)
+      .then(data => {
+        setEventsCount(data.length); // Assuming data is an array
+      })
+      .catch(error => console.error('Error fetching events:', error));
+  }, []);
+
   return (
     <div className="home-container ">
       <Nav />
@@ -26,6 +45,10 @@ const Home = () => {
               supporting diversity, equity, and inclusion.
             </p>
           </div>
+        </div>
+
+        <div className="numbers-count-label">
+          <p>{eventsCount} events and {projectsCount} projects badged</p>
         </div>
 
         <div className="sponsors">
