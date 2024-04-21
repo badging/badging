@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import "./home.scss";
 import { fetchProjects } from '../../hooks/fetchProjects';
 import settings from '../../settings.json';
+import TickBadge from '../../assets/images/icons/tick-badge.svg';
 
 const Home = () => {
   const [eventsCount, setEventsCount] = useState(0);
@@ -50,7 +51,10 @@ const Home = () => {
           ) : eventsError || projectsError ? (
             <p>Error fetching data</p>
           ) : (
+            <div>
+            <img  src={TickBadge} alt="Tick Badge"></img>
             <p>{eventsCount} events and {projectsCount} projects badged</p>
+            </div>
           )}
         </div>
 
