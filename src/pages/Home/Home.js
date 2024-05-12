@@ -1,29 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import { chaossLogo, gitLabLogo, githubSponsor } from "../../assets/images";
+import "../../assets/styles/global.scss";
 import Nav from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./home.scss";
-import { fetchProjects } from '../../hooks/fetchProjects';
 import settings from '../../settings.json';
 import TickBadge from '../../assets/images/icons/tick-badge.svg';
 
 const Home = () => {
   const [eventsCount, setEventsCount] = useState(0);
   const [projectsCount, setProjectsCount] = useState(0);
-  const { eventData, isLoading: eventsLoading, error: eventsError } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
-  const { projectData, isLoading: projectsLoading, error: projectsError } = fetchProjects(`${settings.API_BASE_URL}/badged_events`);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (eventData) {
-      setProjectsCount(eventData.length);
-    }
-    if (projectData) {
-      setEventsCount(projectData.length);
-    }
-  }, [eventData, projectData]);
+    const fetchData = async () => {
+      try {
+        const [eventsResponse, projectsResponse] = await Promise.all([
+          fetch(`${settings.API_BASE_URL}/badged_events`),
+          fetch(`${settings.API_BASE_URL}/badgedRepos`)
+        ]);
+
+        if (!eventsResponse.ok || !projectsResponse.ok) {
+          throw new Error('Failed to fetch data');
+        }
+
+        const [eventsData, projectsData] = await Promise.all([
+          eventsResponse.json(),
+          projectsResponse.json()
+        ]);
+
+        setEventsCount(eventsData.length);
+        setProjectsCount(projectsData.length);
+        setIsLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
-    <div className="home-container ">
+    <div className="home-container">
       <Nav />
 
       <div className="overlay">
@@ -31,6 +51,7 @@ const Home = () => {
         <div className="bgCenter"></div>
         <div className="bgLeft"></div>
       </div>
+
       <section className="hero container-new">
         <div className="hero-header">
           <h1>CHAOSS DEI Badging Initiative</h1>
@@ -46,13 +67,19 @@ const Home = () => {
         </div>
 
         <div className="numbers-count-label">
-          {eventsLoading || projectsLoading ? (
+          {isLoading ? (
             <p>Loading...</p>
-          ) : eventsError || projectsError ? (
-            <p className='badge-text'> <img className='count-icon' src={TickBadge} alt="Tick Badge"></img>Error fetching data</p>
+          ) : error ? (
+            <p className='badge-text'>
+              <img className='count-icon' src={TickBadge} alt="Tick Badge" />
+              {error}
+            </p>
           ) : (
             <div className='badge-count'>
-              <p className='badge-text'> <img className='count-icon'  src={TickBadge} alt="Tick Badge"></img> {eventsCount} events and {projectsCount} projects badged</p>
+              <p className='badge-text'>
+                <img className='count-icon' src={TickBadge} alt="Tick Badge" />
+                {eventsCount} events and {projectsCount} projects badged
+              </p>
             </div>
           )}
         </div>
@@ -72,6 +99,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
