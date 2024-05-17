@@ -68,7 +68,7 @@ const Home = () => {
 
         <div className="numbers-count-label">
           {isLoading ? (
-            <p className="loading-text">Loading...</p>
+            <p className="loading-text">Loading Content...</p>
           ) : error ? (
             <p className="error-text badge-text">
               {error}
