@@ -143,24 +143,51 @@ h6 {
 }
 
 .numbers-count-label {
-  display: inline-flex;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  border: 1px solid #def3ec;
-  border-radius: 0.25rem;
-  --bs-focus-ring-x: 10px;
-  --bs-focus-ring-y: 10px;
-  --bs-focus-ring-blur: 4px;
-  background-color: #fbfcfb;
   margin-top: 25px;
 }
 
-.badge-text {
-  display: inline-flex;
+.loading-text {
+  color: rgb(54, 109, 192);
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+.badge-count {
+  display: flex;
   align-items: center;
+  width: 100%;
 }
 
-.count-icon {
-  margin-right: 10px;
+.counts {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure it takes up full width */
 }
 
+.count-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 80px; /* Adds space between each count section */
+}
+
+.count-numbers {
+  font-weight: bold;
+  display: block; 
+  font-size: 2rem;
+  color: #000;
+}
+
+.count-numbers-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3a3434ef;
+}

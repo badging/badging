@@ -68,19 +68,24 @@ const Home = () => {
 
         <div className="numbers-count-label">
           {isLoading ? (
-            <p>Loading...</p>
+            <p className="loading-text">Loading Content...</p>
           ) : error ? (
-            <p className='badge-text'>
-              <img className='count-icon' src={TickBadge} alt="Tick Badge" />
+            <p className="error-text badge-text">
               {error}
             </p>
           ) : (
-            <div className='badge-count'>
-              <p className='badge-text'>
-                <img className='count-icon' src={TickBadge} alt="Tick Badge" />
-                {eventsCount} events and {projectsCount} projects badged
-              </p>
+          <div className="badge-count">
+            <div className="counts">
+              <div className="count-section">
+                <span className="count-numbers">{eventsCount}</span>
+                <span className="count-numbers-text">Badged Events</span>
+              </div>
+              <div className="count-section">
+                <span className="count-numbers">{projectsCount}</span>
+                <span className="count-numbers-text"> Badged Projects</span>
+              </div>
             </div>
+          </div>
           )}
         </div>
 
