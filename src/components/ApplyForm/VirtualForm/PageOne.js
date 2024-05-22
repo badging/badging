@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import '../applyform.scss';
+import "../applyform.scss";
 
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
 // import UseFormContext from '../../hooks/useFormContext';
 // import { Button as MuiButton } from '@mui/material';
 // import { styled } from '@mui/system';
@@ -34,18 +34,18 @@ const PageOne = () => {
             aria-required
             required
             className="input_text"
-            {...register('eventname', {
+            {...register("eventname", {
               required: true,
-              message: 'Please enter valid website',
+              message: "Please enter valid website",
             })}
-          />{' '}
+          />{" "}
           {/* <p className="error">{errors.eventname?.message}</p> */}
           <br />
         </div>
         <div className="input-wrapper ">
           <label htmlFor="eventWebsite">
             Link to the event website<span>*</span>
-          </label>{' '}
+          </label>{" "}
           <br /> <br />
           <input
             type="text"
@@ -55,15 +55,15 @@ const PageOne = () => {
             name="eventWebsite"
             aria-required
             required
-            {...register('evenWebsite', {
+            {...register("evenWebsite", {
               required: true,
               pattern: {
                 value:
                   /^(https?:\/\/)?(wwww{1}\.)?[\w\d]*\.([a-zA-Z]*\.)?([a-zA-Z]*)?$/i,
-                message: 'Please enter valid website',
+                message: "Please enter valid website",
               },
             })}
-          />{' '}
+          />{" "}
           {/* <p className="error">{errors.eventWebsite?.message}</p> */}
           <br />
         </div>
@@ -78,7 +78,7 @@ const PageOne = () => {
               name="yes_no"
               className="radio-input"
               aria-checked
-              {...register('yes_no', { required: true || false })}
+              {...register("yes_no", { required: true || false })}
             />
             Yes
           </label>
@@ -90,7 +90,7 @@ const PageOne = () => {
               name="yes_no"
               className="radio-input"
               aria-checked
-              {...register('yes_no', { required: true || false })}
+              {...register("yes_no", { required: true || false })}
             />
             No
           </label>

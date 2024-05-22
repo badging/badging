@@ -2,7 +2,6 @@ import { useContext } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { DataContext } from "../../contexts/DataContext";
 
-
 const SelectedProjects = () => {
   const { userData, setUserData } = useContext(DataContext);
   const filteredReposToBadge = [...new Set(userData.reposToBadge)];

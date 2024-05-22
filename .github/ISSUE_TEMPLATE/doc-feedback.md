@@ -1,11 +1,11 @@
 ---
 name: Doc feedback
 about: Help us improve the docs
-title: 'Briefly describe the improvement you are requesting e.g. [DOC]: Improve clarity
-  of X'
-labels: ''
-assignees: ''
-
+title:
+  "Briefly describe the improvement you are requesting e.g. [DOC]: Improve clarity
+  of X"
+labels: ""
+assignees: ""
 ---
 
 **Description**

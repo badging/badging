@@ -21,10 +21,9 @@ The DEI project badges help open source project maintainers showcase their ongoi
 
 Currently, the DEI Project Badge is available in one level
 
-| Level    | Badge                                                                                                                | Requirements Met        |
-| -------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Bronze   | ![Bronze Badge](https://raw.githubusercontent.com/badging/badging/main/src/assets/images/badges/bronze-badge.svg) | Presence of DEI.md File |
-
+| Level  | Badge                                                                                                             | Requirements Met        |
+| ------ | ----------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| Bronze | ![Bronze Badge](https://raw.githubusercontent.com/badging/badging/main/src/assets/images/badges/bronze-badge.svg) | Presence of DEI.md File |
 
 ## Contributing to this Project
 

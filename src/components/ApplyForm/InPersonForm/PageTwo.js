@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // import { useForm } from 'react-hook-form';
-import '../applyform.scss';
+import "../applyform.scss";
 
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
 // import { useDesktop } from '../../contexts/DesktopContext';
-import { useState } from 'react';
+import { useState } from "react";
 // import { Outlet } from 'react-router-dom';
 
 const PageTwo = () => {
@@ -20,7 +20,7 @@ const PageTwo = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Event Demographics</h4>
         <label htmlFor="demographics">
           <input
@@ -28,10 +28,10 @@ const PageTwo = () => {
             name="demographics"
             id="demographics"
             aria-required
-            {...register('demographics', { required: true })}
-          />{' '}
+            {...register("demographics", { required: true })}
+          />{" "}
           &nbsp; This event commits to Speaker Diversity & Inclusion.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -69,15 +69,15 @@ const PageTwo = () => {
           <div>
             <a href="https://chaoss.community/metrics-for-event-organizers/">
               CHAOSS Metric Document
-            </a>{' '}
+            </a>{" "}
             <br />
             <a href="https://chaoss.community/metrics-for-event-organizers/">
               CHAOSS Metric Document
-            </a>{' '}
+            </a>{" "}
             <br />
             <a href="https://chaoss.community/metrics-for-event-organizers/">
               CHAOSS Metric Document
-            </a>{' '}
+            </a>{" "}
           </div>
         )}
       </div>
@@ -96,14 +96,14 @@ const PageTwo = () => {
           placeholder="Enter your answer here"
           id="eventDemographics"
           className="input_text"
-          {...register('eventDemographics', { required: true })}
+          {...register("eventDemographics", { required: true })}
         />
       </div>
       <div className="input-wrapper">
         <label htmlFor="optOut">
           Provide an example of an opt-out option on the Event registration page
           if available.<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           className="input_text"
@@ -113,7 +113,7 @@ const PageTwo = () => {
           placeholder="Enter your answer here"
           rows="6"
           cols="75"
-          {...register('optOut', { required: true })}
+          {...register("optOut", { required: true })}
         />
         <br />
         <p className="suffix-text">
@@ -126,7 +126,7 @@ const PageTwo = () => {
           Provide an example of a demographics text input box on the Event
           registration page if available.
           <span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="demoText"
@@ -136,8 +136,8 @@ const PageTwo = () => {
           placeholder="Enter your answer here"
           className="input_text"
           id="demoText"
-          {...register('demoText', { required: true })}
-        />{' '}
+          {...register("demoText", { required: true })}
+        />{" "}
         <br />
         <p className="suffix-text">
           For example, an alternative identity input for gender.

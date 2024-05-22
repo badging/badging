@@ -2,7 +2,7 @@
 import React from "react";
 import { Footer, Header } from "../../components";
 import { getBadgedFullBG, getBadgedMobile } from "../../assets/images";
-import "./Layout.scss"
+import "./Layout.scss";
 
 // Pass the child props
 const Layout = ({ children, className }) => {
@@ -15,7 +15,7 @@ const Layout = ({ children, className }) => {
         <div className="section-one">
           <img
             className="bg-getStarted"
-            src={getBadgedFullBG} 
+            src={getBadgedFullBG}
             alt="hero section desktop background"
           />
           <img

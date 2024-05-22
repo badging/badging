@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-unused-vars */
+
 import React, { useState } from "react";
 import "../../assets/styles/global.scss";
 import "./project.scss";
-import { AboutDeiMobile, Footer, Header } from "../../components";
-import Jumbotron from "../../components/Jumbotron/Jumbotron";
+import { Footer, Header } from "../../components";
 import { Pagination, TablePagination } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
@@ -18,14 +22,10 @@ import {
   Filter,
   ScheduleIcon,
   SearchIcon,
-  badge,
-  curlyBraces,
 } from "../../assets/images";
-import { Publish } from "@mui/icons-material";
 import { fetchProjects } from "../../hooks/fetchProjects";
-import RandomString from "../../components/RandomString";
 import AboutNew from "../../components/AboutDeiBadgingCom/About";
-import settings from '../../settings.json';
+import settings from "../../settings.json";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -65,16 +65,10 @@ const Projects = () => {
   const [filterStatus, setFilterStatus] = useState("Published");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("createdAt");
-  const [swap, setSwap] = useState("about")
-  const { data, isLoading, error } = fetchProjects(`${settings.API_BASE_URL}/badgedRepos`);
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+  const [swap, setSwap] = useState("about");
+  const { data, isLoading } = fetchProjects(
+    `${settings.API_BASE_URL}/badgedRepos`
+  );
 
   const handleFilterToggle = () => {
     setFilter((prev) => !prev);
@@ -116,20 +110,20 @@ const Projects = () => {
     return match ? match[1] : null;
   }
 
-const swapHandler = (toggle) => {
-  setSwap(toggle)
-}
+  const swapHandler = (toggle) => {
+    setSwap(toggle);
+  };
 
   return (
     <main>
-      <div className='overlay'>
-            <div className='bgRight'></div>
-            <div className='bgCenter'></div>
-            <div className='bgLeft'></div>
-        </div>
+      <div className="overlay">
+        <div className="bgRight"></div>
+        <div className="bgCenter"></div>
+        <div className="bgLeft"></div>
+      </div>
       <Header />
       <div className="container jumbotron__container">
-      {/* <div className='overlay'>
+        {/* <div className='overlay'>
         <div className='bgRight'></div>
         <div className='bgCenter'></div>
         <div className='bgLeft'></div>
@@ -137,195 +131,206 @@ const swapHandler = (toggle) => {
         {/* <img src={curlyBraces} alt="badging-logo" /> */}
         <h1>Project Badging</h1>
         <div className="about-project">
-          <button onClick={() =>swapHandler('about')} className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}>About Project Badging</button>
-          <button onClick={() => swapHandler('project')} className={swap == 'project' ? 'buttonActive' : 'buttonInActive'}>Badged Projects</button>
+          <button
+            onClick={() => swapHandler("about")}
+            className={swap == "about" ? "buttonActive" : "buttonInActive"}
+          >
+            About Project Badging
+          </button>
+          <button
+            onClick={() => swapHandler("project")}
+            className={swap == "project" ? "buttonActive" : "buttonInActive"}
+          >
+            Badged Projects
+          </button>
         </div>
       </div>
 
-
       <section className="project">
-        {
-          swap && swap == 'project' ? (
-            <>
+        {swap && swap == "project" ? (
+          <>
             <p className="projectIntro container">
-        CHAOSS Project Badging is helping open source 
-        communities prioritize diversity, equity, and inclusion.
-         Using the CHAOSS DEI metrics as an industry benchmark, we are 
-         creating more inclusive and welcoming open-source environments for all. 
-         Our badged projects serve as exemplary demonstrations:
-         <hr className="divider" />
-        </p>
-        
-        {!isLoading ? (
-          <div className="badging container">
-            <div className="container-holder">
-              <div className="table-top-header">
-                <p>DEI Projects</p>
-                <div className="filter-projects">
-                  <div className="search">
-                    <img
-                      src={SearchIcon}
-                      width={25}
-                      height={25}
-                      alt="filter-icon"
-                    />
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      placeholder="Search for projects..."
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-                  </div>
-                  <div className="filter" onClick={handleFilterToggle}>
-                    <button>Filter</button>
-                    <img
-                      src={Filter}
-                      width={25}
-                      height={25}
-                      alt="filter-icon"
-                    />
-                  </div>
-                  <div
-                    className="filter-dropdown"
-                    style={{ display: filter == true ? "" : "none" }}
-                  >
-                    <ul>
-                      <li
-                        className={sortBy == "Published" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Published")}
-                      >
-                        <img
-                          src={ScheduleIcon}
-                          width={25}
-                          className="ccc"
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Published Date</span>
-                      </li>
-                      <li
-                        className={sortBy == "Badged" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Badged")}
-                      >
-                        <img
-                          src={DateIcon}
-                          width={25}
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Badged Date</span>
-                      </li>
-                      <li
-                        className={sortBy == "Project" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Project")}
-                      >
-                        <img
-                          src={AZicon}
-                          width={25}
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Project Title</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="badging-table">
-                <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                      <TableRow>
-                        {/* <StyledTableCell>S/N</StyledTableCell> */}
-                        <StyledTableCell align="left">
-                          Badge Date
-                        </StyledTableCell>
-                        {/* <StyledTableCell align="left">
-                          Project Title
-                        </StyledTableCell> */}
-                        <StyledTableCell align="left">
-                          DEI Badge
-                        </StyledTableCell>
-                        <StyledTableCell align="left">
-                          Project Repository
-                        </StyledTableCell>
-                      </TableRow>
-                    </TableHead>
+              CHAOSS Project Badging is helping open source communities
+              prioritize diversity, equity, and inclusion. Using the CHAOSS DEI
+              metrics as an industry benchmark, we are creating more inclusive
+              and welcoming open-source environments for all. Our badged
+              projects serve as exemplary demonstrations:
+              <hr className="divider" />
+            </p>
 
-                    <TableBody>
-                      {filteredData
-                        .slice(
-                          page * rowsPerPage,
-                          page * rowsPerPage + rowsPerPage
-                        )
-                        .map((row, index) => (
-                          <StyledTableRow key={index}>
-                            {/* <StyledTableCell component="th" scope="row">
-                              {row.id}
-                            </StyledTableCell> */}
-                            <StyledTableCell align="left" style={{ color: "black" }}>
-                              {formatDate(row.createdAt)}
+            {!isLoading ? (
+              <div className="badging container">
+                <div className="container-holder">
+                  <div className="table-top-header">
+                    <p>DEI Projects</p>
+                    <div className="filter-projects">
+                      <div className="search">
+                        <img
+                          src={SearchIcon}
+                          width={25}
+                          height={25}
+                          alt="filter-icon"
+                        />
+                        <input
+                          type="text"
+                          value={searchTerm}
+                          placeholder="Search for projects..."
+                          onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                      </div>
+                      <div className="filter" onClick={handleFilterToggle}>
+                        <button>Filter</button>
+                        <img
+                          src={Filter}
+                          width={25}
+                          height={25}
+                          alt="filter-icon"
+                        />
+                      </div>
+                      <div
+                        className="filter-dropdown"
+                        style={{ display: filter == true ? "" : "none" }}
+                      >
+                        <ul>
+                          <li
+                            className={
+                              sortBy == "Published" ? "activeFilter" : ""
+                            }
+                            onClick={() => setSortBy("Published")}
+                          >
+                            <img
+                              src={ScheduleIcon}
+                              width={25}
+                              className="ccc"
+                              height={25}
+                              alt="filter-icon"
+                            />
+                            <span>Published Date</span>
+                          </li>
+                          <li
+                            className={sortBy == "Badged" ? "activeFilter" : ""}
+                            onClick={() => setSortBy("Badged")}
+                          >
+                            <img
+                              src={DateIcon}
+                              width={25}
+                              height={25}
+                              alt="filter-icon"
+                            />
+                            <span>Badged Date</span>
+                          </li>
+                          <li
+                            className={
+                              sortBy == "Project" ? "activeFilter" : ""
+                            }
+                            onClick={() => setSortBy("Project")}
+                          >
+                            <img
+                              src={AZicon}
+                              width={25}
+                              height={25}
+                              alt="filter-icon"
+                            />
+                            <span>Project Title</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="badging-table">
+                    <TableContainer component={Paper}>
+                      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <TableHead>
+                          <TableRow>
+                            {/* <StyledTableCell>S/N</StyledTableCell> */}
+                            <StyledTableCell align="left">
+                              Badge Date
                             </StyledTableCell>
                             {/* <StyledTableCell align="left">
+                          Project Title
+                        </StyledTableCell> */}
+                            <StyledTableCell align="left">
+                              DEI Badge
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              Project Repository
+                            </StyledTableCell>
+                          </TableRow>
+                        </TableHead>
+
+                        <TableBody>
+                          {filteredData
+                            .slice(
+                              page * rowsPerPage,
+                              page * rowsPerPage + rowsPerPage
+                            )
+                            .map((row, index) => (
+                              <StyledTableRow key={index}>
+                                {/* <StyledTableCell component="th" scope="row">
+                              {row.id}
+                            </StyledTableCell> */}
+                                <StyledTableCell
+                                  align="left"
+                                  style={{ color: "black" }}
+                                >
+                                  {formatDate(row.createdAt)}
+                                </StyledTableCell>
+                                {/* <StyledTableCell align="left">
                               {(() => {
                                 const text = row.repoLink.split("/");
                                 return text[3];
                               })()}
                             </StyledTableCell> */}
-                            <StyledTableCell align="left">
-                              <img
-                                src={extractImageUrl(row.attachment)}
-                                width={100}
-                                height={100}
-                                alt="badgeImage"
-                              />
-                            </StyledTableCell>
-                            <StyledTableCell align="left">
-                              <a
-                                href={row.repoLink}
-                                target="_blank"
-                                style={{ color: "#000" }}
-                                rel="noreferrer"
-                              >
-                                {row.repoLink}
-                              </a>
-                            </StyledTableCell>
-                          </StyledTableRow>
-                        ))}
+                                <StyledTableCell align="left">
+                                  <img
+                                    src={extractImageUrl(row.attachment)}
+                                    width={100}
+                                    height={100}
+                                    alt="badgeImage"
+                                  />
+                                </StyledTableCell>
+                                <StyledTableCell align="left">
+                                  <a
+                                    href={row.repoLink}
+                                    target="_blank"
+                                    style={{ color: "#000" }}
+                                    rel="noreferrer"
+                                  >
+                                    {row.repoLink}
+                                  </a>
+                                </StyledTableCell>
+                              </StyledTableRow>
+                            ))}
 
-                      {emptyRows > 0 && (
-                        <TableRow style={{ height: 53 * emptyRows }}>
-                          <TableCell colSpan={6} />
-                        </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
+                          {emptyRows > 0 && (
+                            <TableRow style={{ height: 53 * emptyRows }}>
+                              <TableCell colSpan={6} />
+                            </TableRow>
+                          )}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                  </div>
+                  <div className="badging-footer">
+                    <Pagination
+                      count={Math.ceil(data.length / rowsPerPage)}
+                      page={page + 1}
+                      onChange={(event, newPage) => setPage(newPage - 1)}
+                      variant="outlined"
+                      shape="rounded"
+                      color="success"
+                      className="pagination"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="badging-footer">
-                <Pagination
-                  count={Math.ceil(data.length / rowsPerPage)}
-                  page={page + 1}
-                  onChange={(event, newPage) => setPage(newPage - 1)}
-                  variant="outlined"
-                  shape="rounded"
-                  color="success"
-                  className="pagination"
-                />
-              </div>
-            </div>
-          </div>
+            ) : (
+              <p>Error Retrieving Data....</p>
+            )}
+          </>
         ) : (
-          <p>Error Retrieving Data....</p>
-        )}
-            </>
-          ): (
           <AboutNew />
-          )
-        }
-        
-
-        
+        )}
       </section>
       <Footer />
     </main>

@@ -1,10 +1,10 @@
 // import { useNavigate } from 'react-router-dom';
-import '../../../assets/styles/global.scss';
-import '../applyform.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import "../applyform.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
-import { useState } from 'react';
+import { useState } from "react";
 const PageFive = () => {
   const { register } = useFormContext();
   const [showLink, setShowLink] = useState(false);
@@ -23,17 +23,17 @@ const PageFive = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Code of Conduct at Event</h4>
         <label htmlFor="eventCode">
           <input
             type="checkbox"
             name="eventCode"
             id="eventCode"
-            {...register('eventCode', { required: true })}
-          />{' '}
+            {...register("eventCode", { required: true })}
+          />{" "}
           &nbsp; This event commits to the Code of Conduct at Event.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -93,7 +93,7 @@ const PageFive = () => {
             value="codeposted"
             id="codeposted"
             name="codeposted"
-            {...register('codePosted', { required: true || false })}
+            {...register("codePosted", { required: true || false })}
             className="radio-input"
           />
           Yes
@@ -105,7 +105,7 @@ const PageFive = () => {
             value="codenotposted"
             id="codenotposted"
             name="codenotposted"
-            {...register('codePosted', { required: true || false })}
+            {...register("codePosted", { required: true || false })}
             className="radio-input"
           />
           No
@@ -114,7 +114,7 @@ const PageFive = () => {
       <div className="input-wrapper ">
         <label htmlFor="conductlink">
           Provide link for the Event Code of Conduct<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <input
           type="text"
@@ -122,8 +122,8 @@ const PageFive = () => {
           className="input_text"
           id="conductlink"
           name="conductlink"
-          {...register('conductLink', { required: true })}
-        />{' '}
+          {...register("conductLink", { required: true })}
+        />{" "}
         <br />
       </div>
 

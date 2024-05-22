@@ -1,3 +1,9 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/no-unescaped-entities */
+
 import React, { useEffect, useState } from "react";
 import { Footer, Jumbotron } from "../../components";
 import { arrowRight } from "../../assets/images";

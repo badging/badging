@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // import { useForm } from 'react-hook-form';
-import '../applyform.scss';
+import "../applyform.scss";
 // import { useNavigate } from 'react-router-dom';
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
 // import { Button as MuiButton } from '@mui/material';
 // import { styled } from '@mui/system';
 // import { useDesktop } from '../../contexts/DesktopContext';
-import { useState } from 'react';
+import { useState } from "react";
 // import { Outlet } from 'react-router-dom';
 
 const PageThree = () => {
@@ -23,17 +23,17 @@ const PageThree = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Inclusive Experience at Event</h4>
         <label htmlFor="inclusiveExp">
           <input
             type="checkbox"
             name="inclusiveExp"
             id="inclusiveExp"
-            {...register('inclusiveExp', { required: true })}
-          />{' '}
+            {...register("inclusiveExp", { required: true })}
+          />{" "}
           &nbsp; This event commits to Attendee Diversity & Inclusion.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -78,7 +78,7 @@ const PageThree = () => {
 
       <div className="input-wrapper">
         <label htmlFor="eventfb">
-          Provide an example of the Event Feedback page if available.{' '}
+          Provide an example of the Event Feedback page if available.{" "}
           <span>*</span>
         </label>
         <br /> <br />
@@ -90,14 +90,14 @@ const PageThree = () => {
           placeholder="Enter your answer here"
           id="eventfb"
           className="input_text"
-          {...register('eventfb', { required: true })}
+          {...register("eventfb", { required: true })}
         />
       </div>
       <div className="input-wrapper">
         <label htmlFor="prevfb">
           Is the event team using feedback from previous event`s attendees,
           speakers, and volunteers to improve DEI at this event? .<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="prevfb"
@@ -107,7 +107,7 @@ const PageThree = () => {
           placeholder="Enter your answer here"
           className="input_text"
           id="prevfb"
-          {...register('prevfb', { required: true })}
+          {...register("prevfb", { required: true })}
         />
         <br />
         <p className="suffix-text">If so, provide an example.</p>
@@ -117,7 +117,7 @@ const PageThree = () => {
           Does the event team plan to use feedback from this event`s attendees,
           speakers, and volunteers to improve DEI at future events?
           <span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="futurefb"
@@ -127,7 +127,7 @@ const PageThree = () => {
           placeholder="Enter your answer here"
           className="input_text"
           id="futurefb"
-          {...register('futurefb', { required: true })}
+          {...register("futurefb", { required: true })}
           aria-required
         />
         <br />
@@ -140,7 +140,7 @@ const PageThree = () => {
         <label htmlFor="accesslearn">
           How can attendees learn more about accessibility at the event?
           <span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="accesslearn"
@@ -150,15 +150,15 @@ const PageThree = () => {
           placeholder="Enter your answer here"
           className="input_text"
           id="accesslearn"
-          {...register('accesslearn', { required: true })}
-        />{' '}
+          {...register("accesslearn", { required: true })}
+        />{" "}
         <br />
       </div>
       <div className="input-wrapper">
         <label htmlFor="accsuggest">
           Does the event platform allow attendees to suggest future
           accomodations for the event?<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="accsuggest"
@@ -169,8 +169,8 @@ const PageThree = () => {
           className="input_text"
           id="accsuggest"
           aria-required
-          {...register('accsuggest', { required: true })}
-        />{' '}
+          {...register("accsuggest", { required: true })}
+        />{" "}
         <br />
         <p className="suffix-text">If yes, provide the process.</p>
       </div>
@@ -178,7 +178,7 @@ const PageThree = () => {
         <label htmlFor="futureaccess">
           Will the event platform be accessible to attendees and speakers after
           the event?<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           name="futureaccess"
@@ -188,8 +188,8 @@ const PageThree = () => {
           placeholder="Enter your answer here"
           className="input_text"
           id="futureaccess"
-          {...register('futureaccess', { required: true })}
-        />{' '}
+          {...register("futureaccess", { required: true })}
+        />{" "}
         <br />
         <p className="suffix-text">If yes, provide the name of the platform.</p>
       </div>

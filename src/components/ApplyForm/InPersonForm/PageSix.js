@@ -1,10 +1,10 @@
-import '../applyform.scss';
+import "../applyform.scss";
 // import { useNavigate } from 'react-router-dom';
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
-import { useState } from 'react';
+import { useState } from "react";
 const PageSix = () => {
   const { register } = useFormContext();
   const [showLink, setShowLink] = useState(false);
@@ -23,17 +23,17 @@ const PageSix = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Family Friendliness</h4>
         <label htmlFor="famCheck">
           <input
             type="checkbox"
             name="famCheck"
             id="famCheck"
-            {...register('famCheck', { required: true })}
-          />{' '}
+            {...register("famCheck", { required: true })}
+          />{" "}
           &nbsp; This event commits to the Diversity Access Tickets.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -80,7 +80,7 @@ const PageSix = () => {
         <label htmlFor="childcare">
           Does the Event provide childcare facilities for its attendees and
           speakers?<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           className="input_text"
@@ -88,10 +88,10 @@ const PageSix = () => {
           type="text"
           name="childcare"
           placeholder="Enter your answer here"
-          {...register('childcare', { required: true })}
+          {...register("childcare", { required: true })}
           rows="6"
           cols="75"
-        />{' '}
+        />{" "}
         <br />
       </div>
       <div className="input-wrapper ">
@@ -99,7 +99,7 @@ const PageSix = () => {
           What are the other ways that a family-friendly environment is being
           created in the Event?
           <span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           className="input_text"
@@ -107,16 +107,16 @@ const PageSix = () => {
           type="text"
           name="familyEnviron"
           placeholder="Enter your answer here"
-          {...register('familyEnviron', { required: true })}
+          {...register("familyEnviron", { required: true })}
           rows="6"
           cols="75"
-        />{' '}
+        />{" "}
         <br />
       </div>
       <div className="input-wrapper ">
         <label htmlFor="famLink">
           Provide link for the Event Code of Conduct<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <input
           type="text"
@@ -124,8 +124,8 @@ const PageSix = () => {
           className="input_text"
           id="famLink"
           name="famLink"
-          {...register('famLink', { required: true })}
-        />{' '}
+          {...register("famLink", { required: true })}
+        />{" "}
         <br />
       </div>
 
@@ -143,7 +143,7 @@ const PageSix = () => {
       </div>
       <div className="submit-info">
         <p>
-          {' '}
+          {" "}
           Once you click `submit`, you must use your GitHub account to finalize
           the issue on their Website by clicking `Create New Issue`.
         </p>

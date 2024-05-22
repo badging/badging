@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import PageOne from './PageOne';
+import React, { useState } from "react";
+import PageOne from "./PageOne";
 // import FormTest from './FormTest';
-import PageTwo from './PageTwo';
-import PageThree from './PageThree';
-import PageFour from './PageFour';
-import PageFive from './PageFive';
-import PageSix from './PageSix';
+import PageTwo from "./PageTwo";
+import PageThree from "./PageThree";
+import PageFour from "./PageFour";
+import PageFive from "./PageFive";
+import PageSix from "./PageSix";
 // import { useForm } from 'react-hook-form';
 // import UseFormContext from '../../hooks/useFormContext';
-import { useForm, FormProvider } from 'react-hook-form';
+import { useForm, FormProvider } from "react-hook-form";
 // import { Button, Step, StepLabel, Stepper } from '@mui/material';
 
-import '../formcontainer.scss';
+import "../formcontainer.scss";
 
 const FormContainer = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -59,7 +59,7 @@ const FormContainer = () => {
           <h1> In-Person Event</h1>
           <p>
             Please only use this form if you are applying for a CHAOSS DEI Event
-            Badge for physical events. You can apply for virtual events{' '}
+            Badge for physical events. You can apply for virtual events{" "}
             <a className="ev-link" href="/virtual">
               here
             </a>
@@ -80,11 +80,11 @@ const FormContainer = () => {
                 onClick={nextStep}
                 disabled={!methods.formState.isValid}
                 style={{
-                  background: methods.formState.isValid ? '#222D33' : '#F3F5F6',
-                  color: methods.formState.isValid ? '#FFFFFF' : '#5B656B',
+                  background: methods.formState.isValid ? "#222D33" : "#F3F5F6",
+                  color: methods.formState.isValid ? "#FFFFFF" : "#5B656B",
                 }}
               >
-                Next ({currentStep + '/' + stepLength})
+                Next ({currentStep + "/" + stepLength})
               </button>
             ) : (
               <button
@@ -92,11 +92,11 @@ const FormContainer = () => {
                 type="submit"
                 disabled={!methods.formState.isValid}
                 style={{
-                  background: methods.formState.isValid ? '#222D33' : '#F3F5F6',
-                  color: methods.formState.isValid ? '#FFFFFF' : '#5B656B',
+                  background: methods.formState.isValid ? "#222D33" : "#F3F5F6",
+                  color: methods.formState.isValid ? "#FFFFFF" : "#5B656B",
                 }}
               >
-                Submit ({currentStep + '/' + stepLength})
+                Submit ({currentStep + "/" + stepLength})
               </button>
             )}
           </div>

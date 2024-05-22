@@ -9,31 +9,41 @@ main {
     z-index: -1;
     position: absolute;
     overflow: hidden;
-   
+
     .bgLeft {
       width: 50%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 107, 160, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 107, 160, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       right: -10rem;
       overflow: hidden;
       top: 3rem;
-      
     }
-  
+
     .bgRight {
       width: 50%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(94, 184, 148, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);   
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(94, 184, 148, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       left: -10rem;
       top: 5rem;
-      
     }
-  
+
     .bgCenter {
       width: 100%;
-      background: radial-gradient(50% 50% at 50% 50%, rgba(98, 203, 251, 0.30) 0%, rgba(255, 255, 255, 0.00) 62.81%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(98, 203, 251, 0.3) 0%,
+        rgba(255, 255, 255, 0) 62.81%
+      );
       height: 100%;
       position: absolute;
       top: -3rem;
@@ -48,9 +58,9 @@ main {
   height: 400px;
   margin: auto;
   max-width: 1440px;
-  border-bottom: 1px solid #ADCFF8;
+  border-bottom: 1px solid #adcff8;
   position: relative;
-  
+
   h1 {
     margin-top: 5rem;
     font-size: 3.375rem;
@@ -65,7 +75,7 @@ main {
     button {
       padding: 10px 30px;
       border-radius: 8px 8px 0px 0px;
-      border: 1px solid #ADCFF8;
+      border: 1px solid #adcff8;
       background-color: #fff;
       color: #000;
       font-size: 15px;
@@ -74,7 +84,7 @@ main {
       margin-left: 5px;
 
       &:hover {
-        background-color: #D61B5E;
+        background-color: #d61b5e;
         color: #fff;
       }
     }
@@ -82,9 +92,7 @@ main {
       background-color: #000;
       color: #fff;
     }
-   
   }
-
 }
 
 .project {
@@ -344,7 +352,6 @@ main {
 }
 .MuiPagination-ul {
   color: #000 !important;
-  
 }
 .MuiPagination-ul button {
   background-color: #000;
@@ -365,7 +372,6 @@ main {
     }
   }
 }
-
 
 @media screen and (max-width: 700px) {
   .jumbotron__container {

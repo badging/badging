@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // import { useForm } from 'react-hook-form';
-import '../applyform.scss';
+import "../applyform.scss";
 // import { useNavigate } from 'react-router-dom';
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
-import { useState } from 'react';
+import { useState } from "react";
 const PageFour = () => {
   const { register } = useFormContext();
   const [showLink, setShowLink] = useState(false);
@@ -26,17 +26,17 @@ const PageFour = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Time Inclusion for Virtual Events</h4>
         <label htmlFor="timeInclusion">
           <input
             type="checkbox"
             name="timeInclusion"
             id="timeInclusion"
-            {...register('tiimeInclusion', { required: true })}
-          />{' '}
+            {...register("tiimeInclusion", { required: true })}
+          />{" "}
           &nbsp; This event commits to the Attendee Diversity & Inclusion.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -90,7 +90,7 @@ const PageFour = () => {
             value="no"
             id="preRecord"
             name="preRecord"
-            {...register('preRecord', { required: true || false })}
+            {...register("preRecord", { required: true || false })}
             className="radio-input"
           />
           Yes
@@ -102,7 +102,7 @@ const PageFour = () => {
             value="yes"
             id="notpreRecord"
             name="notpreRecord"
-            {...register('preRecord', { required: true || false })}
+            {...register("preRecord", { required: true || false })}
             className="radio-input"
           />
           No
@@ -119,7 +119,7 @@ const PageFour = () => {
             value="yes"
             id="VidQuality"
             name="VidQuality"
-            {...register('vidQuality', { required: true || false })}
+            {...register("vidQuality", { required: true || false })}
             className="radio-input"
           />
           Yes
@@ -131,7 +131,7 @@ const PageFour = () => {
             value="no"
             id="vid"
             name="vid"
-            {...register('vidQuality', { required: true || false })}
+            {...register("vidQuality", { required: true || false })}
             className="radio-input"
           />
           No

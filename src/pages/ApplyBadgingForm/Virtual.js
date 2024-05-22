@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import '../../assets/styles/global.scss';
-import './inperson.scss';
-import { Footer, Header } from '../../components';
+import React, { useState } from "react";
+import "../../assets/styles/global.scss";
+import "./inperson.scss";
+import { Footer, Header } from "../../components";
 
 // import AboutNew from '../../components/AboutDeiBadgingCom/About';
 // import PageOne from '../../components/ApplyForm/PageOne';
 // import PageTwo from '../../components/ApplyForm/PageTwo';
-import FormContainer from '../../components/ApplyForm/InPersonForm/FormContainer';
+import FormContainer from "../../components/ApplyForm/InPersonForm/FormContainer";
 
-import VirtualContainer from '../../components/ApplyForm/VirtualForm/VirtualContainer';
+import VirtualContainer from "../../components/ApplyForm/VirtualForm/VirtualContainer";
 
 const Virtual = () => {
-  const [swap, setSwap] = useState('inperson');
+  const [swap, setSwap] = useState("inperson");
 
   const swapHandler = (toggle) => {
     setSwap(toggle);
@@ -35,14 +35,14 @@ const Virtual = () => {
         <h1>Apply For Event Badging</h1>
         <div className="about-project">
           <button
-            onClick={() => swapHandler('virtual')}
-            className={swap == 'virtual' ? 'buttonActive' : 'buttonInActive'}
+            onClick={() => swapHandler("virtual")}
+            className={swap == "virtual" ? "buttonActive" : "buttonInActive"}
           >
             In-Person Event
           </button>
           <button
-            onClick={() => swapHandler('inperson')}
-            className={swap == 'inperson' ? 'buttonActive' : 'buttonInActive'}
+            onClick={() => swapHandler("inperson")}
+            className={swap == "inperson" ? "buttonActive" : "buttonInActive"}
           >
             Virtual Event
           </button>
@@ -50,7 +50,7 @@ const Virtual = () => {
       </div>
 
       <section className="inperson">
-        {swap && swap == 'inperson' ? <VirtualContainer /> : <FormContainer />}
+        {swap && swap == "inperson" ? <VirtualContainer /> : <FormContainer />}
       </section>
       <Footer />
     </main>

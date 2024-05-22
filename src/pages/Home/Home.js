@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { chaossLogo, gitLabLogo, githubSponsor } from "../../assets/images";
+import React, { useState, useEffect } from "react";
+import { gitLabLogo, githubSponsor } from "../../assets/images";
 import "../../assets/styles/global.scss";
 import Nav from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./home.scss";
-import settings from '../../settings.json';
-import TickBadge from '../../assets/images/icons/tick-badge.svg';
+import settings from "../../settings.json";
 
 const Home = () => {
   const [eventsCount, setEventsCount] = useState(0);
@@ -18,16 +17,16 @@ const Home = () => {
       try {
         const [eventsResponse, projectsResponse] = await Promise.all([
           fetch(`${settings.API_BASE_URL}/badged_events`),
-          fetch(`${settings.API_BASE_URL}/badgedRepos`)
+          fetch(`${settings.API_BASE_URL}/badgedRepos`),
         ]);
 
         if (!eventsResponse.ok || !projectsResponse.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error("Failed to fetch data");
         }
 
         const [eventsData, projectsData] = await Promise.all([
           eventsResponse.json(),
-          projectsResponse.json()
+          projectsResponse.json(),
         ]);
 
         setEventsCount(eventsData.length);
@@ -70,22 +69,20 @@ const Home = () => {
           {isLoading ? (
             <p className="loading-text">Loading Content...</p>
           ) : error ? (
-            <p className="error-text badge-text">
-              {error}
-            </p>
+            <p className="error-text badge-text">{error}</p>
           ) : (
-          <div className="badge-count">
-            <div className="counts">
-              <div className="count-section">
-                <span className="count-numbers">{eventsCount}</span>
-                <span className="count-numbers-text">Badged Events</span>
-              </div>
-              <div className="count-section">
-                <span className="count-numbers">{projectsCount}</span>
-                <span className="count-numbers-text"> Badged Projects</span>
+            <div className="badge-count">
+              <div className="counts">
+                <div className="count-section">
+                  <span className="count-numbers">{eventsCount}</span>
+                  <span className="count-numbers-text">Badged Events</span>
+                </div>
+                <div className="count-section">
+                  <span className="count-numbers">{projectsCount}</span>
+                  <span className="count-numbers-text"> Badged Projects</span>
+                </div>
               </div>
             </div>
-          </div>
           )}
         </div>
 

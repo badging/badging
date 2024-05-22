@@ -9,5 +9,5 @@ dotenv.config({ path: `.env.production.local`, override: true });
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
-    mode: "production"
+  mode: "production",
 });

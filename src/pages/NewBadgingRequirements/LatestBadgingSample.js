@@ -5,17 +5,9 @@ import {
   getBadgedFullBG,
   getBadgedMobile,
 } from "../../assets/images";
-<<<<<<< HEAD
-
-import settings from '../../settings.json';
-
-import '../../assets/styles/global.scss';
-import './LatestBadging.scss';
-=======
-import settings from '../../settings.json';
-import '../../assets/styles/global.scss';
-import './latest-badging.scss';
->>>>>>> 4644e8a (fixing)
+import settings from "../../settings.json";
+import "../../assets/styles/global.scss";
+import "./latest-badging.scss";
 
 const LatestBadgingSample = () => {
   const baseurl = settings.API_BASE_URL;
@@ -39,11 +31,6 @@ const LatestBadgingSample = () => {
             src={getBadgedMobile}
             alt="arrow pointer design"
           />
-<<<<<<< HEAD
-          {/* <h1> Getting Started With Project Badging</h1> */}
-          {/* <img src={getStartedBg} alt="get started background" /> */}
-=======
->>>>>>> 4644e8a (fixing)
         </div>
 
         <div className="section-two">

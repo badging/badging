@@ -6,7 +6,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import {
   SearchBar,
   SelectedProjects,
-  Layout,
   Loader,
   Jumbotron,
   Footer,
@@ -20,7 +19,7 @@ const url = settings.API_BASE_URL;
 
 const callbackQuery = (provider, code) => ({
   queryKey: ["callback", provider, code],
-  queryFn: async () => { 
+  queryFn: async () => {
     if (!provider || !code) {
       throw new Error("Invalid code or provider");
     }

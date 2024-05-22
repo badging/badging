@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 // * {
 //   border: 1px solid red;
 // }
@@ -22,7 +22,7 @@
     span {
       color: red;
     }
-    input[type='text'] {
+    input[type="text"] {
       width: 250px;
       line-height: 40px;
       padding: 13px, 10px, 13px, 10px;
@@ -99,13 +99,13 @@
       color: $textColor4;
       margin-right: 6px;
     }
-    .radio-input input[type='radio'] {
+    .radio-input input[type="radio"] {
       width: 230px;
       height: 29px;
       margin-right: 8rem;
     }
 
-    input[type='radio'].radio-input {
+    input[type="radio"].radio-input {
       margin-right: 8px;
     }
   }
@@ -168,7 +168,7 @@
       span {
         color: red;
       }
-      input[type='text'] {
+      input[type="text"] {
         width: 566px;
         line-height: 40px;
 
@@ -196,7 +196,7 @@
         p {
           padding-bottom: 10px;
         }
-        .radio-input input[type='radio'] {
+        .radio-input input[type="radio"] {
           height: 29px;
         }
       }

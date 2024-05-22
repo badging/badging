@@ -1,10 +1,10 @@
-import '../applyform.scss';
+import "../applyform.scss";
 // import { useNavigate } from 'react-router-dom';
-import '../../../assets/styles/global.scss';
-import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
+import "../../../assets/styles/global.scss";
+import { useFormContext } from "react-hook-form";
+import { carretDown, carretRight } from "../../../assets/images";
 
-import { useState } from 'react';
+import { useState } from "react";
 const PageSix = () => {
   const { register } = useFormContext();
   const [showLink, setShowLink] = useState(false);
@@ -23,18 +23,18 @@ const PageSix = () => {
   return (
     <div className="badge_form">
       <div className="input-wrapper">
-        {' '}
+        {" "}
         <h4>Diversity Access Tickets</h4>
         <label htmlFor="accessTickets">
           <input
             type="checkbox"
             name="accessTickets"
             id="accessTickets"
-            {...register('accessTickets', { required: true })}
+            {...register("accessTickets", { required: true })}
             required
-          />{' '}
+          />{" "}
           &nbsp;This event commits to the Diversity Access Tickets.
-        </label>{' '}
+        </label>{" "}
         <br />
         <button
           type="button"
@@ -81,7 +81,7 @@ const PageSix = () => {
         <label htmlFor="ticketType">
           How many different types of diversity access tickets are available for
           the event?<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           className="input_text"
@@ -89,18 +89,18 @@ const PageSix = () => {
           type="text"
           name="ticketType"
           placeholder="Enter your answer here"
-          {...register('ticketType', { required: true })}
+          {...register("ticketType", { required: true })}
           rows="6"
           cols="75"
           required
-        />{' '}
+        />{" "}
         <br />
       </div>
       <div className="input-wrapper ">
         <label htmlFor="ticketCriteria">
           What are the criteria for qualifying for a diversity access ticket?
           <span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <textarea
           className="input_text"
@@ -108,18 +108,18 @@ const PageSix = () => {
           type="text"
           name="ticketCriteria"
           placeholder="Enter your answer here"
-          {...register('ticketCriteria', { required: true })}
+          {...register("ticketCriteria", { required: true })}
           rows="6"
           cols="75"
           required
-        />{' '}
+        />{" "}
         <br />
       </div>
       <div className="input-wrapper ">
         <label htmlFor="ticketLink">
           Provide a link to the page containing information about Diversity
           Access Tickets<span>*</span>
-        </label>{' '}
+        </label>{" "}
         <br /> <br />
         <input
           type="text"
@@ -127,9 +127,9 @@ const PageSix = () => {
           className="input_text"
           id="ticketLink"
           name="ticketLink"
-          {...register('ticketLink', { required: true })}
+          {...register("ticketLink", { required: true })}
           required
-        />{' '}
+        />{" "}
         <br />
       </div>
 
@@ -150,7 +150,7 @@ const PageSix = () => {
       </div>
       <div className="submit-info">
         <p>
-          {' '}
+          {" "}
           Once you click `submit`, you must use your GitHub account to finalize
           the issue on their Website by clicking `Create New Issue`.
         </p>
