@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Footer, Header } from '../../components';
 import BadgedEvents from './BadgedEvents';
 import './event-badging.scss';
 import '../../assets/styles/global.scss';
 import { arrowRight } from '../../assets/images';
+
 const EventBadging = () => {
-  const [swap, setSwap] = useState('about');
+  const { section } = useParams();
+  const navigate = useNavigate();
+  const [swap, setSwap] = useState(section || 'about');
   const [showAbout, setShowAbout] = useState('what');
+
+  useEffect(() => {
+    if (section) {
+      setSwap(section);
+    }
+  }, [section]);
+
   const swapHandler = (toggle) => {
     setSwap(toggle);
+    navigate(`/event-badging/${toggle}`);
   };
+
   const eventHandler = (about) => {
     setShowAbout(about);
   };
+
   return (
     <>
       <main>
@@ -27,66 +41,56 @@ const EventBadging = () => {
           <div className='about-project'>
             <button
               onClick={() => swapHandler('about')}
-              className={swap == 'about' ? 'buttonActive' : 'buttonInActive'}
+              className={swap === 'about' ? 'buttonActive' : 'buttonInActive'}
             >
               About Event Badging
             </button>
             <button
               onClick={() => swapHandler('events')}
-              className={swap == 'events' ? 'buttonActive' : 'buttonInActive'}
+              className={swap === 'events' ? 'buttonActive' : 'buttonInActive'}
             >
               Badged Events
             </button>
-            {/* <a
-              href="https://github.com/badging/event-diversity-and-inclusion#badges-granted-version-3"
-              target="_blank"
-            >
-              Badged Events
-            </a> */}
           </div>
         </div>
         <section className='container'>
-          {swap && swap == 'about' ? (
+          {swap === 'about' ? (
             <div className='main-event'>
               <ul className='main-list'>
                 <li
                   onClick={() => eventHandler('what')}
-                  className={showAbout == 'what' ? 'aboutEventHeader' : ''}
+                  className={showAbout === 'what' ? 'aboutEventHeader' : ''}
                 >
                   What is Event Badging{' '}
-                  {showAbout == 'what' && <img src={arrowRight} alt='arrow' />}{' '}
+                  {showAbout === 'what' && <img src={arrowRight} alt='arrow' />}{' '}
                 </li>
                 <li
                   onClick={() => eventHandler('works')}
-                  className={showAbout == 'works' ? 'aboutEventHeader' : ''}
+                  className={showAbout === 'works' ? 'aboutEventHeader' : ''}
                 >
                   How It Works{' '}
-                  {showAbout == 'works' && <img src={arrowRight} alt='arrow' />}
+                  {showAbout === 'works' && <img src={arrowRight} alt='arrow' />}
                 </li>
                 <li
                   onClick={() => eventHandler('apply')}
-                  className={showAbout == 'apply' ? 'aboutEventHeader' : ''}
+                  className={showAbout === 'apply' ? 'aboutEventHeader' : ''}
                 >
                   How to Apply{' '}
-                  {showAbout == 'apply' && <img src={arrowRight} alt='arrow' />}
+                  {showAbout === 'apply' && <img src={arrowRight} alt='arrow' />}
                 </li>
                 <li
                   onClick={() => eventHandler('badger')}
-                  className={showAbout == 'badger' ? 'aboutEventHeader' : ''}
+                  className={showAbout === 'badger' ? 'aboutEventHeader' : ''}
                 >
                   Become a Badger{' '}
-                  {showAbout == 'badger' && (
-                    <img src={arrowRight} alt='arrow' />
-                  )}
+                  {showAbout === 'badger' && <img src={arrowRight} alt='arrow' />}
                 </li>
               </ul>
 
               <div className='desc-group'>
-                <div
-                  className={`${showAbout == 'what' ? 'showDesc' : 'hideDesc'}`}
-                >
+                <div className={`${showAbout === 'what' ? 'showDesc' : 'hideDesc'}`}>
                   <div className='info'>
-                    <h1>What is CHAOSS DEI Event badging</h1>
+                    <h1>What is CHAOSS DEI Event Badging</h1>
                     <p>
                       The CHAOSS DEI Event Badging Initiative is an award system
                       through which open source event organizers earn badges
@@ -103,11 +107,7 @@ const EventBadging = () => {
                     </p>
                   </div>
                 </div>
-                <div
-                  className={`${
-                    showAbout == 'works' ? 'showDesc' : 'hideDesc'
-                  }`}
-                >
+                <div className={`${showAbout === 'works' ? 'showDesc' : 'hideDesc'}`}>
                   <div className='info'>
                     <h1>How it Works</h1>
 
@@ -155,13 +155,9 @@ const EventBadging = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`${
-                    showAbout == 'apply' ? 'showDesc' : 'hideDesc'
-                  }`}
-                >
+                <div className={`${showAbout === 'apply' ? 'showDesc' : 'hideDesc'}`}>
                   <div className='info'>
-                    <h1>How to apply</h1>
+                    <h1>How to Apply</h1>
                     <p>
                       To submit an application for your event/conference, you
                       will need to have a GitHub account, as well as meet the
@@ -234,12 +230,14 @@ const EventBadging = () => {
                             target='_blank'
                             className='a-line'
                           >
-                            CHAOSS DEI Event Badging submission form
-                          </a>{' '}
+                            DEI Badging site
+                          </a>
+                          , click on “Get Started” and log in with your GitHub
+                          account.
                         </li>
                         <li>
-                          Fill out the web form to the best of your ability and
-                          click "Submit" on the web form.
+                          After you are logged in, click on “New Issue” to begin
+                          your application process.
                         </li>
                         <li>
                           An issue template will be created for you with the
@@ -271,9 +269,7 @@ const EventBadging = () => {
                     </div>
                   </div>
                 </div>
-                <div
-                  className={showAbout == 'badger' ? 'showDesc' : 'hideDesc'}
-                >
+                <div className={`${showAbout === 'badger' ? 'showDesc' : 'hideDesc'}`}>
                   <div className='info'>
                     <h1>Become a Badger</h1>
                     <p>
