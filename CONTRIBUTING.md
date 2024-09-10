@@ -15,7 +15,7 @@ Before you get started, please take a moment to read through the following guide
 
 ## Code of Conduct
 
-Please note that this project has a [Code of Conduct](https://github.com/chaoss/.github/blob/main/CODE_OF_CONDUCT.md). We expect all contributors to adhere to it. Please take a moment to read through these guidelines to ensure a positive and inclusive contributor experience.
+Please note that this project has a [Code of Conduct](/CODE_OF_CONDUCT.md). We expect all contributors to adhere to it. Please take a moment to read through these guidelines to ensure a positive and inclusive contributor experience.
 
 ## Who can contribute?
 
