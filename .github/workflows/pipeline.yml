@@ -35,9 +35,9 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Download Build Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: build
           path: build
@@ -52,7 +52,6 @@ jobs:
             echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
             mkdir -p /var/www/badging.chaoss.community
 
-      - uses: actions/checkout@v4
       - name: upload build
         uses: appleboy/scp-action@v0.1.7
         with:
