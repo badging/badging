@@ -92,9 +92,11 @@ We appreciate your contributions and look forward to working with you to make AL
 ## Community Resources
 
 ### Badging
-- [CHAOSS DEI Badging Project Documentation](https://github.com/badging/badging/wiki)
--  [CHAOSS DEI Project Badging (chaoss.community)](https://chaoss.community/chaoss-dei-project-badging/)
--  [Metrics Model: DEI Event Badging (chaoss.community)](https://chaoss.community/kb/metrics-model-dei-event-badging/)
+- [Badging Project Documentation](https://github.com/badging/badging/wiki)
+- [Badging Website](https://badging.chaoss.community/)
+- [Badging Website Design (Figma)](https://www.figma.com/design/BG3gSZL2ukRqtTz5i94CGH/Project-Badging)
+-  [CHAOSS DEI Project Badging (Blog | chaoss.community)](https://chaoss.community/chaoss-dei-project-badging/)
+-  [Metrics Model: DEI Event Badging (Blog | chaoss.community)](https://chaoss.community/kb/metrics-model-dei-event-badging/)
 -  [About CHAOSS DEI Badging (github.com)](https://github.com/badging/badging?tab=readme-ov-file#dei-project-badging)
 
 ### CHAOSS
