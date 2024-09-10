@@ -53,13 +53,13 @@ jobs:
             mkdir -p /var/www/badging.chaoss.community
 
       - name: Upload build
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "${{ github.workspace }}/build/**"
-          target: "/var/www/badging.chaoss.community/"
+          source: "${{ github.workspace }}/build/*"
+          target: /var/www/badging.chaoss.community/
 
 
       - name: Restart nginx
