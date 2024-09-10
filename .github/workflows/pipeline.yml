@@ -58,7 +58,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "${{ github.workspace }}/build"
+          source: "${{ github.workspace }}/build/*"
           target: "/var/www/badging.chaoss.community"
 
       - name: Restart nginx
