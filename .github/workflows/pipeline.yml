@@ -35,9 +35,9 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Build Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: build
@@ -52,11 +52,15 @@ jobs:
             echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
             mkdir -p /var/www/badging.chaoss.community
 
-      - name: Deploy new build using SCP
-        run: |
-          scp -r -o StrictHostKeyChecking=no build/* ${{ secrets.SSHUSERNAME }}@${{ secrets.HOST }}:/var/www/badging.chaoss.community/
-        env:
-          SSHPASS: ${{ secrets.SSHPASSWORD }}
+      - uses: actions/checkout@v4
+      - name: upload build
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          source: "${{ github.workspace }}/build"
+          target: "/var/www/badging.chaoss.community"
 
       - name: Restart nginx
         uses: appleboy/ssh-action@master
