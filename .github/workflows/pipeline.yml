@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
           name: build
           path: build
 
-      - name: remove old build
+      - name: Remove old build
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -51,16 +52,13 @@ jobs:
             echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
             mkdir -p /var/www/badging.chaoss.community
 
-      - name: deploy new build
-        uses: garygrossgarten/github-action-scp@release
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSHUSERNAME }}
-          password: ${{ secrets.SSHPASSWORD }}
-          local: ${{ github.workspace }}/build
-          remote: "/var/www/badging.chaoss.community"
+      - name: Deploy new build using SCP
+        run: |
+          scp -r -o StrictHostKeyChecking=no build/* ${{ secrets.SSHUSERNAME }}@${{ secrets.HOST }}:/var/www/badging.chaoss.community/
+        env:
+          SSHPASS: ${{ secrets.SSHPASSWORD }}
 
-      - name: restart nginx
+      - name: Restart nginx
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
