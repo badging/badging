@@ -52,14 +52,15 @@ jobs:
             echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
             mkdir -p /var/www/badging.chaoss.community
 
-      - name: upload build
+      - name: Upload build
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "${{ github.workspace }}/build/*"
-          target: "/var/www/badging.chaoss.community"
+          source: "${{ github.workspace }}/build/**"
+          target: "/var/www/badging.chaoss.community/"
+
 
       - name: Restart nginx
         uses: appleboy/ssh-action@master
