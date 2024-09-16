@@ -73,7 +73,7 @@ const FormContainer = () => {
               the issue on their Website by clicking "Create New Issue".
             </p>
            </div>
-        }
+          }
           <div className="sub">
             {currentStep > 1 && (
               <button className="sub-button" type="button" onClick={prevStep}>
