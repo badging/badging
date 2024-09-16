@@ -134,7 +134,7 @@
   }
 }
 @media screen and (min-width: 425px) {
-  .badge_form {
+  .badge_form, .sub {
     width: 80%;
   }
 }
@@ -145,7 +145,6 @@
     flex-direction: column;
     gap: 32px;
     height: auto;
-    min-height: 1000px;
     .input-wrapper {
       margin: 0;
       padding: 0;
