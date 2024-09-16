@@ -22,10 +22,10 @@ const PageFive = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         {' '}
         <h4>Diversity Access Tickets</h4>
-        <label htmlFor="accessTickets">
+        <label className='text-sm' htmlFor="accessTickets">
           <input
             type="checkbox"
             name="accessTickets"
