@@ -53,7 +53,7 @@ const VirtualContainer = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container container">
       <FormProvider {...methods}>
         <form className="form-wrap" onSubmit={methods.handleSubmit(onSubmit)}>
           <h1> Virtual Event</h1>

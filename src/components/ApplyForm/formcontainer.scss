@@ -2,22 +2,15 @@
 
 .form-container {
   display: flex;
-  justify-content: center;
-  // align-items: center;
   min-height: 900px;
   height: auto;
   width: auto;
-  padding-left: 1rem;
 }
 .form-wrap {
   height: auto;
-
-  // margin: 2rem 2rem 2rem 2rem;
-  // margin-left: 2rem;
-  margin: auto;
-  // width: 50%;
+  margin: 2rem 0;
+  width: 100%;
   p {
-    width: 268px;
     padding: 1rem 0 2rem 0;
     font-family: Theinhardt Pan;
     font-size: 14px;
@@ -51,21 +44,16 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+  @media screen and (min-width: 769px) {
   .form-container {
     display: flex;
-    justify-content: center;
-    // align-items: center;
     min-height: 950px;
-    // height: auto;
   }
   .form-wrap {
-    width: 50%;
+    width: 80%;
     min-height: 100%;
-    margin: 4rem 4rem;
-
+    margin: 4rem 0;
     p {
-      width: 588px;
       padding: 1rem 0 1rem 0;
       font-family: Theinhardt Pan;
       font-size: 16px;
@@ -85,6 +73,12 @@
         border-radius: 4px;
         color: black;
       }
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .form-wrap {
+      width: 60%;
     }
   }
 }
