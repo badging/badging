@@ -49,7 +49,7 @@ const InPerson = () => {
         </div>
       </div>
 
-      <section className="virtual">
+      <section className="virtual bg-white">
         {swap && swap == 'virtual' ? <VirtualContainer /> : <FormContainer />}
       </section>
       <Footer />
