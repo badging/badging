@@ -25,10 +25,10 @@ const PageFour = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         {' '}
         <h4>Code of Conduct at Event</h4>
-        <label htmlFor="eventCode">
+        <label className='text-sm' htmlFor="eventCode">
           <input
             type="checkbox"
             name="eventCode"
