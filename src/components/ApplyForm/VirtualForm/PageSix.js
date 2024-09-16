@@ -22,7 +22,7 @@ const PageSix = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         {' '}
         <h4>Diversity Access Tickets</h4>
         <label htmlFor="accessTickets">
@@ -146,13 +146,6 @@ const PageSix = () => {
         <p>
           <span> Findability: </span>
           The information about Diversity Access Tickets is public.
-        </p>
-      </div>
-      <div className="submit-info">
-        <p>
-          {' '}
-          Once you click `submit`, you must use your GitHub account to finalize
-          the issue on their Website by clicking `Create New Issue`.
         </p>
       </div>
     </div>
