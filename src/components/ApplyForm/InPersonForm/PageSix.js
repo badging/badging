@@ -22,10 +22,10 @@ const PageSix = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         {' '}
         <h4>Family Friendliness</h4>
-        <label htmlFor="famCheck">
+        <label className='text-sm' htmlFor="famCheck">
           <input
             type="checkbox"
             name="famCheck"
@@ -139,13 +139,6 @@ const PageSix = () => {
           <span>Ticket allocation: </span>
           The information about the family friendly services provided at the
           Event is easy to find on the website.
-        </p>
-      </div>
-      <div className="submit-info">
-        <p>
-          {' '}
-          Once you click `submit`, you must use your GitHub account to finalize
-          the issue on their Website by clicking `Create New Issue`.
         </p>
       </div>
     </div>
