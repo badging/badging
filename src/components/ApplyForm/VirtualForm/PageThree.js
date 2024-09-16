@@ -22,10 +22,10 @@ const PageThree = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         {' '}
         <h4>Inclusive Experience at Event</h4>
-        <label htmlFor="inclusiveExp">
+        <label className='text-sm' htmlFor="inclusiveExp">
           <input
             type="checkbox"
             name="inclusiveExp"
@@ -93,7 +93,7 @@ const PageThree = () => {
           {...register('eventfb', { required: true })}
         />
       </div>
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         <label htmlFor="prevfb">
           Is the event team using feedback from previous event`s attendees,
           speakers, and volunteers to improve DEI at this event? .<span>*</span>
@@ -112,7 +112,7 @@ const PageThree = () => {
         <br />
         <p className="suffix-text">If so, provide an example.</p>
       </div>
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         <label htmlFor="futurefb">
           Does the event team plan to use feedback from this event`s attendees,
           speakers, and volunteers to improve DEI at future events?
@@ -154,7 +154,7 @@ const PageThree = () => {
         />{' '}
         <br />
       </div>
-      <div className="input-wrapper">
+      <div className="input-wrapper mb-0">
         <label htmlFor="accsuggest">
           Does the event platform allow attendees to suggest future
           accomodations for the event?<span>*</span>
