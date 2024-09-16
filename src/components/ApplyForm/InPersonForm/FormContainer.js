@@ -53,7 +53,7 @@ const FormContainer = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container container">
       <FormProvider {...methods}>
         <form className="form-wrap" onSubmit={methods.handleSubmit(onSubmit)}>
           <h1> In-Person Event</h1>
