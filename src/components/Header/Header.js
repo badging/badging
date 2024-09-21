@@ -66,7 +66,7 @@ const Nav = () => {
             {isDropdownOpen && (
               <div className="dropdown-menu">
                 <a
-                  href="https://chaoss.community/diversity-and-inclusion-badging/"
+                  href="/event-badging/apply"
                   className="dropdown-option"
                 >
                   Event Badging
