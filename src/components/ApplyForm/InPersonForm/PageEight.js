@@ -5,7 +5,7 @@ import { useFormContext } from 'react-hook-form';
 import { carretDown, carretRight } from '../../../assets/images';
 
 import { useState } from 'react';
-const PageSix = () => {
+const PageEight = () => {
  const { register } = useFormContext();
  const [showLink, setShowLink] = useState(false);
 
@@ -24,15 +24,15 @@ const PageSix = () => {
   <div className='badge_form'>
    <div className='input-wrapper mb-0'>
     {' '}
-    <h4>Family Friendliness</h4>
+    <h4>Event Location Inclusivity</h4>
     <label className='text-sm' htmlFor='famCheck'>
      <input
       type='checkbox'
-      name='FFIP'
+      name='ELIIP'
       id='famCheck'
-      {...register('FFIP', { required: true })}
+      {...register('ELIIP', { required: true })}
      />{' '}
-     &nbsp; This event commits to the Diversity Access Tickets.
+     &nbsp; This event commits to Event Location Inclusivity.
     </label>{' '}
     <br />
     <button
@@ -69,70 +69,76 @@ const PageSix = () => {
     <br />
     {showLink && (
      <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/family-friendly.md'>
+      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/event-location-inclusivity.md'>
        CHAOSS Metric Document
       </a>
-      <br />
-      <a href='https://adacamp.org/adacamp-toolkit/childcare/'>
-       Childcare Toolkit
+      <a href='https://www.equaldex.com/'>
+       Equality Index for LGTBQ+ Community by Location
       </a>
-      <br />
-      <a href='https://open.nytimes.com/what-if-child-care-were-as-standard-as-coffee-at-tech-conferences-568c5fba028e?gi=e13ba9882c23'>
-       Article on Childcare at Tech Conferences
+      <a href='https://www.un.org/development/desa/disabilities/disability-laws-and-acts-by-country-area.html'>
+       Disability Laws and Acts by Country/Area
       </a>
      </div>
     )}
    </div>
 
    <div className='input-wrapper '>
-    <label htmlFor='childcare'>
-     Does the Event provide childcare facilities for its attendees and speakers?
+    <label htmlFor='locationCheck'>
+     To the best of your ability, has the Event’s geographic location been
+     checked against lists of places of concern for the following demographics:
+     sexual and gender minorities, people with disabilities, racial and ethnic
+     minorities, women, or religious minorities?
      <span>*</span>
     </label>{' '}
     <br /> <br />
     <textarea
      className='input_text'
-     id='childcare'
+     id='locationCheck'
      type='text'
-     name='FFIP1'
+     name='ELIIP1'
      placeholder='Enter your answer here'
-     {...register('FFIP1', { required: true })}
+     {...register('ELIIP1', { required: true })}
      rows='6'
      cols='75'
     />{' '}
     <br />
    </div>
    <div className='input-wrapper '>
-    <label htmlFor='familyEnviron'>
-     What are the other ways that a family-friendly environment is being created
-     in the Event?
+    <label htmlFor='dateCheck'>
+     To the best of your ability, have the Event’s dates been checked for other
+     events happening in the same location at the same time that could
+     potentially bring harm to a subset of any attendees?
      <span>*</span>
     </label>{' '}
     <br /> <br />
     <textarea
      className='input_text'
-     id='familyEnviron'
+     id='dateCheck'
      type='text'
-     name='FFIP2'
+     name='ELIIP2'
      placeholder='Enter your answer here'
-     {...register('FFIP2', { required: true })}
+     {...register('ELIIP2', { required: true })}
      rows='6'
      cols='75'
     />{' '}
     <br />
    </div>
    <div className='input-wrapper '>
-    <label htmlFor='famLink'>
-     Provide link for the Event Code of Conduct<span>*</span>
+    <label htmlFor='marginalized'>
+     In what ways does the event communications address or acknowledge any cause
+     for concern for marginalized attendees?
+     <span>*</span>
     </label>{' '}
     <br /> <br />
-    <input
-     type='text'
-     placeholder='Enter your answer here'
+    <textarea
      className='input_text'
-     id='famLink'
-     name='FFIP3'
-     {...register('FFIP3', { required: true })}
+     id='marginalized'
+     type='text'
+     name='ELIIP3'
+     placeholder='Enter your answer here'
+     {...register('ELIIP3', { required: true })}
+     rows='6'
+     cols='75'
     />{' '}
     <br />
    </div>
@@ -140,17 +146,25 @@ const PageSix = () => {
    <div className='criteria'>
     <p>CRITERIA:</p>
     <p>
-     <span> Availability: </span>
-     The Event provides one or more services/facilities for families.
+     <span> Wheelchair Accessible: </span>
+     The Event is in a wheelchair-accessible venue.
     </p>
     <p>
-     <span>Ticket allocation: </span>
-     The information about the family friendly services provided at the Event is
-     easy to find on the website.
+     <span>Colorblind Accessible: </span>
+     The Event guides speakers and provides colorblind-friendly signage.
+    </p>
+    <p>
+     <span>Other Accommodations: </span>
+     The Event will provide other accommodations as requested.
+    </p>
+    <p>
+     <span>Findability: </span>
+     The information about the accessibility accommodations provided at the
+     Event is easy to find on the website.
     </p>
    </div>
   </div>
  );
 };
 
-export default PageSix;
+export default PageEight;
