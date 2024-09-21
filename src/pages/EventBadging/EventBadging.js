@@ -143,7 +143,7 @@ const EventBadging = () => {
                         <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/requirements.md'>
                           Event Submission Requirements
                         </a>
-                        : This document describes the minimum requirements for
+                        : This <a href='https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/requirements.md'>document</a> describes the minimum requirements for
                         an event/conference to be eligible for a CHAOSS badging
                         process
                         <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/guidelines.md'>
