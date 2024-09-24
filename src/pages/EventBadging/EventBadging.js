@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Footer, Header } from '../../components';
-import BadgedEvents from './BadgedEvents';
-import './event-badging.scss';
-import '../../assets/styles/global.scss';
-import { arrowRight } from '../../assets/images';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Footer, Header } from "../../components";
+import BadgedEvents from "./BadgedEvents";
+import "./event-badging.scss";
+import "../../assets/styles/global.scss";
+import { arrowRight } from "../../assets/images";
 
 const EventBadging = () => {
   const { section } = useParams();
   const navigate = useNavigate();
-  const [swap, setSwap] = useState(section || 'about');
-  const [showAbout, setShowAbout] = useState('what');
+  const [swap, setSwap] = useState(section || "about");
+  const [showAbout, setShowAbout] = useState("what");
 
   useEffect(() => {
     if (section) {
@@ -30,66 +30,76 @@ const EventBadging = () => {
   return (
     <>
       <main>
-        <div className='overlay'>
-          <div className='bgRight'></div>
-          <div className='bgCenter'></div>
-          <div className='bgLeft'></div>
+        <div className="overlay">
+          <div className="bgRight"></div>
+          <div className="bgCenter"></div>
+          <div className="bgLeft"></div>
         </div>
         <Header />
-        <div className='container jumbotron__container'>
+        <div className="container jumbotron__container">
           <h1>Event Badging</h1>
-          <div className='about-project'>
+          <div className="about-project">
             <button
-              onClick={() => swapHandler('about')}
-              className={swap === 'about' ? 'buttonActive' : 'buttonInActive'}
+              onClick={() => swapHandler("about")}
+              className={swap === "about" ? "buttonActive" : "buttonInActive"}
             >
               About Event Badging
             </button>
             <button
-              onClick={() => swapHandler('events')}
-              className={swap === 'events' ? 'buttonActive' : 'buttonInActive'}
+              onClick={() => swapHandler("events")}
+              className={swap === "events" ? "buttonActive" : "buttonInActive"}
             >
               Badged Events
             </button>
           </div>
         </div>
-        <section className='container'>
-          {swap === 'about' ? (
-            <div className='main-event'>
-              <ul className='main-list'>
+        <section className="container">
+          {swap === "about" ? (
+            <div className="main-event">
+              <ul className="main-list">
                 <li
-                  onClick={() => eventHandler('what')}
-                  className={showAbout === 'what' ? 'aboutEventHeader' : ''}
+                  onClick={() => eventHandler("what")}
+                  className={showAbout === "what" ? "aboutEventHeader" : ""}
                 >
-                  What is Event Badging{' '}
-                  {showAbout === 'what' && <img src={arrowRight} alt='arrow' />}{' '}
+                  What is Event Badging{" "}
+                  {showAbout === "what" && <img src={arrowRight} alt="arrow" />}{" "}
                 </li>
                 <li
-                  onClick={() => eventHandler('works')}
-                  className={showAbout === 'works' ? 'aboutEventHeader' : ''}
+                  onClick={() => eventHandler("works")}
+                  className={showAbout === "works" ? "aboutEventHeader" : ""}
                 >
-                  How It Works{' '}
-                  {showAbout === 'works' && <img src={arrowRight} alt='arrow' />}
+                  How It Works{" "}
+                  {showAbout === "works" && (
+                    <img src={arrowRight} alt="arrow" />
+                  )}
                 </li>
                 <li
-                  onClick={() => eventHandler('apply')}
-                  className={showAbout === 'apply' ? 'aboutEventHeader' : ''}
+                  onClick={() => eventHandler("apply")}
+                  className={showAbout === "apply" ? "aboutEventHeader" : ""}
                 >
-                  How to Apply{' '}
-                  {showAbout === 'apply' && <img src={arrowRight} alt='arrow' />}
+                  How to Apply{" "}
+                  {showAbout === "apply" && (
+                    <img src={arrowRight} alt="arrow" />
+                  )}
                 </li>
                 <li
-                  onClick={() => eventHandler('badger')}
-                  className={showAbout === 'badger' ? 'aboutEventHeader' : ''}
+                  onClick={() => eventHandler("badger")}
+                  className={showAbout === "badger" ? "aboutEventHeader" : ""}
                 >
-                  Become a Badger{' '}
-                  {showAbout === 'badger' && <img src={arrowRight} alt='arrow' />}
+                  Become a Badger{" "}
+                  {showAbout === "badger" && (
+                    <img src={arrowRight} alt="arrow" />
+                  )}
                 </li>
               </ul>
 
-              <div className='desc-group'>
-                <div className={`${showAbout === 'what' ? 'showDesc' : 'hideDesc'}`}>
-                  <div className='info'>
+              <div className="desc-group">
+                <div
+                  className={`${
+                    showAbout === "what" ? "showDesc" : "hideDesc"
+                  }`}
+                >
+                  <div className="info">
                     <h1>What is CHAOSS DEI Event Badging</h1>
                     <p>
                       The CHAOSS DEI Event Badging Initiative is an award system
@@ -107,12 +117,16 @@ const EventBadging = () => {
                     </p>
                   </div>
                 </div>
-                <div className={`${showAbout === 'works' ? 'showDesc' : 'hideDesc'}`}>
-                  <div className='info'>
+                <div
+                  className={`${
+                    showAbout === "works" ? "showDesc" : "hideDesc"
+                  }`}
+                >
+                  <div className="info">
                     <h1>How it Works</h1>
 
-                    <div className='about-parag'>
-                      <p className='pTitle'>How it Works</p>
+                    <div className="about-parag">
+                      <p className="pTitle">How it Works</p>
                       <p>
                         First, an event organizer will submit a badge
                         application and answer questions that are based on
@@ -133,21 +147,21 @@ const EventBadging = () => {
                       </p>
                     </div>
 
-                    <div className='about-parag'>
-                      <p className='pTitle'> Before You Start</p>
+                    <div className="about-parag">
+                      <p className="pTitle"> Before You Start</p>
                       <p>
                         For additional information, please visit the official
                         CHAOSS DEI Event Badging Repository. In order to submit
                         an application for your event/conference, review the
                         following documents:
-                        <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/requirements.md'>
+                        <a href="https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/requirements.md" class="a-line">
                           Event Submission Requirements
                         </a>
                         : This document describes the minimum requirements for
                         an event/conference to be eligible for a CHAOSS badging
-                        process
-                        <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/guidelines.md'>
-                          Event Submission Guidelines
+                        process:
+                        <a href="https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/guidelines.md" class="a-line">
+                          Event Submission Guideline
                         </a>
                         : This document describes guidelines and steps on how an
                         event can gain a badge under the CHAOSS Badging program.
@@ -155,19 +169,23 @@ const EventBadging = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`${showAbout === 'apply' ? 'showDesc' : 'hideDesc'}`}>
-                  <div className='info'>
+                <div
+                  className={`${
+                    showAbout === "apply" ? "showDesc" : "hideDesc"
+                  }`}
+                >
+                  <div className="info">
                     <h1>How to Apply</h1>
                     <p>
                       To submit an application for your event/conference, you
                       will need to have a GitHub account, as well as meet the
                       following requirements:
                     </p>
-                    <div className='des-bullets'>
-                      <p className='Dtitle'>
+                    <div className="des-bullets">
+                      <p className="Dtitle">
                         Event status-related requirements
                       </p>
-                      <ul className='bullet-list'>
+                      <ul className="bullet-list">
                         <li>
                           The event must be about open-source technologies and
                           practices.
@@ -179,9 +197,9 @@ const EventBadging = () => {
                       </ul>
                     </div>
 
-                    <div className='des-bullets'>
-                      <p className='Dtitle'>Metric related requirements</p>
-                      <ul className='bullet-list'>
+                    <div className="des-bullets">
+                      <p className="Dtitle">Metric related requirements</p>
+                      <ul className="bullet-list">
                         <li>
                           The information about the event must be publicly
                           available, for example, on a website.
@@ -196,20 +214,20 @@ const EventBadging = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='des-bullets'>
-                      <p className='Smalltitle'>
+                    <div className="des-bullets">
+                      <p className="Smalltitle">
                         CHAOSS DEI Event Badging submission guidelines
                       </p>
-                      <p className='Dtitle'>General guidelines</p>
-                      <ul className='bullet-list'>
+                      <p className="Dtitle">General guidelines</p>
+                      <ul className="bullet-list">
                         <li>
-                          Make sure all the{' '}
+                          Make sure all the{" "}
                           <a
-                            href='https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/requirements.md'
-                            className='a-line'
+                            href="https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/requirements.md"
+                            className="a-line"
                           >
                             requirements
-                          </a>{' '}
+                          </a>{" "}
                           are fulfilled before initiating a CHAOSS DEI Event
                           Badging application.
                         </li>
@@ -220,15 +238,15 @@ const EventBadging = () => {
                       </ul>
                     </div>
 
-                    <div className='des-bullets'>
-                      <p className='Dtitle'>Application guide</p>
-                      <ul className='bullet-list num'>
+                    <div className="des-bullets">
+                      <p className="Dtitle">Application guide</p>
+                      <ul className="bullet-list num">
                         <li>
-                          Navigate to the{' '}
+                          Navigate to the{" "}
                           <a
-                            href='https://chaoss.community/diversity-and-inclusion-badging/'
-                            target='_blank'
-                            className='a-line'
+                            href="https://chaoss.community/diversity-and-inclusion-badging/"
+                            target="_blank"
+                            className="a-line"
                           >
                             DEI Badging site
                           </a>
@@ -255,11 +273,11 @@ const EventBadging = () => {
                         </li>
                         <li>
                           The review ends when a maintainer confirms that the
-                          initial checks are met, and everything is in order.{' '}
+                          initial checks are met, and everything is in order.{" "}
                         </li>
                         <li>
                           Then, a badge is generated for you according to the
-                          information provided, and the checklist is completed.{' '}
+                          information provided, and the checklist is completed.{" "}
                         </li>
                         <li>
                           The issue will be closed by a maintainer using the
@@ -269,8 +287,12 @@ const EventBadging = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`${showAbout === 'badger' ? 'showDesc' : 'hideDesc'}`}>
-                  <div className='info'>
+                <div
+                  className={`${
+                    showAbout === "badger" ? "showDesc" : "hideDesc"
+                  }`}
+                >
+                  <div className="info">
                     <h1>Become a Badger</h1>
                     <p>
                       If you would like to help make open source events more
@@ -282,16 +304,16 @@ const EventBadging = () => {
                       this is a perfect opportunity for those new to the
                       community to begin contributing to CHAOSS right away.
                     </p>
-                    <div className='about-parag'>
+                    <div className="about-parag">
                       <p>
-                        To learn more about becoming a Badger, join the{' '}
+                        To learn more about becoming a Badger, join the{" "}
                         <a
-                          href='https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg'
-                          target='_blank'
-                          className='a-line'
+                          href="https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg"
+                          target="_blank"
+                          className="a-line"
                         >
                           CHAOSS slack
-                        </a>{' '}
+                        </a>{" "}
                         and then join the #badging channel and let us know! We
                         will point you in the right direction from there.
                       </p>
