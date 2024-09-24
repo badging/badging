@@ -4,10 +4,6 @@ main {
   width: 100%;
   height: auto;
 
-  section {
-    background-color: #fff;
-  }
-  
   .overlay {
     height: 100%;
     width: 100%;
@@ -87,10 +83,6 @@ main {
       cursor: pointer;
       transition: background-color 0.3s ease;
       margin-left: 5px;
-
-      &.ml-0 {
-        margin-left: 0;
-      }
 
       &:hover {
         background-color: #d61b5e;

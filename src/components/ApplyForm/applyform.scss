@@ -6,6 +6,7 @@
 .badge_form {
   display: flex;
   flex-direction: column;
+  min-width: 256px;
   height: auto;
   margin-top: 1.5rem;
 
@@ -22,13 +23,14 @@
       color: red;
     }
     input[type='text'] {
-      width: 100%;
+      width: 250px;
       line-height: 40px;
       padding: 13px, 10px, 13px, 10px;
       border: 1px solid #bebebe;
       border-radius: 4px;
       color: black;
       box-sizing: border-box;
+      padding-left: 1rem;
     }
     p.error {
       color: red;
@@ -36,6 +38,7 @@
 
     textarea.input_text {
       resize: both;
+      width: 250px;
       height: 50px;
       line-height: 40px;
       padding: 13px, 10px, 13px, 10px;
@@ -43,11 +46,12 @@
       border-radius: 4px;
       color: black;
       box-sizing: border-box;
+      padding-left: 1rem;
     }
     ::placeholder {
       line-height: 24px;
-      font-family: Theinhardt Pan;
       padding-left: 1rem;
+      font-family: Theinhardt Pan;
     }
     .reference {
       margin-top: 0;
@@ -96,6 +100,7 @@
       margin-right: 6px;
     }
     .radio-input input[type='radio'] {
+      width: 230px;
       height: 29px;
       margin-right: 8rem;
     }
@@ -106,6 +111,7 @@
   }
   .submit-button {
     margin-top: 0.5rem;
+    width: 306px;
     height: 60px;
     padding: 8px, 24.1px, 8px, 24.1px;
     border: none;
@@ -122,6 +128,7 @@
       padding-top: 0;
       padding-bottom: 0;
       font-size: 14px;
+      width: 300px;
     }
   }
 
@@ -131,6 +138,10 @@
     background-color: #adcff8;
     padding: 2px 6px;
     font-size: 12px;
+    min-width: 200px;
+    p {
+      // width: 300px;
+    }
   }
 }
 
@@ -138,7 +149,7 @@
   .badge_form {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 576px;
     gap: 32px;
     height: auto;
     min-height: 1000px;
@@ -158,6 +169,7 @@
         color: red;
       }
       input[type='text'] {
+        width: 566px;
         line-height: 40px;
 
         padding: 13px, 16px, 13px, 16px;
@@ -166,6 +178,7 @@
         color: black;
       }
       textarea.input_text {
+        width: 556px;
         height: 100px;
         line-height: 40px;
         padding: 13px, 10px, 13px, 10px;
@@ -175,6 +188,7 @@
       }
       ::placeholder {
         line-height: 24px;
+        padding-left: 1rem;
         font-family: Theinhardt Pan;
       }
       .radio-input {
@@ -196,6 +210,7 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         font-size: 14px;
+        width: 566px;
       }
     }
 
@@ -206,6 +221,10 @@
       padding: 2px 6px;
       margin-bottom: 1.5rem;
       font-size: 14px;
+      width: 550px;
+      p {
+        width: 550px;
+      }
     }
   }
 }
