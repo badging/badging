@@ -25,7 +25,7 @@ const PageFour = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper mb-0">
+      <div className="input-wrapper">
         {' '}
         <h4>Time Inclusion for Virtual Events</h4>
         <label htmlFor="timeInclusion">
@@ -138,7 +138,7 @@ const PageFour = () => {
         </label>
       </div>
 
-      <div className="criteria mt-2">
+      <div className="criteria">
         <p>CRITERIA:</p>
 
         <p>
