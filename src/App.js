@@ -20,6 +20,7 @@ import { DesktopProvider } from './contexts/DesktopContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import EventBadging from './pages/EventBadging/EventBadging';
 import Faq from './pages/Faq/Faq';
+import Virtual from './pages/ApplyBadgingForm/Virtual';
 
 const queryClient = new QueryClient({
  defaultOptions: {
@@ -48,10 +49,7 @@ const App = () => {
        <Route path='/project-badging/dei-file' element={<DeiFile />} />
        <Route path='/project-badging/dei-badge' element={<DeiBadge />} />
       </Route>
-      <Route path='/event-badging'>
-       <Route path='/event-badging' element={<EventBadging />} />
-       <Route path='/event-badging/apply' element={<InPerson />} />
-      </Route>
+      <Route path='/event-badging/:section' element={<EventBadging />} />
       <Route path='/badge' element={<GetStartedBadging />} />
       <Route path='/select-project/:provider' element={<SelectProjectRepo />} />
       <Route exact path='/comingsoon' element={<ComingSoon />} />
@@ -61,6 +59,8 @@ const App = () => {
        path='/project-badging-successful'
        element={<SuccessfullyBadged />}
       />
+      <Route path='/apply' element={<InPerson />}>
+      </Route>
       <Route path='*' element={<ErrorPage />} />
      </Routes>
     </DataProvider>
