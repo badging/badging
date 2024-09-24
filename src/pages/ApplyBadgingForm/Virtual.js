@@ -49,7 +49,7 @@ const Virtual = () => {
         </div>
       </div>
 
-      <section className="inperson bg-white">
+      <section className="inperson">
         {swap && swap == 'inperson' ? <VirtualContainer /> : <FormContainer />}
       </section>
       <Footer />
