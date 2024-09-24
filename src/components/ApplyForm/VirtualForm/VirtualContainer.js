@@ -66,14 +66,6 @@ const VirtualContainer = () => {
             .
           </p>
           {renderStep()}
-          {currentStep === 6 && <div className="submit-info">
-            <p>
-              {' '}
-              Once you click "submit", you must use your GitHub account to finalize
-              the issue on their Website by clicking "Create New Issue".
-            </p>
-           </div>
-          }
 
           <div className="sub">
             {currentStep > 1 && (

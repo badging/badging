@@ -22,7 +22,7 @@ const PageFive = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper mb-0">
+      <div className="input-wrapper">
         {' '}
         <h4>Code of Conduct at Event</h4>
         <label htmlFor="eventCode">
