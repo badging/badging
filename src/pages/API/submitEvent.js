@@ -16,13 +16,16 @@ export const submitEventForm = async (data, type) => {
    break;
  }
 
- const title = `${type} Event ${type === 'In-Person' ? data.nameIP : data.nameVI}`;
+ const title = `[${type} Event] ${
+  type === 'In-Person' ? data.nameIP : data.nameVI
+ }`;
 
- const response = await fetch(`${settings.API_BASE_URL}/submit-form`, {
+ const response = await fetch(`${settings.API_BASE_URL}/auth/github`, {
   method: 'POST',
   body: JSON.stringify({
    title: title,
    body: markdown,
+   type: 'event-badging',
   }),
   headers: {
    'Content-type': 'application/json; charset=UTF-8',
