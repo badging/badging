@@ -18,7 +18,7 @@ export const submitEventForm = async (data, type) => {
 
  const title = `${type} Event ${type === 'In-Person' ? data.nameIP : data.nameVI}`;
 
- const response = await fetch(`${settings.API_BASE_URL}/submit-form`, {
+ const response = await fetch(`${settings.API_BASE_URL}/api/submit-form`, {
   method: 'POST',
   body: JSON.stringify({
    title: title,
