@@ -112,7 +112,7 @@ const FormContainer = () => {
        <button
         className='sub-button'
         type='button'
-        // disabled={!methods.formState.isValid}
+        disabled={!methods.formState.isValid}
         onClick={nextStep}
         style={{
          background: methods.formState.isValid ? '#222D33' : '#F3F5F6',
