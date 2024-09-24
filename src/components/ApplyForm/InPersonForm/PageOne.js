@@ -57,11 +57,11 @@ const PageOne = () => {
        required
        {...register('linkwebIP', {
         required: true,
-        pattern: {
-         value:
-          /^(https?:\/\/)?(wwww{1}\.)?[\w\d]*\.([a-zA-Z]*\.)?([a-zA-Z]*)?$/i,
-         message: 'Please enter valid website',
-        },
+        // pattern: {
+        //  value:
+        //   /^(https?:\/\/)?(wwww{1}\.)?[\w\d]*\.([a-zA-Z]*\.)?([a-zA-Z]*)?$/i,
+        //  message: 'Please enter valid website',
+        // },
        })}
       />{' '}
       {/* <p className="error">{errors.eventWebsite?.message}</p> */}
