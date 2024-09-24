@@ -64,7 +64,7 @@ export const navLinks = [
   },
   {
     pathname: "Event Badging",
-    url: "/event-badging",
+    url: "/event-badging/about",
   },
   {
     pathname: "Project Badging",
