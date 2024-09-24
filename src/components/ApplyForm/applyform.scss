@@ -14,9 +14,9 @@
   }
   .input-wrapper {
     margin-bottom: 1.3rem;
-    label {   
+    label {
+      font-family: Theinhardt Pan;
       color: black;
-      font-size: 14px;
     }
     span {
       color: red;
@@ -46,7 +46,7 @@
     }
     ::placeholder {
       line-height: 24px;
-      
+      font-family: Theinhardt Pan;
       padding-left: 1rem;
     }
     .reference {
@@ -133,16 +133,12 @@
     font-size: 12px;
   }
 }
-@media screen and (min-width: 425px) {
-  .badge_form {
-    width: 80%;
-  }
-}
 
 @media screen and (min-width: 769px) {
   .badge_form {
     display: flex;
     flex-direction: column;
+    width: 80%;
     gap: 32px;
     height: auto;
     min-height: 1000px;
@@ -155,7 +151,7 @@
       }
 
       label {
-        font-size: 16px;
+        font-family: Theinhardt Pan;
         color: black;
       }
       span {
@@ -179,7 +175,7 @@
       }
       ::placeholder {
         line-height: 24px;
-        
+        font-family: Theinhardt Pan;
       }
       .radio-input {
         accent-color: $textColor4;
