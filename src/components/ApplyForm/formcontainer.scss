@@ -28,12 +28,12 @@
     display: flex;
     // justify-content: space-between;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     .sub-button {
       top: 10rem;
       margin-bottom: 1rem;
 
-      width: 100%;
+      min-width: 120px;
       height: 60px;
       padding: 8px, 24.1px, 8px, 24.1px;
       border: 1px solid #adcff8;
@@ -63,6 +63,8 @@
       .sub-button {
         top: 10rem;
         margin-bottom: 1rem;
+
+        width: 350px;
         height: 60px;
         padding: 8px, 24.1px, 8px, 24.1px;
         border: 1px solid #adcff8;
