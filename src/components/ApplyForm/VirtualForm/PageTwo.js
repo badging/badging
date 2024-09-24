@@ -19,10 +19,10 @@ const PageTwo = () => {
 
   return (
     <div className="badge_form">
-      <div className="input-wrapper mb-0">
+      <div className="input-wrapper">
         {' '}
         <h4>Event Demographics</h4>
-        <label className='text-sm' htmlFor="demographics">
+        <label htmlFor="demographics">
           <input
             type="checkbox"
             name="demographics"
@@ -99,7 +99,7 @@ const PageTwo = () => {
           {...register('eventDemographics', { required: true })}
         />
       </div>
-      <div className="input-wrapper mb-0">
+      <div className="input-wrapper">
         <label htmlFor="optOut">
           Provide an example of an opt-out option on the Event registration page
           if available.<span>*</span>
