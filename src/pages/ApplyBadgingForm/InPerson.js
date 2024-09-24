@@ -36,7 +36,7 @@ const InPerson = () => {
         <div className="about-project">
           <button
             onClick={() => swapHandler('inperson')}
-            className={`ml-0 ${swap == 'inperson' ? 'buttonActive' : 'buttonInActive'}`}
+            className={swap == 'inperson' ? 'buttonActive' : 'buttonInActive'}
           >
             In-Person Event
           </button>
