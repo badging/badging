@@ -20,7 +20,7 @@ export const submitEventForm = async (data, type) => {
   type === 'In-Person' ? data.nameIP : data.nameVI
  }`;
 
- const response = await fetch(`${settings.API_BASE_URL}/auth/github`, {
+ const response = await fetch(`https://badgingapi.onrender.com/api/auth/github`, {
   method: 'POST',
   body: JSON.stringify({
    title: title,
