@@ -25,7 +25,7 @@ The All In CHAOSS Badging initiative is built by the community and warmly welcom
 
 Here are the steps to follow to contribute to All In CHAOSS Badging:
 
-1. **Fork the Repository**: Click the "Fork" button in the upper right-hand corner of the All In CHAOSS Badging repository on GitHub.
+1. **Fork the Repository**: Click the "Fork" button in the upper right-hand corner of the All In CHAOSS Badging repository on GitHub.![screenshot showing the fork button](src/assets/images/others/screenshot-forkbtn.png)
 
 2. **Clone Your Fork**: Clone your fork of the repository to your local machine:
 
@@ -77,14 +77,21 @@ Here are the steps to follow to contribute to All In CHAOSS Badging:
 
 ## Code Style and Standards
 
-All In CHAOSS Badging follows a specific code style and coding standards. Please make sure to adhere to these standards when contributing.
+All In CHAOSS Badging follows a specific [code style and coding standards](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md#coding-style). Please make sure to adhere to these standards when contributing.
 
 ### Issue Tracking
 
 If you're looking for ways to contribute but don't have specific code changes in mind, you can check the [issue tracker](https://github.com/badging/badging/issues) for All In CHAOSS Badging on GitHub. You might find issues marked as "help wanted" or "good first issue."
 
 Ask for help
-If you have any questions or need assistance with your contribution, please contact get in touch with the project maintainers.
+If you have any questions or need assistance with your contribution, please get in touch with any of the following project maintainers:
+- [Tochukwu Odeme](https://github.com/Teek-tech)
+- [Precious Abubakar](https://github.com/misspee007)
+- [Kaxada](https://github.com/kaxada)
+- [iyimide adegunloye](https://github.com/mide358)
+- [Ruth Ikegah](https://github.com/Ruth-ikegah)
+- [Anita Ihuman](https://github.com/Anita-ihuman)
+- [Kingsley Mkpandiok](https://github.com/iamkingsleey)
 
 We appreciate your contributions and look forward to working with you to make ALL In CHAOSS Badging even better!
 
