@@ -77,7 +77,7 @@ Here are the steps to follow to contribute to All In CHAOSS Badging:
 
 ## Code Style and Standards
 
-All In CHAOSS Badging follows a specific [code style and coding standards](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md#coding-style). Please make sure to adhere to these standards when contributing.
+CHAOSS Badging follows a specific code style and coding standards. Please make sure to adhere to these standards when contributing.
 
 ### Issue Tracking
 
