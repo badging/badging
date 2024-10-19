@@ -33,53 +33,12 @@ const PageTwo = () => {
       &nbsp; This event commits to improving demographic diversity at the event.
      </label>{' '}
      <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
      <br />
-     {showLink && (
-      <div>
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>{' '}
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>{' '}
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>{' '}
-      </div>
-     )}
+    <div>
+        <a className='ev-link' href='https://chaoss.community/kb/metric-event-demographics/' target="_blank" rel="noopener noreferrer">
+            Metric: Event Demographics
+        </a>
+    </div>
     </div>
 
     <div className='input-wrapper'>
