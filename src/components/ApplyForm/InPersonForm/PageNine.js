@@ -81,7 +81,7 @@ const PageNine = () => {
     <p>
      Have you read about the{' '}
      <a className='ev-link' href='https://publichealthpledge.com/' target="_blank" rel="noopener noreferrer">Public Health Badging Program</a>
-     ?<span>*</span>
+     ?
     </p>
     <label htmlFor='participateYes'>
      <input

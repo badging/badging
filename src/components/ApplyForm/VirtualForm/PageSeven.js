@@ -79,7 +79,7 @@ const PageSeven = () => {
 
    <div className='input-wrapper '>
     <label htmlFor='closeCaption'>
-     Is a form of closed-captioning provided?<span>*</span>
+     Is a form of closed-captioning provided?
     </label>{' '}
     <br /> <br />
     <textarea
@@ -99,7 +99,7 @@ const PageSeven = () => {
     <label htmlFor='accomodations'>
      Does the Event provide other accessibility accommodations, or will upon
      request?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -118,7 +118,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='eventLink'>
      Provide relevant links related to event accessibility at the Event
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <input

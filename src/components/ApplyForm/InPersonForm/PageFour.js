@@ -88,7 +88,7 @@ const PageFour = () => {
    </div>
    <div className='radio-input'>
     <p>
-     Is the code of conduct posted at Event venue?<span>*</span>
+     Is the code of conduct posted at Event venue?
     </p>
     <label htmlFor='codeposted'>
      <input
@@ -116,7 +116,7 @@ const PageFour = () => {
    </div>
    <div className='input-wrapper '>
     <label htmlFor='conductlink'>
-     Provide link for the Event Code of Conduct<span>*</span>
+     Provide link for the Event Code of Conduct
     </label>{' '}
     <br /> <br />
     <input

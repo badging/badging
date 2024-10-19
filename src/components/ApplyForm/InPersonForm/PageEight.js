@@ -88,7 +88,7 @@ const PageEight = () => {
      checked against lists of places of concern for the following demographics:
      sexual and gender minorities, people with disabilities, racial and ethnic
      minorities, women, or religious minorities?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -108,7 +108,7 @@ const PageEight = () => {
      To the best of your ability, have the Event’s dates been checked for other
      events happening in the same location at the same time that could
      potentially bring harm to a subset of any attendees?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -127,7 +127,7 @@ const PageEight = () => {
     <label htmlFor='marginalized'>
      In what ways does the event communications address or acknowledge any cause
      for concern for marginalized attendees?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea

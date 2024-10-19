@@ -85,7 +85,7 @@ const PageTwo = () => {
    <div className='input-wrapper'>
     <label htmlFor='eventDemographics'>
      Detail the process for measuring Event Demographics.
-     <span>*</span>
+     
     </label>
     <br /> <br />
     <textarea
@@ -102,7 +102,7 @@ const PageTwo = () => {
    <div className='input-wrapper mb-0'>
     <label htmlFor='optOut'>
      Provide an example of an opt-out option on the Event registration page if
-     available.<span>*</span>
+     available.
     </label>{' '}
     <br /> <br />
     <textarea
@@ -125,7 +125,7 @@ const PageTwo = () => {
     <label htmlFor='demoText'>
      Provide an example of a demographics text input box on the Event
      registration page if available.
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea

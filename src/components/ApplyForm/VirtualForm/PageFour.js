@@ -82,7 +82,7 @@ const PageFour = () => {
     <div className='radio-input'>
      <p>
       Are speakers able to pre-record their presentations, as opposed to
-      presenting them live?<span>*</span>
+      presenting them live?
      </p>
      <label htmlFor='preRecord'>
       <input
@@ -111,7 +111,7 @@ const PageFour = () => {
     <div className='radio-input'>
      <p>
       Can attendees change video quality on the Event platform while viewing a
-      presentation?<span>*</span>
+      presentation?
      </p>
      <label htmlFor='vidQualityYes'>
       <input

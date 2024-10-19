@@ -78,7 +78,7 @@ const PageThree = () => {
 
     <div className='input-wrapper'>
      <label htmlFor='eventfb'>
-      Provide an example of the Event Feedback page if available. <span>*</span>
+      Provide an example of the Event Feedback page if available. 
      </label>
      <br /> <br />
      <textarea
@@ -95,7 +95,7 @@ const PageThree = () => {
     <div className='input-wrapper mb-0'>
      <label htmlFor='prevfb'>
       Is the event team using feedback from previous event`s attendees,
-      speakers, and volunteers to improve DEI at this event? .<span>*</span>
+      speakers, and volunteers to improve DEI at this event? .
      </label>{' '}
      <br /> <br />
      <textarea
@@ -115,7 +115,7 @@ const PageThree = () => {
      <label htmlFor='futurefb'>
       Does the event team plan to use feedback from this event`s attendees,
       speakers, and volunteers to improve DEI at future events?
-      <span>*</span>
+      
      </label>{' '}
      <br /> <br />
      <textarea
@@ -138,7 +138,7 @@ const PageThree = () => {
     <div className='input-wrapper'>
      <label htmlFor='accesslearn'>
       How can attendees learn more about accessibility at the event?
-      <span>*</span>
+      
      </label>{' '}
      <br /> <br />
      <textarea
@@ -156,7 +156,7 @@ const PageThree = () => {
     <div className='input-wrapper mb-0'>
      <label htmlFor='accsuggest'>
       Does the event platform allow attendees to suggest future accomodations
-      for the event?<span>*</span>
+      for the event?
      </label>{' '}
      <br /> <br />
      <textarea
@@ -176,7 +176,7 @@ const PageThree = () => {
     <div className='input-wrapper'>
      <label htmlFor='futureaccess'>
       Will the event platform be accessible to attendees and speakers after the
-      event?<span>*</span>
+      event?
      </label>{' '}
      <br /> <br />
      <textarea

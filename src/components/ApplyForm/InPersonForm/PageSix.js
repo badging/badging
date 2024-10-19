@@ -87,7 +87,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='childcare'>
      Does the Event provide childcare facilities for its attendees and speakers?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -106,7 +106,7 @@ const PageSix = () => {
     <label htmlFor='familyEnviron'>
      What are the other ways that a family-friendly environment is being created
      in the Event?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -123,7 +123,7 @@ const PageSix = () => {
    </div>
    <div className='input-wrapper '>
     <label htmlFor='famLink'>
-     Provide link for the Event Code of Conduct<span>*</span>
+    Provide relevant links related to family friendliness at the Event.
     </label>{' '}
     <br /> <br />
     <input

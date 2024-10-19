@@ -80,7 +80,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='ticketType'>
      How many different types of diversity access tickets are available for the
-     event?<span>*</span>
+     event?
     </label>{' '}
     <br /> <br />
     <textarea
@@ -99,7 +99,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='ticketCriteria'>
      What are the criteria for qualifying for a diversity access ticket?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -118,7 +118,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='ticketLink'>
      Provide a link to the page containing information about Diversity Access
-     Tickets<span>*</span>
+     Tickets
     </label>{' '}
     <br /> <br />
     <input

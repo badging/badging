@@ -79,7 +79,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='wheelchairAccess'>
      Is the Event in a wheelchair-accessible venue?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -98,7 +98,7 @@ const PageSeven = () => {
     <label htmlFor='slidesGuide'>
      Are speakers given guidance about creating slides that are colorblind
      accessible?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -116,7 +116,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='signage'>
      Is signage at the event and the event website colorblind accessible?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -135,7 +135,7 @@ const PageSeven = () => {
     <label htmlFor='otherAccess'>
      Does the Event provide other accessibility accommodations, or will upon
      request?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -153,7 +153,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='eventAccessLink'>
      Provide relevant links related to event accessibility at the Event.
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <input
