@@ -32,7 +32,7 @@ const PageThree = () => {
        id='inclusiveExp'
        {...register('IEEV', { required: true })}
       />{' '}
-      &nbsp; This event commits to Attendee Diversity & Inclusion.
+      &nbsp; This event commits to improving the inclusive experience at the event.
      </label>{' '}
      <br />
      <button

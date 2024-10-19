@@ -32,7 +32,7 @@ const PageSix = () => {
       id='famCheck'
       {...register('FFIP', { required: true })}
      />{' '}
-     &nbsp; This event commits to the Diversity Access Tickets.
+     &nbsp; This event commits to Family Friendliness.
     </label>{' '}
     <br />
     <button

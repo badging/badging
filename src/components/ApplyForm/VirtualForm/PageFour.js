@@ -35,7 +35,7 @@ const PageFour = () => {
        id='timeInclusion'
        {...register('TIVEV', { required: true })}
       />{' '}
-      &nbsp; This event commits to the Attendee Diversity & Inclusion.
+      &nbsp; This event commits to Time Inclusion for Virtual Events
      </label>{' '}
      <br />
      <button

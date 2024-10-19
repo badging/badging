@@ -32,8 +32,7 @@ const PageNine = () => {
       id='publicHealthCheck'
       {...register('PHIP', { required: true })}
      />{' '}
-     &nbsp; This event commits to public health and safety procedures and
-     provisions.
+     &nbsp; This event commits to Public Health and Safety.
     </label>{' '}
     <br />
     <button
@@ -80,8 +79,8 @@ const PageNine = () => {
 
    <div className='radio-input'>
     <p>
-     Have you participated in the{' '}
-     <a href='https://publichealthpledge.com/'>Public Health Badging Program</a>
+     Have you read about the{' '}
+     <a className='ev-link' href='https://publichealthpledge.com/' target="_blank" rel="noopener noreferrer">Public Health Badging Program</a>
      ?<span>*</span>
     </p>
     <label htmlFor='participateYes'>
@@ -109,22 +108,6 @@ const PageNine = () => {
      />
      No
     </label>
-   </div>
-   <div className='input-wrapper '>
-    <label htmlFor='provideBadgeLinkPH'>
-     Please provide a link to the Badges received from the Public Health Pledge
-     Badging Program
-    </label>{' '}
-    <br /> <br />
-    <input
-     className='input_text'
-     id='provideBadgeLinkPH'
-     type='text'
-     name='PHIP2'
-     placeholder='Enter your answer here'
-     {...register('PHIP2', { required: true })}
-    />{' '}
-    <br />
    </div>
    <div className='input-wrapper '>
     <label htmlFor='provideLinkPH'>

@@ -30,7 +30,7 @@ const PageTwo = () => {
        aria-required
        {...register('EDV', { required: true })}
       />{' '}
-      &nbsp; This event commits to Speaker Diversity & Inclusion.
+      &nbsp; This event commits to improving demographic diversity at the event.
      </label>{' '}
      <br />
      <button
@@ -146,10 +146,6 @@ const PageTwo = () => {
 
     <div className='criteria'>
      <p>CRITERIA:</p>
-     <p>
-      <span>Measuring Demographics: </span>
-      This event commits to Speaker Diversity & Inclusion.
-     </p>
      <p>
       <span>Opt-Out: </span>
       The Event provides an opportunity to opt-out of providing demographic
