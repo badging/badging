@@ -34,46 +34,6 @@ const PageThree = () => {
       />{' '}
       &nbsp; This event commits to improving the inclusive experience at the event.
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
-      <div>
-       <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/attendee-demographics.md'>
-        CHAOSS Metric Document
-       </a>
-      </div>
-     )}
     </div>
 
     <div className='input-wrapper'>
