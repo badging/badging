@@ -38,53 +38,12 @@ const PageFour = () => {
      &nbsp; This event commits to the Code of Conduct at Event.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
     <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/event-code-of-conduct.md'>
-       CHAOSS Metric Document
-      </a>
-      <br />
-      <a href='https://www.asaecenter.org/resources/articles/an_plus/2019/october/why-and-how-to-develop-an-event-code-of-conduct'>
-       Developing an Event Code of Conduct
-      </a>
-      <br />
-      <a href='https://blog.tito.io/posts/code-of-conduct-for-virtual-events/'>
-       Code of Conduct for Virtual Events
-      </a>
-     </div>
-    )}
+    <div>
+        <a className='ev-link' href='https://chaoss.community/kb/metric-code-of-conduct-at-event/' target="_blank" rel="noopener noreferrer">
+            Metric: Code of Conduct at Event
+        </a>
+    </div>
    </div>
    <div className='radio-input'>
     <p>

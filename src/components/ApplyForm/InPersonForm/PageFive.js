@@ -35,46 +35,13 @@ const PageFive = () => {
       />{' '}
       &nbsp;This event commits to the Diversity Access Tickets.
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
+      <br />
+      <br />
       <div>
-       <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/diversity-tickets.md'>
-        CHAOSS Metric Document
-       </a>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-diversity-access-tickets/' target="_blank" rel="noopener noreferrer">
+              Metric: Diversity Access Tickets
+          </a>
       </div>
-     )}
     </div>
 
     <div className='input-wrapper '>
@@ -117,7 +84,7 @@ const PageFive = () => {
     </div>
     <div className='input-wrapper '>
      <label htmlFor='ticketLink'>
-      Provide link for the Event Code of Conduct
+        Provide a link to the page containing information about Diversity Access Tickets.
      </label>{' '}
      <br /> <br />
      <input

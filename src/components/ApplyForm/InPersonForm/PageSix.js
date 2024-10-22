@@ -35,53 +35,12 @@ const PageSix = () => {
      &nbsp; This event commits to Family Friendliness.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/family-friendly.md'>
-       CHAOSS Metric Document
-      </a>
       <br />
-      <a href='https://adacamp.org/adacamp-toolkit/childcare/'>
-       Childcare Toolkit
-      </a>
-      <br />
-      <a href='https://open.nytimes.com/what-if-child-care-were-as-standard-as-coffee-at-tech-conferences-568c5fba028e?gi=e13ba9882c23'>
-       Article on Childcare at Tech Conferences
-      </a>
-     </div>
-    )}
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-family-friendliness/' target="_blank" rel="noopener noreferrer">
+              Metric: Family Friendliness
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>

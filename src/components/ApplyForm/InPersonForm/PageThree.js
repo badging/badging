@@ -34,6 +34,13 @@ const PageThree = () => {
       />{' '}
       &nbsp; This event commits to improving the inclusive experience at the event.
      </label>{' '}
+     <br />
+     <br />
+    <div>
+        <a className='ev-link' href='https://chaoss.community/kb/metric-inclusive-experience-at-event/' target="_blank" rel="noopener noreferrer">
+            Metric: Inclusive Experience at Event
+        </a>
+    </div>
     </div>
 
     <div className='input-wrapper'>

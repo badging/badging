@@ -35,51 +35,12 @@ const PageEight = () => {
      &nbsp; This event commits to Event Location Inclusivity.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/event-location-inclusivity.md'>
-       CHAOSS Metric Document
-      </a>
-      <a href='https://www.equaldex.com/'>
-       Equality Index for LGTBQ+ Community by Location
-      </a>
-      <a href='https://www.un.org/development/desa/disabilities/disability-laws-and-acts-by-country-area.html'>
-       Disability Laws and Acts by Country/Area
-      </a>
-     </div>
-    )}
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-event-location-inclusivity/' target="_blank" rel="noopener noreferrer">
+              Metric: Event Location Inclusivity
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>

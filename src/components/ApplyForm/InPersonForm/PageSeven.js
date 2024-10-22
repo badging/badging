@@ -35,45 +35,12 @@ const PageSeven = () => {
      &nbsp; This event commits to Event Accessibility.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/event-accessibility.md'>
-       CHAOSS Metric Document
-      </a>
-     </div>
-    )}
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-event-accessibility/' target="_blank" rel="noopener noreferrer">
+              Metric: Event Accessibility
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
