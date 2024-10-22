@@ -37,47 +37,13 @@ const PageFour = () => {
       />{' '}
       &nbsp; This event commits to Time Inclusion for Virtual Events
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
+      <br />
+      <br />
       <div>
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
+          <a className='ev-link' href='https://chaoss.community/kb/metric-time-inclusion-for-virtual-events/' target="_blank" rel="noopener noreferrer">
+              Metric: Time Inclusion for Virtual Events
+          </a>
       </div>
-     )}
     </div>
     <div className='radio-input'>
      <p>

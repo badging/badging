@@ -34,7 +34,7 @@ const PageSeven = () => {
      />{' '}
      &nbsp; This event commits to Event Accessibility.
     </label>{' '}
-    <br />
+      <br />
       <br />
       <div>
           <a className='ev-link' href='https://chaoss.community/kb/metric-event-accessibility/' target="_blank" rel="noopener noreferrer">

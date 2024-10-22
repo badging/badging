@@ -34,54 +34,13 @@ const PageFive = () => {
       />{' '}
       &nbsp; This event commits to the Code of Conduct at Event.
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
+      <br />
+      <br />
       <div>
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-code-of-conduct-at-event/' target="_blank" rel="noopener noreferrer">
+              Metric: Code of Conduct at Event
+          </a>
       </div>
-     )}
     </div>
     <div className='radio-input'>
      <p>
