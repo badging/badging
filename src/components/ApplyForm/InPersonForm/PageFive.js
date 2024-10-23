@@ -2,12 +2,9 @@
 import '../../../assets/styles/global.scss';
 import '../applyform.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageFive = () => {
   const { register } = useFormContext();
-  const [showLink, setShowLink] = useState(false);
 
   // const objectStyle = {
   //   color: 'blue',

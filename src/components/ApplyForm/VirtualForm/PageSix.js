@@ -2,23 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageSix = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
-
- // const objectStyle = {
- //   color: 'blue',
- //   backgroundColor: 'red',
- //   padding: '10px',
- // };
- // const objectStyleValid = {
- //   color: 'Red',
- //   backgroundColor: 'green',
- //   padding: '10px',
- // };
 
  return (
   <div className='badge_form'>

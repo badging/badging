@@ -5,12 +5,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageFour = () => {
   const { register } = useFormContext();
-  const [showLink, setShowLink] = useState(false);
 
   // const objectStyle = {
   //   color: 'blue',

@@ -5,17 +5,11 @@ import '../applyform.scss';
 
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-// import { useDesktop } from '../../contexts/DesktopContext';
-import { useState } from 'react';
-// import { Outlet } from 'react-router-dom';
 
 const PageTwo = () => {
-  // const { isDesktop } = useDesktop();
 
   const { register } = useFormContext();
-  const [showLink, setShowLink] = useState(false);
 
   return (
    <div className='badge_form'>

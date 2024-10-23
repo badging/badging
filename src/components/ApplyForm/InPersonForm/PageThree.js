@@ -5,20 +5,13 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-// import { Button as MuiButton } from '@mui/material';
-// import { styled } from '@mui/system';
-// import { useDesktop } from '../../contexts/DesktopContext';
-import { useState } from 'react';
-// import { Outlet } from 'react-router-dom';
 
 const PageThree = () => {
   // const { isDesktop } = useDesktop();
 
   const { register } = useFormContext();
 
-  const [showLink, setShowLink] = useState(false);
 
   return (
    <div className='badge_form'>
