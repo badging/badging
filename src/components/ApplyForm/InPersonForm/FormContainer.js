@@ -46,7 +46,6 @@ const FormContainer = () => {
  // };
  const nextStep = () => {
   setCurrentStep(currentStep + 1);
-  console.log(currentStep);
  };
 
  const prevStep = () => {
@@ -112,7 +111,6 @@ const FormContainer = () => {
        <button
         className='sub-button'
         type='button'
-        // disabled={!methods.formState.isValid}
         onClick={nextStep}
         style={{
          background: methods.formState.isValid ? '#222D33' : '#F3F5F6',
@@ -125,10 +123,9 @@ const FormContainer = () => {
        <button
         className='sub-button'
         type='submit'
-        disabled={!methods.formState.isValid}
         style={{
-         background: methods.formState.isValid ? '#222D33' : '#F3F5F6',
-         color: methods.formState.isValid ? '#FFFFFF' : '#5B656B',
+         background: '#222D33',
+         color: '#FFFFFF'
         }}
        >
         Submit ({currentStep + '/' + stepLength})

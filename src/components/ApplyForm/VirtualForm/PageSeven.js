@@ -30,8 +30,7 @@ const PageSeven = () => {
       type='checkbox'
       name='EAV'
       id='eventAccess'
-      {...register('EAV', { required: true })}
-      required
+      {...register('EAV')}
      />{' '}
      &nbsp;This event commits to Event Accessibility.
     </label>{' '}
@@ -55,10 +54,10 @@ const PageSeven = () => {
      type='text'
      name='EAV1'
      placeholder='Enter your answer here'
-     {...register('EAV1', { required: true })}
+     {...register('EAV1')}
      rows='6'
      cols='75'
-     required
+     
     />{' '}
     <br />
    </div>
@@ -75,10 +74,10 @@ const PageSeven = () => {
      type='text'
      name='EAV2'
      placeholder='Enter your answer here'
-     {...register('EAV2', { required: true })}
+     {...register('EAV2')}
      rows='6'
      cols='75'
-     required
+     
     />{' '}
     <br />
    </div>
@@ -94,8 +93,8 @@ const PageSeven = () => {
      className='input_text'
      id='eventLink'
      name='EAV3'
-     {...register('EAV3', { required: true })}
-     required
+     {...register('EAV3')}
+     
     />{' '}
     <br />
    </div>
@@ -107,7 +106,7 @@ const PageSeven = () => {
      The Event provides closed-captioning.
     </p>
     <p>
-     <span>Other Accomodations: </span>
+     <span>Other Accommodations: </span>
      The Event provides other accommodations as requested.
     </p>
     <p>

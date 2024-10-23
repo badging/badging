@@ -30,7 +30,7 @@ const PageNine = () => {
       type='checkbox'
       name='PHIP'
       id='publicHealthCheck'
-      {...register('PHIP', { required: true })}
+      {...register('PHIP')}
      />{' '}
      &nbsp; This event commits to Public Health and Safety.
     </label>{' '}
@@ -57,7 +57,7 @@ const PageNine = () => {
       name='participateYes'
       className='radio-input'
       aria-checked
-      {...register('PHIP1', { required: true || false })}
+      {...register('PHIP1')}
      />
      Yes
     </label>
@@ -70,7 +70,7 @@ const PageNine = () => {
       name='participateNo'
       className='radio-input'
       aria-checked
-      {...register('PHIP1', { required: true || false })}
+      {...register('PHIP1')}
      />
      No
     </label>
@@ -87,7 +87,7 @@ const PageNine = () => {
      type='text'
      name='PHIP3'
      placeholder='Enter your answer here'
-     {...register('PHIP3', { required: true })}
+     {...register('PHIP3')}
     />{' '}
     <br />
    </div>
