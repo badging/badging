@@ -2,12 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageSeven = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
 
  // const objectStyle = {
  //   color: 'blue',
@@ -30,56 +27,22 @@ const PageSeven = () => {
       type='checkbox'
       name='EAV'
       id='eventAccess'
-      {...register('EAV', { required: true })}
-      required
+      {...register('EAV')}
      />{' '}
      &nbsp;This event commits to Event Accessibility.
     </label>{' '}
-    <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/event-accessibility.md'>
-       CHAOSS Metric Document
-      </a>
-     </div>
-    )}
+      <br />
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-event-accessibility/' target="_blank" rel="noopener noreferrer">
+              Metric: Event Accessibility
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
     <label htmlFor='closeCaption'>
-     Is a form of closed-captioning provided?<span>*</span>
+     Is a form of closed-captioning provided?
     </label>{' '}
     <br /> <br />
     <textarea
@@ -88,10 +51,10 @@ const PageSeven = () => {
      type='text'
      name='EAV1'
      placeholder='Enter your answer here'
-     {...register('EAV1', { required: true })}
+     {...register('EAV1')}
      rows='6'
      cols='75'
-     required
+     
     />{' '}
     <br />
    </div>
@@ -99,7 +62,7 @@ const PageSeven = () => {
     <label htmlFor='accomodations'>
      Does the Event provide other accessibility accommodations, or will upon
      request?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -108,17 +71,17 @@ const PageSeven = () => {
      type='text'
      name='EAV2'
      placeholder='Enter your answer here'
-     {...register('EAV2', { required: true })}
+     {...register('EAV2')}
      rows='6'
      cols='75'
-     required
+     
     />{' '}
     <br />
    </div>
    <div className='input-wrapper '>
     <label htmlFor='eventLink'>
      Provide relevant links related to event accessibility at the Event
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <input
@@ -127,8 +90,8 @@ const PageSeven = () => {
      className='input_text'
      id='eventLink'
      name='EAV3'
-     {...register('EAV3', { required: true })}
-     required
+     {...register('EAV3')}
+     
     />{' '}
     <br />
    </div>
@@ -140,7 +103,7 @@ const PageSeven = () => {
      The Event provides closed-captioning.
     </p>
     <p>
-     <span>Other Accomodations: </span>
+     <span>Other Accommodations: </span>
      The Event provides other accommodations as requested.
     </p>
     <p>

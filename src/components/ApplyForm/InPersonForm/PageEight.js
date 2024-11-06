@@ -2,12 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageEight = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
 
  // const objectStyle = {
  //   color: 'blue',
@@ -35,51 +32,12 @@ const PageEight = () => {
      &nbsp; This event commits to Event Location Inclusivity.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/event-location-inclusivity.md'>
-       CHAOSS Metric Document
-      </a>
-      <a href='https://www.equaldex.com/'>
-       Equality Index for LGTBQ+ Community by Location
-      </a>
-      <a href='https://www.un.org/development/desa/disabilities/disability-laws-and-acts-by-country-area.html'>
-       Disability Laws and Acts by Country/Area
-      </a>
-     </div>
-    )}
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-event-location-inclusivity/' target="_blank" rel="noopener noreferrer">
+              Metric: Event Location Inclusivity
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
@@ -88,7 +46,7 @@ const PageEight = () => {
      checked against lists of places of concern for the following demographics:
      sexual and gender minorities, people with disabilities, racial and ethnic
      minorities, women, or religious minorities?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -108,7 +66,7 @@ const PageEight = () => {
      To the best of your ability, have the Event’s dates been checked for other
      events happening in the same location at the same time that could
      potentially bring harm to a subset of any attendees?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -127,7 +85,7 @@ const PageEight = () => {
     <label htmlFor='marginalized'>
      In what ways does the event communications address or acknowledge any cause
      for concern for marginalized attendees?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea

@@ -2,12 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageSix = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
 
  // const objectStyle = {
  //   color: 'blue',
@@ -32,62 +29,21 @@ const PageSix = () => {
       id='famCheck'
       {...register('FFIP', { required: true })}
      />{' '}
-     &nbsp; This event commits to the Diversity Access Tickets.
+     &nbsp; This event commits to Family Friendliness.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/family-friendly.md'>
-       CHAOSS Metric Document
-      </a>
       <br />
-      <a href='https://adacamp.org/adacamp-toolkit/childcare/'>
-       Childcare Toolkit
-      </a>
-      <br />
-      <a href='https://open.nytimes.com/what-if-child-care-were-as-standard-as-coffee-at-tech-conferences-568c5fba028e?gi=e13ba9882c23'>
-       Article on Childcare at Tech Conferences
-      </a>
-     </div>
-    )}
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-family-friendliness/' target="_blank" rel="noopener noreferrer">
+              Metric: Family Friendliness
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
     <label htmlFor='childcare'>
      Does the Event provide childcare facilities for its attendees and speakers?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -106,7 +62,7 @@ const PageSix = () => {
     <label htmlFor='familyEnviron'>
      What are the other ways that a family-friendly environment is being created
      in the Event?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -123,7 +79,7 @@ const PageSix = () => {
    </div>
    <div className='input-wrapper '>
     <label htmlFor='famLink'>
-     Provide link for the Event Code of Conduct<span>*</span>
+    Provide relevant links related to family friendliness at the Event.
     </label>{' '}
     <br /> <br />
     <input
