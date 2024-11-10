@@ -4,21 +4,29 @@ import { useContext, useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
+import { DoorBackOutlined } from "@mui/icons-material";
 
 
 const SearchBar = ({ setShowInfo }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputClicked, setInputClicked] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-  const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
-  const { userData, setUserData } = useContext(DataContext);
+  const [focusedSuggestionIndfsfsadf
+DoorBackOutlinedsf
+    asdfa ex, setFocusedSuggestionIndex] = useState(-1);
+  const { userData,svas
+
+    setUserData } = useContext(DataContext);
   const searchBarRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchBarRef.current && !searchBarRef.current.contains(e.target)) {
         clearSuggestions();
-      }
+      }sdfgasf
+
+      da
+
     };
 
     document.addEventListener("mousedown", handleClickOutside);
