@@ -61,7 +61,6 @@ jobs:
           source: "${{ github.workspace }}/build/*"
           target: /var/www/badging.chaoss.community/
 
-
       - name: Restart nginx
         uses: appleboy/ssh-action@master
         with:

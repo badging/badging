@@ -6,7 +6,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import {
   SearchBar,
   SelectedProjects,
-  Layout,
   Loader,
   Jumbotron,
   Footer,

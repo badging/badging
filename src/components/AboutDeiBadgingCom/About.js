@@ -1,7 +1,6 @@
 import "./about.scss";
 import "../../assets/styles/global.scss";
-import { Footer, Header, Sidebar, AboutDeiMobile } from "..";
-import { curlyBraces } from "../../assets/images";
+import { Sidebar, AboutDeiMobile } from "..";
 import { useDesktop } from "../../contexts/DesktopContext";
 import { Outlet } from "react-router-dom";
 
@@ -9,7 +8,7 @@ const AboutNew = () => {
   const { isDesktop } = useDesktop();
 
   return (
-    <div className="about-dei">    
+    <div className="about-dei">
       <main className="container">
         <div className="main__container">
           {isDesktop && (

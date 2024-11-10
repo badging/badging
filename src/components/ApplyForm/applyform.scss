@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 // * {
 //   border: 1px solid red;
 // }
@@ -18,7 +18,7 @@
     &.mb-0 {
       margin-bottom: 0;
     }
-    label {   
+    label {
       color: black;
       font-size: 14px;
       &.text-sm {
@@ -28,7 +28,7 @@
     span {
       color: red;
     }
-    input[type='text'] {
+    input[type="text"] {
       width: 100%;
       line-height: 40px;
       padding: 13px, 10px, 13px, 10px;
@@ -104,11 +104,11 @@
       color: $textColor4;
       margin-right: 6px;
     }
-    .radio-input input[type='radio'] {
+    .radio-input input[type="radio"] {
       height: 29px;
       margin-right: 8rem;
     }
-    input[type='radio'].radio-input {
+    input[type="radio"].radio-input {
       margin-right: 8px;
     }
   }
@@ -167,7 +167,7 @@
       .reference {
         font-size: 14px;
       }
-      input[type='text'] {
+      input[type="text"] {
         line-height: 40px;
 
         padding: 13px, 16px, 13px, 16px;
@@ -185,14 +185,13 @@
       }
       ::placeholder {
         line-height: 24px;
-        
       }
       .radio-input {
         accent-color: $textColor4;
         p {
           padding-bottom: 10px;
         }
-        .radio-input input[type='radio'] {
+        .radio-input input[type="radio"] {
           height: 29px;
         }
       }

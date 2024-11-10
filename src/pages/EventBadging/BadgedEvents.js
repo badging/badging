@@ -1,74 +1,53 @@
-import React, { useState } from 'react';
-import './badgedEvents.scss';
-import { AboutDeiMobile, Footer, Header } from '../../components';
-import Jumbotron from '../../components/Jumbotron/Jumbotron';
-import { Pagination, TablePagination } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon } from '../../assets/images';
-import { Publish } from '@mui/icons-material';
-import { fetchProjects } from '../../hooks/fetchProjects';
-import RandomString from '../../components/RandomString';
-import AboutNew from '../../components/AboutDeiBadgingCom/About';
-import settings from '../../settings.json';
+import React, { useState } from "react";
+import "./badgedEvents.scss";
+import { Pagination } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { AZicon, Filter, ScheduleIcon, SearchIcon } from "../../assets/images";
+import { fetchProjects } from "../../hooks/fetchProjects";
+import settings from "../../settings.json";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: '#1C1C1C',
+    backgroundColor: "#1C1C1C",
     color: theme.palette.common.white,
-    borderBottom: '1px solid #030303',
+    borderBottom: "1px solid #030303",
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     color: theme.palette.common.white,
   },
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
+  "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  // hide last border
-  'th, td': {
-    borderBottom: '1px solid #030303',
+  "th, td": {
+    borderBottom: "1px solid #030303",
   },
-  '&:last-child td, &:last-child th': {
+  "&:last-child td, &:last-child th": {
     border: 0,
   },
 }));
 
-const StyledTablePagination = styled(TablePagination)((theme) => ({
-  backgroundColor: '#1C1C1C',
-  color: '#fff',
-}));
-
 const BadgedEvents = () => {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(4);
+  const [rowsPerPage] = useState(4);
   const [filter, setFilter] = useState(false);
-  const [filterStatus, setFilterStatus] = useState('Published');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('createdAt');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("createdAt");
 
-  const { data, isLoading, error } = fetchProjects(
+  const { data, isLoading } = fetchProjects(
     `${settings.API_BASE_URL}/badged_events`
   );
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
 
   const handleFilterToggle = () => {
     setFilter((prev) => !prev);
@@ -76,23 +55,23 @@ const BadgedEvents = () => {
 
   function formatDate(dateString) {
     const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
     return `${day}-${month}-${year}`;
   }
 
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+  const emptyRows =
+    rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
-  const filteredData = data &&
+  const filteredData =
+    data &&
     data
-      .filter((row) =>
-        row.event_name.includes(searchTerm.toLowerCase())
-      )
+      .filter((row) => row.event_name.includes(searchTerm.toLowerCase()))
       .sort((a, b) => {
-        if (sortBy === 'Published') {
+        if (sortBy === "Published") {
           return new Date(b.createdAt) - new Date(a.createdAt);
-        } else if (sortBy === 'Badge') {
+        } else if (sortBy === "Badge") {
           return a.badge.name.localeCompare(b.badge.name);
         }
         return new Date(b.createdAt) - new Date(a.createdAt);
@@ -132,7 +111,15 @@ const BadgedEvents = () => {
                           onChange={(e) => setSearchTerm(e.target.value)}
                         />
                       </div>
-                      <div className="filter" onClick={handleFilterToggle}>
+                      <div
+                        className="filter"
+                        onClick={handleFilterToggle}
+                        tabIndex="0"
+                        role="button"
+                        onKeyDown={(e) =>
+                          e.key === "Enter" && handleFilterToggle()
+                        }
+                      >
                         <button>Filter</button>
                         <img
                           src={Filter}
@@ -143,12 +130,19 @@ const BadgedEvents = () => {
                       </div>
                       <div
                         className="filter-dropdown"
-                        style={{ display: filter === true ? '' : 'none' }}
+                        style={{ display: filter === true ? "" : "none" }}
                       >
                         <ul>
                           <li
-                            className={sortBy === 'Published' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Published')}
+                            className={
+                              sortBy === "Published" ? "activeFilter" : ""
+                            }
+                            onClick={() => setSortBy("Published")}
+                            tabIndex="0"
+                            role="button"
+                            onKeyDown={(e) =>
+                              e.key === "Enter" && setSortBy("Published")
+                            }
                           >
                             <img
                               src={ScheduleIcon}
@@ -160,8 +154,13 @@ const BadgedEvents = () => {
                             <span>Published Date</span>
                           </li>
                           <li
-                            className={sortBy === 'Badge' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Badge')}
+                            className={sortBy === "Badge" ? "activeFilter" : ""}
+                            onClick={() => setSortBy("Badge")}
+                            tabIndex="0"
+                            role="button"
+                            onKeyDown={(e) =>
+                              e.key === "Enter" && setSortBy("Badge")
+                            }
                           >
                             <img
                               src={AZicon}
@@ -181,10 +180,18 @@ const BadgedEvents = () => {
                         <TableHead>
                           <TableRow>
                             <StyledTableCell align="left">Date</StyledTableCell>
-                            <StyledTableCell align="left">Event Name</StyledTableCell>
-                            <StyledTableCell align="left">Badge</StyledTableCell>
-                            <StyledTableCell align="left">Reviewers</StyledTableCell>
-                            <StyledTableCell align="left">Application ID & Link</StyledTableCell>
+                            <StyledTableCell align="left">
+                              Event Name
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              Badge
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              Reviewers
+                            </StyledTableCell>
+                            <StyledTableCell align="left">
+                              Application ID & Link
+                            </StyledTableCell>
                           </TableRow>
                         </TableHead>
 
@@ -198,7 +205,7 @@ const BadgedEvents = () => {
                               <StyledTableRow key={index}>
                                 <StyledTableCell
                                   align="left"
-                                  style={{ color: 'black' }}
+                                  style={{ color: "black" }}
                                 >
                                   {formatDate(row.createdAt)}
                                 </StyledTableCell>
@@ -206,7 +213,10 @@ const BadgedEvents = () => {
                                   <a
                                     href={row.event_URL}
                                     target="_blank"
-                                    style={{ color: '#000', textDecoration: 'underline' }}
+                                    style={{
+                                      color: "#000",
+                                      textDecoration: "underline",
+                                    }}
                                     rel="noreferrer"
                                   >
                                     {row.event_name}
@@ -224,11 +234,15 @@ const BadgedEvents = () => {
                                       key={index}
                                       href={reviewer.github_profile_link}
                                       target="_blank"
-                                      style={{ color: '#000', textDecoration: 'underline' }}
+                                      style={{
+                                        color: "#000",
+                                        textDecoration: "underline",
+                                      }}
                                       rel="noreferrer"
                                     >
                                       {reviewer.name}
-                                      {index !== row.reviewers.length - 1 && ', '}
+                                      {index !== row.reviewers.length - 1 &&
+                                        ", "}
                                     </a>
                                   ))}
                                 </StyledTableCell>
@@ -236,7 +250,10 @@ const BadgedEvents = () => {
                                   <a
                                     href={row.application.app_URL}
                                     target="_blank"
-                                    style={{ color: '#000', textDecoration: 'underline'}}
+                                    style={{
+                                      color: "#000",
+                                      textDecoration: "underline",
+                                    }}
                                     rel="noreferrer"
                                   >
                                     #{row.application.app_no}

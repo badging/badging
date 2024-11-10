@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 
 .form-container {
   display: flex;
@@ -46,7 +46,7 @@
   .submit-info {
     border: 1px solid #adcff8;
     border-radius: 4px;
-    background-color: #EFF4FB;
+    background-color: #eff4fb;
     padding: 1rem;
     font-size: 12px;
     margin-top: 1.7rem;
@@ -56,7 +56,7 @@
   }
 }
 
-  @media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .form-container {
     display: flex;
     min-height: 950px;

@@ -12,7 +12,7 @@ const cardItems = [
       </p>
     ),
     copy: "",
-    
+
     blankDiv: (
       <div className="blank_div">
         <div className="mobile_blank">

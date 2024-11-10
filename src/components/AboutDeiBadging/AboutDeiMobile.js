@@ -5,12 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import {
-  goldBadge,
-  silverBadge,
-  bronzeBadge,
-  platinumBadge,
-} from "../../assets/images";
+import { bronzeBadge } from "../../assets/images";
 
 const AboutDeiMobile = () => {
   return (
@@ -21,25 +16,20 @@ const AboutDeiMobile = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography component={"div"}>
-            What is Project Badging?
-          </Typography>
+          <Typography component={"div"}>What is Project Badging?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography component={"div"}>
             <div>
               <p>
-              Project Badging is an initiative developed 
-              by the CHAOSS project to recognize open source 
-              projects that exemplify best practices for diversity, 
-              equity, and inclusion (DEI) work within their 
-              respective communities. The initiative uses 
-              CHAOSS DEI metrics as a benchmark to reflect 
-              on DEI efforts in an open source project. 
-              All CHAOSS DEI metrics are developed in an 
-              open and collaborative setting. More information 
-              about the CHAOSS DEI metrics development process 
-              can be found <a href="##">here</a>..
+                Project Badging is an initiative developed by the CHAOSS project
+                to recognize open source projects that exemplify best practices
+                for diversity, equity, and inclusion (DEI) work within their
+                respective communities. The initiative uses CHAOSS DEI metrics
+                as a benchmark to reflect on DEI efforts in an open source
+                project. All CHAOSS DEI metrics are developed in an open and
+                collaborative setting. More information about the CHAOSS DEI
+                metrics development process can be found <a href="##">here</a>..
               </p>
               {/* <p>
                 The initiative uses CHAOSS DEI metrics as a benchmark to reflect
@@ -52,10 +42,9 @@ const AboutDeiMobile = () => {
             <div className="objectives">
               <h3>Project Badging Objective</h3>
               <p>
-                The primary objective of the Project Badging
-                Initiative is to enable open source maintainers to signal their
-                ongoing efforts in improving and prioritizing DEI within their
-                communities.
+                The primary objective of the Project Badging Initiative is to
+                enable open source maintainers to signal their ongoing efforts
+                in improving and prioritizing DEI within their communities.
               </p>
               <ul>
                 <li>
@@ -95,9 +84,12 @@ const AboutDeiMobile = () => {
                 Leadership, Communication Transparency, and Newcomer Experience.
                 After the reflective process, maintainers can document how the
                 project attends to and prioritizes DEI around these areas in a
-                markdown file called the <a href="https://github.com/AllInOpenSource/All-In/blob/main/DEI.md">DEI.md file</a>. This
-                DEI.md file should exist within the project&#39;s repository for
-                easy feedback from the community.
+                markdown file called the{" "}
+                <a href="https://github.com/AllInOpenSource/All-In/blob/main/DEI.md">
+                  DEI.md file
+                </a>
+                . This DEI.md file should exist within the project&#39;s
+                repository for easy feedback from the community.
               </p>
             </div>
             <div>
@@ -108,11 +100,11 @@ const AboutDeiMobile = () => {
                 must be an admin or maintainer of the project, and the
                 repository that holds the DEI.md file must be specified.
               </p>
-              <ul className='bullet-list'>
-                  <li>Project Access</li>
-                  <li>Inclusive Leadership </li>
-                  <li>Communication Transparency</li>
-                  <li>Newcomer Experience</li>
+              <ul className="bullet-list">
+                <li>Project Access</li>
+                <li>Inclusive Leadership </li>
+                <li>Communication Transparency</li>
+                <li>Newcomer Experience</li>
               </ul>
             </div>
             <div>
@@ -122,10 +114,13 @@ const AboutDeiMobile = () => {
                 scans the project repository for the presence of a DEI.md file.
                 The bot will review the DEI.md file for relevant information
                 provided by the maintainer and its alignment with the CHAOSS DEI
-                metrics stated in the <a href="https://github.com/badging/badging/blob/main/DEI.md">DEI.md template</a> to
-                determine eligibility for the badge. Upon successful review of
-                the DEI.md file, a project badge will be issued. The four CHAOSS
-                metrics used in the DEI.md file include:
+                metrics stated in the{" "}
+                <a href="https://github.com/badging/badging/blob/main/DEI.md">
+                  DEI.md template
+                </a>{" "}
+                to determine eligibility for the badge. Upon successful review
+                of the DEI.md file, a project badge will be issued. The four
+                CHAOSS metrics used in the DEI.md file include:
               </p>
             </div>
             <div>

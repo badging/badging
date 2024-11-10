@@ -14,21 +14,21 @@ religion, or sexual identity and orientation.
 Examples of behavior that contributes to creating a positive environment
 include:
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
 
 Examples of unacceptable behavior by participants include:
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
+- The use of sexualized language or imagery and unwelcome sexual attention or
   advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
+- Trolling, insulting/derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or electronic
   address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
+- Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
 ## Our Responsibilities
@@ -55,7 +55,7 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the CHAOSS Code of Conduct Team at 
+reported by contacting the CHAOSS Code of Conduct Team at
 <chaoss-conduct@googlegroups.com>. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
@@ -74,17 +74,17 @@ CHAOSS members or the general public. We will not name victims without their
 affirmative consent.
 
 The CHAOSS Code of Conduct Team will report on a yearly basis the number of
-incidence reports. The CHAOSS Code of Conduct Team shall consist of three members 
+incidence reports. The CHAOSS Code of Conduct Team shall consist of three members
 elected by the community every two years or when needed.
 
 ## Who to Contact
 
-The following people comprise the CHAOSS Code of Conduct Team and are the only 
+The following people comprise the CHAOSS Code of Conduct Team and are the only
 recipients of <chaoss-conduct@googlegroups.com>:
- - MaryBlessing Okolie 
- - Georg Link
- - Anita Ihuman
 
+- MaryBlessing Okolie
+- Georg Link
+- Anita Ihuman
 
 ## Attribution
 
@@ -98,21 +98,22 @@ available at https://geekfeminism.org/about/code-of-conduct/
 
 ## Version History
 
-* v1.3 New members were added from a Governing Board vote in January 2024
+- v1.3 New members were added from a Governing Board vote in January 2024
 
-* v1.2 update Code of Conduct Team based on [vote results](https://civs.cs.cornell.edu/cgi-bin/results.pl?id=E_eb0e86af55a181a9) on June 12, 2018
+- v1.2 update Code of Conduct Team based on [vote results](https://civs.cs.cornell.edu/cgi-bin/results.pl?id=E_eb0e86af55a181a9) on June 12, 2018
 
-* v1.1 proposed on April 2, 2018; accepted by CHAOSS Governing Board on May 1, 2018
+- v1.1 proposed on April 2, 2018; accepted by CHAOSS Governing Board on May 1, 2018
+
   - update email address
   - change requirements for Code of Conduct team to be more inclusive
   - change to three members of the team to have a tie-breaking vote
 
-* v1.0 adopted through a CHAOSS Governing Board vote from February 12, 2018
+- v1.0 adopted through a CHAOSS Governing Board vote from February 12, 2018
 
-* v1.0 proposed on [January 27, 2018](https://github.com/chaoss/governance/pull/3#issuecomment-360939881) by the working group consisting of:
-    * Alexander Serebrenik
-    * Georg Link
-    * Jesus M Gonzales-Barahona
-    * Ray Paik
-    * Sean Goggins
-    * Vicky Janicki
+- v1.0 proposed on [January 27, 2018](https://github.com/chaoss/governance/pull/3#issuecomment-360939881) by the working group consisting of:
+  - Alexander Serebrenik
+  - Georg Link
+  - Jesus M Gonzales-Barahona
+  - Ray Paik
+  - Sean Goggins
+  - Vicky Janicki

@@ -85,10 +85,10 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 
 ### (Optional:Changes Neeeded) Other Efforts
 
-(**Optional:Changes Needed**) Our project is doing other DEI-related efforts or has plans to, that are not mentioned above. 
+(**Optional:Changes Needed**) Our project is doing other DEI-related efforts or has plans to, that are not mentioned above.
 
 1.  (**Sample**) Our [Project Name] is currently working on DEI-related efforts not mentioned above
-2.  (**Sample**) Our [Project Name] plans to work on future DEI-related efforts not mentioned above 
+2.  (**Sample**) Our [Project Name] plans to work on future DEI-related efforts not mentioned above
 
 (**Required:No Changes**) We recognize that the inclusion of the DEI.md file and the provided reflection on the specific DEI metrics does not ensure community safety nor community inclusiveness. The inclusion of the DEI.md file signals that we, as a project, are committed to centering DEI in our project and regularly reviewing and reflecting on our project DEI practices.
 

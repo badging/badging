@@ -1,9 +1,4 @@
-import {
-  bronzeBadge,
-  goldBadge,
-  silverBadge,
-  platinumBadge,
-} from "../../assets/images";
+import { bronzeBadge } from "../../assets/images";
 
 const DeiBadge = () => {
   return (
@@ -11,23 +6,20 @@ const DeiBadge = () => {
       <h2 id="dei-badges">CHAOSS DEI Project Badge Levels</h2>
 
       <div className="badges">
-        {/* commented out for future use */}
         <img src={bronzeBadge} alt="Bronze badge" />
-        {/* <img src={silverBadge} alt="Silver badge" />
-        <img src={goldBadge} alt="Gold badge" />
-        <img src={platinumBadge} alt="Platinum badge" /> */}
       </div>
 
       <div>
         <p>
-          CHAOSS DEI Project Badging  currently offers one badge
-          level: Bronze. As the project evolves, it is our intention to include
-          additional CHAOSS metrics in the DEI.md file as indicators of Silver,
-          Gold, and Platinum level badges. CHAOSS DEI Project Badging is intended to follow an incremental approach that requires
-          the presence of one badge to apply for the next and an understanding
-          of the criteria associated with each badge level. This will enable
-          applicants to showcase their commitment, dedication, and consistent
-          efforts in meeting the evolving DEI standards for each badge.
+          CHAOSS DEI Project Badging currently offers one badge level: Bronze.
+          As the project evolves, it is our intention to include additional
+          CHAOSS metrics in the DEI.md file as indicators of Silver, Gold, and
+          Platinum level badges. CHAOSS DEI Project Badging is intended to
+          follow an incremental approach that requires the presence of one badge
+          to apply for the next and an understanding of the criteria associated
+          with each badge level. This will enable applicants to showcase their
+          commitment, dedication, and consistent efforts in meeting the evolving
+          DEI standards for each badge.
         </p>
         <div>
           <h3>Bronze Badge</h3>
@@ -47,8 +39,8 @@ const DeiBadge = () => {
             </li>
           </ul>
           <p>
-            Silver, Gold, and Platinum Badges will be coming soon. Please join us
-            in our open and collaborative conversations when considering what
+            Silver, Gold, and Platinum Badges will be coming soon. Please join
+            us in our open and collaborative conversations when considering what
             CHAOSS metrics would be best suited as indicators of these badges.
             You can join the CHAOSS project through their{" "}
             <a href="https://join.slack.com/t/chaoss-workspace/shared_invite/zt-1fah5gu35-5oUQEPT32O2Zt~3MFVNMlw">

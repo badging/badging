@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { search } from "../../assets/images";
 import { DataContext } from "../../contexts/DataContext";
 
-
 const SearchBar = ({ setShowInfo }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputClicked, setInputClicked] = useState(false);

@@ -4,44 +4,45 @@
   color: #000;
   height: 50vh;
   padding-top: 3rem;
-    h1 {
-      margin-bottom: 20px;
-    }
+  h1 {
+    margin-bottom: 20px;
+  }
 
-    .section-list {
-      li {
-        list-style-type: styleL;
-        margin-top: 10px; 
-        margin-left: 2rem;
+  .section-list {
+    li {
+      list-style-type: styleL;
+      margin-top: 10px;
+      margin-left: 2rem;
     }
-    }
-    .login {
-      // background-color: red;
-      width: 100%;
-      display: flex;
-      gap: 10px;
-      margin-top: 2rem;
+  }
+  .login {
+    // background-color: red;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
 
-      button, a {
-        // font-size: 16px;
-        padding: 15px 4rem;
-        border-radius: 10px;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-       
-      }
-      .github, .self__hosted {
-        background-color:#222D33;
-      }
-      .gitlab {
-        background-color:#D61B5E;
-      }
-      .self__hosted {
-        text-align: center;
-        font-size: 0.83rem;
-      }
+    button,
+    a {
+      // font-size: 16px;
+      padding: 15px 4rem;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      cursor: pointer;
     }
+    .github,
+    .self__hosted {
+      background-color: #222d33;
+    }
+    .gitlab {
+      background-color: #d61b5e;
+    }
+    .self__hosted {
+      text-align: center;
+      font-size: 0.83rem;
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -60,7 +61,8 @@
 @media screen and (max-width: 500px) {
   .badge {
     .login {
-      button, a {
+      button,
+      a {
         // font-size: 16px;
         padding: 20px 3rem !important;
       }
@@ -73,7 +75,8 @@
     height: fit-content;
 
     .login {
-      button, a {
+      button,
+      a {
         // font-size: 16px;
         padding: 8px 15px !important;
       }
