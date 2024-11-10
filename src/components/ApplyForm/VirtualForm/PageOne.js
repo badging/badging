@@ -23,7 +23,7 @@ const PageOne = () => {
    <div>
     <div className='input-wrapper '>
      <label htmlFor='eventname'>
-      Event name<span>*</span>
+      Event name
      </label>
      <br /> <br />
      <input
@@ -44,7 +44,7 @@ const PageOne = () => {
     </div>
     <div className='input-wrapper '>
      <label htmlFor='eventWebsite'>
-      Link to the event website<span>*</span>
+      Link to the event website
      </label>{' '}
      <br /> <br />
      <input
@@ -69,7 +69,7 @@ const PageOne = () => {
     </div>
     <div className='radio-input'>
      <p>
-      Are you an organizer of this event?<span>*</span>
+      Are you an organizer of this event?
      </p>
      <label htmlFor='organizerYes'>
       <input

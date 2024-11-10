@@ -2,23 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageSix = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
-
- // const objectStyle = {
- //   color: 'blue',
- //   backgroundColor: 'red',
- //   padding: '10px',
- // };
- // const objectStyleValid = {
- //   color: 'Red',
- //   backgroundColor: 'green',
- //   padding: '10px',
- // };
 
  return (
   <div className='badge_form'>
@@ -35,52 +21,19 @@ const PageSix = () => {
      />{' '}
      &nbsp;This event commits to the Diversity Access Tickets.
     </label>{' '}
-    <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-diversity-inclusion/blob/master/focus-areas/events/diversity-tickets.md'>
-       CHAOSS Metric Document
-      </a>
-     </div>
-    )}
+      <br />
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-diversity-access-tickets/' target="_blank" rel="noopener noreferrer">
+              Metric: Diversity Access Tickets
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
     <label htmlFor='ticketType'>
      How many different types of diversity access tickets are available for the
-     event?<span>*</span>
+     event?
     </label>{' '}
     <br /> <br />
     <textarea
@@ -99,7 +52,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='ticketCriteria'>
      What are the criteria for qualifying for a diversity access ticket?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -118,7 +71,7 @@ const PageSix = () => {
    <div className='input-wrapper '>
     <label htmlFor='ticketLink'>
      Provide a link to the page containing information about Diversity Access
-     Tickets<span>*</span>
+     Tickets
     </label>{' '}
     <br /> <br />
     <input

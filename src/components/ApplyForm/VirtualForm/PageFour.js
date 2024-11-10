@@ -5,12 +5,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageFour = () => {
   const { register } = useFormContext();
-  const [showLink, setShowLink] = useState(false);
 
   // const objectStyle = {
   //   color: 'blue',
@@ -35,54 +32,20 @@ const PageFour = () => {
        id='timeInclusion'
        {...register('TIVEV', { required: true })}
       />{' '}
-      &nbsp; This event commits to the Attendee Diversity & Inclusion.
+      &nbsp; This event commits to Time Inclusion for Virtual Events
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
+      <br />
+      <br />
       <div>
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
+          <a className='ev-link' href='https://chaoss.community/kb/metric-time-inclusion-for-virtual-events/' target="_blank" rel="noopener noreferrer">
+              Metric: Time Inclusion for Virtual Events
+          </a>
       </div>
-     )}
     </div>
     <div className='radio-input'>
      <p>
       Are speakers able to pre-record their presentations, as opposed to
-      presenting them live?<span>*</span>
+      presenting them live?
      </p>
      <label htmlFor='preRecord'>
       <input
@@ -111,7 +74,7 @@ const PageFour = () => {
     <div className='radio-input'>
      <p>
       Can attendees change video quality on the Event platform while viewing a
-      presentation?<span>*</span>
+      presentation?
      </p>
      <label htmlFor='vidQualityYes'>
       <input

@@ -2,12 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageNine = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
 
  // const objectStyle = {
  //   color: 'blue',
@@ -30,59 +27,24 @@ const PageNine = () => {
       type='checkbox'
       name='PHIP'
       id='publicHealthCheck'
-      {...register('PHIP', { required: true })}
+      {...register('PHIP')}
      />{' '}
-     &nbsp; This event commits to public health and safety procedures and
-     provisions.
+     &nbsp; This event commits to Public Health and Safety.
     </label>{' '}
     <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/public-health-and-safety.md'>
-       CHAOSS Metric Document
-      </a>
-      <a href='https://publichealthpledge.com/'>Public Health Pledge</a>
-     </div>
-    )}
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-public-health-and-safety/' target="_blank" rel="noopener noreferrer">
+              Metric: Public Health and Safety
+          </a>
+      </div>
    </div>
 
    <div className='radio-input'>
     <p>
-     Have you participated in the{' '}
-     <a href='https://publichealthpledge.com/'>Public Health Badging Program</a>
-     ?<span>*</span>
+     Have you read about the{' '}
+     <a className='ev-link' href='https://publichealthpledge.com/' target="_blank" rel="noopener noreferrer">Public Health Badging Program</a>
+     ?
     </p>
     <label htmlFor='participateYes'>
      <input
@@ -92,7 +54,7 @@ const PageNine = () => {
       name='participateYes'
       className='radio-input'
       aria-checked
-      {...register('PHIP1', { required: true || false })}
+      {...register('PHIP1')}
      />
      Yes
     </label>
@@ -105,26 +67,10 @@ const PageNine = () => {
       name='participateNo'
       className='radio-input'
       aria-checked
-      {...register('PHIP1', { required: true || false })}
+      {...register('PHIP1')}
      />
      No
     </label>
-   </div>
-   <div className='input-wrapper '>
-    <label htmlFor='provideBadgeLinkPH'>
-     Please provide a link to the Badges received from the Public Health Pledge
-     Badging Program
-    </label>{' '}
-    <br /> <br />
-    <input
-     className='input_text'
-     id='provideBadgeLinkPH'
-     type='text'
-     name='PHIP2'
-     placeholder='Enter your answer here'
-     {...register('PHIP2', { required: true })}
-    />{' '}
-    <br />
    </div>
    <div className='input-wrapper '>
     <label htmlFor='provideLinkPH'>
@@ -138,7 +84,7 @@ const PageNine = () => {
      type='text'
      name='PHIP3'
      placeholder='Enter your answer here'
-     {...register('PHIP3', { required: true })}
+     {...register('PHIP3')}
     />{' '}
     <br />
    </div>

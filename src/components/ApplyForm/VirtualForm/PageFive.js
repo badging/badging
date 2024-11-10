@@ -2,12 +2,9 @@
 import '../../../assets/styles/global.scss';
 import '../applyform.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageFive = () => {
   const { register } = useFormContext();
-  const [showLink, setShowLink] = useState(false);
 
   // const objectStyle = {
   //   color: 'blue',
@@ -34,58 +31,17 @@ const PageFive = () => {
       />{' '}
       &nbsp; This event commits to the Code of Conduct at Event.
      </label>{' '}
-     <br />
-     <button
-      type='button'
-      className='reference'
-      onClick={(e) => {
-       e.preventDefault();
-       setShowLink(!showLink);
-      }}
-     >
-      References
-      {showLink ? (
-       <span id='reft'>
-        <img
-         src={carretDown}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      ) : (
-       <span id='reft'>
-        <img
-         src={carretRight}
-         width={35}
-         height={35}
-         alt='carret-icon'
-         className='carret'
-        />
-       </span>
-      )}
-     </button>
-     <br />
-     {showLink && (
+      <br />
+      <br />
       <div>
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
-       <br />
-       <a href='https://chaoss.community/metrics-for-event-organizers/'>
-        CHAOSS Metric Document
-       </a>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-code-of-conduct-at-event/' target="_blank" rel="noopener noreferrer">
+              Metric: Code of Conduct at Event
+          </a>
       </div>
-     )}
     </div>
     <div className='radio-input'>
      <p>
-      Is the code of conduct posted at Event venue?<span>*</span>
+      Is the code of conduct posted at Event venue?
      </p>
      <label htmlFor='codeposted'>
       <input
@@ -113,7 +69,7 @@ const PageFive = () => {
     </div>
     <div className='input-wrapper '>
      <label htmlFor='conductlink'>
-      Provide link for the Event Code of Conduct<span>*</span>
+      Provide link for the Event Code of Conduct
      </label>{' '}
      <br /> <br />
      <input

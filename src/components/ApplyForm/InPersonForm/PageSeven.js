@@ -2,12 +2,9 @@ import '../applyform.scss';
 // import { useNavigate } from 'react-router-dom';
 import '../../../assets/styles/global.scss';
 import { useFormContext } from 'react-hook-form';
-import { carretDown, carretRight } from '../../../assets/images';
 
-import { useState } from 'react';
 const PageSeven = () => {
  const { register } = useFormContext();
- const [showLink, setShowLink] = useState(false);
 
  // const objectStyle = {
  //   color: 'blue',
@@ -34,52 +31,19 @@ const PageSeven = () => {
      />{' '}
      &nbsp; This event commits to Event Accessibility.
     </label>{' '}
-    <br />
-    <button
-     type='button'
-     className='reference'
-     onClick={(e) => {
-      e.preventDefault();
-      setShowLink(!showLink);
-     }}
-    >
-     References
-     {showLink ? (
-      <span id='reft'>
-       <img
-        src={carretDown}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     ) : (
-      <span id='reft'>
-       <img
-        src={carretRight}
-        width={35}
-        height={35}
-        alt='carret-icon'
-        className='carret'
-       />
-      </span>
-     )}
-    </button>
-    <br />
-    {showLink && (
-     <div>
-      <a href='https://github.com/chaoss/wg-dei/blob/main/focus-areas/event-diversity/event-accessibility.md'>
-       CHAOSS Metric Document
-      </a>
-     </div>
-    )}
+      <br />
+      <br />
+      <div>
+          <a className='ev-link' href='https://chaoss.community/kb/metric-event-accessibility/' target="_blank" rel="noopener noreferrer">
+              Metric: Event Accessibility
+          </a>
+      </div>
    </div>
 
    <div className='input-wrapper '>
     <label htmlFor='wheelchairAccess'>
      Is the Event in a wheelchair-accessible venue?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -98,7 +62,7 @@ const PageSeven = () => {
     <label htmlFor='slidesGuide'>
      Are speakers given guidance about creating slides that are colorblind
      accessible?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -116,7 +80,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='signage'>
      Is signage at the event and the event website colorblind accessible?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -135,7 +99,7 @@ const PageSeven = () => {
     <label htmlFor='otherAccess'>
      Does the Event provide other accessibility accommodations, or will upon
      request?
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <textarea
@@ -153,7 +117,7 @@ const PageSeven = () => {
    <div className='input-wrapper '>
     <label htmlFor='eventAccessLink'>
      Provide relevant links related to event accessibility at the Event.
-     <span>*</span>
+     
     </label>{' '}
     <br /> <br />
     <input
