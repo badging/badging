@@ -1,9 +1,9 @@
-# Contributing to All In CHAOSS Badging!
+# Contributing to DEI CHAOSS Badging!
 
-👍🎉Thank you for your interest in contributing to All In CHAOSS Badging! 🎉👍
+👍🎉Thank you for your interest in contributing to DEI CHAOSS Badging! 🎉👍
 
 We are beyond excited to see that you want to contribute! and we welcome all contributions to help make this project even better.
-There are many ways in which one could contribute to the ALL In CHAOSS  Badging and every contribution is equally appreciated.
+There are many ways in which one could contribute to the DEI CHAOSS Badging and every contribution is equally appreciated.
 
 Before you get started, please take a moment to read through the following guidelines:
 
@@ -19,17 +19,19 @@ Please note that this project has a [Code of Conduct](/CODE_OF_CONDUCT.md). We e
 
 ## Who can contribute?
 
-The All In CHAOSS Badging initiative is built by the community and warmly welcomes collaboration. So anyone can contribute to this project.
+The DEI CHAOSS Badging initiative is built by the community and warmly welcomes collaboration. So anyone can contribute to this project.
 
 ## How to Contribute
 
-Here are the steps to follow to contribute to All In CHAOSS Badging:
+Here are the steps to follow to contribute to DEI CHAOSS Badging:
 
-1. **Fork the Repository**: Click the "Fork" button in the upper right-hand corner of the All In CHAOSS Badging repository on GitHub.![screenshot showing the fork button](src/assets/images/others/screenshot-forkbtn.png)
+1. **Fork the Repository**: Click the "Fork" button in the upper right-hand corner of the [DEI CHAOSS Badging repository](https://github.com/badging/badging) on GitHub.
+   ![screenshot showing the fork button](src/assets/images/others/screenshot-forkbtn.png)
 
-2. **Clone Your Fork**: Clone your fork of the repository to your local machine:
-
-   _git clone https://github.com/your_username/badging.git_
+3. **Clone Your Fork**: Clone your fork of the repository to your local machine:
+   ```bash
+   git clone https://github.com/your_username/badging.git
+   ```
 
    replace `your_username` with your actual github username
 
@@ -43,12 +45,13 @@ Here are the steps to follow to contribute to All In CHAOSS Badging:
    ```
 
 4. **Create a Branch**: Create a new branch for your contribution:
+   ```bash
+   git checkout -b your-branch-name
+   ```
 
-   _git checkout -b your-branch-name_
+6. **Make Changes**: Make your desired changes to the codebase. Ensure your code follows our coding standards and guidelines.
 
-5. **Make Changes**: Make your desired changes to the codebase. Ensure your code follows our coding standards and guidelines.
-
-6. **Test**: Test your changes to ensure they work as expected. You may need to create a `.env` file with values from the `.env.example` file. e.g, if you want to connect to an API, create a `.env` file with values as shown below.
+7. **Test**: Test your changes to ensure they work as expected. You may need to create a `.env` file with values from the `.env.example` file. e.g, if you want to connect to an API, create a `.env` file with values as shown below.
 
    ```bash
       API_BASE_URL = <replace with string of your local or remote api endpoint>
@@ -57,23 +60,25 @@ Here are the steps to follow to contribute to All In CHAOSS Badging:
    once that is done, you can test some of your changes locally in development mode by running;
 
    ```bash
-      npm run dev
+   npm run dev
    ```
 
-7. **Commit Changes**: Commit your changes with a clear and descriptive message.
+8. **Commit Changes**: Commit your changes with a clear and descriptive message.
+   ```bash
+   git add .
+   git commit -S -m "<Brief description of your changes>"
+   ```
 
-   _git add .
-   git commit -S -m "<Brief description of your changes>"_
+9. **Push Changes**: Push your changes to your fork on GitHub:
+   ```bash
+   git push origin your-branch-name
+   ```
 
-8. **Push Changes**: Push your changes to your fork on GitHub:
+10. Create a Pull Request: Go to the ALL In CHAOSS Badging repository on GitHub and create a new pull request from your fork. Describe your changes and why they should be merged.
 
-   _git push origin your-branch-name_
+11. **Review and Discussion**: Your pull request will be reviewed by the maintainers and the community. Be prepared for feedback and be responsive to any suggested changes.
 
-9. Create a Pull Request: Go to the ALL In CHAOSS Badging repository on GitHub and create a new pull request from your fork. Describe your changes and why they should be merged.
-
-10. **Review and Discussion**: Your pull request will be reviewed by the maintainers and the community. Be prepared for feedback and be responsive to any suggested changes.
-
-11. **Merge**: Once your pull request is approved, it will be merged into the main project.
+12. **Merge**: Once your pull request is approved, it will be merged into the main project.
 
 ## Code Style and Standards
 
