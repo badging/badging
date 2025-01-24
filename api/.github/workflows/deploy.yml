@@ -1,0 +1,58 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - "main"
+
+env:
+  IMAGE_NAME: "project_badging"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Remove old Docker images
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            if docker inspect ${{ env.IMAGE_NAME }} >/dev/null 2>&1; then
+              docker stop ${{ env.IMAGE_NAME }}
+              docker rm ${{ env.IMAGE_NAME }}
+              docker images --filter "reference=${{ env.IMAGE_NAME }}*" -q | xargs docker rmi -f || true
+            fi
+
+      - name: Build Docker image
+        run: docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} .
+
+      - name: Create image archive
+        run: docker save ${{ env.IMAGE_NAME }}:${{ github.sha }} -o badging.tar
+
+      - name: Upload image archive using appleboy/scp-action
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          source: badging.tar
+          target: ~/
+
+      - name: Extract and load image on droplet
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            docker load -i ~/badging.tar
+            docker run -d \
+              -p ${{ secrets.PORT }}:${{ secrets.PORT }} \
+              --env-file /home/${{ secrets.USERNAME }}/.env \
+              --network host \
+              --restart=always \
+              --name ${{ env.IMAGE_NAME }} \
+              ${{ env.IMAGE_NAME }}:${{ github.sha }}

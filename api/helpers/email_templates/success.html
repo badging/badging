@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+      }
+
+      #logo {
+        margin-bottom: 40px;
+      }
+
+      #carousel {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        color: #333333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .email-content {
+        color: #555555;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      footer {
+        background-color: #0d1117;
+        text-align: center;
+        color: #ffffff;
+        padding: 40px 0;
+      }
+
+      footer a {
+        color: #06f395;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Congratulations on Your DEI Badge!</h1>
+      <p class="email-content">
+        Dear {{recipientName}},
+        <br />
+        <br />
+        We are thrilled to inform you that your recent review submission of your
+        Open Source Project has been recognized and rewarded a CHAOSS DEI
+        Project <strong>{{badgeName}}</strong> badge.
+        <br />
+        <br />
+        Once Again, congratulations on this well-deserved Badge!
+        <br />
+        <br />
+        To poudly showcase your accomplishment, we have provided a Markdown
+        Badge link that can be seamlessly incorporated into your project's
+        documentation, README, website or any other online platform.
+        <br />
+        <br />
+        Markdown Badge Link:
+        <br />
+        <code>{{markdownLink}}</code>
+        <br />
+        <br />
+        Here is the HTML Link:
+        <br />
+        <code>{{htmlLink}}</code>
+        <br />
+        <br />
+        Thank you for your ongoing DEI efforts!
+        <br />
+        <br />
+        Best regards;
+        <br />
+        The DEI Badging Team
+      </p>
+      <footer>
+        <p>
+          Contact us at
+          <a href="mailto:chaossbadge@gmail.com">Badging by CHAOSS</a>
+          <br />
+          <a href="https://badging.chaoss.community/project-badging"
+            >About Us</a
+          >
+          <br />
+          CHAOSS © 2024
+          <br />
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "name": "badgingapi",
+  "version": "1.0.0",
+  "description": "Server Side Development for ProjectBadging",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "precommit": "lint-staged",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "test": "npm run test",
+    "dev": "NODE_ENV=development node configure.js && NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production node index.js",
+    "prepare": "husky install",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badging/BadgingAPI.git"
+  },
+  "author": "CHAOSS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badging/BadgingAPI/issues"
+  },
+  "homepage": "https://github.com/badging/BadgingAPI#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
+    "@octokit/rest": "^19.0.11",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-http-proxy": "^2.0.0",
+    "mongoose": "^7.4.1",
+    "mysql2": "^3.6.0",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22",
+    "octokit": "^2.1.0",
+    "sequelize": "^6.32.1",
+    "turndown": "^7.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jsonlint": "^1.6.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "smee-client": "^2.0.1"
+  }
+}

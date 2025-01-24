@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .email-content {
+        color: #555555;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      ul {
+        color: #555555;
+      }
+
+      #logo {
+        margin-bottom: 40px;
+      }
+
+      #carousel {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      footer {
+        background-color: #0d1117;
+        text-align: center;
+        color: #ffffff;
+        padding: 40px 0;
+      }
+
+      footer a {
+        color: #06f395;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://raw.githubusercontent.com/badging/BadgingAPI/main/assets/images/logo.svg"
+          alt="badging-logo"
+          id="logo"
+        />
+        <img
+          src="https://raw.githubusercontent.com/badging/BadgingAPI/main/assets/images/carousel.svg"
+          alt="email-carousel"
+          id="carousel"
+        />
+      </header>
+      <h1>Badging Updates</h1>
+      <p class="email-content">
+        Dear {{recipientName}},
+        <br />
+        <br />
+        We hope this email finds you well. We appreciate your submission of the
+        Open Source Project for review to be considered for the
+        <strong>{{badgeName}}</strong> badge.
+        <br />
+        <br />
+        Unfortunately, we couldn't issue the badge due to the following;
+      </p>
+      <ul>
+        <li>{{results}}</li>
+      </ul>
+      <p class="email-content">
+        Once you have the missing information, please resubmit your project for
+        review, and we'll be happy to reconsider it for the badge issuance.
+        <br />
+        <br />
+        If you have any questions or need further assistance, feel free to reach
+        out to our DEI Badging Team.
+        <br />
+        <br />
+        Thank you for your continuous effort in promoting Diversity, Equity, and
+        Inclusion.
+        <br />
+        <br />
+        Best regards,
+        <br />
+        The DEI Badging Team
+      </p>
+      <footer>
+        <p>
+          Contact us at
+          <a href="mailto:chaossbadge@gmail.com">Badging by CHAOSS</a>
+          <br />
+          <a href="https://badging.chaoss.community/about-project-badging"
+            >About Us</a
+          >
+          <br />
+          CHAOSS © 2023
+          <br />
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
