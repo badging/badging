@@ -30,7 +30,7 @@ export const eventFaqs = [
     title: "Where can I ask questions about Event Badging?",
     description: (
       <>
-        If you have quesitons about Event Badging, please either{" "}
+        If you have questions about Event Badging, please either{" "}
         <a
           href="https://github.com/badging/badging"
           target="_blank"
