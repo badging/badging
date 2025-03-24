@@ -76,7 +76,7 @@ export const projectFaqs = [
     title: "Where can I ask questions about Project Badging?",
     description: (
       <>
-        If you have quesitons about Project Badging, please either{" "}
+        If you have questions about Project Badging, please either{" "}
         <a
           href="https://github.com/badging/badging"
           target="_blank"
