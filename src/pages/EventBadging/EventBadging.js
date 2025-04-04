@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { arrowRight } from '../../assets/images';
+import '../../assets/styles/global.scss';
 import { Footer, Header } from '../../components';
 import BadgedEvents from './BadgedEvents';
 import './event-badging.scss';
-import '../../assets/styles/global.scss';
-import { arrowRight } from '../../assets/images';
 
 const EventBadging = () => {
  const { section } = useParams();
@@ -215,43 +215,42 @@ const EventBadging = () => {
              <li>
               Navigate to the{' '}
               <a
-               href='https://chaoss.community/diversity-and-inclusion-badging/'
+               href='https://badging.chaoss.community/event-badging/apply'
                target='_blank'
                rel='noreferrer'
                className='a-line'
               >
-               DEI Badging site
+               Event Badging Application Form
               </a>
-              , click on “Get Started” and log in with your GitHub account.
              </li>
              <li>
-              After you are logged in, click on “New Issue” to begin your
-              application process.
+             After you click 'Submit', you will be prompted to authenticate your GitHub account 
+             and an issue will be automatically created for you on the {' '}
+             <a 
+               href='https://github.com/badging/event-diversity-and-inclusion'
+               target='_blank'
+               rel='noreferrer'
+               className='a-line' 
+             >
+                event diversity and inclusion repository.
+             </a>
              </li>
              <li>
-              An issue template will be created for you with the information you
-              provided. Click "Create New Issue" to begin the application.
+                At least two reviewers will be assigned to assess your event, and they will provide feedback where necessary.
              </li>
              <li>
               Communicate with the reviewers during the process and provide
-              event information according to the metrics your event is committed
-              to.
-             </li>
-             <li>
-              At least two reviewers will be assigned to assess your event, and
-              they will provide feedback where necessary.
+              event information according to the metrics your event is committed to.
              </li>
              <li>
               The review ends when a maintainer confirms that the initial checks
               are met, and everything is in order.{' '}
              </li>
              <li>
-              Then, a badge is generated for you according to the information
-              provided, and the checklist is completed.{' '}
+                Afterwards, a badge is generated for you according to the information provided, and the checklist is completed.
              </li>
              <li>
-              The issue will be closed by a maintainer using the /end command in
-              a comment.
+                The issue will be closed by a maintainer once the badge awarded is satisfactory.
              </li>
             </ul>
            </div>
