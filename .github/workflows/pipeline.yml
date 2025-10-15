@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: build
+          path: build/
 
   deploy:
     needs: build
@@ -40,7 +40,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build
-          path: ${{ github.workspace }}/build
+          path: build/
+          
+      - name: Verify build contents
+        run: |
+          echo "Working directory: $(pwd)"
+          ls -al build
 
       - name: Remove old build
         uses: appleboy/ssh-action@master
@@ -58,7 +63,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "${{ github.workspace }}/build/"
+          source: "build/"
           target: /var/www/badging.chaoss.community/
 
 
