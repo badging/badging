@@ -30,7 +30,7 @@ export const eventFaqs = [
     title: "Where can I ask questions about Event Badging?",
     description: (
       <>
-        If you have questions about Event Badging, please either{" "}
+        If you have quesitons about Event Badging, please either{" "}
         <a
           href="https://github.com/badging/badging"
           target="_blank"
@@ -76,7 +76,7 @@ export const projectFaqs = [
     title: "Where can I ask questions about Project Badging?",
     description: (
       <>
-        If you have questions about Project Badging, please either{" "}
+        If you have quesitons about Project Badging, please either{" "}
         <a
           href="https://github.com/badging/badging"
           target="_blank"
@@ -98,23 +98,7 @@ export const projectFaqs = [
   {
     id: 5,
     title: "What if I'm not seeing my repository when applying for a badge?",
-    description:(
-      <>
-        If you aren't seeing your repository during the application process, try cleaning out your cache or trying a different browser. If that doesn't help, {" "}
-        <a 
-        href="https://github.com/badging/badging"
-        target="_blank"
-        rel="noreferrer"
-        >open an issue in our badging repo</a>{" "}
-         or reach on the {" "}
-         <a
-         href="https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg"
-         target="_blank"
-         rel="noreferrer"
-         >
-          community on Slack
-         </a>
-      </>
-    ),
+    description:
+      "If you aren't seeing your repository during the application process, try clearning out your cache or trying a different browser. If that doesn't help [open an issue in our badging repo](https://github.com/badging/badging) or reach on the [community on Slack](https://join.slack.com/t/chaoss-workspace/shared_invite/zt-28p56bayt-67TRjdA4yJWQmUd4hCzULg)",
   },
 ];
