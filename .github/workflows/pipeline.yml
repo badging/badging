@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build
-          path: build
+          path: ${{ github.workspace }}/build
 
       - name: Remove old build
         uses: appleboy/ssh-action@master
@@ -58,7 +58,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "/build/*"
+          source: "${{ github.workspace }}/build/"
           target: /var/www/badging.chaoss.community/
 
 
