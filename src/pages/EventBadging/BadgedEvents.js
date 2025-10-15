@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './badgedEvents.scss';
-import { AboutDeiMobile, Footer, Header } from '../../components';
-import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import { Pagination, TablePagination } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -11,11 +9,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { AZicon, DateIcon, Filter, ScheduleIcon, SearchIcon } from '../../assets/images';
-import { Publish } from '@mui/icons-material';
+import { AZicon, Filter, ScheduleIcon, SearchIcon } from '../../assets/images';
 import { fetchProjects } from '../../hooks/fetchProjects';
-import RandomString from '../../components/RandomString';
-import AboutNew from '../../components/AboutDeiBadgingCom/About';
 import settings from '../../settings.json';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -87,7 +82,7 @@ const BadgedEvents = () => {
   const filteredData = data &&
     data
       .filter((row) =>
-        row.event_name.includes(searchTerm.toLowerCase())
+        row.event_name.toLowerCase().includes(searchTerm.toLowerCase())
       )
       .sort((a, b) => {
         if (sortBy === 'Published') {
@@ -96,7 +91,7 @@ const BadgedEvents = () => {
           return a.badge.name.localeCompare(b.badge.name);
         }
         return new Date(b.createdAt) - new Date(a.createdAt);
-      });
+      });  
 
   return (
     <div>
@@ -189,7 +184,14 @@ const BadgedEvents = () => {
                         </TableHead>
 
                         <TableBody>
-                          {filteredData
+                          {filteredData.length ===0 ? (
+                              <StyledTableRow>
+                              <StyledTableCell colSpan={5} align="center" style={{ color: '#000' }}>
+                                No events found.
+                              </StyledTableCell>
+                            </StyledTableRow>
+                          ) : (
+                            filteredData
                             .slice(
                               page * rowsPerPage,
                               page * rowsPerPage + rowsPerPage
@@ -230,7 +232,8 @@ const BadgedEvents = () => {
                                       {reviewer.name}
                                       {index !== row.reviewers.length - 1 && ', '}
                                     </a>
-                                  ))}
+                                    ))
+                                  }
                                 </StyledTableCell>
                                 <StyledTableCell align="left">
                                   <a
@@ -243,7 +246,7 @@ const BadgedEvents = () => {
                                   </a>
                                 </StyledTableCell>
                               </StyledTableRow>
-                            ))}
+                            )))}
 
                           {emptyRows > 0 && (
                             <TableRow style={{ height: 53 * emptyRows }}>
