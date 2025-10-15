@@ -24,8 +24,7 @@ const Footer = () => {
         </Link>
       </span>
       <span className="copy-right">
-        Copyright &copy; <a href="/">CHAOSS.</a> All rights reserved a Linux
-        Foundation Project
+        Copyright &copy; <a href="/">CHAOSS.</a> A Linux Foundation Project. All rights reserved.
       </span>
     </footer>
   );
