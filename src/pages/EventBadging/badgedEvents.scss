@@ -252,24 +252,9 @@ main {
   background-color: #fff;
 }
 
-.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-previousNext > .MuiPaginationItem-icon,
-.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-firstLast > .MuiPaginationItem-icon {
-  &:hover {
-      fill: #000;
-  }
-}
-
 .MuiPagination-root .MuiPaginationItem-root {
-  // color: #000;
+  color: #000;
   border-bottom: none !important;
-
-  &.MuiPaginationItem-ellipsis {
-    color: #000;
-  }
-
-  &:hover {
-    color: #000;
-  }
 }
 
 .css-1q1u3t4-MuiTableRow-root {
@@ -280,7 +265,7 @@ main {
 }
 .MuiPagination-ul button {
   background-color: #000;
-  // color: #000 !important;
+  color: #000 !important;
 }
 
 @media screen and (max-width: 1080px) {
