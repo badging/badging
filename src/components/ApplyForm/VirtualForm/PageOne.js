@@ -67,6 +67,24 @@ const PageOne = () => {
      {/* <p className="error">{errors.eventWebsite?.message}</p> */}
      <br />
     </div>
+    <div className='input-wrapper '>
+     <label htmlFor='preferredName'>
+      Preferred Project Name (Optional)
+      <span className='hint'>
+       This name will be displayed in the badged projects list
+      </span>
+     </label>
+     <br /> <br />
+     <input
+      type='text'
+      placeholder='Enter preferred display name for your project'
+      className='input_text'
+      id='preferredName'
+      name='preferredNameVI'
+      {...register('preferredNameVI')}
+     />
+     <br />
+    </div>
     <div className='radio-input'>
      <p>
       Are you an organizer of this event?
