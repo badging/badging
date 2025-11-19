@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
-import { githubIcon, linkedin, twitter, slack } from "../../assets/images";
+import { githubIcon, linkedin, slack, mail } from "../../assets/images";
 
 const Footer = () => {
   return (
@@ -13,8 +13,8 @@ const Footer = () => {
         <Link to="https://www.linkedin.com/company/chaoss/" target="blank">
           <img src={linkedin} alt="linkedin-icon" />
         </Link>
-        <Link to="https://twitter.com/chaossproj" target="blank">
-          <img src={twitter} alt="twitter-icon" />
+        <Link to="https://chaoss.community/connect/" target="blank" title="Connect with us on Mastodon">
+          <img src={mail} alt="mastodon-icon" />
         </Link>
         <Link
           to="https://chaoss-workspace.slack.com/messages/C012A4L7M8V/"
