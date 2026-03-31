@@ -43,3 +43,10 @@ Our heartfelt gratitude to all the maintainers of this project. Thank you for yo
 - [Ruth Ikegah](https://github.com/Ruth-ikegah)
 - [Anita Ihuman](https://github.com/Anita-ihuman)
 - [Kingsley Mkpandiok](https://github.com/iamkingsleey)
+- [Desmond Obisi](https://github.com/desmondsanctity)
+- [Gift Uhiene](https://github.com/Giftea)
+- [Adeyinka Oresanya](https://github.com/adeyinkaoresanya)
+
+
+
+
