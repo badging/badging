@@ -143,190 +143,192 @@ const swapHandler = (toggle) => {
       </div>
 
 
-      <section className="project">
-        {
-          swap && swap == 'project' ? (
-            <>
-            <p className="projectIntro container">
-        CHAOSS Project Badging is helping open source 
-        communities prioritize diversity, equity, and inclusion.
-         Using the CHAOSS DEI metrics as an industry benchmark, we are 
-         creating more inclusive and welcoming open-source environments for all. 
-         Our badged projects serve as exemplary demonstrations:
-         <hr className="divider" />
-        </p>
-        
-        {!isLoading ? (
-          <div className="badging container">
-            <div className="container-holder">
-              <div className="table-top-header">
-                <p>DEI Projects</p>
-                <div className="filter-projects">
-                  <div className="search">
-                    <img
-                      src={SearchIcon}
-                      width={25}
-                      height={25}
-                      alt="filter-icon"
-                    />
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      placeholder="Search for projects..."
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-                  </div>
-                  <div className="filter" onClick={handleFilterToggle}>
-                    <button>Filter</button>
-                    <img
-                      src={Filter}
-                      width={25}
-                      height={25}
-                      alt="filter-icon"
-                    />
-                  </div>
-                  <div
-                    className="filter-dropdown"
-                    style={{ display: filter == true ? "" : "none" }}
-                  >
-                    <ul>
-                      <li
-                        className={sortBy == "Published" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Published")}
-                      >
-                        <img
-                          src={ScheduleIcon}
-                          width={25}
-                          className="ccc"
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Published Date</span>
-                      </li>
-                      <li
-                        className={sortBy == "Badged" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Badged")}
-                      >
-                        <img
-                          src={DateIcon}
-                          width={25}
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Badged Date</span>
-                      </li>
-                      <li
-                        className={sortBy == "Project" ? "activeFilter" : ""}
-                        onClick={() => setSortBy("Project")}
-                      >
-                        <img
-                          src={AZicon}
-                          width={25}
-                          height={25}
-                          alt="filter-icon"
-                        />
-                        <span>Project Title</span>
-                      </li>
-                    </ul>
+      <div className="bg-white">
+        <section className="project">
+          {
+            swap && swap == 'project' ? (
+              <>
+              <p className="projectIntro container">
+          CHAOSS Project Badging is helping open source 
+          communities prioritize diversity, equity, and inclusion.
+          Using the CHAOSS DEI metrics as an industry benchmark, we are 
+          creating more inclusive and welcoming open-source environments for all. 
+          Our badged projects serve as exemplary demonstrations:
+          <hr className="divider" />
+          </p>
+          
+          {!isLoading ? (
+            <div className="badging container">
+              <div className="container-holder">
+                <div className="table-top-header">
+                  <p>DEI Projects</p>
+                  <div className="filter-projects">
+                    <div className="search">
+                      <img
+                        src={SearchIcon}
+                        width={25}
+                        height={25}
+                        alt="filter-icon"
+                      />
+                      <input
+                        type="text"
+                        value={searchTerm}
+                        placeholder="Search for projects..."
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                      />
+                    </div>
+                    <div className="filter" onClick={handleFilterToggle}>
+                      <button>Filter</button>
+                      <img
+                        src={Filter}
+                        width={25}
+                        height={25}
+                        alt="filter-icon"
+                      />
+                    </div>
+                    <div
+                      className="filter-dropdown"
+                      style={{ display: filter == true ? "" : "none" }}
+                    >
+                      <ul>
+                        <li
+                          className={sortBy == "Published" ? "activeFilter" : ""}
+                          onClick={() => setSortBy("Published")}
+                        >
+                          <img
+                            src={ScheduleIcon}
+                            width={25}
+                            className="ccc"
+                            height={25}
+                            alt="filter-icon"
+                          />
+                          <span>Published Date</span>
+                        </li>
+                        <li
+                          className={sortBy == "Badged" ? "activeFilter" : ""}
+                          onClick={() => setSortBy("Badged")}
+                        >
+                          <img
+                            src={DateIcon}
+                            width={25}
+                            height={25}
+                            alt="filter-icon"
+                          />
+                          <span>Badged Date</span>
+                        </li>
+                        <li
+                          className={sortBy == "Project" ? "activeFilter" : ""}
+                          onClick={() => setSortBy("Project")}
+                        >
+                          <img
+                            src={AZicon}
+                            width={25}
+                            height={25}
+                            alt="filter-icon"
+                          />
+                          <span>Project Title</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="badging-table">
-                <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                      <TableRow>
-                        {/* <StyledTableCell>S/N</StyledTableCell> */}
-                        <StyledTableCell align="left">
-                          Badge Date
-                        </StyledTableCell>
-                        {/* <StyledTableCell align="left">
-                          Project Title
-                        </StyledTableCell> */}
-                        <StyledTableCell align="left">
-                          DEI Badge
-                        </StyledTableCell>
-                        <StyledTableCell align="left">
-                          Project Repository
-                        </StyledTableCell>
-                      </TableRow>
-                    </TableHead>
-
-                    <TableBody>
-                      {filteredData
-                        .slice(
-                          page * rowsPerPage,
-                          page * rowsPerPage + rowsPerPage
-                        )
-                        .map((row, index) => (
-                          <StyledTableRow key={index}>
-                            {/* <StyledTableCell component="th" scope="row">
-                              {row.id}
-                            </StyledTableCell> */}
-                            <StyledTableCell align="left" style={{ color: "black" }}>
-                              {formatDate(row.createdAt)}
-                            </StyledTableCell>
-                            {/* <StyledTableCell align="left">
-                              {(() => {
-                                const text = row.repoLink.split("/");
-                                return text[3];
-                              })()}
-                            </StyledTableCell> */}
-                            <StyledTableCell align="left">
-                              <img
-                                src={extractImageUrl(row.attachment)}
-                                width={100}
-                                height={100}
-                                alt="badgeImage"
-                              />
-                            </StyledTableCell>
-                            <StyledTableCell align="left">
-                              <a
-                                href={row.repoLink}
-                                target="_blank"
-                                style={{ color: "#000" }}
-                                rel="noreferrer"
-                              >
-                                {row.repoLink}
-                              </a>
-                            </StyledTableCell>
-                          </StyledTableRow>
-                        ))}
-
-                      {emptyRows > 0 && (
-                        <TableRow style={{ height: 53 * emptyRows }}>
-                          <TableCell colSpan={6} />
+                <div className="badging-table">
+                  <TableContainer component={Paper}>
+                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                      <TableHead>
+                        <TableRow>
+                          {/* <StyledTableCell>S/N</StyledTableCell> */}
+                          <StyledTableCell align="left">
+                            Badge Date
+                          </StyledTableCell>
+                          {/* <StyledTableCell align="left">
+                            Project Title
+                          </StyledTableCell> */}
+                          <StyledTableCell align="left">
+                            DEI Badge
+                          </StyledTableCell>
+                          <StyledTableCell align="left">
+                            Project Repository
+                          </StyledTableCell>
                         </TableRow>
-                      )}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-              <div className="badging-footer">
-                <Pagination
-                  count={Math.ceil(data.length / rowsPerPage)}
-                  page={page + 1}
-                  onChange={(event, newPage) => setPage(newPage - 1)}
-                  variant="outlined"
-                  shape="rounded"
-                  color="success"
-                  className="pagination"
-                />
+                      </TableHead>
+
+                      <TableBody>
+                        {filteredData
+                          .slice(
+                            page * rowsPerPage,
+                            page * rowsPerPage + rowsPerPage
+                          )
+                          .map((row, index) => (
+                            <StyledTableRow key={index}>
+                              {/* <StyledTableCell component="th" scope="row">
+                                {row.id}
+                              </StyledTableCell> */}
+                              <StyledTableCell align="left" style={{ color: "black" }}>
+                                {formatDate(row.createdAt)}
+                              </StyledTableCell>
+                              {/* <StyledTableCell align="left">
+                                {(() => {
+                                  const text = row.repoLink.split("/");
+                                  return text[3];
+                                })()}
+                              </StyledTableCell> */}
+                              <StyledTableCell align="left">
+                                <img
+                                  src={extractImageUrl(row.attachment)}
+                                  width={100}
+                                  height={100}
+                                  alt="badgeImage"
+                                />
+                              </StyledTableCell>
+                              <StyledTableCell align="left">
+                                <a
+                                  href={row.repoLink}
+                                  target="_blank"
+                                  style={{ color: "#000" }}
+                                  rel="noreferrer"
+                                >
+                                  {row.repoLink}
+                                </a>
+                              </StyledTableCell>
+                            </StyledTableRow>
+                          ))}
+
+                        {emptyRows > 0 && (
+                          <TableRow style={{ height: 53 * emptyRows }}>
+                            <TableCell colSpan={6} />
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </div>
+                <div className="badging-footer">
+                  <Pagination
+                    count={Math.ceil(data.length / rowsPerPage)}
+                    page={page + 1}
+                    onChange={(event, newPage) => setPage(newPage - 1)}
+                    variant="outlined"
+                    shape="rounded"
+                    color="success"
+                    className="pagination"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ) : (
-          <p>Error Retrieving Data....</p>
-        )}
-            </>
-          ): (
-          <AboutNew />
-          )
-        }
-        
+          ) : (
+            <p>Error Retrieving Data....</p>
+          )}
+              </>
+            ): (
+            <AboutNew />
+            )
+          }
+          
 
-        
-      </section>
+          
+        </section>
+      </div>
       <Footer />
     </main>
   );

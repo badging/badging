@@ -1,8 +1,8 @@
-name: Deploy to Production
+name: Deploy to Staging
 on:
   push:
     branches:
-      - main
+      - staging
 
 jobs:
   build:
@@ -21,18 +21,18 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm test
-      - run: npm run build
+      - run: npm run build:staging
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: build/
+          path: build
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/staging' && github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v3
@@ -40,12 +40,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build
-          path: build/
-          
-      - name: Verify build contents
-        run: |
-          echo "Working directory: $(pwd)"
-          ls -al build
+          path: build
 
       - name: Remove old build
         uses: appleboy/ssh-action@master
@@ -54,8 +49,8 @@ jobs:
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
           script: |
-            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/badging.chaoss.community/*
-            mkdir -p /var/www/badging.chaoss.community
+            echo ${{ secrets.SSHPASSWORD }} | sudo -S rm -rf /var/www/staging.chaoss.community/*
+            mkdir -p /var/www/staging.chaoss.community
 
       - name: Upload build
         uses: appleboy/scp-action@master
@@ -63,8 +58,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSHUSERNAME }}
           password: ${{ secrets.SSHPASSWORD }}
-          source: "build/"
-          target: /var/www/badging.chaoss.community/
+          source: "${{ github.workspace }}/build/*"
+          target: /var/www/staging.chaoss.community/
 
 
       - name: Restart nginx

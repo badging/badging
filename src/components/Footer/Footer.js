@@ -13,9 +13,6 @@ const Footer = () => {
         <Link to="https://www.linkedin.com/company/chaoss/" target="blank">
           <img src={linkedin} alt="linkedin-icon" />
         </Link>
-        <Link to="https://twitter.com/chaossproj" target="blank">
-          <img src={twitter} alt="twitter-icon" />
-        </Link>
         <Link
           to="https://chaoss-workspace.slack.com/messages/C012A4L7M8V/"
           target="blank"
