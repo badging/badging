@@ -11,6 +11,7 @@ Before you get started, please take a moment to read through the following guide
 - [Who can contribute?](#who-can-contribute?)
 - [How to Contribute](#how-to-contribute)
   - [Set up your Local Development Environment](#set-up-your-local-development-environment)
+- [Contributing to the Badging Project Wiki](#contributing-to-the-badging-project-wiki)
 - [Code Style and Standards](#code-style-and-standards)
 
 ## Code of Conduct
@@ -79,6 +80,91 @@ Here are the steps to follow to contribute to DEI CHAOSS Badging:
 11. **Review and Discussion**: Your pull request will be reviewed by the maintainers and the community. Be prepared for feedback and be responsive to any suggested changes.
 
 12. **Merge**: Once your pull request is approved, it will be merged into the main project.
+
+## Contributing to the Badging Project Wiki
+### Method 1: Fork, Clone, Edit Locally, and Push
+
+1. **Fork the Main Repository**
+   - Visit the [badging repository](https://github.com/badging/badging).
+   - Click the "Fork" button in the top-right corner to create a copy under your GitHub account.
+
+2. **Clone the Wiki Repository**
+   - Navigate to your forked repo's Wiki tab or visit:  
+     `https://github.com/<your-username>/badging.wiki.git`
+   - Hit `Create the first Page` button. You should see some placeholder text, click save.
+   - Copy the wiki repository URL (it ends with `.wiki.git`).
+   - On your local machine, open a terminal and run:
+     ```bash
+     git clone https://github.com/<your-username>/badging.wiki.git
+     ```
+     Replace `<your-username>` with your GitHub username.
+
+3. **Add upstream and fetch latest data from the staging branch**
+   - Add upstream:
+      ```bash
+      git remote add upstream https://github.com/<your-username>/badging.wiki.git
+      ```
+   - Fetch latest update:
+   ```bash
+   git fetch upstream staging
+   ```
+
+4. **Checkout to staging branch**
+   - Checkout:
+   ```bash
+   git checkout staging
+   ```
+   - Merge updates fetched from upstream to your staging branch to keep your fork in sync:
+   ```bash
+   git merge upstream/staging
+   ```
+
+5. **Make your changes**
+   - Edit existing `.md` files or add new ones using your favorite text editor.
+   - Follow Markdown best practices and maintain a clear structure.
+
+6. **Submit your changes to your fork**
+   ```bash
+   git add .
+   git commit -s -m "descriptive commit message"
+   git push origin staging
+   ```
+
+7. **Create a Pull Request**
+   - Go to your forked repository on GitHub.
+   - You should see a "Compare & pull request" button. Click it.
+   - Ensure your pull request targets the `main` branch of the `badging/badging.wiki` repository.
+   - Add a clear title and description explaining your changes.
+   - Submit the pull request.
+
+---
+
+### Method 2: Fork and Edit the Wiki Directly on GitHub
+
+1. **Fork the Repository**
+   - Go to the [badging repository](https://github.com/badging/badging) and fork it as described above.
+
+2. **Navigate to the Wiki Tab**
+   - In your forked repository, click the "Wiki" tab.
+
+3. **Edit or Create Pages Online**
+   - Use the “New Page” or “Edit” buttons to modify or create wiki pages.
+   - Add your content in Markdown.
+   - Preview your changes before saving.
+
+4. **Save Changes**
+   - Add a commit message summarizing your update.
+   - Save the page.
+
+5. **Submit a Pull Request**
+   - Go to your forked repository on GitHub.
+   - Open a pull request from your fork’s wiki to the `badging/badging.wiki` repository’s `main` branch.
+
+### Submitting changes to the main repository
+After making your pull request on each method, you need to open an issue and provide the following:
+  - Link to your repository.
+  - Description to the change you've done.
+N/B: If you're fixing an existing issue, you don't need to open a new one. Just submit your changes there.
 
 ## Code Style and Standards
 
