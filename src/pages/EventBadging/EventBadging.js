@@ -133,7 +133,14 @@ const EventBadging = () => {
            <div className='about-parag'>
                 <p className='pTitle'> Before You Start</p>
                 <p>
-                    For more details, visit the official CHAOSS DEI Event Badging Repository.  To apply for event/conference badging, review the following documents:
+                    For more details, visit the official {" "} 
+                    <a
+                    target='_blank'
+                    className="a-line"
+                    rel="noopener noreferrer"
+                    href="https://github.com/badging/badging">
+                    CHAOSS DEI Event Badging Repository
+                    </a>.  To apply for event/conference badging, review the following documents:
                 </p>
                 <ul className='bullet-list'>
                     <li>
