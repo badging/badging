@@ -158,6 +158,10 @@ main {
             li {
               list-style-type: disc;
               margin-top: 10px;
+              span {
+                color: #000;
+                line-height: 180%;
+              }
             }
           }
         }

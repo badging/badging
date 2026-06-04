@@ -131,23 +131,52 @@ const EventBadging = () => {
            </div>
 
            <div className='about-parag'>
-            <p className='pTitle'> Before You Start</p>
-            <p>
-             For additional information, please visit the official CHAOSS DEI
-             Event Badging Repository. In order to submit an application for
-             your event/conference, review the following documents:
-             <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/requirements.md'>
-              Event Submission Requirements
-             </a>
-             : This document describes the minimum requirements for an
-             event/conference to be eligible for a CHAOSS badging process
-             <a href='https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/guidelines.md'>
-              Event Submission Guidelines
-             </a>
-             : This document describes guidelines and steps on how an event can
-             gain a badge under the CHAOSS Badging program.
-            </p>
+                <p className='pTitle'> Before You Start</p>
+                <p>
+                    For more details, visit the official {" "} 
+                    <a
+                    target='_blank'
+                    className="a-line"
+                    rel="noopener noreferrer"
+                    href="https://github.com/badging/badging">
+                    CHAOSS DEI Event Badging Repository
+                    </a>.  To apply for event/conference badging, review the following documents:
+                </p>
+                <ul className='bullet-list'>
+                    <li>
+                        <a
+                            href="https://github.com/badging/event-diversity-and-inclusion/blob/master/info-for-applicants/requirements.md"
+                            target='_blank'
+                            className="a-line"
+                            rel="noopener noreferrer"
+                        >
+                            Event Submission Requirements
+                        </a>
+                        <span>
+                            {" "}
+                            – Outlines the minimum criteria your event must meet to be eligible for
+                            the CHAOSS badging process.
+                        </span>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://github.com/badging/event-diversity-and-inclusion/blob/main/info-for-applicants/guidelines.md"
+                            className="a-line"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
+                            Event Submission Guidelines
+                        </a>
+                        <span>
+                            {" "}
+                            – Provides step-by-step instructions on how to apply and obtain a
+                            CHAOSS badge.
+                        </span>
+                    </li>
+                </ul>       
            </div>
+           
           </div>
          </div>
          <div className={`${showAbout === 'apply' ? 'showDesc' : 'hideDesc'}`}>
