@@ -39,7 +39,7 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 3.  (**Sample**) [Project Name] project maintainers and merge request coaches span global time zones and work asynchronously with contributors across the world.
 4.  (**Sample**) Translation services are provided for all website pages.
 5.  (**Sample**) All areas of [Project Name] are considered open to community contributions. A stated goal of our project is that “everyone can contribute."
-6.  (**Sample**) The [Project Name] SaaS product is conformant with the [Voluntary Product Accessibility Template (VPAT 2.4)](https://www.section508.gov/sell/vpat/) revised in June 2023 as well as to level AA of the [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
+6.  (**Sample**) The [Project Name] SaaS product is conformant with to [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/) level AA. Having a public Accessibility Conformance Report, preferably an [OpenACR](https://acreditor.section508.gov/) file, is strongly recommended.  
 7.  (**Sample**) [Project Name] is developing a unified contributor program that recognizes and rewards non-code contributors, including contributions through events, blog posts, and comments in issues and merge requests.
 
 ### (Required:No Changes) [Communication Transparency](https://chaoss.community/?p=4957)
