@@ -256,6 +256,7 @@ const BadgedEvents = () => {
                   </div>
                   <div className="badging-footer">
                     <Pagination
+                      showFirstButton
                       showLastButton
                       count={Math.ceil(data.length / rowsPerPage)}
                       page={page + 1}

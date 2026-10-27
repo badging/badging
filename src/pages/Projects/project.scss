@@ -324,19 +324,50 @@ main {
 }
 
 .MuiPagination-root .MuiPaginationItem-root {
-  color: #fff; // Replace with your desired pagination text color
-  // border: #1C1C1C 1px solid;
-  border-bottom: none !important;
-}
-
-.MuiPagination-root .MuiPaginationItem-root.Mui-selected {
-  color: #000; // Replace with your desired pagination text color
-  background-color: #fff;
-}
-
-.MuiPagination-root .MuiPaginationItem-root {
   color: #000;
-  border-bottom: none !important;
+  background-color: #fff;
+  border: 1px solid #bebebe;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &.Mui-selected {
+    color: #fff !important;
+    background-color: #000 !important;
+    border-color: #000;
+
+    &:hover {
+      background-color: #222;
+      color: #fff;
+    }
+  }
+
+  &.MuiPaginationItem-ellipsis {
+    color: #000;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
+  }
+}
+
+.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-previousNext > .MuiPaginationItem-icon,
+.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-firstLast > .MuiPaginationItem-icon {
+  fill: #000;
+
+  &:hover {
+    fill: #fff;
+  }
+}
+
+.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-previousNext:hover > .MuiPaginationItem-icon,
+.MuiPagination-root .MuiPaginationItem-root.MuiPaginationItem-firstLast:hover > .MuiPaginationItem-icon {
+  fill: #fff;
 }
 
 .css-1q1u3t4-MuiTableRow-root {
@@ -344,11 +375,10 @@ main {
 }
 .MuiPagination-ul {
   color: #000 !important;
-  
 }
 .MuiPagination-ul button {
-  background-color: #000;
-  // color: #000 !important;
+  background-color: #fff;
+  color: #000;
 }
 
 @media screen and (max-width: 1080px) {
