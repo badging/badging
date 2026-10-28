@@ -41,6 +41,11 @@ The DEI.md file was originally created in the CHAOSS project. This comment provi
 5.  (**Sample**) All areas of [Project Name] are considered open to community contributions. A stated goal of our project is that “everyone can contribute."
 6.  (**Sample**) The [Project Name] SaaS product is conformant with the [Voluntary Product Accessibility Template (VPAT 2.4)](https://www.section508.gov/sell/vpat/) revised in June 2023 as well as to level AA of the [World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/).
 7.  (**Sample**) [Project Name] is developing a unified contributor program that recognizes and rewards non-code contributors, including contributions through events, blog posts, and comments in issues and merge requests.
+8.  (**Sample**) Virtual and in-person events provide real-time automated or CART (Communication Access Realtime Translation) captioning, and recorded presentations include accurate transcripts and closed captions.
+9.  (**Sample**) Event registration forms include dedicated options for attendees and speakers to request specific accessibility accommodations (such as sign language interpretation, assistive listening devices, or mobility accommodations) in advance.
+10. (**Sample**) Presenters and organizers are provided guidelines to ensure all slides, presentations, and digital media feature high color contrast, readable fonts, and alternative text (alt text) for images and diagrams.
+11. (**Sample**) In-person and hybrid event venues are evaluated for barrier-free physical accessibility, including step-free wheelchair access, accessible restrooms, designated quiet or sensory-decompression areas, and clear mobility signage.
+12. (**Sample**) Project websites, documentation, and digital tools are regularly tested against [W3C WCAG 2.1 AA](https://www.w3.org/TR/WCAG21/) standards for keyboard navigation, screen-reader compatibility, and color contrast.
 
 ### (Required:No Changes) [Communication Transparency](https://chaoss.community/?p=4957)
 
