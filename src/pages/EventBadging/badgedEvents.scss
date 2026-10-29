@@ -227,18 +227,31 @@ main {
   color: #000 !important;
   font-size: 14px;
   font-weight: 400;
+  padding: 10px 16px !important;
+  white-space: nowrap;
 }
 
 .css-ux5ofw-MuiTableCell-root.MuiTableCell-head {
   background-color: #ededed !important;
   color: #000 !important;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   border-bottom: none !important;
+  padding: 10px 16px !important;
+  white-space: nowrap;
 }
 .css-1gj0jdp-MuiTableRow-root th,
 .css-1gj0jdp-MuiTableRow-root td {
   border-bottom: 1px solid gray !important;
+  padding: 10px 16px !important;
+  white-space: nowrap;
+}
+
+.badging-table {
+  .MuiTableCell-root {
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
 }
 
 .MuiPagination-root .MuiPaginationItem-root {

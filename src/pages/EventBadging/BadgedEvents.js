@@ -51,7 +51,7 @@ const StyledTablePagination = styled(TablePagination)((theme) => ({
 
 const BadgedEvents = () => {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(4);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
   const [filter, setFilter] = useState(false);
   const [filterStatus, setFilterStatus] = useState('Published');
   const [searchTerm, setSearchTerm] = useState('');
@@ -246,7 +246,7 @@ const BadgedEvents = () => {
                             ))}
 
                           {emptyRows > 0 && (
-                            <TableRow style={{ height: 53 * emptyRows }}>
+                            <TableRow style={{ height: 42 * emptyRows }}>
                               <TableCell colSpan={5} />
                             </TableRow>
                           )}
