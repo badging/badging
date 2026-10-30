@@ -42,6 +42,7 @@ const SelectProjectRepo = () => {
   const { userData, setUserData } = useContext(DataContext);
   const { userId, name, email, reposToBadge } = userData;
   const [showInfo, setShowInfo] = useState(true);
+  const [preferredProjectName, setPreferredProjectName] = useState("");
   const [openLoaderLight, setOpenLoaderLight] = useState(false);
   const { provider } = useParams();
   const [searchParams] = useSearchParams();
@@ -80,6 +81,7 @@ const SelectProjectRepo = () => {
         userId,
         name,
         email,
+        preferredProjectName: preferredProjectName.trim() || undefined,
         repos: reposToBadge,
         provider,
       }),
@@ -127,6 +129,17 @@ const SelectProjectRepo = () => {
                   <strong>Note: </strong>The selected repository must have the
                   presence of a DEI.md file.
                 </p>
+              </div>
+
+              <div className="preferred-project-name">
+                <label htmlFor="preferredProjectName">Preferred Project Name (Optional)</label>
+                <input
+                  id="preferredProjectName"
+                  type="text"
+                  placeholder="e.g. My Open Source Project"
+                  value={preferredProjectName}
+                  onChange={(e) => setPreferredProjectName(e.target.value)}
+                />
               </div>
 
               <SearchBar setShowInfo={setShowInfo} />

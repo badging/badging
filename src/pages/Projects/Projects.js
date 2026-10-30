@@ -241,9 +241,9 @@ const swapHandler = (toggle) => {
                           <StyledTableCell align="left">
                             Badge Date
                           </StyledTableCell>
-                          {/* <StyledTableCell align="left">
-                            Project Title
-                          </StyledTableCell> */}
+                          <StyledTableCell align="left">
+                            Project Name
+                          </StyledTableCell>
                           <StyledTableCell align="left">
                             DEI Badge
                           </StyledTableCell>
@@ -267,12 +267,13 @@ const swapHandler = (toggle) => {
                               <StyledTableCell align="left" style={{ color: "black" }}>
                                 {formatDate(row.createdAt)}
                               </StyledTableCell>
-                              {/* <StyledTableCell align="left">
-                                {(() => {
-                                  const text = row.repoLink.split("/");
-                                  return text[3];
+                              <StyledTableCell align="left" style={{ color: "black", fontWeight: 500 }}>
+                                {row.projectName || row.name || (() => {
+                                  if (!row.repoLink) return "N/A";
+                                  const parts = row.repoLink.split("/").filter(Boolean);
+                                  return parts[parts.length - 1] || "N/A";
                                 })()}
-                              </StyledTableCell> */}
+                              </StyledTableCell>
                               <StyledTableCell align="left">
                                 <img
                                   src={extractImageUrl(row.attachment)}

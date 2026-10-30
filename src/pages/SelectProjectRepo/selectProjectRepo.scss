@@ -74,6 +74,40 @@
       gap: 3px !important;
     }
 
+    .preferred-project-name {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 1.5rem;
+      width: 100%;
+
+      label {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: $headingColor;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid $headingColor;
+        border-radius: 4px;
+        font-size: 1rem;
+        color: $headingColor;
+        outline: none;
+        background: #ffffff;
+        box-sizing: border-box;
+
+        &:focus {
+          border-color: $chaossPink;
+        }
+
+        &::placeholder {
+          color: #8c9ba5;
+        }
+      }
+    }
+
     h2 {
       background: linear-gradient(180deg, #030303 0%, #030303 100%);
       font-size: 1.5rem;
