@@ -87,7 +87,7 @@ const BadgedEvents = () => {
   const filteredData = data &&
     data
       .filter((row) =>
-        row.event_name.includes(searchTerm.toLowerCase())
+        (row.event_name ? row.event_name.toLowerCase().includes(searchTerm.toLowerCase().trim()) : false)
       )
       .sort((a, b) => {
         if (sortBy === 'Published') {

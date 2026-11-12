@@ -97,7 +97,7 @@ const Projects = () => {
     data
       .filter((row) =>
         // row.title.toLowerCase().includes(searchTerm.toLowerCase())
-        row.repoLink.includes(searchTerm.toLowerCase())
+        (row.repoLink ? row.repoLink.toLowerCase().includes(searchTerm.toLowerCase().trim()) : false)
       )
       .sort((a, b) => {
         if (sortBy === "Published") {
