@@ -88,9 +88,9 @@ const Projects = () => {
     return `${day}-${month}-${year}`;
   }
 
-  // const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  const filteredCount = filteredData ? filteredData.length : 0;
   const emptyRows =
-    rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+    rowsPerPage - Math.min(rowsPerPage, filteredCount - page * rowsPerPage);
 
   const filteredData =
     data &&
@@ -305,7 +305,7 @@ const swapHandler = (toggle) => {
                 </div>
                 <div className="badging-footer">
                   <Pagination
-                    count={Math.ceil(data.length / rowsPerPage)}
+                    count={Math.max(1, Math.ceil((filteredData ? filteredData.length : 0) / rowsPerPage))}
                     page={page + 1}
                     onChange={(event, newPage) => setPage(newPage - 1)}
                     variant="outlined"
