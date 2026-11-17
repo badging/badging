@@ -74,6 +74,16 @@ const BadgedEvents = () => {
     setFilter((prev) => !prev);
   };
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setPage(0);
+  };
+
+  const handleSortChange = (newSort) => {
+    setSortBy(newSort);
+    setPage(0);
+  };
+
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
@@ -129,7 +139,7 @@ const BadgedEvents = () => {
                           type="text"
                           value={searchTerm}
                           placeholder="Search for events..."
-                          onChange={(e) => setSearchTerm(e.target.value)}
+                          onChange={handleSearchChange}
                         />
                       </div>
                       <div className="filter" onClick={handleFilterToggle}>
@@ -148,7 +158,7 @@ const BadgedEvents = () => {
                         <ul>
                           <li
                             className={sortBy === 'Published' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Published')}
+                            onClick={() => handleSortChange('Published')}
                           >
                             <img
                               src={ScheduleIcon}
@@ -161,7 +171,7 @@ const BadgedEvents = () => {
                           </li>
                           <li
                             className={sortBy === 'Badge' ? 'activeFilter' : ''}
-                            onClick={() => setSortBy('Badge')}
+                            onClick={() => handleSortChange('Badge')}
                           >
                             <img
                               src={AZicon}

@@ -80,6 +80,16 @@ const Projects = () => {
     setFilter((prev) => !prev);
   };
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setPage(0);
+  };
+
+  const handleSortChange = (newSort) => {
+    setSortBy(newSort);
+    setPage(0);
+  };
+
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, "0");
@@ -174,7 +184,7 @@ const swapHandler = (toggle) => {
                         type="text"
                         value={searchTerm}
                         placeholder="Search for projects..."
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={handleSearchChange}
                       />
                     </div>
                     <div className="filter" onClick={handleFilterToggle}>
@@ -193,7 +203,7 @@ const swapHandler = (toggle) => {
                       <ul>
                         <li
                           className={sortBy == "Published" ? "activeFilter" : ""}
-                          onClick={() => setSortBy("Published")}
+                          onClick={() => handleSortChange("Published")}
                         >
                           <img
                             src={ScheduleIcon}
@@ -206,7 +216,7 @@ const swapHandler = (toggle) => {
                         </li>
                         <li
                           className={sortBy == "Badged" ? "activeFilter" : ""}
-                          onClick={() => setSortBy("Badged")}
+                          onClick={() => handleSortChange("Badged")}
                         >
                           <img
                             src={DateIcon}
@@ -218,7 +228,7 @@ const swapHandler = (toggle) => {
                         </li>
                         <li
                           className={sortBy == "Project" ? "activeFilter" : ""}
-                          onClick={() => setSortBy("Project")}
+                          onClick={() => handleSortChange("Project")}
                         >
                           <img
                             src={AZicon}
