@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { chaossLogo, mobileMenuIcon } from "../../assets/images";
 import "./header.scss";
 import { Link, useLocation } from "react-router-dom";
@@ -8,22 +8,30 @@ const Nav = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const [toggleNav, setToggleNav] = useState(false);
-  const [applyBtn, setApplyBtn] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (applyBtn && !event.target.closest(".apply-div")) {
-        setApplyBtn(false);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [applyBtn]);
+  }, []);
+
+  useEffect(() => {
+    setIsDropdownOpen(false);
+    setToggleNav(false);
+  }, [pathname]);
 
   return (
     <nav className="navigation-wrapper">
@@ -57,23 +65,33 @@ const Nav = () => {
             ))}
           </ul>
 
-          <div className="wrapper">
+          <div className="wrapper" ref={dropdownRef}>
             <div className="apply-for-badge-wrapper">
-              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+              <button
+                type="button"
+                aria-expanded={isDropdownOpen}
+                aria-haspopup="true"
+                onClick={() => setIsDropdownOpen((prev) => !prev)}
+              >
                 Apply for Badge
               </button>
             </div>
             {isDropdownOpen && (
               <div className="dropdown-menu">
-                <a
-                  href="/event-badging/apply"
+                <Link
+                  to="/event-badging/apply"
                   className="dropdown-option"
+                  onClick={() => setIsDropdownOpen(false)}
                 >
                   Event Badging
-                </a>
-                <a href="/badge" className="dropdown-option">
+                </Link>
+                <Link
+                  to="/badge"
+                  className="dropdown-option"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
                   Project Badging
-                </a>
+                </Link>
               </div>
             )}
           </div>
