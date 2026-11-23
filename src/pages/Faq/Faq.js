@@ -12,31 +12,37 @@ const Faq = () => {
   const { hash } = location;
 
   useEffect(() => {
-    // check location hash and show corresponding faq
-    const hashStr = hash.substring(1);
-    const [about, faqId] = hashStr.split("-");
+    if (hash) {
+      // check location hash and show corresponding faq
+      const hashStr = hash.substring(1);
+      const [about, faqId] = hashStr.split("-");
 
-    setShowAbout(about);
-    faqHandler(faqId);
+      if (about) {
+        setShowAbout(about);
+      }
+      if (faqId) {
+        setFaq(faqId);
+      }
 
-    // scroll to the corresponding faq
-    if (faqId === "1") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
+      // scroll to the corresponding faq
+      if (faqId === "1") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const element = document.getElementById(hashStr);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-
-    const element = document.getElementById(hashStr);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  }, [hash]);
 
   const eventHandler = (about) => {
     setShowAbout(about);
   };
 
   const faqHandler = (getFaq) => {
-    setFaq(getFaq);
+    setFaq((prevFaq) => (prevFaq === getFaq ? "" : getFaq));
   };
   const title = "Frequently Asked Questions";
 
@@ -94,7 +100,7 @@ const Faq = () => {
                             <a href="#">
                               CHAOSS DEI Event Submission Requirements:
                             </a>{" "}
-                            The application process will disply the minimum
+                            The application process will display the minimum
                             requirements for an event/conference to be able to
                             receive a CHAOSS DEI Event badge.
                           </li>
@@ -142,8 +148,8 @@ const Faq = () => {
                             repository where your DEI.md file is located or
                           </li>
                           <li>
-                            If you have a priviate GitHub or GitLab repository,
-                            enusre that your DEI.md file is available on a
+                            If you have a private GitHub or GitLab repository,
+                            ensure that your DEI.md file is available on a
                             website or other public location.
                           </li>
                         </ul>
