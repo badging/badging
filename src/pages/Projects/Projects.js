@@ -92,6 +92,12 @@ const Projects = () => {
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
+  const getProjectName = (item) => {
+    if (!item || !item.repoLink) return "";
+    const parts = item.repoLink.split("/").filter(Boolean);
+    return parts[parts.length - 1] || item.repoLink;
+  };
+
   const filteredData =
     data &&
     data
@@ -101,16 +107,19 @@ const Projects = () => {
       )
       .sort((a, b) => {
         if (sortBy === "Published") {
-          return new Date(b.createdAt) - new Date(a.createdAt);
+          return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
         } else if (sortBy === "Badged") {
-          return new Date(b.updatedAt) - new Date(a.updatedAt);
+          return new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0);
         } else if (sortBy === "Project") {
-          return a.badgeType.localeCompare(b.badgeType);
+          return getProjectName(a).localeCompare(getProjectName(b));
         }
         return 0;
       });
 
   function extractImageUrl(markdownText) {
+    if (!markdownText || typeof markdownText !== "string") {
+      return null;
+    }
     const imageUrlRegex = /!\[.*?\]\((.*?)\)/;
     const match = markdownText.match(imageUrlRegex);
     return match ? match[1] : null;
