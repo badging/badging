@@ -9,7 +9,6 @@ import { DataContext } from "../../contexts/DataContext";
 
 const SearchBar = ({ setShowInfo }) => {
   const [inputValue, setInputValue] = useState("");
-  const [inputClicked, setInputClicked] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const [focusedSuggestionIndex, setFocusedSuggestionIndex] = useState(-1);
   const { userData, setUserData } = useContext(DataContext);
@@ -39,32 +38,42 @@ const SearchBar = ({ setShowInfo }) => {
   }
 
   const handleInputClick = () => {
-    if (!inputClicked) {
-      setInputClicked(true);
-      setShowInfo(false);
-      setSearchResults(userData.repos);
+    setShowInfo(false);
+    const repos = userData?.repos || [];
+    if (inputValue.trim()) {
+      setSearchResults(performSearch(inputValue));
+    } else {
+      setSearchResults(repos);
     }
   };
 
   function performSearch(value) {
-    return userData.repos.filter((repoData) =>
-      repoData.fullName.toLowerCase().includes(value.toLowerCase())
+    const repos = userData?.repos || [];
+    return repos.filter((repoData) =>
+      repoData?.fullName?.toLowerCase().includes(value.toLowerCase())
     );
   }
 
   function handleRepoSelection(repoData) {
-    setUserData({
-      ...userData,
-      reposToBadge: [...userData.reposToBadge, repoData],
-    });
+    if (!repoData) return;
+    const currentRepos = userData?.reposToBadge || [];
+    const alreadySelected = currentRepos.some(
+      (repo) => repo.id === repoData.id || repo.fullName === repoData.fullName
+    );
+
+    if (!alreadySelected) {
+      setUserData({
+        ...userData,
+        reposToBadge: [...currentRepos, repoData],
+      });
+    }
+    setInputValue("");
     clearSuggestions();
   }
 
   function handleSuggestionClick(repoData, index) {
-    if (focusedSuggestionIndex === index) {
-      handleRepoSelection(repoData);
-    }
     setFocusedSuggestionIndex(index);
+    handleRepoSelection(repoData);
   }
 
   function clearSuggestions() {
@@ -90,7 +99,9 @@ const SearchBar = ({ setShowInfo }) => {
             <li key={index}>
               <button
                 type="button"
-                className="btn suggestion"
+                className={`btn suggestion ${
+                  focusedSuggestionIndex === index ? "focused" : ""
+                }`}
                 onClick={() => handleSuggestionClick(repoData, index)}
               >
                 {repoData.fullName}
